@@ -1,4 +1,6 @@
-# Toward Integrity-Aware Wi-Fi Fingerprinting: Scan-Level Reliability and Gross-Error Diagnosis Across Datasets and Estimators
+# An Intelligent Framework for Scan-Level Reliability, Accuracy Diagnostics, and Gross-Error Detection in Wi-Fi Fingerprinting-Based Indoor Positioning Systems
+
+**Publication status:** Under review in *Expert Systems with Applications*.
 
 This repository will host the Python analysis pipeline and Android implementation associated with the paper.
 
