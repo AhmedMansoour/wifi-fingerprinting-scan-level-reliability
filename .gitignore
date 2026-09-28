@@ -1,0 +1,68 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.coverage
+htmlcov/
+
+# Build outputs (Python, Java, and Android)
+build/
+dist/
+out/
+target/
+*.class
+*.apk
+*.aab
+*.dex
+*.aar
+hs_err_pid*
+replay_pid*
+
+# Android Studio and Gradle
+.gradle/
+.cxx/
+.externalNativeBuild/
+local.properties
+captures/
+*.jks
+*.keystore
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.classpath
+.project
+.settings/
+
+# Temporary files and operating-system files
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+tmp/
+temp/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Generated results; retain the folder placeholder
+/results/*
+!/results/.gitkeep
