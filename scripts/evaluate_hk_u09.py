@@ -143,6 +143,11 @@ def main() -> None:
                                   weight_power=args.weight_power, seed=args.seed,
                                   check_hash=not args.skip_input_hash_check)
     if args.check_frozen:
+        import numpy, pandas, sklearn
+        versions = {"numpy": numpy.__version__, "pandas": pandas.__version__, "scikit-learn": sklearn.__version__}
+        expected_versions = {"numpy": "2.3.5", "pandas": "2.2.3", "scikit-learn": "1.8.0"}
+        if versions != expected_versions:
+            raise SystemExit("Frozen U09 baseline requires pip install -e '[dev,empirical]': " + str(versions))
         frozen = json.loads((ROOT / "docs/hk_u09_expected_summary.json").read_text())
         if report["input"]["input_sha256"] != frozen["input_sha256"] or report["settings"] != frozen["settings"]:
             raise SystemExit("HK U09 run does not match the frozen input/configuration")

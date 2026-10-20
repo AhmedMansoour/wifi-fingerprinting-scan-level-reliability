@@ -25,6 +25,7 @@ transformer = ["torch>=2.2"]
 cnn = ["tensorflow>=2.16"]
 parquet = ["pyarrow>=14"]
 dev = ["pytest>=8"]
+empirical = ["numpy==2.3.5", "pandas==2.2.3", "scikit-learn==1.8.0"]
 
 [project.scripts]
 wifi-integrity = "wifi_integrity.cli:app"

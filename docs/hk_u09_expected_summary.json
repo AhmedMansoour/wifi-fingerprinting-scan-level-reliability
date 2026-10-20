@@ -39,5 +39,10 @@
       "p95_error_m": 16.153386,
       "max_error_m": 43.1383
     }
+  },
+  "dependency_versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.8.0"
   }
 }

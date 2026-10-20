@@ -6,8 +6,8 @@
   "files": [
     {
       "path": ".github/workflows/ci.yml",
-      "size_bytes": 1505,
-      "sha256": "fc695407ab93332f9e99f95f3bd11c13e981f930f8a55e0e5b586955ff396345"
+      "size_bytes": 1515,
+      "sha256": "aadbe392cda72918df61362d0f1e2a328368843b002534f274b18080e1776536"
     },
     {
       "path": ".gitignore",
@@ -26,8 +26,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 5030,
-      "sha256": "cf5d6593d00e9685185a6cddf13f4a6a50ec4be4efe14470f04d7d88ad5d553f"
+      "size_bytes": 5074,
+      "sha256": "e903e2713a64db7b68533f16820b2fcdd4eee3bf1fbf4b2729d945e85678669b"
     },
     {
       "path": "RELEASE_VALIDATION.md",
@@ -501,8 +501,8 @@
     },
     {
       "path": "docs/HK_U09_EMPIRICAL_REPRODUCIBILITY.md",
-      "size_bytes": 2952,
-      "sha256": "8bae21eb92e30ba29aa0dd4238d64c028468794cfa1e7ac746f54520b7f75380"
+      "size_bytes": 3141,
+      "sha256": "89baf4c1a1a08cc0a2d913d5c8d19934ee81975fbdfd43d6894d1f1fbebadee4"
     },
     {
       "path": "docs/INDICATORS.md",
@@ -536,8 +536,8 @@
     },
     {
       "path": "docs/hk_u09_expected_summary.json",
-      "size_bytes": 1045,
-      "sha256": "15abfc21534c24c413f54e4ce907c8a199a279a2ce5f878c5e97569f16f8c726"
+      "size_bytes": 1150,
+      "sha256": "f6c8406138abf342b5bed63a040653aa11ab85579795db7497875bb2eebe1c98"
     },
     {
       "path": "examples/.gitkeep",
@@ -626,8 +626,8 @@
     },
     {
       "path": "pyproject.toml",
-      "size_bytes": 1252,
-      "sha256": "6e93a30bbb1cf1ab88c89f5c9650dc57241aec5186cd885abb0130391d80f045"
+      "size_bytes": 1321,
+      "sha256": "127824fb73ef98aa5766ddcf69e0c11b64319acfe8c1e2dd2d9f7551d2e1ac91"
     },
     {
       "path": "reference/.gitkeep",
@@ -686,8 +686,8 @@
     },
     {
       "path": "scripts/evaluate_hk_u09.py",
-      "size_bytes": 9084,
-      "sha256": "5ad1f427115835345e28ccce3cb49c19654b7422c185264ee4af25bf06c6f29b"
+      "size_bytes": 9482,
+      "sha256": "fc33fb1c6929ec8df0c1db31ccf4ac27f769fb653ddd5cc7b620c57f78b6cbcb"
     },
     {
       "path": "scripts/export_relative_errors.py",

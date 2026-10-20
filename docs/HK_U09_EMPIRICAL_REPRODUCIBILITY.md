@@ -4,7 +4,7 @@ The published input `data/empirical/hk_u09_ap_relative.csv.gz` contains 4,150 **
 
 ## One-command reproduction
 
-At the repository root after `python -m pip install -e ".[dev]"`:
+At the repository root after `python -m pip install -e ".[dev,empirical]"`:
 
 ```bash
 python scripts/reproduce_release.py --mode hk-u09
@@ -14,7 +14,7 @@ python scripts/evaluate_hk_u09.py --check-frozen
 python scripts/evaluate_hk_u09.py --save-predictions
 ```
 
-Outputs: `results/empirical/hk_u09/summary.json`; optional `predictions.csv.gz`. `--check-frozen` compares specified output summaries with `docs/hk_u09_expected_summary.json`, with an absolute 0.03 m numerical tolerance for possible dependency changes. CI reruns the baseline and checks the input SHA-256.
+Outputs: `results/empirical/hk_u09/summary.json`; optional `predictions.csv.gz`. `--check-frozen` compares specified output summaries with `docs/hk_u09_expected_summary.json`, with an absolute 0.03 m numerical tolerance for possible dependency changes. CI reruns the baseline and checks the input SHA-256. The frozen numerical results use NumPy 2.3.5, pandas 2.2.3 and scikit-learn 1.8.0 via `.[empirical]`; versions are checked explicitly rather than silently changing the reference.
 
 ## Explicit protocol
 

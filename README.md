@@ -33,6 +33,7 @@ fresh, fully specified evaluation using the existing KNN, WKNN and Random Forest
 implementations.
 
 ```bash
+python -m pip install -e ".[dev,empirical]"
 python scripts/reproduce_release.py --mode hk-u09
 ```
 
