@@ -1,5 +1,5 @@
 schema_version: 2
-registry_status: public_reference_bundle_and_relative_hk_data_available
+registry_status: public_UJI_U01_U03_and_HK_U09_external_source_links_for_others
 frozen_source:
   archive: legacy_release/data/scratch_start.zip
   combined_member: scratch_start/data/interim/datasets_combined_all/combined_all_datasets.csv
@@ -14,9 +14,10 @@ units:
   expected_train: 4628
   expected_test: 1157
   floor_labels_available: true
-  source_url: null
-  license: null
-  redistribution: raw_radio_map_not_distributed
+  source_url: https://archive.ics.uci.edu/dataset/310/ujiindoorloc
+  license: CC-BY-4.0
+  redistribution: distributed_with_attribution
+  public_input: data/empirical/U01.csv.gz
 - id: U02
   label: UJI-B1
   dataset: UJIndoorLoc
@@ -24,9 +25,10 @@ units:
   expected_train: 4402
   expected_test: 1101
   floor_labels_available: true
-  source_url: null
-  license: null
-  redistribution: raw_radio_map_not_distributed
+  source_url: https://archive.ics.uci.edu/dataset/310/ujiindoorloc
+  license: CC-BY-4.0
+  redistribution: distributed_with_attribution
+  public_input: data/empirical/U02.csv.gz
 - id: U03
   label: UJI-B2
   dataset: UJIndoorLoc
@@ -34,9 +36,10 @@ units:
   expected_train: 7808
   expected_test: 1952
   floor_labels_available: true
-  source_url: null
-  license: null
-  redistribution: raw_radio_map_not_distributed
+  source_url: https://archive.ics.uci.edu/dataset/310/ujiindoorloc
+  license: CC-BY-4.0
+  redistribution: distributed_with_attribution
+  public_input: data/empirical/U03.csv.gz
 - id: U04
   label: TUT-WLAN
   dataset: TUT_WLAN_RSS_1161525
@@ -44,9 +47,9 @@ units:
   expected_train: 1142
   expected_test: 286
   floor_labels_available: true
-  source_url: null
+  source_url: https://zenodo.org/records/1161525
   license: null
-  redistribution: raw_radio_map_not_distributed
+  redistribution: external_download_required
 - id: U05
   label: TAU-B1
   dataset: TAU_ADDITIONAL_3819917
@@ -54,9 +57,9 @@ units:
   expected_train: 8309
   expected_test: 2076
   floor_labels_available: true
-  source_url: null
+  source_url: https://zenodo.org/records/3819917
   license: null
-  redistribution: raw_radio_map_not_distributed
+  redistribution: external_download_required
 - id: U06
   label: TAU-B2
   dataset: TAU_ADDITIONAL_3819917
@@ -64,9 +67,9 @@ units:
   expected_train: 7433
   expected_test: 1858
   floor_labels_available: true
-  source_url: null
+  source_url: https://zenodo.org/records/3819917
   license: null
-  redistribution: raw_radio_map_not_distributed
+  redistribution: external_download_required
 - id: U07
   label: Tampere-SAH1
   dataset: TAMPERE_MULTIBUILDING_5174851
@@ -74,9 +77,9 @@ units:
   expected_train: 7558
   expected_test: 1889
   floor_labels_available: true
-  source_url: null
+  source_url: https://zenodo.org/records/5174851
   license: null
-  redistribution: raw_radio_map_not_distributed
+  redistribution: external_download_required
 - id: U08
   label: Tampere-TIE1
   dataset: TAMPERE_MULTIBUILDING_5174851
@@ -84,9 +87,9 @@ units:
   expected_train: 8547
   expected_test: 2136
   floor_labels_available: true
-  source_url: null
+  source_url: https://zenodo.org/records/5174851
   license: null
-  redistribution: raw_radio_map_not_distributed
+  redistribution: external_download_required
 - id: U09
   label: Block-Z
   dataset: BlockZ-10W-1719W
@@ -97,7 +100,7 @@ units:
   source_url: null
   license: null
   redistribution: relative_coordinates_and_opaque_ap_tokens_only
-  public_input: data/public/hk_relative.csv.gz
+  public_input: data/empirical/hk_u09_ap_relative.csv.gz
 - id: U10
   label: DSI
   dataset: DSI_3778646
@@ -105,6 +108,6 @@ units:
   expected_train: 1374
   expected_test: 343
   floor_labels_available: false
-  source_url: null
+  source_url: https://zenodo.org/records/3778646
   license: null
-  redistribution: raw_radio_map_not_distributed
+  redistribution: external_download_required

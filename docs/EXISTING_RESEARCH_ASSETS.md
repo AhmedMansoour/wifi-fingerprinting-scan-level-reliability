@@ -32,4 +32,4 @@ python -m pip install -e ".[dev,empirical]"
 python scripts/reproduce_release.py --mode hk-u09
 ```
 
-The original ten-unit input archive also contains nine other relative-coordinate measured units, but their source-specific third-party redistribution permissions are recorded as pending. Those nine datasets are intentionally absent from this GitHub commit pending documented data rights, while aggregate evaluation outputs are supplied. Original floor-plan images and map vectors are never supplied.
+U01–U03 are included as measured UJIIndoorLoc study units under CC BY 4.0 with attribution. U04–U08 and U10 have original publisher download links and a formatting guide at `docs/DATASET_DOWNLOADS_AND_FORMAT.md`; their harmonized empirical copies are not hosted in this repository. Original floor-plan images and vectors are never supplied.

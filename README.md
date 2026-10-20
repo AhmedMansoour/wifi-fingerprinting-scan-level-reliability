@@ -60,6 +60,22 @@ The original coordinate origin and building-map images/vectors are not included.
 The remaining nine units' real input datasets are held for dataset-specific
 redistribution clearance; the original aggregate results are supplied.
 
+## Public UJI measurements and other dataset downloads
+
+Measured UJIIndoorLoc units **U01–U03** are available under `data/empirical/`
+with [CC BY 4.0 attribution](docs/UJI_DATA_ATTRIBUTION.md). HK U09 is also
+included in anonymous-AP, local-relative form. For **U04–U08 and U10**, use
+the [original publisher downloads and eight-column input guide](docs/DATASET_DOWNLOADS_AND_FORMAT.md).
+
+```bash
+python scripts/validate_uji_release.py
+python scripts/stage_existing_units.py --input-dir data/empirical --units U01 U02 U03
+```
+
+Use `scripts/import_external_unit.py` to adapt independently downloaded
+RSS and coordinate tables. Independently chosen source splits do not
+reproduce the paper's original train/test assignments.
+
 ## Android Studio
 
 Open `android/` in Android Studio; SDK 35, JDK 17 (or compatible Android Gradle tooling) and network access to resolve Android dependencies are required. Run `./gradlew testDebugUnitTest assembleDebug` inside `android/`. The app initializes an empty local database from `android/app/src/main/assets/database/schema.sql` and requires importing your authorized local radio map. **No populated database or original HK building data is distributed.** Java-only smoke tests can run without an Android SDK; see `android/README.md`.

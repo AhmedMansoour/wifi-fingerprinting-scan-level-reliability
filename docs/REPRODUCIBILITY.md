@@ -10,3 +10,7 @@ Four distinct execution routes must not be conflated:
 `tests/unit/` run in the public checkout. `tests/reference/` need generated products or separately supplied research assets. The default pytest configuration runs only public-safe unit tests; the reference suite is not claimed to pass without those inputs.
 
 Historical timing: the 99-run Android result concerns post-retrieval indicator/composite/warning computation, excluding scan capture and positioning stages. Cohort-relative adverse percentile thresholds do not establish prospective warning calibration; deployable cutoffs need a separate fixed calibration cohort and independent evaluation. Cross-dataset robustness is limited to the evaluated dataset units and estimators.
+
+## External measured dataset inputs
+
+See [dataset download links and canonical input format](DATASET_DOWNLOADS_AND_FORMAT.md). `scripts/import_external_unit.py` adapts wide or paired Wi-Fi RSS files, and `scripts/stage_existing_units.py` prepares radio-map matrices with the original repository code. New partitions should not be equated with the study's archived numerical results.

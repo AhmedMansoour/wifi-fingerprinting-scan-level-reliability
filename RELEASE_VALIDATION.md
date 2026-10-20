@@ -48,3 +48,7 @@ These are newly computed empirical baseline values, not the historic ESWA
 eight-estimator results. The GitHub CI reruns
 `python scripts/reproduce_release.py --mode hk-u09` and checks a fixed
 aggregate reference within a 0.03-m numerical tolerance.
+
+## Public UJI source data and external input format (2026-10-21)
+
+UJIIndoorLoc U01–U03 have 16,838 measured training scans and 4,210 measured test scans; `scripts/validate_uji_release.py` verifies their original study split counts and AP labels, and `scripts/stage_existing_units.py` prepares their radio maps. The import adapter has tests for both original wide-table and paired RSS/coordinate formats. Unhosted units link to official publishers in `docs/DATASET_DOWNLOADS_AND_FORMAT.md`.

@@ -1,1 +1,1 @@
-No empirical or third-party research observations are distributed in this checkout. See examples/synthetic_combined/ for fabricated input data. The approved empirical analysis requires an independently authorized private source.
+Measured UJIIndoorLoc U01–U03 (CC BY 4.0) and HK U09 units are included under `data/empirical/`; the HK radio map is under `data/radio_maps/`. Source download pages and formatting instructions for U04–U08 and U10 are at `docs/DATASET_DOWNLOADS_AND_FORMAT.md`. Fully synthetic examples remain under `examples/synthetic_combined/`.
