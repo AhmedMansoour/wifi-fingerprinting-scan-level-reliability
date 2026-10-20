@@ -1,0 +1,65 @@
+[
+  {
+    "source": "14_add_extratrees_ridge_transformer.py",
+    "source_sha256": "88033c20ae2a2707626655ace2e1fa21c2b0a53f05a4fdd152b84c16a43b24b9",
+    "adaptation": "Training functions retained; main/archive discovery omitted; fitted model and train-only transforms returned for separate inference."
+  },
+  {
+    "source": "15_add_attached_deep_estimators.py",
+    "source_sha256": "ad1686c536a9077408f825114439605b36534452bd38cdbcd4f60ae6b63f51bb",
+    "adaptation": "Training functions retained; main/archive discovery omitted; fitted model and train-only transforms returned for separate inference."
+  },
+  {
+    "source": "A3/Analysis/run_a3_statistics.py",
+    "source_sha256": "793e3b2fe316202d358e5f9196504b3cd17f5723d4cd5496f98bfd4a7f239ab8",
+    "adaptation": "Four unit-cluster bootstrap functions copied unchanged."
+  },
+  {
+    "source": "run_a7_extension.py",
+    "source_sha256": "16b9c6c2f9c3ac53931e80afaa8bcd2253e2012f27024b1ee684ecf7f9047ecd",
+    "adaptation": "Original numerical analysis retained; absolute workspace paths replaced with local ignored output paths.",
+    "public_path": "scripts/research/run_a7_extension.py"
+  },
+  {
+    "source": "run_a4_floor_analysis.py",
+    "source_sha256": "816a062834cdccbd9d4da199a09b6358771d845f70bf05ede462f3da344a2444",
+    "adaptation": "Original numerical analysis retained; absolute workspace paths replaced with local ignored output paths.",
+    "public_path": "scripts/research/run_a4_floor_analysis.py"
+  },
+  {
+    "source": "run_a1_sqs_ablation.py",
+    "source_sha256": "70cc4788e1ef102fa278b077e17f7a50ae045c1144e481e952e0016a7f6d56a8",
+    "adaptation": "Original numerical analysis retained; absolute workspace paths replaced with local ignored output paths.",
+    "public_path": "scripts/research/run_a1_sqs_ablation.py"
+  },
+  {
+    "source": "run_a3_statistics.py",
+    "source_sha256": "793e3b2fe316202d358e5f9196504b3cd17f5723d4cd5496f98bfd4a7f239ab8",
+    "adaptation": "Original numerical analysis retained; absolute workspace paths replaced with local ignored output paths.",
+    "public_path": "scripts/research/run_a3_statistics.py"
+  },
+  {
+    "source": "run_a6_runtime.py",
+    "source_sha256": "db6e36ba6dfbf8caf197785916dfe680218cd11b1b0cf52ec5bc475fcf4a87e0",
+    "adaptation": "Original numerical analysis retained; absolute workspace paths replaced with local ignored output paths.",
+    "public_path": "scripts/research/run_a6_runtime.py"
+  },
+  {
+    "source": "run_a4_phase2.py",
+    "source_sha256": "3fd649adf718d80712cd3e5cdf02160e1c2dcd7a1ca44d6c206f2118a020902b",
+    "adaptation": "Original numerical analysis retained; absolute workspace paths replaced with local ignored output paths.",
+    "public_path": "scripts/research/run_a4_phase2.py"
+  },
+  {
+    "source": "run_a5_sensitivity.py",
+    "source_sha256": "542837846f063fc4cde36bbc313c9d4573ffe63522d0de37c5ab722ab3b29993",
+    "adaptation": "Original numerical analysis retained; absolute workspace paths replaced with local ignored output paths.",
+    "public_path": "scripts/research/run_a5_sensitivity.py"
+  },
+  {
+    "source": "run_a5_fast.py",
+    "source_sha256": "80dc9f90f2dac24fc78c7b562f605ba2144c5f681019e10c0cebf1a4c5aec897",
+    "adaptation": "Original numerical analysis retained; absolute workspace paths replaced with local ignored output paths.",
+    "public_path": "scripts/research/run_a5_fast.py"
+  }
+]

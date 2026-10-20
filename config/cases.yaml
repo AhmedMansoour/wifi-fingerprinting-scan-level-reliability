@@ -1,0 +1,18 @@
+schema_version: 1
+selection:
+  weights:
+    severity: 0.45
+    confidently_wrong: 0.25
+    floor_hidden: 0.15
+    warning_fraction: 0.15
+  min_units: 6
+  max_per_unit_estimator: 2
+  require_all_estimator_families: true
+  include_matched_controls: true
+  stable_tie_break: [unit, estimator, scan_id]
+figure_panels:
+  - spatial_context
+  - candidate_neighborhood
+  - rss_compatibility
+  - indicator_profile
+  - decision_strip

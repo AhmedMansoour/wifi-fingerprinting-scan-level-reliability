@@ -1,0 +1,21 @@
+schema_version: 1
+association:
+  method: spearman
+  aligned_direction: true
+  bh_fdr_q: 0.05
+  correction_family: within_unit_estimator_across_indicators
+bootstrap:
+  repetitions: 10000
+  confidence_level: 0.95
+  cluster: evaluation_unit
+adaptive_gross_error:
+  tail_quantile: 0.75
+  multiplier: 1.5
+  sensitivity_quantiles: [0.70, 0.75, 0.80]
+  sensitivity_multipliers: [1.0, 1.5, 2.0]
+fixed_gross_error_m: [5, 7, 10]
+confidence_quantiles: [0.70, 0.75, 0.80]
+floor_assignment:
+  method: inverse_distance_weighted_knn_rss
+  k_values: [3, 5, 10]
+case_warning_budget: 0.20
