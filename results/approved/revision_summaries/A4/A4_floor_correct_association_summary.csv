@@ -1,0 +1,55 @@
+k,indicator_id,label,family,n_conditions,median_aligned_rho,direction_consistency_pct
+3,C_sigma,Signal-to-spread support score,Composite support,72,0.11986674091622607,68.05555555555556
+3,D_cand,Candidate-set diameter,Candidate geometry,72,0.24905068285649884,95.83333333333334
+3,FII,Fingerprint Integrity Index,Composite support,72,0.1463311076211402,95.83333333333334
+3,I_k,Cumulative-neighborhood instability,Candidate geometry,72,0.29092763429831103,98.61111111111111
+3,SQS,Scan Quality and Support Score,Composite support,72,0.2711013124277511,97.22222222222221
+3,ap_count,AP count,Scan statistics,72,0.10073179613826252,86.11111111111111
+3,ap_overlap,Maximum AP overlap,Radio-map compatibility,72,0.08429791328818695,83.33333333333334
+3,ap_set_novelty,AP-set novelty,Radio-map compatibility,72,0.08429791328818695,83.33333333333334
+3,local_rp_density,Local RP density,Local spatial support,72,0.16971664504872794,100.0
+3,max_cosine_similarity,Nearest-match cosine similarity,Radio-map compatibility,72,0.0910493407792483,66.66666666666666
+3,mean_ap_overlap,Mean AP overlap,Radio-map compatibility,72,0.07278190279347163,73.61111111111111
+3,min_rss_distance,Minimum RSS distance,Radio-map compatibility,72,0.005519388790763427,55.55555555555556
+3,nearest_match_isolation,Nearest-match isolation,Radio-map compatibility,72,0.06861791176898874,77.77777777777779
+3,nearest_rp_distance,Nearest-RP distance,Local spatial support,61,0.30524028676936654,98.36065573770492
+3,rss_gradient_proxy,RSS-gradient uncertainty proxy,Map ambiguity,72,0.27139180276268027,97.22222222222221
+3,rss_range,RSS range,Scan statistics,72,-0.1204118918489332,11.11111111111111
+3,rss_std,RSS standard deviation,Scan statistics,72,-0.07540909883774007,15.277777777777779
+3,sigma_fps,Candidate spatial spread,Candidate geometry,72,0.2811873548338776,97.22222222222221
+5,C_sigma,Signal-to-spread support score,Composite support,72,0.12030065821129282,70.83333333333334
+5,D_cand,Candidate-set diameter,Candidate geometry,72,0.24925575664501134,95.83333333333334
+5,FII,Fingerprint Integrity Index,Composite support,72,0.14922766941519755,95.83333333333334
+5,I_k,Cumulative-neighborhood instability,Candidate geometry,72,0.2927964028003608,98.61111111111111
+5,SQS,Scan Quality and Support Score,Composite support,72,0.2736760571992988,97.22222222222221
+5,ap_count,AP count,Scan statistics,72,0.09822225460894288,84.72222222222221
+5,ap_overlap,Maximum AP overlap,Radio-map compatibility,72,0.08342759250835219,87.5
+5,ap_set_novelty,AP-set novelty,Radio-map compatibility,72,0.08342759250835219,87.5
+5,local_rp_density,Local RP density,Local spatial support,72,0.17341559692593023,100.0
+5,max_cosine_similarity,Nearest-match cosine similarity,Radio-map compatibility,72,0.08980948709811264,66.66666666666666
+5,mean_ap_overlap,Mean AP overlap,Radio-map compatibility,72,0.06692035922474365,75.0
+5,min_rss_distance,Minimum RSS distance,Radio-map compatibility,72,-0.003995445159497097,48.61111111111111
+5,nearest_match_isolation,Nearest-match isolation,Radio-map compatibility,72,0.06786743212643045,77.77777777777779
+5,nearest_rp_distance,Nearest-RP distance,Local spatial support,61,0.30966138900772366,98.36065573770492
+5,rss_gradient_proxy,RSS-gradient uncertainty proxy,Map ambiguity,72,0.27495235076685126,98.61111111111111
+5,rss_range,RSS range,Scan statistics,72,-0.1163428173464077,12.5
+5,rss_std,RSS standard deviation,Scan statistics,72,-0.07529705650257443,16.666666666666664
+5,sigma_fps,Candidate spatial spread,Candidate geometry,72,0.280601238600219,97.22222222222221
+10,C_sigma,Signal-to-spread support score,Composite support,72,0.12773233119145966,73.61111111111111
+10,D_cand,Candidate-set diameter,Candidate geometry,72,0.24934985240925414,95.83333333333334
+10,FII,Fingerprint Integrity Index,Composite support,72,0.1421424468241827,95.83333333333334
+10,I_k,Cumulative-neighborhood instability,Candidate geometry,72,0.2918220494950958,98.61111111111111
+10,SQS,Scan Quality and Support Score,Composite support,72,0.2741467253718984,97.22222222222221
+10,ap_count,AP count,Scan statistics,72,0.09239693424729797,81.94444444444444
+10,ap_overlap,Maximum AP overlap,Radio-map compatibility,72,0.06978967668908015,87.5
+10,ap_set_novelty,AP-set novelty,Radio-map compatibility,72,0.06978967668908015,87.5
+10,local_rp_density,Local RP density,Local spatial support,72,0.17341588673152505,100.0
+10,max_cosine_similarity,Nearest-match cosine similarity,Radio-map compatibility,72,0.08844435898429484,66.66666666666666
+10,mean_ap_overlap,Mean AP overlap,Radio-map compatibility,72,0.07163051857877667,73.61111111111111
+10,min_rss_distance,Minimum RSS distance,Radio-map compatibility,72,-0.003474167031178056,48.61111111111111
+10,nearest_match_isolation,Nearest-match isolation,Radio-map compatibility,72,0.06661903339191921,76.38888888888889
+10,nearest_rp_distance,Nearest-RP distance,Local spatial support,61,0.30417383959493693,98.36065573770492
+10,rss_gradient_proxy,RSS-gradient uncertainty proxy,Map ambiguity,72,0.2725799564245769,97.22222222222221
+10,rss_range,RSS range,Scan statistics,72,-0.12566161515729396,12.5
+10,rss_std,RSS standard deviation,Scan statistics,72,-0.08073309073483617,15.277777777777779
+10,sigma_fps,Candidate spatial spread,Candidate geometry,72,0.27625879149094823,97.22222222222221

@@ -1,0 +1,17 @@
+{
+  "primary_M": 10,
+  "primary_pooled_median_ms": 0.5135245625,
+  "primary_pooled_p95_ms": 0.8779587812500002,
+  "primary_median_unit_median_ms": 0.4647575625,
+  "primary_max_unit_median_ms": 0.7202450625000001,
+  "candidate_retrieval_median_ms": 0.1089945,
+  "post_retrieval_median_ms": 0.3650545625,
+  "offline_prep_median_ms": 160.3617635,
+  "offline_prep_range_ms": [
+    46.567526,
+    295.643767
+  ],
+  "radio_map_memory_median_mb": 1.3537979125976562,
+  "radio_map_memory_max_mb": 7.498970031738281,
+  "validation_median_of_indicator_medians": 0.0
+}

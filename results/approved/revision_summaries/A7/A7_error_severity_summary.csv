@@ -1,0 +1,3 @@
+strategy,strategy_label,n_conditions_with_cw,median_threshold_m,median_condition_cw_error_m,q25_condition_cw_error_m,q75_condition_cw_error_m,median_condition_cc_error_m,median_condition_other_wrong_error_m,median_cw_to_cc_error_ratio,median_cw_threshold_ratio,median_cw_excess_m
+adaptive_iqr,Adaptive IQR,67,14.559612941287416,20.750903860201802,13.654107251913533,30.291271497790156,3.998778998851776,19.5696382522583,4.889796081555229,1.3341045790170356,3.9073911341130154
+fixed_7m,Fixed 7 m,78,7.0,10.080619251839735,8.924844467944144,10.85609831194661,3.101900157412101,10.574337197648624,3.047540287015447,1.4400884645485337,3.0806192518397357

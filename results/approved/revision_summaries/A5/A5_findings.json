@@ -1,0 +1,20 @@
+{
+  "adaptive_min_rank_concordance": 0.9772727272727273,
+  "adaptive_min_top6_overlap": 0.8333333333333334,
+  "adaptive_sqs_auroc_range": [
+    0.715455202613187,
+    0.8248578818993666
+  ],
+  "fixed_min_rank_concordance": 0.9318181818181819,
+  "fixed_sqs_auroc_range": [
+    0.6572272924288347,
+    0.7496652475177933
+  ],
+  "confidence_min_rank_concordance": 0.9030303030303028,
+  "confidence_cw_range": [
+    2.3255813953488373,
+    24.911995041192334
+  ],
+  "candidate_min_auroc_rank_concordance": 0.9634703196347033,
+  "candidate_min_assoc_rank_concordance": 0.9543378995433791
+}

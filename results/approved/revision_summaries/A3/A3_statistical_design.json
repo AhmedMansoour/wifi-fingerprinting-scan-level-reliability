@@ -1,0 +1,9 @@
+{
+  "n_families": 80,
+  "min_tests_per_family": 17,
+  "max_tests_per_family": 18,
+  "total_tests": 1429,
+  "alpha": 0.05,
+  "bootstrap_repetitions": 10000,
+  "bootstrap_cluster": "evaluation unit"
+}

@@ -20,8 +20,8 @@ APP_ICON_SHA256 = '62759400e1f289a522f3b7c1f441828a3f39908f0837ebb2ceb12e8cee78e
 WRAPPER = 'android/gradle/wrapper/gradle-wrapper.jar'
 WRAPPER_SHA256 = '81a82aaea5abcc8ff68b3dfcb58b3c3c429378efd98e7433460610fecd7ae45f'
 GZ_PREFIX = 'examples/synthetic_combined/'
-GZ_PATHS = {'data/empirical/hk_u09_ap_relative.csv.gz'} | {GZ_PREFIX+'combined_all_datasets.csv.gz'} | {GZ_PREFIX+f'units/U{i:02d}.csv.gz' for i in range(1,11)}
-ALLOWED_DATA = {'data/.gitkeep','data/public/README.md','reference/.gitkeep','reference/README.md','data/empirical/hk_u09_ap_relative.csv.gz'}
+GZ_PATHS = {'data/empirical/hk_u09_test_ordered.csv.gz','data/radio_maps/hk_u09_train.csv.gz'} | {'data/empirical/hk_u09_ap_relative.csv.gz'} | {GZ_PREFIX+'combined_all_datasets.csv.gz'} | {GZ_PREFIX+f'units/U{i:02d}.csv.gz' for i in range(1,11)}
+ALLOWED_DATA = {'data/.gitkeep','data/public/README.md','reference/.gitkeep','reference/README.md','data/empirical/hk_u09_ap_relative.csv.gz','data/empirical/hk_u09_test_ordered.csv.gz','data/radio_maps/hk_u09_train.csv.gz'}
 EMBED = re.compile(rb'(?:data:image/|<svg\b|<image\b|\bpathData\s*=)', re.I)
 
 

@@ -41,6 +41,25 @@ See [the reproducibility protocol](docs/HK_U09_EMPIRICAL_REPRODUCIBILITY.md).
 This is a newly calculated empirical baseline, not a reconstruction of the historical
 eight-estimator ESWA results over ten dataset units.
 
+## Existing ESWA research data, radio maps and results
+
+The repository already provides the original Python and Android code. Added
+research assets include the measured **HK U09 radio map** (3,319 fingerprints),
+831 ordered held-out scans, **6,648 original eight-estimator predictions**,
+831 original scan-level indicator/SQS records, 6,648 warning-decision records,
+and **27 approved aggregate tables for the ten-unit study**.
+
+These are historical research outputs, not replacement experiments.
+See [existing research assets](docs/EXISTING_RESEARCH_ASSETS.md).
+
+```bash
+python scripts/verify_existing_research_assets.py
+```
+
+The original coordinate origin and building-map images/vectors are not included.
+The remaining nine units' real input datasets are held for dataset-specific
+redistribution clearance; the original aggregate results are supplied.
+
 ## Android Studio
 
 Open `android/` in Android Studio; SDK 35, JDK 17 (or compatible Android Gradle tooling) and network access to resolve Android dependencies are required. Run `./gradlew testDebugUnitTest assembleDebug` inside `android/`. The app initializes an empty local database from `android/app/src/main/assets/database/schema.sql` and requires importing your authorized local radio map. **No populated database or original HK building data is distributed.** Java-only smoke tests can run without an Android SDK; see `android/README.md`.

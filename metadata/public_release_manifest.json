@@ -6,8 +6,8 @@
   "files": [
     {
       "path": ".github/workflows/ci.yml",
-      "size_bytes": 1515,
-      "sha256": "aadbe392cda72918df61362d0f1e2a328368843b002534f274b18080e1776536"
+      "size_bytes": 1578,
+      "sha256": "ceb5c2a0cfa0c01ff149cf366dca3e8b12ee5270a30861454d77511b689d7fd6"
     },
     {
       "path": ".gitignore",
@@ -26,8 +26,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 5074,
-      "sha256": "e903e2713a64db7b68533f16820b2fcdd4eee3bf1fbf4b2729d945e85678669b"
+      "size_bytes": 5930,
+      "sha256": "9de526e9e2b35a7435950f552f32bd500b56ba1d92cf977a7a4f564c818658dd"
     },
     {
       "path": "RELEASE_VALIDATION.md",
@@ -450,9 +450,19 @@
       "sha256": "b99bac3454e8f0f306c7fb8c012a7def5e277251c8013304e50e02ae51717078"
     },
     {
+      "path": "data/empirical/hk_u09_test_ordered.csv.gz",
+      "size_bytes": 140595,
+      "sha256": "616b38dd551d2fcaf891d51ed742fbff3e064e4e859c4f8ebaf2fb887694105c"
+    },
+    {
       "path": "data/public/README.md",
       "size_bytes": 229,
       "sha256": "92ffbc52718039f3eb1ce62ce79efbe04dd477a1e1bc25206a680e5ab71524de"
+    },
+    {
+      "path": "data/radio_maps/hk_u09_train.csv.gz",
+      "size_bytes": 493697,
+      "sha256": "74a202c55d35244da1a82343a2447363199b6622ebc9c2fddd9eb0916ab2fa3a"
     },
     {
       "path": "docs/.gitkeep",
@@ -488,6 +498,11 @@
       "path": "docs/ESTIMATORS.md",
       "size_bytes": 2085,
       "sha256": "7cc6c5e72bdeaf7aeabc27af3e2a24945521389e2731bd8fcef3ee92933f07e3"
+    },
+    {
+      "path": "docs/EXISTING_RESEARCH_ASSETS.md",
+      "size_bytes": 3060,
+      "sha256": "b0d84f03f8ba075c2b825d58dfbf699c6792792a8e02f665c56e3a11c49db79e"
     },
     {
       "path": "docs/GETTING_STARTED.md",
@@ -615,6 +630,11 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
+      "path": "metadata/existing_research_asset_manifest.json",
+      "size_bytes": 6988,
+      "sha256": "11e0d3e15d2a0def15892b1f8a2c23dfeacc136d85d7c82a633839cee0525927"
+    },
+    {
       "path": "metadata/source_provenance.json",
       "size_bytes": 3391,
       "sha256": "b2af8975519635cff4eb581b554237855ade4cc7c656d2a912bc56cb6ab08a0d"
@@ -643,6 +663,156 @@
       "path": "results/.gitkeep",
       "size_bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "results/approved/legacy_canonical/cross_dataset_robustness_summary_legacy.csv",
+      "size_bytes": 3749,
+      "sha256": "232a6c562c5222101efecb5e9d5ae11043d31a430aed41d10ae9656405699381"
+    },
+    {
+      "path": "results/approved/legacy_canonical/estimator_error_summary.csv",
+      "size_bytes": 1183,
+      "sha256": "a268838f10173f609ed8129f793c4704e6c1b774bd10cfde4b03f0bf0eb5ebfa"
+    },
+    {
+      "path": "results/approved/legacy_canonical/gross_error_adaptive_summary_legacy.csv",
+      "size_bytes": 4486,
+      "sha256": "66010e8e83865375ce9d5ded27d2aa8f926e6d02ccf531ab8d3c654db8a80bfe"
+    },
+    {
+      "path": "results/approved/legacy_canonical/gross_error_fixed7m_summary_legacy.csv",
+      "size_bytes": 4471,
+      "sha256": "e4cd4a3814d3fbea30012333e8104211eda8881ab109c4e3c9ed9991d04bac1b"
+    },
+    {
+      "path": "results/approved/legacy_canonical/indicator_error_association_summary_legacy.csv",
+      "size_bytes": 2288,
+      "sha256": "2de3acd427570a4122fae645bcce8c757048f6589e8122b1a2057af86b9d6ad7"
+    },
+    {
+      "path": "results/approved/revision_summaries/A1/A1_SQS_complete_summary.csv",
+      "size_bytes": 9261,
+      "sha256": "edb627757393f78d304e80a2e8681fc5ea26250fa0f24a07ce7e66899694db15"
+    },
+    {
+      "path": "results/approved/revision_summaries/A1/A1_SQS_main_component_ablation_summary.csv",
+      "size_bytes": 5472,
+      "sha256": "d8bd40887f6c0c97a506d2dae2a958bc310cb59b84b991b9b48198c7def286cf"
+    },
+    {
+      "path": "results/approved/revision_summaries/A1/A1_SQS_reconstruction_audit.csv",
+      "size_bytes": 133,
+      "sha256": "6078ff4af70d7275a229ed3667cc25d998c3d7cb9a34737a4c38a5439a8e998c"
+    },
+    {
+      "path": "results/approved/revision_summaries/A3/A3_gross_error_adaptive_summary_ci.csv",
+      "size_bytes": 5320,
+      "sha256": "cb79e7c17ccd952ac79dd197fda46e100d2bf4a78f72d9fc758d43505b836374"
+    },
+    {
+      "path": "results/approved/revision_summaries/A3/A3_gross_error_fixed7m_summary_ci.csv",
+      "size_bytes": 5387,
+      "sha256": "e92d493b76453ba623eccd030e1bde79e2edac61fede51cd20b02bdf3a32be97"
+    },
+    {
+      "path": "results/approved/revision_summaries/A3/A3_indicator_error_association_summary_ci_bh.csv",
+      "size_bytes": 3669,
+      "sha256": "ab7a9c0d1800ea0c1e12673fab8d378beec4a2c36b98159e3f9e406e3de29a53"
+    },
+    {
+      "path": "results/approved/revision_summaries/A3/A3_statistical_design.json",
+      "size_bytes": 198,
+      "sha256": "f6531fdf1e7bc4a315773013de0732d5411a731e7bd7ea159950858ecd79c5c7"
+    },
+    {
+      "path": "results/approved/revision_summaries/A4/A4_floor_correct_adaptive_discrimination_summary.csv",
+      "size_bytes": 6567,
+      "sha256": "02a5d80a6380a7a1282274e9a345b165e8e9b91e161d021d07c787639958262f"
+    },
+    {
+      "path": "results/approved/revision_summaries/A4/A4_floor_correct_association_summary.csv",
+      "size_bytes": 5290,
+      "sha256": "8aeb22fcae5206cce40adc9415934742f089341e5462c3c925c92c6e587b99e3"
+    },
+    {
+      "path": "results/approved/revision_summaries/A4/A4_floor_hit_rate_summary.csv",
+      "size_bytes": 584,
+      "sha256": "79614eb80aa8e7255b3e5fc46d5717c8420d4a948dbc5091218b4511666e8f8f"
+    },
+    {
+      "path": "results/approved/revision_summaries/A5/A5_adaptive_rule_summary.csv",
+      "size_bytes": 1120,
+      "sha256": "13fc8e98846f2f3c24fd5ff0c8719d47258ab31234c3587a9679786a8fd5ed87"
+    },
+    {
+      "path": "results/approved/revision_summaries/A5/A5_candidate_M_stability_summary.csv",
+      "size_bytes": 186,
+      "sha256": "591762e3a0ebf47a7156884a8a4b48d7a0724f763640caa21b638e37a52ae7fb"
+    },
+    {
+      "path": "results/approved/revision_summaries/A5/A5_findings.json",
+      "size_bytes": 584,
+      "sha256": "861a12d71a51283b9afcedb6ff3426bc741a6cd8fad568e03be8a2f0e25ce3c8"
+    },
+    {
+      "path": "results/approved/revision_summaries/A5/A5_fixed_threshold_summary.csv",
+      "size_bytes": 340,
+      "sha256": "7b69f8864def992260491c6f81f2d071795c803260584c6f305b266c1544faef"
+    },
+    {
+      "path": "results/approved/revision_summaries/A5/A5_rank_stability_summary.csv",
+      "size_bytes": 582,
+      "sha256": "1bfa4cc4cfe1d3f1eb276e27e97bfa54925d394ac7e9b809300e49f5543e20e3"
+    },
+    {
+      "path": "results/approved/revision_summaries/A6/A6_findings.json",
+      "size_bytes": 557,
+      "sha256": "ac68f6e4ac7cdd3bfbd194ebd1103746f81247a794b220e71714c2475d5fc5ad"
+    },
+    {
+      "path": "results/approved/revision_summaries/A6/A6_primary_phase_summary.csv",
+      "size_bytes": 597,
+      "sha256": "7fa68d86e64f216e4433c6aaaa199136fc2db2f3b675277a0c1dc737e9295ea3"
+    },
+    {
+      "path": "results/approved/revision_summaries/A6/A6_runtime_summary_by_M.csv",
+      "size_bytes": 2637,
+      "sha256": "4dc99b25c1a8c3966f60e83284bb44b8ca56dac2603dec9cbb65c082f27f5f17"
+    },
+    {
+      "path": "results/approved/revision_summaries/A7/A7_error_severity_summary.csv",
+      "size_bytes": 650,
+      "sha256": "5671007b5bacd6c1134a6e63c4b6f7b218dc870ce7c690c90c54250868a86a14"
+    },
+    {
+      "path": "results/approved/revision_summaries/A7/A7_findings.json",
+      "size_bytes": 16546,
+      "sha256": "013ada96c8a77ff16f5e19073d1b1cc8dc33edcf39f4fd9391be549a28bcdbcf"
+    },
+    {
+      "path": "results/approved/revision_summaries/A7/A7_four_state_summary.csv",
+      "size_bytes": 1328,
+      "sha256": "4bb81e45048c362d3330af3e8a9ea094ce8674cb308f77064b53ddfb73af445a"
+    },
+    {
+      "path": "results/approved/revision_summaries/A7/A7_secondary_screening_summary.csv",
+      "size_bytes": 12053,
+      "sha256": "480c80f29296c2f429aa57f91465ab807f5e5c075a017e9a7719956e9fe66ddd"
+    },
+    {
+      "path": "results/empirical/hk_u09/historical_estimator_predictions.csv.gz",
+      "size_bytes": 167983,
+      "sha256": "27ea8c845396c592a529b39ef13dd9adba69ae90a6c0c25db40e5a8713395934"
+    },
+    {
+      "path": "results/empirical/hk_u09/historical_reliability_decisions.csv.gz",
+      "size_bytes": 1081160,
+      "sha256": "219194d817f5808fa082a9a51060dd86c2e2999e1f565aac34c2488276567200"
+    },
+    {
+      "path": "results/empirical/hk_u09/historical_scan_reliability.csv.gz",
+      "size_bytes": 112140,
+      "sha256": "cfa3ffa49d0bde0fdb3cf1c16f46f7b97e3b67fd37545f7b973b2c3b67ce79c8"
     },
     {
       "path": "scripts/.gitkeep",
@@ -676,8 +846,8 @@
     },
     {
       "path": "scripts/check_public_release.py",
-      "size_bytes": 5862,
-      "sha256": "267e46708647415ba8b085f267d9cd3df16217c0cbd8a5b178603e2c869a84ba"
+      "size_bytes": 6030,
+      "sha256": "a703818951635ef453950ca39677d87d324cf08b160379c3a0952fc90ec255dc"
     },
     {
       "path": "scripts/create_public_synthetic_combined.py",
@@ -808,6 +978,11 @@
       "path": "scripts/validate_synthetic_combined.py",
       "size_bytes": 2422,
       "sha256": "60f8482e6d1e3fa4987f057573e4ab33f96f4ec8fc5af136c5813fdf2a3b2cc0"
+    },
+    {
+      "path": "scripts/verify_existing_research_assets.py",
+      "size_bytes": 3671,
+      "sha256": "505043a1e82fcbcc11d56a786fd66dc2b301cf0cd6484f4c046d75c893fe0b18"
     },
     {
       "path": "src/.gitkeep",
