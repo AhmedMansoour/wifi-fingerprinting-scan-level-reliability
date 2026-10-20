@@ -1,13 +1,13 @@
 {
-  "release_kind": "PUBLIC_SOURCE_SYNTHETIC_PLUS_HK_U09",
+  "release_kind": "PUBLIC_SOURCE_SYNTHETIC_HK_UJI",
   "empirical_data_included": true,
   "synthetic_fixture_scans": 68149,
   "source": "byte-accurate tracked checkout",
   "files": [
     {
       "path": ".github/workflows/ci.yml",
-      "size_bytes": 1578,
-      "sha256": "ceb5c2a0cfa0c01ff149cf366dca3e8b12ee5270a30861454d77511b689d7fd6"
+      "size_bytes": 1729,
+      "sha256": "d604c5b3f93e33bf8b5caf6b3a361297148c94e7206256776f5d0fce4cf18b26"
     },
     {
       "path": ".gitignore",
@@ -26,13 +26,13 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 5930,
-      "sha256": "9de526e9e2b35a7435950f552f32bd500b56ba1d92cf977a7a4f564c818658dd"
+      "size_bytes": 6658,
+      "sha256": "71985cedc30f37438b501bcc048f522800d2c92fe89b29290c0c9552d4cef515"
     },
     {
       "path": "RELEASE_VALIDATION.md",
-      "size_bytes": 3809,
-      "sha256": "b5ddd48c5dc067e557f0230c606bb5753218499dbd27bb00fa1c4962525da55b"
+      "size_bytes": 4302,
+      "sha256": "fdfa6fd1161a33417ea614a61d78606b6f768e74c19e9590a3353ea0bc62de25"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -396,8 +396,8 @@
     },
     {
       "path": "config/datasets.yaml",
-      "size_bytes": 2823,
-      "sha256": "f6efc59372f5fc63a90d685804ea320d445d6272123987d007e82b5669bd3c16"
+      "size_bytes": 3285,
+      "sha256": "9f4cdd22a469c3f1022aa192b7be5e517c90eb08fb8c6c9d7412fb396b2b925c"
     },
     {
       "path": "config/estimators.yaml",
@@ -445,6 +445,21 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
+      "path": "data/empirical/U01.csv.gz",
+      "size_bytes": 271420,
+      "sha256": "9fbb0a623b7414218f219dfdbfb0d0652f556fa46001766d262e737cd8e87ede"
+    },
+    {
+      "path": "data/empirical/U02.csv.gz",
+      "size_bytes": 204422,
+      "sha256": "1247bdf87d7f0a2b1ad96914c0b4f139b52e2ac90d3b05ace0d55b623d0bdb23"
+    },
+    {
+      "path": "data/empirical/U03.csv.gz",
+      "size_bytes": 443484,
+      "sha256": "2fac9689f508b46cf83775a05337c3fdceb3cee517008377ae5e298b7c1715c1"
+    },
+    {
       "path": "data/empirical/hk_u09_ap_relative.csv.gz",
       "size_bytes": 792004,
       "sha256": "b99bac3454e8f0f306c7fb8c012a7def5e277251c8013304e50e02ae51717078"
@@ -456,8 +471,8 @@
     },
     {
       "path": "data/public/README.md",
-      "size_bytes": 229,
-      "sha256": "92ffbc52718039f3eb1ce62ce79efbe04dd477a1e1bc25206a680e5ab71524de"
+      "size_bytes": 334,
+      "sha256": "8d2578d3b407b5f8f9a4dfe6beeb07aa917e7ee5b7d134cee3a1c91ba1ffa57c"
     },
     {
       "path": "data/radio_maps/hk_u09_train.csv.gz",
@@ -490,9 +505,14 @@
       "sha256": "220052e888d888a8b2dac5cac85de84b1c8883cb8c92617e099cbd43b230ae54"
     },
     {
+      "path": "docs/DATASET_DOWNLOADS_AND_FORMAT.md",
+      "size_bytes": 10761,
+      "sha256": "7236ff8964d179a8754f7e126a758ba4706defdafd845639a07f361f7635eee4"
+    },
+    {
       "path": "docs/DATA_AND_PRIVACY.md",
-      "size_bytes": 1017,
-      "sha256": "364f1da57f859935c0faf5ddf9fcdf12137b25a7002619b11b5ca90631b44266"
+      "size_bytes": 1156,
+      "sha256": "9753093db97e82cdb0be345a6d86ce85a15e92bc275b309f2b8d1c400e25f3a7"
     },
     {
       "path": "docs/ESTIMATORS.md",
@@ -501,8 +521,8 @@
     },
     {
       "path": "docs/EXISTING_RESEARCH_ASSETS.md",
-      "size_bytes": 3060,
-      "sha256": "b0d84f03f8ba075c2b825d58dfbf699c6792792a8e02f665c56e3a11c49db79e"
+      "size_bytes": 3005,
+      "sha256": "c8de2db44f14801e7564cf79636ca0f45f268790544ea5608b13990aea37ba68"
     },
     {
       "path": "docs/GETTING_STARTED.md",
@@ -526,8 +546,8 @@
     },
     {
       "path": "docs/REPRODUCIBILITY.md",
-      "size_bytes": 1983,
-      "sha256": "8232489297b45644e9a1c8acc7a16c8054383d431f690c422a01a14f0b3baae6"
+      "size_bytes": 2367,
+      "sha256": "f63777f79f412c5425c980decd9966c61df276aa5366c8cd718f829653d3740c"
     },
     {
       "path": "docs/RESEARCH_OVERVIEW.md",
@@ -540,9 +560,19 @@
       "sha256": "7077e38758bff8ecf960e28cd37b3965a7474174f8ec137171666a0b0b40b088"
     },
     {
+      "path": "docs/TEN_UNIT_LOCAL_REPRODUCTION.md",
+      "size_bytes": 3999,
+      "sha256": "baa5f5b30287d76fd616ac65ee1dc02d3ac226da733eb9c454414f1f42d0d1bd"
+    },
+    {
       "path": "docs/UI_SCOPE.md",
       "size_bytes": 642,
       "sha256": "bc9e504bd8c518259810fb1cbd6a6b1065faa21e1f1c97f3d29a93f0a9b86dd7"
+    },
+    {
+      "path": "docs/UJI_DATA_ATTRIBUTION.md",
+      "size_bytes": 1341,
+      "sha256": "88f2428276f0686e285c6e4e897eca9460ddf00c5a11996f13d6ec7c91357a5f"
     },
     {
       "path": "docs/WARNING_CALIBRATION.md",
@@ -632,7 +662,7 @@
     {
       "path": "metadata/existing_research_asset_manifest.json",
       "size_bytes": 6988,
-      "sha256": "11e0d3e15d2a0def15892b1f8a2c23dfeacc136d85d7c82a633839cee0525927"
+      "sha256": "bcb1a1faa2707fb35d0bb9038233eaeb32cc9ce73560b0233845a649829e56af"
     },
     {
       "path": "metadata/source_provenance.json",
@@ -846,8 +876,8 @@
     },
     {
       "path": "scripts/check_public_release.py",
-      "size_bytes": 6030,
-      "sha256": "a703818951635ef453950ca39677d87d324cf08b160379c3a0952fc90ec255dc"
+      "size_bytes": 6202,
+      "sha256": "8c73f8dd5d0ac9541a5eb795c1095aefa9d23166eda12a95e4ebc1254e1bf270"
     },
     {
       "path": "scripts/create_public_synthetic_combined.py",
@@ -870,14 +900,19 @@
       "sha256": "a86d3501f9a6e77bc6a5217d55e5b0cdd4baa11e9c863266963f434e41020db4"
     },
     {
+      "path": "scripts/import_external_unit.py",
+      "size_bytes": 8780,
+      "sha256": "852af4e54692cdf1e9a23a363530f7e0fd828d16244c3bee35878c0677dbfafe"
+    },
+    {
       "path": "scripts/prepare_research_workspace.py",
       "size_bytes": 2836,
       "sha256": "9404eb5d37917dd4f24431ec147fadae356410c504df15ae89a9f0ca71147f32"
     },
     {
       "path": "scripts/refresh_release_manifest.py",
-      "size_bytes": 2815,
-      "sha256": "f0031e783f5b1bb500950e85421ac5917052c1b61fd52c7d61e7c69a06678c0a"
+      "size_bytes": 2810,
+      "sha256": "1874612a22ed7bbb989c0b8f5c525d179e755eb4c88f00c0e742c9cf52c26e80"
     },
     {
       "path": "scripts/reproduce_release.py",
@@ -970,6 +1005,11 @@
       "sha256": "5334a31805d499029788eccbad978c7833bc098f536749b298bb07b6be4d36bc"
     },
     {
+      "path": "scripts/stage_existing_units.py",
+      "size_bytes": 5559,
+      "sha256": "915186e6a6ab593eecc32422972e96de6bff0094b8f5af0e3efbcfde67f543fb"
+    },
+    {
       "path": "scripts/validate_hk_empirical.py",
       "size_bytes": 1857,
       "sha256": "40f4de3140af0e204cf5809d2ed593b9466dcf655b314e693706b4289d644280"
@@ -978,6 +1018,11 @@
       "path": "scripts/validate_synthetic_combined.py",
       "size_bytes": 2422,
       "sha256": "60f8482e6d1e3fa4987f057573e4ab33f96f4ec8fc5af136c5813fdf2a3b2cc0"
+    },
+    {
+      "path": "scripts/validate_uji_release.py",
+      "size_bytes": 1654,
+      "sha256": "539401eeef4f04e25d68a8bc3db3c3c9dd42d532d61e3caecc858362e5e31712"
     },
     {
       "path": "scripts/verify_existing_research_assets.py",
@@ -1233,6 +1278,11 @@
       "path": "tests/reference/test_sqs_regression.py",
       "size_bytes": 430,
       "sha256": "ccd275c831a97715659f62340d9edba34ba2236bd0254054289f5a8f831082d2"
+    },
+    {
+      "path": "tests/test_external_unit_input.py",
+      "size_bytes": 2347,
+      "sha256": "60b3f9291e9fdfa3d70b959462f53f0ca0600a0d4ad5fcefe0c1f61ae317c82c"
     },
     {
       "path": "tests/unit/test_calibration.py",
