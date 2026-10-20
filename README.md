@@ -26,6 +26,20 @@ python scripts/prepare_research_workspace.py --combined examples/synthetic_combi
 
 The second command constructs a local, ignored analysis workspace from synthetic values; it does not retrain or reconstruct historical paper results.
 
+## Reproduce an empirical HK U09 baseline
+
+The released HK U09 RSS data (3,319 training scans and 831 test scans) support a
+fresh, fully specified evaluation using the existing KNN, WKNN and Random Forest
+implementations.
+
+```bash
+python scripts/reproduce_release.py --mode hk-u09
+```
+
+See [the reproducibility protocol](docs/HK_U09_EMPIRICAL_REPRODUCIBILITY.md).
+This is a newly calculated empirical baseline, not a reconstruction of the historical
+eight-estimator ESWA results over ten dataset units.
+
 ## Android Studio
 
 Open `android/` in Android Studio; SDK 35, JDK 17 (or compatible Android Gradle tooling) and network access to resolve Android dependencies are required. Run `./gradlew testDebugUnitTest assembleDebug` inside `android/`. The app initializes an empty local database from `android/app/src/main/assets/database/schema.sql` and requires importing your authorized local radio map. **No populated database or original HK building data is distributed.** Java-only smoke tests can run without an Android SDK; see `android/README.md`.

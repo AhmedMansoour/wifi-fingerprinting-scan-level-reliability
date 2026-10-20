@@ -32,3 +32,19 @@ After making changes in a *private checkout* and completing confidentiality revi
 ## HK U09 empirical input (2026-10-21)
 
 `data/empirical/hk_u09_ap_relative.csv.gz` contains measured RSS for 4,150 HK scans (3,319 train; 831 test), 525 AP labels (`AP1`–`AP525`), 11 floor categories and preserved relative-metric coordinates. The file is checksum pinned and validated by `scripts/validate_hk_empirical.py`. This single empirical unit is not the complete ten-unit historical dataset or a reproduction of the paper's aggregate numerical results.
+
+## Executable empirical HK U09 baselines
+
+On the published 3,319-training/831-test scan split, with k=5 Euclidean
+KNN/WKNN (WKNN power=2) and seeded repository Random Forest:
+
+| Estimator | Mean 2D error (m) | Median (m) | P90 (m) |
+|---|---:|---:|---:|
+| KNN | 4.376629 | 3.450368 | 9.116105 |
+| WKNN | 4.153695 | 3.239461 | 8.632744 |
+| Random Forest | 6.351815 | 5.055917 | 11.910807 |
+
+These are newly computed empirical baseline values, not the historic ESWA
+eight-estimator results. The GitHub CI reruns
+`python scripts/reproduce_release.py --mode hk-u09` and checks a fixed
+aggregate reference within a 0.03-m numerical tolerance.

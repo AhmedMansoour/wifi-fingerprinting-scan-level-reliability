@@ -28,7 +28,7 @@ def missing_reference_inputs(root: Path) -> list[str]:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--mode", choices=["demo", "reference", "published"], default="demo")
+    parser.add_argument("--mode", choices=["demo", "reference", "published", "hk-u09"], default="demo")
     parser.add_argument("--check-only", action="store_true", help="Check required inputs without writing outputs")
     args = parser.parse_args()
     if args.mode == "demo":
@@ -40,6 +40,18 @@ def main() -> None:
         subprocess.run([sys.executable, str(ROOT / "scripts/run_synthetic_demo.py"),
                         "--input", str(ROOT / "results/demo/synthetic_scans.csv"),
                         "--output", str(ROOT / "results/demo/demo_results.json")], check=True)
+        return
+    if args.mode == "hk-u09":
+        if args.check_only:
+            import hashlib
+            path = ROOT / "data/empirical/hk_u09_ap_relative.csv.gz"
+            if not path.is_file():
+                parser.exit(2, "Missing released HK U09 data file\n")
+            from validate_hk_empirical import validate
+            print(json.dumps(validate(path), indent=2))
+            return
+        subprocess.run([sys.executable, str(ROOT / "scripts/evaluate_hk_u09.py"),
+                        "--check-frozen"], check=True)
         return
     missing = missing_reference_inputs(ROOT)
     if missing:

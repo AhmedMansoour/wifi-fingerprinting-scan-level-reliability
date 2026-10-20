@@ -6,8 +6,8 @@
   "files": [
     {
       "path": ".github/workflows/ci.yml",
-      "size_bytes": 1442,
-      "sha256": "d76f7b128fb127a1bc8eaf161e00c0b9730afb72bc40690558a7d187a095b6ce"
+      "size_bytes": 1505,
+      "sha256": "fc695407ab93332f9e99f95f3bd11c13e981f930f8a55e0e5b586955ff396345"
     },
     {
       "path": ".gitignore",
@@ -26,13 +26,13 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 4526,
-      "sha256": "1058eb4d0d662c0011eda5ce7d49b6ada6041916f35a22a39f1a932879ee544c"
+      "size_bytes": 5030,
+      "sha256": "cf5d6593d00e9685185a6cddf13f4a6a50ec4be4efe14470f04d7d88ad5d553f"
     },
     {
       "path": "RELEASE_VALIDATION.md",
-      "size_bytes": 3170,
-      "sha256": "edef86736a0913d2d0db3385b5346159828bd97592dd55ae0e2dac09f70912c2"
+      "size_bytes": 3809,
+      "sha256": "b5ddd48c5dc067e557f0230c606bb5753218499dbd27bb00fa1c4962525da55b"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -500,14 +500,19 @@
       "sha256": "03894d174ee1231ac652b187152670d4bcf2402627f629497cdbcc477b8e0f4f"
     },
     {
+      "path": "docs/HK_U09_EMPIRICAL_REPRODUCIBILITY.md",
+      "size_bytes": 2952,
+      "sha256": "8bae21eb92e30ba29aa0dd4238d64c028468794cfa1e7ac746f54520b7f75380"
+    },
+    {
       "path": "docs/INDICATORS.md",
       "size_bytes": 3016,
       "sha256": "a34a76f73af89e671e2c6075f1dc7d7633974e816c2ffb489da2d5d543edff55"
     },
     {
       "path": "docs/REPRODUCIBILITY.md",
-      "size_bytes": 1632,
-      "sha256": "cadfcd30b70b8c303c7dae6a416f549c3724c199151f310359be9e5195324cfd"
+      "size_bytes": 1983,
+      "sha256": "8232489297b45644e9a1c8acc7a16c8054383d431f690c422a01a14f0b3baae6"
     },
     {
       "path": "docs/RESEARCH_OVERVIEW.md",
@@ -528,6 +533,11 @@
       "path": "docs/WARNING_CALIBRATION.md",
       "size_bytes": 1907,
       "sha256": "8d1d7f597ac3b6c5c7bdd6125aed3237e6f20976f42fca1522822651a2461b81"
+    },
+    {
+      "path": "docs/hk_u09_expected_summary.json",
+      "size_bytes": 1045,
+      "sha256": "15abfc21534c24c413f54e4ce907c8a199a279a2ce5f878c5e97569f16f8c726"
     },
     {
       "path": "examples/.gitkeep",
@@ -675,6 +685,11 @@
       "sha256": "1d547a018e8d8337e54e0ef86c7e543ac9e5d3e97336659823e6ca8cf6b6498d"
     },
     {
+      "path": "scripts/evaluate_hk_u09.py",
+      "size_bytes": 9084,
+      "sha256": "5ad1f427115835345e28ccce3cb49c19654b7422c185264ee4af25bf06c6f29b"
+    },
+    {
       "path": "scripts/export_relative_errors.py",
       "size_bytes": 3262,
       "sha256": "a897ab35c379d9dc60eeedde8f3c132858f9e4215a8adc521a551bd4f7901360"
@@ -696,8 +711,8 @@
     },
     {
       "path": "scripts/reproduce_release.py",
-      "size_bytes": 4928,
-      "sha256": "28f2e7822c084029e29e9639d736d5c0eeccdd446d0693c39636edd7a6e6eaba"
+      "size_bytes": 5479,
+      "sha256": "9080b323aac6153bc7ee88e7918031c706184f2774c7e938ee87dd43d47701d4"
     },
     {
       "path": "scripts/reproduce_uncertainty.py",
@@ -1068,6 +1083,11 @@
       "path": "tests/unit/test_harmonization.py",
       "size_bytes": 840,
       "sha256": "e19ec318d23ab1a1dc83fa8b150b1bc2925976387e9374afcc2efac3fdec06ca"
+    },
+    {
+      "path": "tests/unit/test_hk_u09_empirical.py",
+      "size_bytes": 1850,
+      "sha256": "7bfb6425d937050f5db9979eea878785bd79a778617982c33036c5aa400c2b5e"
     },
     {
       "path": "tests/unit/test_public_data.py",
