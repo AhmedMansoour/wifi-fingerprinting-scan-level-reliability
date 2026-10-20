@@ -1,68 +1,76 @@
-# Python
+# Python and local environments
 __pycache__/
 *.py[cod]
 .venv/
 venv/
-env/
 *.egg-info/
-.eggs/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
-.ipynb_checkpoints/
-.coverage
-htmlcov/
-
-# Build outputs (Python, Java, and Android)
+.env
+.env.*
+!.env.example
+# Java, Android, Gradle, and IDE files
 build/
 dist/
 out/
 target/
+.gradle/
+.gradle-dist/
+.cxx/
+.externalNativeBuild/
+.idea/
+.vscode/
+*.iml
+local.properties
 *.class
 *.apk
 *.aab
 *.dex
-*.aar
-hs_err_pid*
-replay_pid*
-
-# Android Studio and Gradle
-.gradle/
-.cxx/
-.externalNativeBuild/
-local.properties
-captures/
 *.jks
 *.keystore
-
-# IDE files
-.idea/
-.vscode/
-*.iml
-*.ipr
-*.iws
-.classpath
-.project
-.settings/
-
-# Temporary files and operating-system files
+# Local research inputs and generated outputs
+/data/*
+!/data/.gitkeep
+!/data/public/
+/reference/*
+!/reference/.gitkeep
+!/reference/README.md
+!/reference/approved/
+!/reference/public/
+/results/*
+!/results/.gitkeep
+/site/
+/public_site/
+/android/app/src/main/assets/database/*.db
+/android/app/src/main/assets/floorplans/
+# Temporary files
 *.log
 *.tmp
-*.temp
 *.bak
 *.swp
-*.swo
 *~
 .DS_Store
 Thumbs.db
-tmp/
-temp/
 
-# Local environment files
-.env
-.env.*
-!.env.example
+# Private site assets, mappings, manuscripts, and archives
+*.db
+*.sqlite*
+*.zip
+*.pdf
+*.tex
+*.docx
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.svg
+*.dxf
+*.dwg
+*.geojson
+*inverse_mapping*
+*coordinate_origin*
+*private_mapping*
 
-# Generated results; retain the folder placeholder
-/results/*
-!/results/.gitkeep
+# Generated from ten versioned synthetic unit inputs
+/examples/synthetic_combined/combined_all_datasets.csv.gz

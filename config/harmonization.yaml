@@ -1,0 +1,21 @@
+schema_version: 1
+coordinate_fields: [x, y]
+floor_field: floor
+split_field: split
+split_values: [train, test]
+rss_field: rss_json
+missing_rss_dbm: -110.0
+ap_vocabularies:
+  estimator:
+    source: training_only
+    max_features: null
+    ordering: frequency_desc_then_ap_id
+  diagnostic_probe:
+    source: weighted_train_and_heldout_query
+    training_weight: 2
+    query_weight: 1
+    max_features: 180
+    ordering: weighted_frequency_desc_then_ap_id
+canonical_outputs:
+  scans: data/processed/harmonized_scans
+  unit_directory: data/processed/units

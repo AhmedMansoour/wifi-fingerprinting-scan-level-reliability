@@ -1,0 +1,32 @@
+schema_version: 1
+candidate_probe:
+  distance: normalized_euclidean_rss
+  primary_m: 10
+  sensitivity_m: [5, 10, 15]
+indicators:
+  - {id: ap_count, label: AP count, group: scan_statistics, adverse_direction: low}
+  - {id: rss_std, label: RSS standard deviation, group: scan_statistics, adverse_direction: high}
+  - {id: rss_range, label: RSS range, group: scan_statistics, adverse_direction: high}
+  - {id: min_rss_distance, label: Minimum RSS distance, group: compatibility, adverse_direction: high}
+  - {id: nearest_match_isolation, label: Nearest-match isolation, group: compatibility, adverse_direction: low}
+  - {id: max_cosine_similarity, label: Nearest-match cosine similarity, group: compatibility, adverse_direction: low}
+  - {id: ap_overlap, label: Maximum AP overlap, group: compatibility, adverse_direction: low}
+  - {id: mean_ap_overlap, label: Mean AP overlap, group: compatibility, adverse_direction: low}
+  - {id: ap_set_novelty, label: AP-set novelty, group: compatibility, adverse_direction: high}
+  - {id: nearest_rp_distance, label: Nearest-RP distance, group: spatial_support, adverse_direction: high}
+  - {id: local_rp_density, label: Local RP density, group: spatial_support, adverse_direction: low}
+  - {id: sigma_fps, label: Candidate spatial spread, group: candidate_geometry, adverse_direction: high}
+  - {id: d_cand, label: Candidate-set diameter, group: candidate_geometry, adverse_direction: high}
+  - {id: i_k, label: Cumulative-neighborhood instability, group: candidate_geometry, adverse_direction: high}
+  - {id: rss_gradient_proxy, label: RSS-gradient uncertainty proxy, group: map_ambiguity, adverse_direction: high}
+  - {id: sqs, label: Scan Quality and Support Score, group: composite, adverse_direction: low}
+  - {id: c_sigma, label: Signal-to-spread support score, group: composite, adverse_direction: low}
+  - {id: fii, label: Fingerprint Integrity Index, group: composite, adverse_direction: low}
+sqs:
+  scaling_quantiles: [0.05, 0.95]
+  components:
+    signal_support: {weight: 0.20}
+    geometry_support: {weight: 0.20}
+    ap_count_support: {weight: 0.20}
+    ap_overlap_support: {weight: 0.20}
+    local_density_support: {weight: 0.20}

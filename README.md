@@ -1,74 +1,44 @@
-# An Intelligent Framework for Scan-Level Reliability, Accuracy Diagnostics, and Gross-Error Detection in Wi-Fi Fingerprinting-Based Indoor Positioning Systems
+# Wi-Fi Fingerprinting Scan-Level Integrity
 
-<p align="center"><strong>Scan-level diagnosis · Reproducible evaluation · On-device inspection</strong></p>
-<p align="center">Under review in <em>Expert Systems with Applications</em></p>
+**Research implementation accompanying a manuscript under review in Expert Systems with Applications.** This repository distributes original source and wholly synthetic demonstration inputs under the MIT license. See `LICENSE` and `THIRD_PARTY_NOTICES.md`.
 
-<p align="center">
-  <a href="docs/RESEARCH_OVERVIEW.md">Research overview</a> ·
-  <a href="docs/REPRODUCIBILITY.md">Reproducibility</a> ·
-  <a href="docs/ANDROID.md">Android implementation</a> ·
-  <a href="docs/ROADMAP.md">Availability</a>
-</p>
+The Python package implements Wi-Fi fingerprinting estimators and diagnostic/reliability components. The Android Java application inspects scans using an imported, authorized local radio map. The project contains a deterministic **fully synthetic** ten-unit input fixture for exercising source code and data preparation, not the observations used in the study. No actual HK floor-map images, geometry/vector exports, real BSSIDs, recorded RSS scans, or original site coordinates are included.
 
-## Reliability information for individual Wi-Fi position fixes
+## Installation and tests
 
-A Wi-Fi scan can closely resemble stored fingerprints while still producing a poor position estimate. This project examines scan-level diagnostics that describe signal compatibility, spatial support, candidate-neighborhood geometry, and radio-map ambiguity, so that reliability information can accompany each Wi-Fi fingerprinting fix.
+Run at the repository root (Python 3.10+, recommended 3.11/3.12):
 
-The repository will host the Python analysis pipeline and Android implementation associated with the paper. The software is organized around a common diagnostic layer that can be examined across positioning estimators and building-level radio maps.
+```bash
+python -m pip install -e ".[dev]"
+python scripts/assemble_synthetic_combined.py
+python -m pytest -q
+python scripts/reproduce_release.py --mode demo
+python scripts/check_public_release.py
+```
 
-> **Code and reproducibility materials are being prepared for the public release.**
->
-> The public repository currently provides the project overview and documentation. Python source, Android source, examples, and research outputs will be added in stages. Installation commands will accompany the corresponding source release.
+**These commands are public-fixture tests**, not validation of the paper's empirical results. The combined CSV is deterministically reconstructed from the 10 committed synthetic unit files, with SHA-256 verification. The sample includes 54,520 fabricated training and 13,629 fabricated test scans across ten registry slots, generated from code rather than site measurements. Counts are for interface compatibility only.
 
-## Study at a glance
+```bash
+python scripts/validate_synthetic_combined.py
+python scripts/prepare_research_workspace.py --combined examples/synthetic_combined/combined_all_datasets.csv.gz
+```
 
-| Evaluation scope | Coverage |
-| :--- | :--- |
-| Building-level evaluation units | **10** |
-| Training fingerprints | **54,520** |
-| Held-out query scans | **13,629** |
-| Positioning estimators | **8** |
-| Retained scan-level indicators | **18**, including SQS and the other composite indicators |
+The second command constructs a local, ignored analysis workspace from synthetic values; it does not retrain or reconstruct historical paper results.
 
-These numbers describe the manuscript evaluation. They do not imply that the underlying datasets or all estimator-training implementations are currently distributed here.
+## Android Studio
 
-## What the project supports
+Open `android/` in Android Studio; SDK 35, JDK 17 (or compatible Android Gradle tooling) and network access to resolve Android dependencies are required. Run `./gradlew testDebugUnitTest assembleDebug` inside `android/`. The app initializes an empty local database from `android/app/src/main/assets/database/schema.sql` and requires importing your authorized local radio map. **No populated database or original HK building data is distributed.** Java-only smoke tests can run without an Android SDK; see `android/README.md`.
 
-| Component | Research purpose | Planned material |
-| :--- | :--- | :--- |
-| **Python analysis** | Examine associations with positioning error, gross-error discrimination, and behavior across conditions | Package, configuration, examples, and reproducibility instructions |
-| **Reliability diagnostics** | Interpret scan statistics, RSS matching, spatial support, candidate geometry, and composite support scores | Indicator definitions and implementation mapping |
-| **Android inspection** | Inspect a live scan, a floor-specific WKNN estimate, and its diagnostic information | Java project, radio-map import specification, and timing/export documentation |
-| **Result exploration** | Inspect estimator comparisons and representative diagnostic cases | A documented results interface after the supporting artifacts are ready |
+## Limits and research-data access
 
-For the distinction between reference-result replay, native recomputation, and live implementation, see the [reproducibility guide](docs/REPRODUCIBILITY.md).
+The real investigation covered ten data units, eight estimators, and 18 selected diagnostic quantities. The empirical 13,629-query / 109,032-prediction scalar reference data and real Wi-Fi observations are **not** in this candidate; their use and redistribution require separate permission. `python scripts/reproduce_release.py --mode reference` stops with a clear error unless approved reference records are supplied. Stored-reference replay is not equivalent to independently retraining all eight original estimators. Historical SQS native reconstruction remains under independent verification.
 
-## Start with your research question
+The retrospective, cohort-relative warning scores must not be presented as independently calibrated future-deployment probabilities. The 99-run Android benchmark measures **post-retrieval indicator/composite/warning computation**, not complete end-to-end positioning time. Evidence on robustness is limited to the evaluated conditions, not unseen buildings or arbitrary devices.
 
-- **Understand the method:** read the [research overview](docs/RESEARCH_OVERVIEW.md) and [indicator guide](docs/INDICATORS.md).
-- **Plan a reproducibility study:** review the [execution modes and validation boundaries](docs/REPRODUCIBILITY.md).
-- **Prepare a radio map for the app:** consult the [Android implementation guide](docs/ANDROID.md).
-- **Check what is available:** follow the [availability and development roadmap](docs/ROADMAP.md).
+See `docs/REPRODUCIBILITY.md`, `docs/CALIBRATION.md`, `docs/WARNING_CALIBRATION.md`, `docs/ANDROID_TIMING.md`, `docs/DATA_AND_PRIVACY.md`, and `PUBLICATION_APPROVAL_REQUIRED.md`.
 
-## Repository structure
+**Repository organization:** `src/` (Python), `scripts/` (entrypoints), `android/` (Java/Gradle), `config/`, `examples/synthetic_combined/`, `dashboard/`, `web/`, `tests/unit/`, and `docs/`. The `tests/reference/` tests deliberately require separately supplied research assets and are excluded from the default test suite.
 
-| Path | Intended role |
-| :--- | :--- |
-| `src/` | Python package and diagnostic implementations |
-| `scripts/` | Demonstration and reproduction entry points |
-| `android/` | Android Studio Java project |
-| `config/` | Scientific configuration and evaluation-unit definitions |
-| `examples/` | Small, clearly labeled usage examples |
-| `docs/` | Research, reproducibility, and implementation documentation |
-| `results/` | Locally generated outputs |
-| `metadata/` | Version and provenance information |
+## License
 
-The software directories currently contain placeholders. Documentation describes the intended organization and the supplied implementations being prepared for release.
-
-## Interpretation and scope
-
-The indicators are diagnostic quantities, not calibrated probabilities that a position is correct. SQS combines five support components with equal nominal weights; it is not a learned fusion model. Warning thresholds require application-specific evaluation. The offline floor-aware analysis uses an auxiliary RSS-based floor assignment and should not be read as a vertical-error benchmark for the eight positioning estimators.
-
-The Android implementation demonstrates floor inference, floor-specific WKNN positioning, and scan-level diagnosis. It serves a different purpose from the controlled eight-estimator offline evaluation. See [research scope](docs/RESEARCH_OVERVIEW.md#interpretation-boundaries) for further details.
-
-Questions about the project or documentation can be raised through [GitHub Issues](https://github.com/AhmedMansoour/wifi-fingerprinting-scan-level-reliability/issues). Include the relevant component and software version when reporting an implementation issue.
+Original project source and synthetic fixtures: MIT (see `LICENSE`). Third-party components have their own licenses (see `THIRD_PARTY_NOTICES.md`). Redistribution of empirical radio-map data is not licensed by this repository.

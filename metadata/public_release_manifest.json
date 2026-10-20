@@ -1,0 +1,1038 @@
+{
+  "release_kind": "UNPUBLISHED_PUBLIC_SOURCE_REVIEW_CANDIDATE",
+  "empirical_data_included": false,
+  "synthetic_fixture_scans": 68149,
+  "source": "local_reconstructed_review_archive",
+  "files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "size_bytes": 493,
+      "sha256": "d04b40fe35b6b7736fedb2570bbad50dd248e532cef2890192ce32b62827ad95"
+    },
+    {
+      "path": ".gitignore",
+      "size_bytes": 938,
+      "sha256": "91b1165d30036654f61b6d8a1679058b82f2c541aedbf80112cd1cd33019e238"
+    },
+    {
+      "path": "PUBLICATION_APPROVAL_REQUIRED.md",
+      "size_bytes": 729,
+      "sha256": "fcbb1ce7b77e28797d10045b4b687d812c316aeda25fbfc9121598624a4bc933"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 3646,
+      "sha256": "3531edddc2346e5ca8acb7e6648c695e9371631a2476340d7438d3b8db476656"
+    },
+    {
+      "path": "RELEASE_VALIDATION.md",
+      "size_bytes": 2518,
+      "sha256": "e850114242a6568837ec8f0556a35acbbacb09d6fc15551cdcee702d52fc3980"
+    },
+    {
+      "path": "android/IMPORT_FORMAT.md",
+      "size_bytes": 1531,
+      "sha256": "4793906783e706cd029c55431b12184f86fbb06ef1365305917dad5aee5c811f"
+    },
+    {
+      "path": "android/INDICATOR_DEFINITIONS.md",
+      "size_bytes": 1499,
+      "sha256": "d79c65f50b46757f1b8f08d8def259d61ada076295cdec54ec36279d62640357"
+    },
+    {
+      "path": "android/README.md",
+      "size_bytes": 651,
+      "sha256": "c4e85c1339af8841232db242d46b2356eb6a91620dcd6e27c4500d2b45790942"
+    },
+    {
+      "path": "android/app/build.gradle",
+      "size_bytes": 974,
+      "sha256": "1adcd64d742515fa3c4dd20e3c0f08386d8025f30fcfb1ef9c9429e7af406140"
+    },
+    {
+      "path": "android/app/proguard-rules.pro",
+      "size_bytes": 82,
+      "sha256": "daad6dcf730ceb87f243076c285dac367b3b324a13f0f38f85beb0b9d6f341a7"
+    },
+    {
+      "path": "android/app/src/main/AndroidManifest.xml",
+      "size_bytes": 1416,
+      "sha256": "03dfecc66f1d878cc48e02b436e988a4023b96068782771109eba5ae4b770077"
+    },
+    {
+      "path": "android/app/src/main/assets/database/schema.sql",
+      "size_bytes": 4421,
+      "sha256": "9999b8920c7a1084b76db8230d22fdae67b0b80b2d1bf26cf08afaf0611b3b4f"
+    },
+    {
+      "path": "android/app/src/main/java/com/wifiintegrity/inspector/data/DatabaseHelper.java",
+      "size_bytes": 6774,
+      "sha256": "0a1677d9d8b665c2887b098f31b2dc27f0c06a9dc4e975977946c6bc427bdac3"
+    },
+    {
+      "path": "android/app/src/main/java/com/wifiintegrity/inspector/diagnostics/DiagnosticEngine.java",
+      "size_bytes": 20246,
+      "sha256": "46fde43eccdb78a8cff445dd08bd4a0344eb1e8ad5164dda5b7f6bc48c511b22"
+    },
+    {
+      "path": "android/app/src/main/java/com/wifiintegrity/inspector/diagnostics/FloorInferenceEngine.java",
+      "size_bytes": 7222,
+      "sha256": "d78deecce11effd611597f07c02f4a4aad7f060e30603188cdec3926c6d0c5f5"
+    },
+    {
+      "path": "android/app/src/main/java/com/wifiintegrity/inspector/importer/RadioMapPackageImporter.java",
+      "size_bytes": 11964,
+      "sha256": "e1e07fd8575e5fa3aad2fb67d0d09a4cd01270d4d7002945c85754a9e77fd3e5"
+    },
+    {
+      "path": "android/app/src/main/java/com/wifiintegrity/inspector/model/Building.java",
+      "size_bytes": 373,
+      "sha256": "a9be6f430e88e742cac2415034be4b76b26ddbbe1b1dc9283e6318dc219b52b8"
+    },
+    {
+      "path": "android/app/src/main/java/com/wifiintegrity/inspector/model/CalibrationSeries.java",
+      "size_bytes": 572,
+      "sha256": "352e05c188ebc2cc6a32636e842fb9e5bf3a22a38cd4f2805bf8ffacbd36a301"
+    },
+    {
+      "path": "android/app/src/main/java/com/wifiintegrity/inspector/model/Candidate.java",
+      "size_bytes": 458,
+      "sha256": "cb5d742f231e69b7eba2d6cef7eee52df10f36df8a5f8514ae6b5788355fdeb2"
+    },
+    {
+      "path": "android/app/src/main/java/com/wifiintegrity/inspector/model/DiagnosticResult.java",
+      "size_bytes": 2691,
+      "sha256": "e1d16d0734ac2dcc2df3afcd5767eb6a1c1a3e4afcc36d4c7dd36403c9d86323"
+    },
+    {
+      "path": "android/app/src/main/java/com/wifiintegrity/inspector/model/FloorData.java",
+      "size_bytes": 1795,
+      "sha256": "6ea04054ea70ffcaadcb247bed1abf2415ede67cec366055f2e481b36a4060a2"
+    },
+    {
+      "path": "android/app/src/main/java/com/wifiintegrity/inspector/model/FloorInferenceProfile.java",
+      "size_bytes": 890,
+      "sha256": "c16680f651d959be1b39cc6b547c72f4b69990f948293edbc1576896a84b44f9"
+    },
+    {
+      "path": "android/app/src/main/java/com/wifiintegrity/inspector/model/FloorInferenceResult.java",
+      "size_bytes": 686,
+      "sha256": "0402ea45b0994e9b3d4d8444f9fe3b27639ae783b5271b6f49564ec896e11c14"
+    },
+    {
+      "path": "android/app/src/main/java/com/wifiintegrity/inspector/model/FloorInferenceScore.java",
+      "size_bytes": 926,
+      "sha256": "cfe61fd679d6dbec58739d4739ab8a4f0cf9ede705182cc978a88c8ed2a571c1"
+    },
+    {
+      "path": "android/app/src/main/java/com/wifiintegrity/inspector/model/FloorInfo.java",
+      "size_bytes": 1414,
+      "sha256": "4996f245f34cdf152f72c845858f79bbaf191f18de33bed66ff0d477c84c2ad9"
+    },
+    {
+      "path": "android/app/src/main/java/com/wifiintegrity/inspector/model/HistoryItem.java",
+      "size_bytes": 1279,
+      "sha256": "753714772d3cc99dc595c9176fe10cc752acf9d50d4d8f5bff320d57dda9b05d"
+    },
+    {
+      "path": "android/app/src/main/java/com/wifiintegrity/inspector/model/IndicatorDiagnostic.java",
+      "size_bytes": 733,
+      "sha256": "ab5163824226860c559a9f930b6bef30bfce38e128fcc924b11fc96b385a9986"
+    },
+    {
+      "path": "android/app/src/main/java/com/wifiintegrity/inspector/model/ProcessingTimes.java",
+      "size_bytes": 3312,
+      "sha256": "0d6e187dff627fe5bbfbd2c8c7f6367106740901a25a759246bd6917e8d3efe1"
+    },
+    {
+      "path": "android/app/src/main/java/com/wifiintegrity/inspector/model/ReferenceTemplate.java",
+      "size_bytes": 576,
+      "sha256": "a2dc1ba4ad0c97597f2dd5eff3254b784f4bdab8c66db68f6e61622fdce12199"
+    },
+    {
+      "path": "android/app/src/main/java/com/wifiintegrity/inspector/model/SavedInspection.java",
+      "size_bytes": 1666,
+      "sha256": "8e8e686fd54bf2d1389c5aacb8e7102366a60419e943f417d9e7b3c90452325b"
+    },
+    {
+      "path": "android/app/src/main/java/com/wifiintegrity/inspector/model/ScanObservation.java",
+      "size_bytes": 366,
+      "sha256": "bb1882022a4901c3fac1a9f6801f43a7e800a2a9021b2b7e75b4bd6d9fb53f2c"
+    },
+    {
+      "path": "android/app/src/main/java/com/wifiintegrity/inspector/repository/RadioMapRepository.java",
+      "size_bytes": 18137,
+      "sha256": "0ff67dc532435accbf76854443bf6647201e57ce3784e14d29978efabf70a05e"
+    },
+    {
+      "path": "android/app/src/main/java/com/wifiintegrity/inspector/scanner/WifiScanner.java",
+      "size_bytes": 4204,
+      "sha256": "a08248ed62c22439380eb4113370c515fda8e67e978bc390f16de32b686bb101"
+    },
+    {
+      "path": "android/app/src/main/java/com/wifiintegrity/inspector/ui/HistoryActivity.java",
+      "size_bytes": 4026,
+      "sha256": "18bed470c5db69b5799db29642baaa3086fed5112bc40d452f3aaa4e47d258ed"
+    },
+    {
+      "path": "android/app/src/main/java/com/wifiintegrity/inspector/ui/IndicatorBarView.java",
+      "size_bytes": 8994,
+      "sha256": "03a89102980f7a042e34e12759b861893748bd45ffb49bf9c3050e81bc99f7c2"
+    },
+    {
+      "path": "android/app/src/main/java/com/wifiintegrity/inspector/ui/IndicatorDiagnosticsView.java",
+      "size_bytes": 8060,
+      "sha256": "b60c2be10eb863815b6d93da229c478cb4273d22fbc6434e96a38c25a0e378d1"
+    },
+    {
+      "path": "android/app/src/main/java/com/wifiintegrity/inspector/ui/InspectionDetailActivity.java",
+      "size_bytes": 6252,
+      "sha256": "e0e3dc859fb7ce38914eded630654a644232082563f35a9249c0666fedb2da39"
+    },
+    {
+      "path": "android/app/src/main/java/com/wifiintegrity/inspector/ui/MainActivity.java",
+      "size_bytes": 39970,
+      "sha256": "70a624ae3d080046666c3adf62501d6d074bffc1290dc5f57606d740278e4d58"
+    },
+    {
+      "path": "android/app/src/main/java/com/wifiintegrity/inspector/ui/PercentileBarView.java",
+      "size_bytes": 3278,
+      "sha256": "6cff9bd7a9e887ee7df4468339275b5fca5ef4ee3e6b4921d839ee4ac13313f1"
+    },
+    {
+      "path": "android/app/src/main/java/com/wifiintegrity/inspector/ui/RadioMapManagerActivity.java",
+      "size_bytes": 2885,
+      "sha256": "31169c053ce6002df3cdd53e7039951527fe83523cd64bb2997a6f267e6c1717"
+    },
+    {
+      "path": "android/app/src/main/java/com/wifiintegrity/inspector/ui/RadioMapView.java",
+      "size_bytes": 22339,
+      "sha256": "3cd310e35a08c11e2632728814901edaa574372ae1a330afee0936aa1ab44ca5"
+    },
+    {
+      "path": "android/app/src/main/java/com/wifiintegrity/inspector/util/CsvTable.java",
+      "size_bytes": 1929,
+      "sha256": "aae9f8377796d484744ee2bc1bc3a9ae1931e4f4737150eff4e389c65026c59d"
+    },
+    {
+      "path": "android/app/src/main/java/com/wifiintegrity/inspector/util/InspectionExporter.java",
+      "size_bytes": 14379,
+      "sha256": "fdc4f0072d9cac4e1a8b2a46fa13ff0d6a177f32fe5fef2a1d7976464884c350"
+    },
+    {
+      "path": "android/app/src/main/java/com/wifiintegrity/inspector/util/JsonCodec.java",
+      "size_bytes": 9979,
+      "sha256": "360c59648c2321f616c72ec9d2fcc41dac0e9d5c01b484818c243c46df580391"
+    },
+    {
+      "path": "android/app/src/main/res/drawable/action_panel.xml",
+      "size_bytes": 374,
+      "sha256": "b3bf43323f800e470454c4c45590afaa360ac93ef60d6f7b918ed12f97d6ae3c"
+    },
+    {
+      "path": "android/app/src/main/res/drawable/button_primary.xml",
+      "size_bytes": 682,
+      "sha256": "91858eeec581a1e2cc03b6dda990dcf6cb8e4ba1c1058230dc72dbca9e58060f"
+    },
+    {
+      "path": "android/app/src/main/res/drawable/ic_launcher_foreground.xml",
+      "size_bytes": 675,
+      "sha256": "62759400e1f289a522f3b7c1f441828a3f39908f0837ebb2ceb12e8cee78e73a"
+    },
+    {
+      "path": "android/app/src/main/res/drawable/metric_card.xml",
+      "size_bytes": 374,
+      "sha256": "6ddfaf7bb05fd0f573f83d9861023322f8288cf0247ffe2021ca56ffe6cd3baf"
+    },
+    {
+      "path": "android/app/src/main/res/drawable/panel_background.xml",
+      "size_bytes": 336,
+      "sha256": "a493bed691eab3913a5cb0e2e9fc9ce6c743b69e076e171388d937e037a6ab9e"
+    },
+    {
+      "path": "android/app/src/main/res/drawable/status_badge.xml",
+      "size_bytes": 313,
+      "sha256": "8f693769c6276a2381e790683efc4c45d8b4ab75f00db7a6697d449ca8b712c0"
+    },
+    {
+      "path": "android/app/src/main/res/layout/activity_detail.xml",
+      "size_bytes": 2379,
+      "sha256": "400696b95e3339978371eff6d6e6ac2929a1f15a23950d150e303f142bc7737f"
+    },
+    {
+      "path": "android/app/src/main/res/layout/activity_history.xml",
+      "size_bytes": 1092,
+      "sha256": "0fc3fe49139e00d052140435cd20d34caf7c80fbc78fa4b6d94832339eac0315"
+    },
+    {
+      "path": "android/app/src/main/res/layout/activity_main.xml",
+      "size_bytes": 24079,
+      "sha256": "facdf2b72b8fe24157fa4b4d2dbc53924f1e51d454148d92d301b7e41b8df642"
+    },
+    {
+      "path": "android/app/src/main/res/layout/activity_manager.xml",
+      "size_bytes": 1623,
+      "sha256": "8d5d32985979d9b52c1f0e7828aa1db232f80b066706d83ed74b0127b841a55e"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml",
+      "size_bytes": 255,
+      "sha256": "57ac59dc7673860d50a21a8a4cc05ca7ebb9bd1a7c28dd0958751f888a46f44c"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml",
+      "size_bytes": 255,
+      "sha256": "57ac59dc7673860d50a21a8a4cc05ca7ebb9bd1a7c28dd0958751f888a46f44c"
+    },
+    {
+      "path": "android/app/src/main/res/values/colors.xml",
+      "size_bytes": 332,
+      "sha256": "905eeeeb5acfce188b3040ee4847fa7eb2dfee441624ea0e5f179706ebcf82ba"
+    },
+    {
+      "path": "android/app/src/main/res/values/strings.xml",
+      "size_bytes": 271,
+      "sha256": "c15669e994803b02e32d324695843f17a9a542180eca1feed5e5ae0a290f2057"
+    },
+    {
+      "path": "android/app/src/main/res/values/styles.xml",
+      "size_bytes": 510,
+      "sha256": "f27bd3ada2435dbbc370573adee8f48a4367b4b793bb099712b2c50bcf21f0d7"
+    },
+    {
+      "path": "android/app/src/test/java/com/wifiintegrity/inspector/diagnostics/DiagnosticEngineTest.java",
+      "size_bytes": 3098,
+      "sha256": "472a881b8dd467d8a455c897d62bb08e9a2a9e61c1520c1909f97117bdfebf08"
+    },
+    {
+      "path": "android/app/src/test/java/com/wifiintegrity/inspector/diagnostics/FloorInferenceEngineTest.java",
+      "size_bytes": 2245,
+      "sha256": "b544505117544bd1457b490dff9759048e05509a1d6ea0f72949bc81af7668f8"
+    },
+    {
+      "path": "android/build.gradle",
+      "size_bytes": 74,
+      "sha256": "d1bd47ceb68955ed5d99760e0b50e0b0fc48077a8c3370651fc4c2ac12a5de66"
+    },
+    {
+      "path": "android/gradle.properties",
+      "size_bytes": 110,
+      "sha256": "46f9b898e4a170f24c4b0492968696ff335bdc5e660892b0e29c6594bb4da448"
+    },
+    {
+      "path": "android/gradle/wrapper/gradle-wrapper.jar",
+      "size_bytes": 43705,
+      "sha256": "81a82aaea5abcc8ff68b3dfcb58b3c3c429378efd98e7433460610fecd7ae45f"
+    },
+    {
+      "path": "android/gradle/wrapper/gradle-wrapper.properties",
+      "size_bytes": 338,
+      "sha256": "3b6b8df392b92f86332d907707f3d952a32c8d6e1fedabafe2b5ec3d933a78c4"
+    },
+    {
+      "path": "android/gradlew",
+      "size_bytes": 8774,
+      "sha256": "c76f16038b4e70b84ed0b3b9e08e82a8ecaf66ec0efdfdecdece92520fa3cecb"
+    },
+    {
+      "path": "android/gradlew.bat",
+      "size_bytes": 2894,
+      "sha256": "0f3ed8f03b50934cb8c48b15a470d5c20a30a5385825e48b55bcc8ea3d8f8e18"
+    },
+    {
+      "path": "android/schema/empty_database.sql",
+      "size_bytes": 4421,
+      "sha256": "9999b8920c7a1084b76db8230d22fdae67b0b80b2d1bf26cf08afaf0611b3b4f"
+    },
+    {
+      "path": "android/settings.gradle",
+      "size_bytes": 339,
+      "sha256": "a83683078a8983169faa4c0aee58263d9ad543c5cf3c156d493c619b9f20031b"
+    },
+    {
+      "path": "android/tools/java_smoke/DiagnosticEngineSmokeTest.java",
+      "size_bytes": 2620,
+      "sha256": "137cfdf17ab01d80b6ddbe47920a82f8475b4b265bac1e5631ffe021c5687ce4"
+    },
+    {
+      "path": "android/tools/java_smoke/FloorInferenceSmokeTest.java",
+      "size_bytes": 1643,
+      "sha256": "b2d53d2d4704ea6a3de6ed58fb93c9b77985aec0bfdf65c1a88c68203ae7c35a"
+    },
+    {
+      "path": "android/tools/prepare_empty_database.py",
+      "size_bytes": 1258,
+      "sha256": "b041c73de28acde87cef3f2fd728e3f5aaa3f713bb7ffbe7a65edd925bd0742f"
+    },
+    {
+      "path": "config/analysis.yaml",
+      "size_bytes": 571,
+      "sha256": "85d8ae794f4346e7a451362df3552ec7b3975a5087c13ada7653a412f9ad397a"
+    },
+    {
+      "path": "config/cases.yaml",
+      "size_bytes": 424,
+      "sha256": "d1824a7aff60c56caae5a217f08f899ceffb35a5247eec5b14afbdb9a2b6a06b"
+    },
+    {
+      "path": "config/datasets.yaml",
+      "size_bytes": 2823,
+      "sha256": "f6efc59372f5fc63a90d685804ea320d445d6272123987d007e82b5669bd3c16"
+    },
+    {
+      "path": "config/estimators.yaml",
+      "size_bytes": 742,
+      "sha256": "dd3ca4563d1a22d728e5642a6eef78cba4861ce66bdcf2b8c933f084bd3aebcb"
+    },
+    {
+      "path": "config/figures.yaml",
+      "size_bytes": 90,
+      "sha256": "c1bf2de4909247b710c7ffe79e59c45d3fc273aaee00f420748c644040509299"
+    },
+    {
+      "path": "config/harmonization.yaml",
+      "size_bytes": 551,
+      "sha256": "13d6f0906aaa185d57853e4386312c707f85e9b86d5ba2b15341615c8a173e7f"
+    },
+    {
+      "path": "config/indicators.yaml",
+      "size_bytes": 2182,
+      "sha256": "74759072d0b9a00f004d6bf905d5b763e11079e00986f2307969828d1e798798"
+    },
+    {
+      "path": "dashboard/app.js",
+      "size_bytes": 3395,
+      "sha256": "fcec09cca24396f38634f7f55142b50eec34f4d1866f807ce19e67c103b35e3a"
+    },
+    {
+      "path": "dashboard/data/metrics.json",
+      "size_bytes": 596,
+      "sha256": "0e0976e51e0b13ae14859baa58840525fb2c5c0d6ba82bf031281c2ac6dcabf0"
+    },
+    {
+      "path": "dashboard/index.html",
+      "size_bytes": 2385,
+      "sha256": "768b373de617a635fe5af489c96b5f5ca99dee6084e0f4ff8749375390fc5dcc"
+    },
+    {
+      "path": "dashboard/styles.css",
+      "size_bytes": 3516,
+      "sha256": "4f9f0871e2fc0f67b52eeff39e28be35f7198c9d16df51b32b12879e8ec4a364"
+    },
+    {
+      "path": "data/.gitkeep",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "data/public/README.md",
+      "size_bytes": 229,
+      "sha256": "92ffbc52718039f3eb1ce62ce79efbe04dd477a1e1bc25206a680e5ab71524de"
+    },
+    {
+      "path": "docs/ANDROID.md",
+      "size_bytes": 2703,
+      "sha256": "b19a2f993db8c563234fcbb6df134e5631bae21501e58283f1d1b3de2b21c477"
+    },
+    {
+      "path": "docs/ANDROID_TIMING.md",
+      "size_bytes": 1039,
+      "sha256": "6579e681d1eb6dc3c26b1345522a7362e820b4a70a1ea06fc2fccae9bffa3e91"
+    },
+    {
+      "path": "docs/CALIBRATION.md",
+      "size_bytes": 4101,
+      "sha256": "ceb323c9900b0a1fca87508c2114524a1578aa7a8085f276f04c204f5ba24c77"
+    },
+    {
+      "path": "docs/CLAIMS_AND_LIMITS.md",
+      "size_bytes": 1935,
+      "sha256": "220052e888d888a8b2dac5cac85de84b1c8883cb8c92617e099cbd43b230ae54"
+    },
+    {
+      "path": "docs/DATA_AND_PRIVACY.md",
+      "size_bytes": 1098,
+      "sha256": "e1dbb8390f80de9c7da30550c9049380c09b0bc64322fa9e7dba6d4729e4e764"
+    },
+    {
+      "path": "docs/ESTIMATORS.md",
+      "size_bytes": 2085,
+      "sha256": "7cc6c5e72bdeaf7aeabc27af3e2a24945521389e2731bd8fcef3ee92933f07e3"
+    },
+    {
+      "path": "docs/GETTING_STARTED.md",
+      "size_bytes": 672,
+      "sha256": "ec677708941c48e8ba5e01b76f1fc3efef7346a364b858052657d03a1913a1d6"
+    },
+    {
+      "path": "docs/HK_PRIVACY_RELEASE_POLICY.md",
+      "size_bytes": 4250,
+      "sha256": "03894d174ee1231ac652b187152670d4bcf2402627f629497cdbcc477b8e0f4f"
+    },
+    {
+      "path": "docs/INDICATORS.md",
+      "size_bytes": 3016,
+      "sha256": "a34a76f73af89e671e2c6075f1dc7d7633974e816c2ffb489da2d5d543edff55"
+    },
+    {
+      "path": "docs/REPRODUCIBILITY.md",
+      "size_bytes": 1632,
+      "sha256": "cadfcd30b70b8c303c7dae6a416f549c3724c199151f310359be9e5195324cfd"
+    },
+    {
+      "path": "docs/RESEARCH_OVERVIEW.md",
+      "size_bytes": 1513,
+      "sha256": "8f458b695ac315fcff461b1aca14d996f9a2a22650fde40f4cef2caa126dff63"
+    },
+    {
+      "path": "docs/ROADMAP.md",
+      "size_bytes": 1217,
+      "sha256": "7077e38758bff8ecf960e28cd37b3965a7474174f8ec137171666a0b0b40b088"
+    },
+    {
+      "path": "docs/UI_SCOPE.md",
+      "size_bytes": 642,
+      "sha256": "bc9e504bd8c518259810fb1cbd6a6b1065faa21e1f1c97f3d29a93f0a9b86dd7"
+    },
+    {
+      "path": "docs/WARNING_CALIBRATION.md",
+      "size_bytes": 1907,
+      "sha256": "8d1d7f597ac3b6c5c7bdd6125aed3237e6f20976f42fca1522822651a2461b81"
+    },
+    {
+      "path": "examples/.gitkeep",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "examples/README.md",
+      "size_bytes": 767,
+      "sha256": "c4e41f5e1691bad20e9d7dfe67fbedfbdc32883b688e6613622fb99d2e5e6f14"
+    },
+    {
+      "path": "examples/synthetic_combined/README.md",
+      "size_bytes": 2676,
+      "sha256": "5b52a1f188b3d8e4e835fdc260f38d4a313e19bf5e2b5479793dd12374f3d138"
+    },
+    {
+      "path": "examples/synthetic_combined/combined_all_datasets.csv.gz",
+      "size_bytes": 4556870,
+      "sha256": "1e69e208a042a07ee088b0302d1932691e0abdb2772a54f380e523bf238d8dcd"
+    },
+    {
+      "path": "examples/synthetic_combined/units/U01.csv.gz",
+      "size_bytes": 383513,
+      "sha256": "263c6c5584a8c787e322cd90bc539221c30e43ac91bbe1ffd4e304f28d677419"
+    },
+    {
+      "path": "examples/synthetic_combined/units/U02.csv.gz",
+      "size_bytes": 345437,
+      "sha256": "844d5d681bbcb0c568b994a06409eda8fbfe9ba2c8d946944e969ecf776d2459"
+    },
+    {
+      "path": "examples/synthetic_combined/units/U03.csv.gz",
+      "size_bytes": 666808,
+      "sha256": "9dc3fab5333203214793fa670ed4bd9a0a0f4c83b305a8785c1ce75189df2597"
+    },
+    {
+      "path": "examples/synthetic_combined/units/U04.csv.gz",
+      "size_bytes": 90274,
+      "sha256": "c83431214ee72ac8febe32317deec6a24f03ed04abaf9ef932570609c470f80e"
+    },
+    {
+      "path": "examples/synthetic_combined/units/U05.csv.gz",
+      "size_bytes": 690070,
+      "sha256": "87deedc731b2b519e75c3f59a3507351d23cd7e2cabb9bd709ff60f4c47346b5"
+    },
+    {
+      "path": "examples/synthetic_combined/units/U06.csv.gz",
+      "size_bytes": 637679,
+      "sha256": "50f35f62b43b3132f8e36063f79109ec52765cca0b959d0f18cd5f7174834aaa"
+    },
+    {
+      "path": "examples/synthetic_combined/units/U07.csv.gz",
+      "size_bytes": 592278,
+      "sha256": "df502b338f1da9eaaab73d4ff1775e3837243d8fac3a8a2b89f0e22d3f8ca5b6"
+    },
+    {
+      "path": "examples/synthetic_combined/units/U08.csv.gz",
+      "size_bytes": 708901,
+      "sha256": "b34f89fef396fa9718e53b7a1dd36164a711fbe316532d2e92b87c3e05f41f2d"
+    },
+    {
+      "path": "examples/synthetic_combined/units/U09.csv.gz",
+      "size_bytes": 274453,
+      "sha256": "873adcd8ab496b1acd4c4d7ecc4839ce9f202b0f3d25bfd134cc91e2af395eeb"
+    },
+    {
+      "path": "examples/synthetic_combined/units/U10.csv.gz",
+      "size_bytes": 97211,
+      "sha256": "3587ce42c8f62b76675b13582ae262aca9aa584efc5d9d5f81fda7b6e81664d0"
+    },
+    {
+      "path": "examples/synthetic_combined/validation_summary.json",
+      "size_bytes": 4003,
+      "sha256": "e398e978a24dd805a64450e89cb5dfd731f3072fdb44a706f449476b235a31a6"
+    },
+    {
+      "path": "metadata/source_provenance.json",
+      "size_bytes": 3391,
+      "sha256": "b2af8975519635cff4eb581b554237855ade4cc7c656d2a912bc56cb6ab08a0d"
+    },
+    {
+      "path": "metadata/validation_environment.json",
+      "size_bytes": 400,
+      "sha256": "158d2f8f46710878a1965e99dfefd94cffda96091ffd2722667be7d894cce101"
+    },
+    {
+      "path": "pyproject.toml",
+      "size_bytes": 1252,
+      "sha256": "6e93a30bbb1cf1ab88c89f5c9650dc57241aec5186cd885abb0130391d80f045"
+    },
+    {
+      "path": "reference/.gitkeep",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "reference/README.md",
+      "size_bytes": 302,
+      "sha256": "7b0c1b2c916b43720ef47e83a960c062963475e4d2d773eb8f23f8c344eb24f7"
+    },
+    {
+      "path": "scripts/build_calibration.py",
+      "size_bytes": 1735,
+      "sha256": "cef27af2c73966ee7b854979e199f45e0ad853bb82caf69d53a8f33f430772fe"
+    },
+    {
+      "path": "scripts/build_synthetic_dashboard.py",
+      "size_bytes": 2356,
+      "sha256": "09ac68151dfa35c925ed2aa7e1ea31b08209e3efcf4ba846ad868c8e25a39fb5"
+    },
+    {
+      "path": "scripts/calibrate_warning_states.py",
+      "size_bytes": 3358,
+      "sha256": "a46dbaddf7f1873e38190674756e969b58f0baf5635ea08d34a56103b852a9f3"
+    },
+    {
+      "path": "scripts/check_native_estimators.py",
+      "size_bytes": 2549,
+      "sha256": "a1b32b4bf355075ad80de275c2295847fa71db73c44b99dfbb73433e937a5bd0"
+    },
+    {
+      "path": "scripts/check_public_release.py",
+      "size_bytes": 5416,
+      "sha256": "f673b24030a71a544c1da1de5214a243bd614d02591f8641e7d702f1f0b88718"
+    },
+    {
+      "path": "scripts/create_public_synthetic_combined.py",
+      "size_bytes": 9600,
+      "sha256": "1d547a018e8d8337e54e0ef86c7e543ac9e5d3e97336659823e6ca8cf6b6498d"
+    },
+    {
+      "path": "scripts/export_relative_errors.py",
+      "size_bytes": 3262,
+      "sha256": "a897ab35c379d9dc60eeedde8f3c132858f9e4215a8adc521a551bd4f7901360"
+    },
+    {
+      "path": "scripts/generate_synthetic_demo.py",
+      "size_bytes": 2231,
+      "sha256": "a86d3501f9a6e77bc6a5217d55e5b0cdd4baa11e9c863266963f434e41020db4"
+    },
+    {
+      "path": "scripts/prepare_research_workspace.py",
+      "size_bytes": 2836,
+      "sha256": "9404eb5d37917dd4f24431ec147fadae356410c504df15ae89a9f0ca71147f32"
+    },
+    {
+      "path": "scripts/reproduce_release.py",
+      "size_bytes": 4928,
+      "sha256": "28f2e7822c084029e29e9639d736d5c0eeccdd446d0693c39636edd7a6e6eaba"
+    },
+    {
+      "path": "scripts/reproduce_uncertainty.py",
+      "size_bytes": 2852,
+      "sha256": "481676e1fad153a4bd137d71a9cf2620e45a5702a16cddea37c7ed8cecf2b914"
+    },
+    {
+      "path": "scripts/research/README.md",
+      "size_bytes": 2542,
+      "sha256": "c8cb346ed87da4138f28500d9efa0a04a5c59e65f4ddc507ccb617340dface4b"
+    },
+    {
+      "path": "scripts/research/legacy/20_make_indicator_tables_and_association_figure.py",
+      "size_bytes": 36388,
+      "sha256": "66a87632ca6201ceecc937a02a8fedf219f12fdcc601904c534cb2d1eb3f497e"
+    },
+    {
+      "path": "scripts/research/legacy/21_build_gross_error_discrimination.py",
+      "size_bytes": 31256,
+      "sha256": "8d66d78aaab9d031f3f4c5b860ffd1bb1a6816386a26cd22f0676d86c4b1ffb5"
+    },
+    {
+      "path": "scripts/research/legacy/23_build_confidently_wrong_fixes.py",
+      "size_bytes": 37282,
+      "sha256": "aa9e4e910182b3afb1e606acc656e027d9fe3ab7f9be681a7cd980f1d962238b"
+    },
+    {
+      "path": "scripts/research/legacy/24_build_cross_dataset_robustness.py",
+      "size_bytes": 27919,
+      "sha256": "21c2c93fda181c4da810d3e897bb91c88d0cf291b4836ed23cfb023431884ce3"
+    },
+    {
+      "path": "scripts/research/research_paths.py",
+      "size_bytes": 336,
+      "sha256": "a4b233a25ea411cd321f0ada234cc3307d6363854c70e1c262ff26870eb3dc74"
+    },
+    {
+      "path": "scripts/research/run_a1_sqs_ablation.py",
+      "size_bytes": 14369,
+      "sha256": "8d2623f6bddef32eded873130db592111ab0c55e81bcf05b8948abb3687e5d7e"
+    },
+    {
+      "path": "scripts/research/run_a3_statistics.py",
+      "size_bytes": 28630,
+      "sha256": "81e09a09a8e9d93bea47193c141c3fc004384ea71c8124cfbaeb7d3be7c401c3"
+    },
+    {
+      "path": "scripts/research/run_a4_floor_analysis.py",
+      "size_bytes": 23132,
+      "sha256": "cfa782cb0a0d9e1816c14ff32dfaa3cf4421c1ca10dfba6f05349cea56cffac5"
+    },
+    {
+      "path": "scripts/research/run_a4_phase2.py",
+      "size_bytes": 9364,
+      "sha256": "181aad469ff1a2e94e238b93d3641fcf438ab4a46ba0169a7f761e850644b017"
+    },
+    {
+      "path": "scripts/research/run_a5_fast.py",
+      "size_bytes": 21535,
+      "sha256": "1f377e1edea1f40c20e15659043b0bc945e119eef0e2c96b2d2daaed7c0724a0"
+    },
+    {
+      "path": "scripts/research/run_a5_sensitivity.py",
+      "size_bytes": 33685,
+      "sha256": "d615a0f06ed2d5174f7a6c491028ab9830931bbde57b4da07d08b7b57450cab7"
+    },
+    {
+      "path": "scripts/research/run_a6_runtime.py",
+      "size_bytes": 22689,
+      "sha256": "59574fe9e96b5b8be98975dfed957d222dcd6df31842cbe11d9c4a1074f2026c"
+    },
+    {
+      "path": "scripts/research/run_a7_extension.py",
+      "size_bytes": 16237,
+      "sha256": "eaf0ce6765c773c8bfdd13d82080919f46bd0a845be5927478a8106bf53fa9b0"
+    },
+    {
+      "path": "scripts/run_synthetic_demo.py",
+      "size_bytes": 3156,
+      "sha256": "f8c056c6b5f6a9e8a5118d6d4acc443562f2580065b1136d91c5af171a0cc440"
+    },
+    {
+      "path": "scripts/sanitize_hk_data.py",
+      "size_bytes": 3222,
+      "sha256": "5334a31805d499029788eccbad978c7833bc098f536749b298bb07b6be4d36bc"
+    },
+    {
+      "path": "scripts/validate_synthetic_combined.py",
+      "size_bytes": 2422,
+      "sha256": "60f8482e6d1e3fa4987f057573e4ab33f96f4ec8fc5af136c5813fdf2a3b2cc0"
+    },
+    {
+      "path": "src/wifi_integrity/__init__.py",
+      "size_bytes": 89,
+      "sha256": "0dcb7f2d07bf6295c93ca36386f6c055e497115e76fc5efb578b203ad6b11159"
+    },
+    {
+      "path": "src/wifi_integrity/__main__.py",
+      "size_bytes": 73,
+      "sha256": "9d790e0b69e315b2c5c72c6cdf34075450562eb4e983a85c68469663fa2d0aab"
+    },
+    {
+      "path": "src/wifi_integrity/benchmark/__init__.py",
+      "size_bytes": 160,
+      "sha256": "aa5adc54d8d091d722761383a833e252ce5e4aa59be1b5e8a723aa11c6ccbdd7"
+    },
+    {
+      "path": "src/wifi_integrity/benchmark/metrics.py",
+      "size_bytes": 2302,
+      "sha256": "867a87fdde9ef810bf6ef63fd02d15fb96b6ea0d7f21255b0e3b2a1ddb561685"
+    },
+    {
+      "path": "src/wifi_integrity/benchmark/native.py",
+      "size_bytes": 4910,
+      "sha256": "c0574e8c105c38cee4ca89db8948cbb26ad33819962ae8d0b136fa9741320e0a"
+    },
+    {
+      "path": "src/wifi_integrity/benchmark/registry.py",
+      "size_bytes": 1474,
+      "sha256": "6aa6b7b6ea43bd266ce2592cc354a0b2979800e34fc4bf2048149ed81c0f9284"
+    },
+    {
+      "path": "src/wifi_integrity/benchmark/replay.py",
+      "size_bytes": 4594,
+      "sha256": "8630ee569ce4420a288a103a954ce524eafae584427c739f1fac93243817cfeb"
+    },
+    {
+      "path": "src/wifi_integrity/cli.py",
+      "size_bytes": 8505,
+      "sha256": "bf3f7c4e2e4b3daccecf0d00630ddaf6b3ce81ea4705617c393bc3a59d90ca0f"
+    },
+    {
+      "path": "src/wifi_integrity/config.py",
+      "size_bytes": 2817,
+      "sha256": "21cbc4aceb57b7792f34c42c7c9ce0e3efb64d09db5be87f8c45e3f042fb65aa"
+    },
+    {
+      "path": "src/wifi_integrity/data/__init__.py",
+      "size_bytes": 64,
+      "sha256": "261d6d8b52564ea2f165c874b501f1d53423602dbf79f8581bb300aa885fc769"
+    },
+    {
+      "path": "src/wifi_integrity/data/extract.py",
+      "size_bytes": 1357,
+      "sha256": "6332fa102ce49936239cc453156e85bba8b8785f386f998df224619704e4f9b1"
+    },
+    {
+      "path": "src/wifi_integrity/data/harmonize.py",
+      "size_bytes": 10791,
+      "sha256": "732989adf384c2a0da51dc312219efac3dcd924d01e04bcb22b60d3097d13012"
+    },
+    {
+      "path": "src/wifi_integrity/data/registry.py",
+      "size_bytes": 1535,
+      "sha256": "d10d92c130186cf582696ba8a2bb98b390cb45d204d6e48929250111e222681e"
+    },
+    {
+      "path": "src/wifi_integrity/data/validate.py",
+      "size_bytes": 2005,
+      "sha256": "5e7807502b65f6277a1100c442edf198222ac86b15ec80eb8ad71d8ab200975c"
+    },
+    {
+      "path": "src/wifi_integrity/estimators/__init__.py",
+      "size_bytes": 294,
+      "sha256": "47397036b06cb5a0304a24fe30e44e7a698a40180b498cd36492d1b749a5bf2e"
+    },
+    {
+      "path": "src/wifi_integrity/estimators/base.py",
+      "size_bytes": 4861,
+      "sha256": "792decafb9fd6780aff94b028fcfc29178656bd89dad48e19265e65c45d24415"
+    },
+    {
+      "path": "src/wifi_integrity/estimators/catboost_model.py",
+      "size_bytes": 2141,
+      "sha256": "8a3c28fd7118cfb1af89270bb523a61b362a8cc36706fde904396593de494ab6"
+    },
+    {
+      "path": "src/wifi_integrity/estimators/classical.py",
+      "size_bytes": 2285,
+      "sha256": "d791ca4a2850f6a3f795bb9ab637d871381b2748023f6dd88c5cfd251db023f4"
+    },
+    {
+      "path": "src/wifi_integrity/estimators/deep.py",
+      "size_bytes": 3397,
+      "sha256": "7138042d0a9423eaf68ab55e20627fca8c56cabae54b3dfae7e8196cd42319a6"
+    },
+    {
+      "path": "src/wifi_integrity/estimators/frozen.py",
+      "size_bytes": 1718,
+      "sha256": "c5ab30eb4c17066fbee78cb8224329e5a904ef15daad2a0a0128d5e3963a47a7"
+    },
+    {
+      "path": "src/wifi_integrity/estimators/recovered/__init__.py",
+      "size_bytes": 66,
+      "sha256": "6d2c72724971a89548a25944add14a3a4d3164669709e04eff811263cd040cbd"
+    },
+    {
+      "path": "src/wifi_integrity/estimators/recovered/residual_cnn.py",
+      "size_bytes": 9216,
+      "sha256": "9138b1078348127687839ab9a19b1323e2a634f1bf584944172217a131fa1e85"
+    },
+    {
+      "path": "src/wifi_integrity/estimators/recovered/transformer.py",
+      "size_bytes": 12501,
+      "sha256": "bf0f5426dbf5681a437740c93e5c4b6add5bddf4533ea14e349ce602d56cd80f"
+    },
+    {
+      "path": "src/wifi_integrity/estimators/retrieval.py",
+      "size_bytes": 1628,
+      "sha256": "730f3ec00cd9edf4949abd15680e11600ec259a95cc8b6803ae56436fe36dcf6"
+    },
+    {
+      "path": "src/wifi_integrity/freeze.py",
+      "size_bytes": 2243,
+      "sha256": "5a7fac642299aee061d62e8c2b4f9c381b1b323159f4aeeb16b787befbdccfd7"
+    },
+    {
+      "path": "src/wifi_integrity/hashing.py",
+      "size_bytes": 593,
+      "sha256": "e6364680f3743833eab3209fc29655dbc458beb3d9a9a27541978c607d0612e3"
+    },
+    {
+      "path": "src/wifi_integrity/paths.py",
+      "size_bytes": 142,
+      "sha256": "1c2c6f923527bf254a8068e86f30a80225a1865f341c1c23e4f1bc6199f9fada"
+    },
+    {
+      "path": "src/wifi_integrity/regression.py",
+      "size_bytes": 2582,
+      "sha256": "a5e1b2215bd86ce61368b7bb7140fa51b66991db9f655ee145de84b65727ba39"
+    },
+    {
+      "path": "src/wifi_integrity/reliability/__init__.py",
+      "size_bytes": 372,
+      "sha256": "1b181a2fb09bf3852f3cca2890d4b22f48eb0f69c32a9155858a544665f2701b"
+    },
+    {
+      "path": "src/wifi_integrity/reliability/analysis.py",
+      "size_bytes": 14800,
+      "sha256": "964f8229d0ace9f7bb107e98d1c3289a859839aa7bf950902a57d5e29f408e6e"
+    },
+    {
+      "path": "src/wifi_integrity/reliability/calibration.py",
+      "size_bytes": 5533,
+      "sha256": "d1d05463bf00f40161301c3b997eee38f8b5a1bb1e9f52724b8c5e94b9547acc"
+    },
+    {
+      "path": "src/wifi_integrity/reliability/cases.py",
+      "size_bytes": 8835,
+      "sha256": "5bfe4f2a301ce99e593630f1ab5504b01af78397ad12c76e7b699a71e67cb755"
+    },
+    {
+      "path": "src/wifi_integrity/reliability/indicators.py",
+      "size_bytes": 22214,
+      "sha256": "60874de165052d8ca8ca061d4075c16d2ccbf22761f5e52527b0c96506bd5cec"
+    },
+    {
+      "path": "src/wifi_integrity/reliability/sqs.py",
+      "size_bytes": 2052,
+      "sha256": "71a750d19f3d6e54314638c1547a1de78429480f505046322a6c9fb67b9b9462"
+    },
+    {
+      "path": "src/wifi_integrity/reliability/uncertainty.py",
+      "size_bytes": 1881,
+      "sha256": "e55f7ca5f644d2f4885d5c67d3395676fa29323c321c23d9179eb4442111d468"
+    },
+    {
+      "path": "src/wifi_integrity/reporting/__init__.py",
+      "size_bytes": 48,
+      "sha256": "1fe5247a452135d28834517ae79ade2be265008718a63f103e87cd170bce0ff4"
+    },
+    {
+      "path": "src/wifi_integrity/reporting/manifests.py",
+      "size_bytes": 1397,
+      "sha256": "270aceb32a711e44ee79643645125c38bd432716835569d61183988f942fab73"
+    },
+    {
+      "path": "src/wifi_integrity/schemas.py",
+      "size_bytes": 691,
+      "sha256": "58265813c49d84d4347d3b7328e71acc8ddfa22699b76ffc5d16316e1ee4cfa4"
+    },
+    {
+      "path": "src/wifi_integrity/ui/__init__.py",
+      "size_bytes": 118,
+      "sha256": "3976ccc5392209321ed0750e1207f277e8d76d876a7a496c9fdc4c4933724d7d"
+    },
+    {
+      "path": "src/wifi_integrity/ui/build.py",
+      "size_bytes": 8923,
+      "sha256": "9c92a4bd84ad16de5bd970262a5af3c3bbc3815bfd192b32bdd597b9a5f9c30e"
+    },
+    {
+      "path": "src/wifi_integrity/ui/server.py",
+      "size_bytes": 591,
+      "sha256": "edab4f9693f13f231f0a293e33f9ea4494c235c481c8afdf408f203cbc83a755"
+    },
+    {
+      "path": "tests/README.md",
+      "size_bytes": 779,
+      "sha256": "a6bd8421e1a04ec835aba6403653417164dd69856c497f10b9ec1502fa626153"
+    },
+    {
+      "path": "tests/reference/test_dashboard.py",
+      "size_bytes": 1322,
+      "sha256": "56404995b95b72328fb9e6eea73c9af7b5f52016d1b36df6303e2f5f88bb20a6"
+    },
+    {
+      "path": "tests/reference/test_data_regression.py",
+      "size_bytes": 1706,
+      "sha256": "62357b41e600f161bd628f781fccf6de0b3b8c5c61c147c1102350fe924f1f0d"
+    },
+    {
+      "path": "tests/reference/test_estimator_benchmark.py",
+      "size_bytes": 1183,
+      "sha256": "d2103f61a3484abee1fe9dc449ca6df1d9106c76d7ce123569e4e208e088bf07"
+    },
+    {
+      "path": "tests/reference/test_frozen_references.py",
+      "size_bytes": 1720,
+      "sha256": "44baf1ddc391e5b781b45b7ecb40cd92ba549b904d35c104e6b4455d412bb7fd"
+    },
+    {
+      "path": "tests/reference/test_native_benchmark.py",
+      "size_bytes": 961,
+      "sha256": "cb85d59886523db19be519ae439dea20e563c96267ef564eb2532b5e2edfb884"
+    },
+    {
+      "path": "tests/reference/test_reliability_pipeline.py",
+      "size_bytes": 2695,
+      "sha256": "0877fe81a89053e2db44126f991bf05b28a8bdbd49d5c6a455955b7dedf0bbb0"
+    },
+    {
+      "path": "tests/reference/test_sqs_regression.py",
+      "size_bytes": 430,
+      "sha256": "ccd275c831a97715659f62340d9edba34ba2236bd0254054289f5a8f831082d2"
+    },
+    {
+      "path": "tests/unit/test_calibration.py",
+      "size_bytes": 1809,
+      "sha256": "5b373c1707ec0fbbea71616c64c5165831ed0ae5f26c0b4929e9204e9fbd72df"
+    },
+    {
+      "path": "tests/unit/test_candidate_entrypoints.py",
+      "size_bytes": 3348,
+      "sha256": "eed438d2eddaf8813126e3c0b95e90f215172d136db45f85f3c268a472c82330"
+    },
+    {
+      "path": "tests/unit/test_config.py",
+      "size_bytes": 694,
+      "sha256": "807168086072bfcc1fb21cb9ccaad2ce61c22458b8cd9475faed5a94b45a9ac5"
+    },
+    {
+      "path": "tests/unit/test_estimator_interface.py",
+      "size_bytes": 1662,
+      "sha256": "4fccea23a968ab2be25a378ab57b3373849b3eee7e88b5d2ad3763401d3900e3"
+    },
+    {
+      "path": "tests/unit/test_harmonization.py",
+      "size_bytes": 840,
+      "sha256": "e19ec318d23ab1a1dc83fa8b150b1bc2925976387e9374afcc2efac3fdec06ca"
+    },
+    {
+      "path": "tests/unit/test_public_data.py",
+      "size_bytes": 2077,
+      "sha256": "212ac30edcf21212e1bfac09894cfb14c7df3419cd24f12d64aac0fad730e1bf"
+    },
+    {
+      "path": "tests/unit/test_schemas.py",
+      "size_bytes": 435,
+      "sha256": "471a40e568943290367a3615b4542c2ec3f70d561cce2282ee0372ccc5ea6f1c"
+    },
+    {
+      "path": "web/assets/app.js",
+      "size_bytes": 14749,
+      "sha256": "8ea1e5ac5dfe7a646e32cb48d5014d9ba28ebede0bc85c82ade5a4751cabb7ac"
+    },
+    {
+      "path": "web/assets/styles.css",
+      "size_bytes": 12445,
+      "sha256": "5240bc5c49576aeb40819a6fadb1dbf8bc6b70413c2263993551f9e8c9c41b69"
+    },
+    {
+      "path": "web/index.html",
+      "size_bytes": 8634,
+      "sha256": "6d2db9cb84ccb402eb1cfcdf729853e73d42432b6169f6a1d1b01b08e6bd362d"
+    }
+  ]
+}

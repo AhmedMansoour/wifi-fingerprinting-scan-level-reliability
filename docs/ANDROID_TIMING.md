@@ -1,0 +1,5 @@
+# Android scope and 99-run measurement
+
+The reported 99-run Android experiment addresses only the computational cost of **18 retained indicator calculations, three composite outputs included therein, and adverse-percentile warning states** after diagnostic candidates and coordinate estimates are already available. In the code, distinguish the `candidateRetrievalMs`, `positionEstimationMs`, `indicatorComputationMs`, and any UI/export/total elapsed figures.
+
+Do **not** label indicator computation cost as end-to-end scan-to-position latency, or reinterpret repeated runtime measurements as an experiment on diagnosis accuracy, classification precision, cross-dataset effectiveness, or floor-detection correctness. Keep the phone model, Android version, CPU state, thermal controls, raw 99 values (if releasable), timing statistic, and source commit alongside any reproduced number. This local candidate contains the timing source and column definitions; the original on-device 99-run raw record and a fresh build are not asserted here.

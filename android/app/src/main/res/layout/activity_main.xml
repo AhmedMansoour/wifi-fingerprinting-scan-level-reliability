@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/background" android:orientation="vertical" tools:context=".ui.MainActivity">
+    <FrameLayout android:id="@+id/pageContainer" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <ScrollView android:id="@+id/pageLive" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Wi-Fi Integrity Inspector" android:textColor="@color/primary_dark" android:textSize="25sp" android:textStyle="bold"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Floor inference, live WKNN positioning, and scan-level reliability diagnosis" android:textColor="#555555" android:textSize="14sp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/panel_background" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Radio-map condition" android:textStyle="bold"/>
+                    <Spinner android:id="@+id/spinnerBuilding" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="6dp"/>
+                    <CheckBox android:id="@+id/checkInferFloor" android:layout_width="match_parent" android:layout_height="wrap_content" android:checked="true" android:text="Infer the floor first, then estimate the 2D position"/>
+                    <Spinner android:id="@+id/spinnerFloor" android:layout_width="match_parent" android:layout_height="48dp"/>
+                    <Spinner android:id="@+id/spinnerK" android:layout_width="match_parent" android:layout_height="48dp"/>
+                    <TextView android:id="@+id/textConditionStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Preparing floor-inference profiles…" android:textColor="#666666" android:textSize="12sp"/>
+                </LinearLayout>
+                <Button android:id="@+id/buttonScan" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:background="@drawable/button_primary" android:text="SCAN, INFER FLOOR, AND DIAGNOSE" android:textColor="#FFFFFF" android:textStyle="bold"/>
+                <LinearLayout android:id="@+id/localMapPanel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:background="@drawable/panel_background" android:orientation="vertical" android:visibility="gone">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Local map around estimate" android:textColor="@color/primary_dark" android:textSize="18sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/textLocalMapStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="Centered on the current estimate with a 30 m × 30 m window (±15 m)." android:textColor="#666666" android:textSize="11sp"/>
+                    <com.wifiintegrity.inspector.ui.RadioMapView android:id="@+id/liveLocalMapView" android:layout_width="match_parent" android:layout_height="300dp" android:layout_marginTop="6dp" android:background="#FFFFFF" android:clickable="false" android:focusable="false"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/summaryPanel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:background="@drawable/panel_background" android:orientation="vertical">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Latest scan-level inspection" android:textColor="@color/primary_dark" android:textSize="18sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/textSummarySubtitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Run a scan to create the first visual inspection." android:textColor="#666666" android:textSize="11sp"/>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:background="@drawable/metric_card" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="INFERRED FLOOR" android:textColor="#777777" android:textSize="10sp" android:textStyle="bold"/>
+                        <TextView android:id="@+id/textFloorValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="—" android:textColor="#222222" android:textSize="20sp" android:textStyle="bold"/>
+                        <TextView android:id="@+id/textFloorDetail" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="No floor inference" android:textColor="#666666" android:textSize="10sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:background="@drawable/metric_card" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TYPE OF CONCERN" android:textColor="#777777" android:textSize="10sp" android:textStyle="bold"/>
+                        <TextView android:id="@+id/textReliabilityBadge" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/status_badge" android:gravity="center" android:maxLines="2" android:text="NO RESULT" android:textColor="#FFFFFF" android:textSize="10sp" android:textStyle="bold"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="Overall scan-level diagnostic status" android:textColor="#666666" android:textSize="10sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:background="@drawable/metric_card" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="INDICATOR WARNINGS" android:textColor="#777777" android:textSize="10sp" android:textStyle="bold"/>
+                        <TextView android:id="@+id/textWarningValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="— / 18" android:textColor="#222222" android:textSize="17sp" android:textStyle="bold"/>
+                        <ProgressBar android:id="@+id/progressWarnings" style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="8dp" android:layout_marginTop="5dp" android:max="18" android:progress="0"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:background="@drawable/metric_card" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SCAN QUALITY AND SUPPORT" android:textColor="#777777" android:textSize="10sp" android:textStyle="bold"/>
+                        <TextView android:id="@+id/textSqsValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="SQS —" android:textColor="#222222" android:textSize="17sp" android:textStyle="bold"/>
+                        <ProgressBar android:id="@+id/progressSqs" style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="8dp" android:layout_marginTop="5dp" android:max="100" android:progress="0"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:background="@drawable/metric_card" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AP COVERAGE" android:textColor="#777777" android:textSize="10sp" android:textStyle="bold"/>
+                        <TextView android:id="@+id/textApValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="— mapped" android:textColor="#222222" android:textSize="15sp" android:textStyle="bold"/>
+                        <ProgressBar android:id="@+id/progressApCoverage" style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="8dp" android:layout_marginTop="5dp" android:max="100" android:progress="0"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:background="@drawable/action_panel" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="OPERATIONAL INTERPRETATION" android:textColor="#8A5524" android:textSize="10sp" android:textStyle="bold"/>
+                        <TextView android:id="@+id/textRecommendedAction" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="No action is available before a scan." android:textColor="#3F2D1D" android:textSize="13sp" android:textStyle="bold"/>
+                        <TextView android:id="@+id/textCalibrationValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="Calibration: not loaded" android:textColor="#6D5A49" android:textSize="10sp"/>
+                    </LinearLayout>
+
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Additional scan details" android:textColor="#777777" android:textSize="11sp" android:textStyle="bold"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:orientation="horizontal">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/metric_card" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2D ESTIMATE" android:textColor="#777777" android:textSize="10sp" android:textStyle="bold"/>
+                            <TextView android:id="@+id/textPositionValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="x —, y —" android:textColor="#222222" android:textSize="14sp" android:textStyle="bold"/>
+                            <TextView android:id="@+id/textPositionDetail" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="WKNN result unavailable" android:textColor="#666666" android:textSize="10sp"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:layout_weight="1" android:background="@drawable/metric_card" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PROCESSING AND RECORD" android:textColor="#777777" android:textSize="10sp" android:textStyle="bold"/>
+                            <TextView android:id="@+id/textProcessingValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="— ms" android:textColor="#222222" android:textSize="15sp" android:textStyle="bold"/>
+                            <TextView android:id="@+id/textRecordValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="No saved record" android:textColor="#666666" android:textSize="10sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:background="@drawable/metric_card" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ON-DEVICE TIMING BREAKDOWN" android:textColor="#777777" android:textSize="10sp" android:textStyle="bold"/>
+                        <TextView android:id="@+id/textTimingBreakdown" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="Run a scan to measure each processing stage." android:textColor="#444444" android:textSize="11sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView android:id="@+id/textStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:text="Loading the radio-map database…" android:textColor="#555555"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:orientation="horizontal">
+                    <Button android:id="@+id/buttonOpenMap" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="OPEN MAP"/>
+                    <Button android:id="@+id/buttonOpenDiagnostics" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:layout_weight="1" android:text="OPEN DIAGNOSTICS"/>
+                </LinearLayout>
+                <Button android:id="@+id/buttonExportResults" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="EXPORT RESULTS AND PROCESSING TIMES"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="12dp" android:text="The floor is inferred first. The 2D estimate and all diagnostics are then calculated only within the inferred floor." android:textColor="#666666" android:textSize="12sp"/>
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout android:id="@+id/pageMap" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="10dp" android:visibility="gone">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Spatial Inspection" android:textColor="@color/primary_dark" android:textSize="22sp" android:textStyle="bold"/>
+            <TextView android:id="@+id/textMapStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="No scan result is available." android:textColor="#666666" android:textSize="12sp"/>
+            <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:scrollbars="none">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <CheckBox android:id="@+id/checkFloorPlan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="Floor image"/>
+                    <CheckBox android:id="@+id/checkShowRps" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="RPs"/>
+                    <CheckBox android:id="@+id/checkShowCandidates" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="Candidates"/>
+                    <CheckBox android:id="@+id/checkShowCentroid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="Centroid"/>
+                    <CheckBox android:id="@+id/checkShowEstimate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="Estimate"/>
+                    <CheckBox android:id="@+id/checkValidationMode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Validation tap"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+            <com.wifiintegrity.inspector.ui.RadioMapView android:id="@+id/radioMapView" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginTop="4dp" android:layout_weight="1" android:background="#FFFFFF" android:minHeight="360dp"/>
+            <TextView android:id="@+id/textValidation" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Enable Validation tap, then tap a known position on the map to calculate the actual horizontal error. Tap a candidate while validation is off to inspect its rank and RSS distance." android:textColor="#555555" android:textSize="12sp"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <Button android:id="@+id/buttonResetMap" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="RESET VIEW"/>
+                <Button android:id="@+id/buttonClearValidation" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:layout_weight="1" android:text="CLEAR VALIDATION"/>
+            </LinearLayout>
+        </LinearLayout>
+        <ScrollView android:id="@+id/pageDiagnostics" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:visibility="gone">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="10dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="18 Condition-Relative Indicator Diagnostics" android:textColor="@color/primary_dark" android:textSize="20sp" android:textStyle="bold"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:background="@drawable/panel_background" android:orientation="vertical">
+                    <TextView android:id="@+id/textDiagnosticBadge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/status_badge" android:text="NO RESULT" android:textColor="#FFFFFF" android:textSize="10sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/textDiagnosticSummary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Run a scan to populate condition-relative diagnostics." android:textColor="#444444" android:textSize="12sp"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:orientation="horizontal">
+                        <TextView android:id="@+id/textDiagnosticSqs" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/metric_card" android:gravity="center" android:padding="8dp" android:text="SQS\n—" android:textColor="#333333" android:textSize="12sp" android:textStyle="bold"/>
+                        <TextView android:id="@+id/textDiagnosticWarnings" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="6dp" android:layout_weight="1" android:background="@drawable/metric_card" android:gravity="center" android:padding="8dp" android:text="WARNINGS\n— / 18" android:textColor="#333333" android:textSize="12sp" android:textStyle="bold"/>
+                        <TextView android:id="@+id/textDiagnosticCsigma" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="6dp" android:layout_weight="1" android:background="@drawable/metric_card" android:gravity="center" android:padding="8dp" android:text="Cσ\n—" android:textColor="#333333" android:textSize="12sp" android:textStyle="bold"/>
+                        <TextView android:id="@+id/textDiagnosticFii" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="6dp" android:layout_weight="1" android:background="@drawable/metric_card" android:gravity="center" android:padding="8dp" android:text="FII\n—" android:textColor="#333333" android:textSize="12sp" android:textStyle="bold"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <com.wifiintegrity.inspector.ui.IndicatorDiagnosticsView android:id="@+id/indicatorDiagnosticsView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"/>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="58dp" android:background="@color/primary_dark" android:orientation="horizontal" android:padding="2dp">
+        <Button android:id="@+id/navLive" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@android:color/transparent" android:text="Live" android:textColor="#FFFFFF" android:textSize="11sp"/>
+        <Button android:id="@+id/navMap" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@android:color/transparent" android:text="Map" android:textColor="#FFFFFF" android:textSize="11sp"/>
+        <Button android:id="@+id/navDiagnostics" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@android:color/transparent" android:text="Diagnostics" android:textColor="#FFFFFF" android:textSize="10sp"/>
+        <Button android:id="@+id/navHistory" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@android:color/transparent" android:text="History" android:textColor="#FFFFFF" android:textSize="11sp"/>
+        <Button android:id="@+id/navMaps" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@android:color/transparent" android:text="Radio Maps" android:textColor="#FFFFFF" android:textSize="9sp"/>
+    </LinearLayout>
+</LinearLayout>

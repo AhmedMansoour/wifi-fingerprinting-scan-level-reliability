@@ -1,0 +1,5 @@
+schema_version: 1
+font_family: DejaVu Serif
+dpi: 500
+ticks_inside: true
+background: white

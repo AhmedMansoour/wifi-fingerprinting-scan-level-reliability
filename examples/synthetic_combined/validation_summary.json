@@ -1,0 +1,152 @@
+{
+  "release_classification": "PUBLIC_SYNTHETIC_SOFTWARE_DEMO",
+  "scientific_scope": "Synthetic end-to-end input for software tests only, not empirical ESWA findings",
+  "generated_from_empirical_scan_data": false,
+  "generated_from_real_AP_or_floor_coordinates": false,
+  "dataset_and_group_columns": "Registry slot identifiers only; samples are NOT records from these real datasets",
+  "seed": 20261021,
+  "train_scans": 54520,
+  "test_scans": 13629,
+  "scans": 68149,
+  "units": [
+    {
+      "unit_id": "U01",
+      "train_scans": 4628,
+      "test_scans": 1157,
+      "simulated_floors": 3,
+      "theoretical_aps": 75,
+      "scan_counts_by_simulated_floor": [
+        1903,
+        2017,
+        1865
+      ],
+      "sha256": "d9159ce4ae1def399136c79ebc0b50d5e255c29346e901100a5deebd7915e27c"
+    },
+    {
+      "unit_id": "U02",
+      "train_scans": 4402,
+      "test_scans": 1101,
+      "simulated_floors": 2,
+      "theoretical_aps": 50,
+      "scan_counts_by_simulated_floor": [
+        2776,
+        2727
+      ],
+      "sha256": "ef385ecac65f4fbc7f3762aaa36bbb158aa9ab88835d3986c8577f15ffd8888d"
+    },
+    {
+      "unit_id": "U03",
+      "train_scans": 7808,
+      "test_scans": 1952,
+      "simulated_floors": 4,
+      "theoretical_aps": 100,
+      "scan_counts_by_simulated_floor": [
+        2499,
+        2474,
+        2348,
+        2439
+      ],
+      "sha256": "60d090f520023a781d97b63267cdc652921e2862308c05985f1ddfa3e08ba635"
+    },
+    {
+      "unit_id": "U04",
+      "train_scans": 1142,
+      "test_scans": 286,
+      "simulated_floors": 2,
+      "theoretical_aps": 50,
+      "scan_counts_by_simulated_floor": [
+        720,
+        708
+      ],
+      "sha256": "08c407dfc2f846961e020aa98d4d51b716b9ea01819107f1315fbd0992210a88"
+    },
+    {
+      "unit_id": "U05",
+      "train_scans": 8309,
+      "test_scans": 2076,
+      "simulated_floors": 3,
+      "theoretical_aps": 75,
+      "scan_counts_by_simulated_floor": [
+        3448,
+        3510,
+        3427
+      ],
+      "sha256": "8b88433dc2466d67d8a6584e313e64eef1863bf78c22df340ed2f62dcb3c81e8"
+    },
+    {
+      "unit_id": "U06",
+      "train_scans": 7433,
+      "test_scans": 1858,
+      "simulated_floors": 4,
+      "theoretical_aps": 100,
+      "scan_counts_by_simulated_floor": [
+        2349,
+        2309,
+        2361,
+        2272
+      ],
+      "sha256": "6929f9e5fcfc64a9941704d5cbedb14c39682f56339b977f5a19b18178534b16"
+    },
+    {
+      "unit_id": "U07",
+      "train_scans": 7558,
+      "test_scans": 1889,
+      "simulated_floors": 2,
+      "theoretical_aps": 50,
+      "scan_counts_by_simulated_floor": [
+        4652,
+        4795
+      ],
+      "sha256": "1cd7e18b0e314db49ea8fd888100c5e30aec371af559c0e0a8d38f665366015d"
+    },
+    {
+      "unit_id": "U08",
+      "train_scans": 8547,
+      "test_scans": 2136,
+      "simulated_floors": 3,
+      "theoretical_aps": 75,
+      "scan_counts_by_simulated_floor": [
+        3568,
+        3587,
+        3528
+      ],
+      "sha256": "287b0d6ccd11fec1c68e885e88a50d5bc26951d847c61a9a69d951d0054aed35"
+    },
+    {
+      "unit_id": "U09",
+      "train_scans": 3319,
+      "test_scans": 831,
+      "simulated_floors": 3,
+      "theoretical_aps": 75,
+      "scan_counts_by_simulated_floor": [
+        1445,
+        1358,
+        1347
+      ],
+      "sha256": "afcc54aca18db86d5bf92d937a8b1927cac4fb38a2d56407694c8779ac6416c0"
+    },
+    {
+      "unit_id": "U10",
+      "train_scans": 1374,
+      "test_scans": 343,
+      "simulated_floors": 1,
+      "theoretical_aps": 25,
+      "scan_counts_by_simulated_floor": [
+        1717
+      ],
+      "sha256": "ca027e1b32a9b0698f46e5d27f0a0c4fd9e5af9a91e8ae219ea7b998f834a714"
+    }
+  ],
+  "schema": [
+    "dataset",
+    "group",
+    "split",
+    "row_id",
+    "floor",
+    "x",
+    "y",
+    "rss_json"
+  ],
+  "combined_sha256": "9c52b9a463d38279032cbd4bef7a671cede47e2724eb71f91c9fbf481b223d19",
+  "license_note": "Generated algorithmically; the paper authors should approve the release notice before publishing."
+}

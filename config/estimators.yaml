@@ -1,0 +1,36 @@
+schema_version: 2
+estimators:
+  - id: knn
+    label: KNN
+    family: retrieval
+    seed: 42
+  - id: wknn
+    label: WKNN
+    family: retrieval
+    seed: 42
+  - id: random_forest
+    label: Random Forest
+    family: tree_ensemble
+    seed: 42
+  - id: extra_trees
+    label: Extra Trees
+    family: tree_ensemble
+    seed: 42
+  - id: hgb
+    label: Histogram-Based Gradient Boosting
+    legacy_prediction_label: Gradient Boosting
+    family: boosted_tree
+    seed: 42
+  - id: catboost
+    label: CatBoost
+    family: boosted_tree
+    seed: 42
+  - id: transformer_ap
+    label: AP-token Transformer
+    legacy_prediction_label: Transformer
+    family: deep
+    seed: 42
+  - id: residual_cnn
+    label: Residual CNN
+    family: deep
+    seed: 42

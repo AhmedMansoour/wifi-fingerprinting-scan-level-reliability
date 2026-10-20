@@ -1,0 +1,1 @@
+No empirical or third-party research observations are distributed in this checkout. See examples/synthetic_combined/ for fabricated input data. The approved empirical analysis requires an independently authorized private source.
