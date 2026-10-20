@@ -14,8 +14,8 @@
     },
     {
       "path": "docs/EXISTING_RESEARCH_ASSETS.md",
-      "bytes": 3060,
-      "sha256": "b0d84f03f8ba075c2b825d58dfbf699c6792792a8e02f665c56e3a11c49db79e"
+      "bytes": 3005,
+      "sha256": "c8de2db44f14801e7564cf79636ca0f45f268790544ea5608b13990aea37ba68"
     },
     {
       "path": "results/approved/legacy_canonical/cross_dataset_robustness_summary_legacy.csv",
