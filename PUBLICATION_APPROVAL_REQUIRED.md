@@ -1,11 +1,12 @@
 # Release boundaries and verification
 
-Public GitHub may contain only reviewed original source, official checksum-pinned
-Gradle wrapper components, and wholly synthetic demonstration inputs. The source
+This public release includes reviewed source, a checksum-pinned Gradle wrapper, synthetic examples and an identified HK U09 empirical input with pseudonymous APs and relative local coordinates. The source
 and synthetic materials are offered under `LICENSE` (MIT); third-party toolchains
 retain their respective licenses. Do not add any private HK building floor-plan
-images or vectors, real BSSIDs, original/transformed empirical scans, derived
+images or vectors, real BSSIDs, identifying raw scans, derived
 real-building geometry, coordinate origins, or author-private records.
+
+The software MIT license does not automatically extend to the empirical input dataset.
 
 This repository's default CI checks reproducible software behavior, not
 independent empirical reproduction of the ESWA paper. A successful Android

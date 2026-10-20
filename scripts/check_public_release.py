@@ -20,8 +20,8 @@ APP_ICON_SHA256 = '62759400e1f289a522f3b7c1f441828a3f39908f0837ebb2ceb12e8cee78e
 WRAPPER = 'android/gradle/wrapper/gradle-wrapper.jar'
 WRAPPER_SHA256 = '81a82aaea5abcc8ff68b3dfcb58b3c3c429378efd98e7433460610fecd7ae45f'
 GZ_PREFIX = 'examples/synthetic_combined/'
-GZ_PATHS = {GZ_PREFIX+'combined_all_datasets.csv.gz'} | {GZ_PREFIX+f'units/U{i:02d}.csv.gz' for i in range(1,11)}
-ALLOWED_DATA = {'data/.gitkeep','data/public/README.md','reference/.gitkeep','reference/README.md'}
+GZ_PATHS = {'data/empirical/hk_u09_ap_relative.csv.gz'} | {GZ_PREFIX+'combined_all_datasets.csv.gz'} | {GZ_PREFIX+f'units/U{i:02d}.csv.gz' for i in range(1,11)}
+ALLOWED_DATA = {'data/.gitkeep','data/public/README.md','reference/.gitkeep','reference/README.md','data/empirical/hk_u09_ap_relative.csv.gz'}
 EMBED = re.compile(rb'(?:data:image/|<svg\b|<image\b|\bpathData\s*=)', re.I)
 
 
@@ -71,6 +71,9 @@ def check(root=ROOT):
     from validate_synthetic_combined import validate
     try: fixture=validate()
     except Exception as exc:fail.append('synthetic fixture failed validation: '+str(exc));fixture={'result':'failed'}
+    from validate_hk_empirical import validate as validate_hk
+    try: hk = validate_hk(root/'data/empirical/hk_u09_ap_relative.csv.gz')
+    except Exception as exc: fail.append('HK validation failed: '+str(exc));hk={'result':'failed'}
     schema=root/'android/app/src/main/assets/database/schema.sql'
     if not schema.is_file():fail.append('Android empty schema missing')
     if list((root/'android/app/src/main/assets/database').glob('*.db')):fail.append('Populated or stored Android DB present')
@@ -78,7 +81,7 @@ def check(root=ROOT):
     if not license_file.is_file() or not license_file.read_text().startswith('MIT License'):
         fail.append('MIT source license missing or invalid')
     return {'result':'passed' if not fail else 'failed','files_scanned':scanned,
-        'synthetic_fixture':fixture,'errors':fail,'scope':'source candidate and generated synthetic data only'}
+        'synthetic_fixture':fixture,'hk_empirical':hk,'errors':fail,'scope':'source, synthetic example and HK empirical U09'}
 
 if __name__ == '__main__':
     x=check();print(json.dumps(x,indent=2));sys.exit(1 if x['errors'] else 0)

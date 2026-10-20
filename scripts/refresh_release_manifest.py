@@ -38,8 +38,8 @@ def make_manifest():
             "sha256": hashlib.sha256(contents).hexdigest(),
         })
     return {
-        "release_kind": "PUBLIC_SYNTHETIC_SOURCE_RELEASE",
-        "empirical_data_included": False,
+        "release_kind": "PUBLIC_SOURCE_SYNTHETIC_PLUS_HK_U09",
+        "empirical_data_included": True,
         "synthetic_fixture_scans": 68149,
         "source": "byte-accurate tracked checkout",
         "files": entries,

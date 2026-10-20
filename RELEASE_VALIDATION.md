@@ -28,3 +28,7 @@ The public ten-unit fixture is **100% synthetic**, not a sanitized or shifted co
 ## Release manifest
 
 After making changes in a *private checkout* and completing confidentiality review, generate `metadata/public_release_manifest.json` with `python scripts/refresh_release_manifest.py --write`, review the diff, and verify using `--check`. This manifest excludes itself and any uncommitted generated combined CSV. Updating the manifest is a bookkeeping operation, **not** permission to publish additional data.
+
+## HK U09 empirical input (2026-10-21)
+
+`data/empirical/hk_u09_ap_relative.csv.gz` contains measured RSS for 4,150 HK scans (3,319 train; 831 test), 525 AP labels (`AP1`–`AP525`), 11 floor categories and preserved relative-metric coordinates. The file is checksum pinned and validated by `scripts/validate_hk_empirical.py`. This single empirical unit is not the complete ten-unit historical dataset or a reproduction of the paper's aggregate numerical results.

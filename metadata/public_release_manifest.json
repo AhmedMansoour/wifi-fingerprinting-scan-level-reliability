@@ -1,13 +1,13 @@
 {
-  "release_kind": "PUBLIC_SYNTHETIC_SOURCE_RELEASE",
-  "empirical_data_included": false,
+  "release_kind": "PUBLIC_SOURCE_SYNTHETIC_PLUS_HK_U09",
+  "empirical_data_included": true,
   "synthetic_fixture_scans": 68149,
   "source": "byte-accurate tracked checkout",
   "files": [
     {
       "path": ".github/workflows/ci.yml",
-      "size_bytes": 1389,
-      "sha256": "5484c658fe2e0cc96c069bffb91b1307c6285a978b71b6fac802ed135b2948b3"
+      "size_bytes": 1442,
+      "sha256": "d76f7b128fb127a1bc8eaf161e00c0b9730afb72bc40690558a7d187a095b6ce"
     },
     {
       "path": ".gitignore",
@@ -21,18 +21,18 @@
     },
     {
       "path": "PUBLICATION_APPROVAL_REQUIRED.md",
-      "size_bytes": 809,
-      "sha256": "180925473cb5d65071ac23a4590175025c815c458e79f4df6cc96a2b34713f4b"
+      "size_bytes": 924,
+      "sha256": "9dce1e51d1e02ddc04ca4c894fe94f6b4e087d6e28692a6e71f529fe8c5e4e8b"
     },
     {
       "path": "README.md",
-      "size_bytes": 4138,
-      "sha256": "938a6d9cc24ad24e556cbff7a6bb995e725b476aa87aee790c52584797bbc535"
+      "size_bytes": 4526,
+      "sha256": "1058eb4d0d662c0011eda5ce7d49b6ada6041916f35a22a39f1a932879ee544c"
     },
     {
       "path": "RELEASE_VALIDATION.md",
-      "size_bytes": 2706,
-      "sha256": "251a33b7aed20b6a958f299a24a6573bcd1e33791d33c1b507f6c74e8b555cdb"
+      "size_bytes": 3170,
+      "sha256": "edef86736a0913d2d0db3385b5346159828bd97592dd55ae0e2dac09f70912c2"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -445,6 +445,11 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
+      "path": "data/empirical/hk_u09_ap_relative.csv.gz",
+      "size_bytes": 792004,
+      "sha256": "b99bac3454e8f0f306c7fb8c012a7def5e277251c8013304e50e02ae51717078"
+    },
+    {
       "path": "data/public/README.md",
       "size_bytes": 229,
       "sha256": "92ffbc52718039f3eb1ce62ce79efbe04dd477a1e1bc25206a680e5ab71524de"
@@ -476,8 +481,8 @@
     },
     {
       "path": "docs/DATA_AND_PRIVACY.md",
-      "size_bytes": 1098,
-      "sha256": "e1dbb8390f80de9c7da30550c9049380c09b0bc64322fa9e7dba6d4729e4e764"
+      "size_bytes": 1017,
+      "sha256": "364f1da57f859935c0faf5ddf9fcdf12137b25a7002619b11b5ca90631b44266"
     },
     {
       "path": "docs/ESTIMATORS.md",
@@ -661,8 +666,8 @@
     },
     {
       "path": "scripts/check_public_release.py",
-      "size_bytes": 5522,
-      "sha256": "d4c36c8cdef9cca13c8bce8a5ed64bb59e12c6beebf1360e18f6124c35d08bb4"
+      "size_bytes": 5862,
+      "sha256": "267e46708647415ba8b085f267d9cd3df16217c0cbd8a5b178603e2c869a84ba"
     },
     {
       "path": "scripts/create_public_synthetic_combined.py",
@@ -686,8 +691,8 @@
     },
     {
       "path": "scripts/refresh_release_manifest.py",
-      "size_bytes": 2812,
-      "sha256": "179f3508a1417b44643a3c8497428d201579499c4daed853100b01d03befcc20"
+      "size_bytes": 2815,
+      "sha256": "f0031e783f5b1bb500950e85421ac5917052c1b61fd52c7d61e7c69a06678c0a"
     },
     {
       "path": "scripts/reproduce_release.py",
@@ -778,6 +783,11 @@
       "path": "scripts/sanitize_hk_data.py",
       "size_bytes": 3222,
       "sha256": "5334a31805d499029788eccbad978c7833bc098f536749b298bb07b6be4d36bc"
+    },
+    {
+      "path": "scripts/validate_hk_empirical.py",
+      "size_bytes": 1857,
+      "sha256": "40f4de3140af0e204cf5809d2ed593b9466dcf655b314e693706b4289d644280"
     },
     {
       "path": "scripts/validate_synthetic_combined.py",

@@ -17,6 +17,7 @@ jobs:
       - run: python scripts/refresh_release_manifest.py --check
       - run: python -m pytest -q
       - run: python scripts/check_public_release.py
+      - run: python scripts/validate_hk_empirical.py
       - run: python scripts/reproduce_release.py --mode demo
       - run: python scripts/validate_synthetic_combined.py
   android-gradle:
