@@ -6,8 +6,8 @@
   "files": [
     {
       "path": ".github/workflows/ci.yml",
-      "size_bytes": 1939,
-      "sha256": "74ed6a46633198d57bbdc22e2f0a06a0f8e34a24212bf5258df02011a595c095"
+      "size_bytes": 2050,
+      "sha256": "120e0e718d94f9c3a63ed8e4ce8dd3c6b1f6999f7568a8642ca7f24d0ce52518"
     },
     {
       "path": ".gitignore",
@@ -546,8 +546,8 @@
     },
     {
       "path": "docs/PUBLIC_EMPIRICAL_INTEGRITY.md",
-      "size_bytes": 3667,
-      "sha256": "ecacb8bd678d48a8675e54a736f5bd94c7e1a3e1b3416b9bc08b422fa509e6f5"
+      "size_bytes": 3916,
+      "sha256": "f53a465984b53da243b21da9e8134117237e623c61258db6dc232c7711cd1866"
     },
     {
       "path": "docs/REPRODUCIBILITY.md",

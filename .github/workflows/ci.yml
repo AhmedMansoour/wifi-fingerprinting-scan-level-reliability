@@ -21,6 +21,10 @@ jobs:
       - run: python scripts/validate_hk_empirical.py
       - run: python scripts/validate_uji_release.py
       - run: python scripts/reproduce_public_integrity.py --units U09
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          MKL_NUM_THREADS: '1'
       - run: python scripts/check_public_integrity_release.py --check-fresh
       - run: python scripts/stage_existing_units.py --input-dir data/empirical --units U01 U02 U03
       - run: python scripts/verify_existing_research_assets.py

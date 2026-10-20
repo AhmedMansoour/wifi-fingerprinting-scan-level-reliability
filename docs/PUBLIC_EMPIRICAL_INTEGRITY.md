@@ -14,7 +14,7 @@ python scripts/reproduce_public_integrity.py
 To run only HK U09 (also exercised by GitHub Actions):
 
 ```bash
-python scripts/reproduce_public_integrity.py --units U09
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python scripts/reproduce_public_integrity.py --units U09
 python scripts/check_public_integrity_release.py --check-fresh
 ```
 
@@ -34,7 +34,7 @@ Frozen examples of these **freshly computed** outputs are committed to `examples
 python scripts/check_public_integrity_release.py
 ```
 
-This checks all 5,041 stored scan-feature rows and 50,410 candidate rows, scan key alignment, rank completeness and exact SQS reconstruction. The optional `--check-fresh` checks the freshly regenerated U09 SQS values against the committed native results, within `1e-7`.
+This checks all 5,041 stored scan-feature rows and 50,410 candidate rows, scan key alignment, rank completeness and exact SQS reconstruction. The optional `--check-fresh` checks the freshly regenerated U09 SQS values against the committed native results, within `1e-7` in the pinned single-thread environment. Near-ties in float32 radio-map distances may otherwise select different candidates on some numerical backends; this does not change the stored study reference results.
 
 | Unit | Training RSS scans | Test scans | Candidate rows |
 |---|---:|---:|---:|
