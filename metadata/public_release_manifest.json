@@ -1,33 +1,48 @@
 {
-  "release_kind": "UNPUBLISHED_PUBLIC_SOURCE_REVIEW_CANDIDATE",
+  "release_kind": "PUBLIC_SYNTHETIC_SOURCE_RELEASE",
   "empirical_data_included": false,
   "synthetic_fixture_scans": 68149,
-  "source": "local_reconstructed_review_archive",
+  "source": "byte-accurate tracked checkout",
   "files": [
     {
       "path": ".github/workflows/ci.yml",
-      "size_bytes": 493,
-      "sha256": "d04b40fe35b6b7736fedb2570bbad50dd248e532cef2890192ce32b62827ad95"
+      "size_bytes": 1389,
+      "sha256": "5484c658fe2e0cc96c069bffb91b1307c6285a978b71b6fac802ed135b2948b3"
     },
     {
       "path": ".gitignore",
-      "size_bytes": 938,
-      "sha256": "91b1165d30036654f61b6d8a1679058b82f2c541aedbf80112cd1cd33019e238"
+      "size_bytes": 1050,
+      "sha256": "90309878c2b591ebb1b2ea0e3a14bdd00979c926e5b994af49a0e32459d9bab3"
+    },
+    {
+      "path": "LICENSE",
+      "size_bytes": 1094,
+      "sha256": "5b0fc0b213c6c71e58b3b94002fc079daab7e5da60f6b151982420be389905f0"
     },
     {
       "path": "PUBLICATION_APPROVAL_REQUIRED.md",
-      "size_bytes": 729,
-      "sha256": "fcbb1ce7b77e28797d10045b4b687d812c316aeda25fbfc9121598624a4bc933"
+      "size_bytes": 809,
+      "sha256": "180925473cb5d65071ac23a4590175025c815c458e79f4df6cc96a2b34713f4b"
     },
     {
       "path": "README.md",
-      "size_bytes": 3646,
-      "sha256": "3531edddc2346e5ca8acb7e6648c695e9371631a2476340d7438d3b8db476656"
+      "size_bytes": 4138,
+      "sha256": "938a6d9cc24ad24e556cbff7a6bb995e725b476aa87aee790c52584797bbc535"
     },
     {
       "path": "RELEASE_VALIDATION.md",
-      "size_bytes": 2518,
-      "sha256": "e850114242a6568837ec8f0556a35acbbacb09d6fc15551cdcee702d52fc3980"
+      "size_bytes": 2706,
+      "sha256": "251a33b7aed20b6a958f299a24a6573bcd1e33791d33c1b507f6c74e8b555cdb"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "size_bytes": 1169,
+      "sha256": "34e61b7df8f896a081c6446327bf06117c428455606d14c34e69cf793d39f8f3"
+    },
+    {
+      "path": "android/.gitkeep",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "path": "android/IMPORT_FORMAT.md",
@@ -365,6 +380,11 @@
       "sha256": "b041c73de28acde87cef3f2fd728e3f5aaa3f713bb7ffbe7a65edd925bd0742f"
     },
     {
+      "path": "config/.gitkeep",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "path": "config/analysis.yaml",
       "size_bytes": 571,
       "sha256": "85d8ae794f4346e7a451362df3552ec7b3975a5087c13ada7653a412f9ad397a"
@@ -428,6 +448,11 @@
       "path": "data/public/README.md",
       "size_bytes": 229,
       "sha256": "92ffbc52718039f3eb1ce62ce79efbe04dd477a1e1bc25206a680e5ab71524de"
+    },
+    {
+      "path": "docs/.gitkeep",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "path": "docs/ANDROID.md",
@@ -511,13 +536,8 @@
     },
     {
       "path": "examples/synthetic_combined/README.md",
-      "size_bytes": 2676,
-      "sha256": "5b52a1f188b3d8e4e835fdc260f38d4a313e19bf5e2b5479793dd12374f3d138"
-    },
-    {
-      "path": "examples/synthetic_combined/combined_all_datasets.csv.gz",
-      "size_bytes": 4556870,
-      "sha256": "1e69e208a042a07ee088b0302d1932691e0abdb2772a54f380e523bf238d8dcd"
+      "size_bytes": 1854,
+      "sha256": "980c8aa484b820cc607e2dcc6eee389eb30bff1490893a33d440c698a8cb78a8"
     },
     {
       "path": "examples/synthetic_combined/units/U01.csv.gz",
@@ -575,6 +595,11 @@
       "sha256": "e398e978a24dd805a64450e89cb5dfd731f3072fdb44a706f449476b235a31a6"
     },
     {
+      "path": "metadata/.gitkeep",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "path": "metadata/source_provenance.json",
       "size_bytes": 3391,
       "sha256": "b2af8975519635cff4eb581b554237855ade4cc7c656d2a912bc56cb6ab08a0d"
@@ -600,6 +625,21 @@
       "sha256": "7b0c1b2c916b43720ef47e83a960c062963475e4d2d773eb8f23f8c344eb24f7"
     },
     {
+      "path": "results/.gitkeep",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "scripts/.gitkeep",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "scripts/assemble_synthetic_combined.py",
+      "size_bytes": 1476,
+      "sha256": "cebfd0f6011492eb1d97cbc94af653a45eaa84eb0c0e3d8fc86db0f717cb97e7"
+    },
+    {
       "path": "scripts/build_calibration.py",
       "size_bytes": 1735,
       "sha256": "cef27af2c73966ee7b854979e199f45e0ad853bb82caf69d53a8f33f430772fe"
@@ -621,8 +661,8 @@
     },
     {
       "path": "scripts/check_public_release.py",
-      "size_bytes": 5416,
-      "sha256": "f673b24030a71a544c1da1de5214a243bd614d02591f8641e7d702f1f0b88718"
+      "size_bytes": 5522,
+      "sha256": "d4c36c8cdef9cca13c8bce8a5ed64bb59e12c6beebf1360e18f6124c35d08bb4"
     },
     {
       "path": "scripts/create_public_synthetic_combined.py",
@@ -643,6 +683,11 @@
       "path": "scripts/prepare_research_workspace.py",
       "size_bytes": 2836,
       "sha256": "9404eb5d37917dd4f24431ec147fadae356410c504df15ae89a9f0ca71147f32"
+    },
+    {
+      "path": "scripts/refresh_release_manifest.py",
+      "size_bytes": 2812,
+      "sha256": "179f3508a1417b44643a3c8497428d201579499c4daed853100b01d03befcc20"
     },
     {
       "path": "scripts/reproduce_release.py",
@@ -738,6 +783,11 @@
       "path": "scripts/validate_synthetic_combined.py",
       "size_bytes": 2422,
       "sha256": "60f8482e6d1e3fa4987f057573e4ab33f96f4ec8fc5af136c5813fdf2a3b2cc0"
+    },
+    {
+      "path": "src/.gitkeep",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "path": "src/wifi_integrity/__init__.py",

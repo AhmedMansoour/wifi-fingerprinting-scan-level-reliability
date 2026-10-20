@@ -14,6 +14,7 @@ jobs:
           cache: pip
       - run: python -m pip install -e ".[dev]"
       - run: python scripts/assemble_synthetic_combined.py
+      - run: python scripts/refresh_release_manifest.py --check
       - run: python -m pytest -q
       - run: python scripts/check_public_release.py
       - run: python scripts/reproduce_release.py --mode demo

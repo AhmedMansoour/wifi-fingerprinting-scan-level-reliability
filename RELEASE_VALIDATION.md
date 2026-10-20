@@ -1,25 +1,30 @@
-# Integration validation: public-release review candidate
+# Verified reproducibility scope and release status
 
-The integration described here was performed in a local Python/Java filesystem. The result has not yet been uploaded to public GitHub when this report was prepared; an MIT source license is included.
+The source repository was published on `main` in commit `4178c3bf559004e223c437a74dc6c06b7057d748` on **2026-10-20**. The public source and completely synthetic fixtures are available at:
 
-| Verification | Actual outcome |
+https://github.com/AhmedMansoour/wifi-fingerprinting-scan-level-reliability
+
+The GitHub Actions workflow for that commit completed successfully:
+
+https://github.com/AhmedMansoour/wifi-fingerprinting-scan-level-reliability/actions/runs/39465309756
+
+| Verification | Status and scope |
 |---|---|
-| Comparison to recovered 211-file implementation | Completed; preserved Python estimator code and Android Studio Gradle project |
-| Python unit suite (`PYTHONPATH=src pytest -q`) | **20 passed** |
-| Synthetic ten-unit CSV validator | **68,149 fabricated rows**, 54,520 train / 13,629 test, 10 units; combined CSV SHA-256 verified |
-| Synthetic demo retrieval | **Passed**, 300 train + 150 test; KNN and WKNN |
-| Synthetic workspace preparation | **Passed** on the fabricated combined table |
-| Native estimator smoke | **7 passed**, residual CNN **skipped** because optional dependency unavailable; not study-level accuracy validation |
-| Java diagnostic and floor-inference smoke | **2 passed** under installed Java runtime |
-| Android Gradle compile/build and on-device run | **Not executed in this environment**, Android SDK/Gradle build infrastructure unavailable; recovered prior-package validation records historical Android build only |
-| JavaScript syntax | Dashboard and browser UI JavaScript checked with Node.js |
-| Source/privacy gate | **Passed**; permitted only fabricated `.csv.gz` files and checksum-pinned official Gradle wrapper and generic app icon |
-| Original HK floor-plan images, vector files, BSSIDs, real HK coordinates | **Not included in candidate**; privacy gate checked staged bytes and extracted archive |
-| Research reference tests | **Not applicable to public checkout**: the original reference/processed outputs are deliberately withheld. Existing reference suite failures must not be hidden or reported as passes |
-| Empirical eight-estimator retraining, native SQS equivalence | **Not established** |
+| Python environment installation | Passed on GitHub Actions runner |
+| Python tests | Passed on GitHub Actions; 20/20 also passed in independent local extraction of predecessor candidate |
+| Generated synthetic combined dataset | Validated: 68,149 fabricated records across ten input slots |
+| Synthetic KNN/WKNN demo | Passed; software operation only |
+| Source privacy gate | Passed in CI and predecessor candidate; not equivalent to legal redistribution clearance |
+| Android SDK 35 / Java 17 Gradle build | `testDebugUnitTest` and `assembleDebug` passed in GitHub Actions |
+| Real smartphone deployment/field test | Not established by GitHub CI |
+| Historical Android 99-run timing experiment | Separate study; its reported timing is post-retrieval indicator/composite/warning computation only |
+| Complete original empirical training/evaluation | Not established; required real research inputs are withheld |
+| Empirical scalar-reference replay and native SQS equivalence | Not established by the public checkout |
 
-The public-data example is **fully synthetic** and is not a transformed or anonymized sample of the empirical study. The empirical study reference predictions, per-scan reliability features, and all real radio fingerprint tables are absent.
+The public ten-unit fixture is **100% synthetic**, not a sanitized or shifted copy of the empirical study. No private HK map, vector floor plan, real BSSID, original HK reference coordinates or empirical radio map is licensed for repository distribution. The code archive does not establish dataset-specific redistribution rights.
 
-**Verification boundary:** this local environment cannot download the Android SDK or Gradle distribution due unavailable DNS; the repository CI workflow is configured to build on GitHub-hosted runners. A GitHub CI build result is the appropriate Android verification. Do not interpret synthetic demonstrations as independent reproduction of manuscript accuracy. Original third-party dependencies retain their licenses; see `THIRD_PARTY_NOTICES.md`.
+**Maintainer checks still needed:** software/contributor license clearance, journal double-blind policy, tests on physical Android hardware where claimed, and any empirical reproduction undertaken privately using licensed datasets. Do not claim statistical empirical reproducibility from the synthetic fixture or infer new-environment robustness from the ten original evaluation units.
 
-The ten versioned synthetic unit files recreate the entire combined table using `python scripts/assemble_synthetic_combined.py`; the script checks all source and combined SHA-256 hashes. The combined gzip file is generated locally, not committed.
+## Release manifest
+
+After making changes in a *private checkout* and completing confidentiality review, generate `metadata/public_release_manifest.json` with `python scripts/refresh_release_manifest.py --write`, review the diff, and verify using `--check`. This manifest excludes itself and any uncommitted generated combined CSV. Updating the manifest is a bookkeeping operation, **not** permission to publish additional data.

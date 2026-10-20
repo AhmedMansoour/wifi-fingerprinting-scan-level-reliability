@@ -1,51 +1,26 @@
-# PUBLIC SYNTHETIC combined Wi-Fi data for software demonstrations
+# Fully synthetic ten-unit demonstration data
 
-## Critical distinction
-All 68,149 individual scans, relative 2D positions, RSS readings, AP placements,
-and all map-like geometry are **fabricated from a random seed**. These are NOT
-measurements from the ESWA study or from the named benchmark datasets. Dataset
-and group names are registry slot labels used only for compatibility with the
-repository; they DO NOT imply original dataset content is reproduced.
+**These are fabricated software-test observations, not ESWA study measurements.** All scan identifiers, AP tokens, RSS values, level labels and 2D coordinates were generated synthetically. The ten unit names designate compatible input slots, not the actual contents or geometry of the benchmark datasets. No original HK BSSIDs, floor plans, real trajectories or reconstructable site geometry are distributed.
 
-This file is suitable as a PUBLIC **synthetic software-test fixture**. It
-CANNOT independently reproduce the paper's empirical accuracy, SQS calibration,
-gross-error results, or per-environment conclusions. Do not label it as
-"anonymized empirical data" or "processed study data". To reproduce reported
-study reference statistics use the separately supplied approved scalar records,
-subject to their own permissions.
+## What's committed to this repository
 
-## Files
-- `processing_inputs/combined_all_datasets.csv` is the drop-in eight-column
-  table for `scripts/prepare_research_workspace.py --combined ...`.
-- `processing_inputs/units/U01.csv.gz` through `U10.csv.gz` are the unit slices.
-- `processing_inputs/validation_summary.json` records sizes and SHA-256 hashes.
-- `scripts/create_public_synthetic_combined.py` generates all 10 units afresh.
+- `units/U01.csv.gz` through `units/U10.csv.gz`: ten checksum-verified synthetic subsets.
+- `validation_summary.json`: recorded SHA-256 digests and expected row counts.
+- `README.md`: this explanatory file.
 
-## Data schema
-`dataset,group,split,row_id,floor,x,y,rss_json`
+The combined `combined_all_datasets.csv.gz` is **generated locally** rather than stored in the Git repository. From the project root:
 
-Coordinates are fabricated metre-scale local Cartesian positions with no
-geodetic origin, genuine reference-point locations, or real floor geometry.
-`floor` is a fabricated categorical level, not a true storey label. RSS
-observations use fabricated AP keys in the `AP_00001` format, *not HK BSSIDs*.
-No real scan rows, raw radio-map signatures, or reversible mappings were used.
-
-## Reproduction
 ```bash
-python scripts/create_public_synthetic_combined.py --output new_public_fixture.zip
-unzip new_public_fixture.zip
+python scripts/assemble_synthetic_combined.py
+python scripts/validate_synthetic_combined.py
 python scripts/prepare_research_workspace.py \
-  --combined processing_inputs/combined_all_datasets.csv
+  --combined examples/synthetic_combined/combined_all_datasets.csv.gz
 ```
 
-The generator is deterministic given its code, seed, and numpy version. A SHA-256
-of its committed output is recorded in the included validation summary. The
-repository's analysis results are **not** expected to match the original paper
-when this fixture is substituted for actual study data.
+The eight-column CSV schema is:
 
-## Source and permissions
-The published release excludes all actual HK indoor geometry, floor-plan
-images, vector shapes, Wi-Fi identifiers, and empirically observed positions.
-The separately stored 10-unit input ZIP contains real derived data and is
-PRIVATE. Redistributing third-party empirical datasets requires dataset-specific
-license verification even after IDs and coordinates are transformed.
+`dataset,group,split,row_id,floor,x,y,rss_json`
+
+The fixture has 68,149 invented scans (54,520 train / 13,629 test). The x/y coordinates are origin-free, fabricated metre coordinates, and AP identifiers have the `AP_00001` style. These values support installation checks, synthetic unit tests and demonstration execution. **They cannot reproduce the manuscript's empirical accuracy, indicator correlations or warning-state results.** The study-specific data and output records are separately controlled and are not licensed by this synthetic fixture.
+
+For regeneration from the original deterministic generator, consult `scripts/create_public_synthetic_combined.py`; byte-level equivalence also depends on the specified dependencies and compression settings.
