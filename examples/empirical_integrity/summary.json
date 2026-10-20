@@ -1,0 +1,67 @@
+{
+  "status": "passed",
+  "scope": "new native indicator and SQS recomputation, not an exact historical replay",
+  "units": {
+    "U01": {
+      "unit": "U01",
+      "status": "computed_from_public_measurements",
+      "train_scans": 4628,
+      "test_scans": 1157,
+      "scan_level_feature_rows": 1157,
+      "retrieved_candidate_rows": 11570,
+      "sqs_mean": 0.46534838675328194,
+      "sqs_median": 0.46836888860034015,
+      "sqs_max_reconstruction_delta": 0.0,
+      "input_sha256": {
+        "U01.csv.gz": "9fbb0a623b7414218f219dfdbfb0d0652f556fa46001766d262e737cd8e87ede"
+      }
+    },
+    "U02": {
+      "unit": "U02",
+      "status": "computed_from_public_measurements",
+      "train_scans": 4402,
+      "test_scans": 1101,
+      "scan_level_feature_rows": 1101,
+      "retrieved_candidate_rows": 11010,
+      "sqs_mean": 0.4496961934412555,
+      "sqs_median": 0.45641838448564015,
+      "sqs_max_reconstruction_delta": 0.0,
+      "input_sha256": {
+        "U02.csv.gz": "1247bdf87d7f0a2b1ad96914c0b4f139b52e2ac90d3b05ace0d55b623d0bdb23"
+      }
+    },
+    "U03": {
+      "unit": "U03",
+      "status": "computed_from_public_measurements",
+      "train_scans": 7808,
+      "test_scans": 1952,
+      "scan_level_feature_rows": 1952,
+      "retrieved_candidate_rows": 19520,
+      "sqs_mean": 0.5056942659162708,
+      "sqs_median": 0.5167382870278319,
+      "sqs_max_reconstruction_delta": 0.0,
+      "input_sha256": {
+        "U03.csv.gz": "2fac9689f508b46cf83775a05337c3fdceb3cee517008377ae5e298b7c1715c1"
+      }
+    },
+    "U09": {
+      "unit": "U09",
+      "status": "computed_from_public_measurements",
+      "train_scans": 3319,
+      "test_scans": 831,
+      "scan_level_feature_rows": 831,
+      "retrieved_candidate_rows": 8310,
+      "sqs_mean": 0.5303191162866864,
+      "sqs_median": 0.525473254004507,
+      "sqs_max_reconstruction_delta": 0.0,
+      "input_sha256": {
+        "hk_u09_train.csv.gz": "74a202c55d35244da1a82343a2447363199b6622ebc9c2fddd9eb0916ab2fa3a",
+        "hk_u09_test_ordered.csv.gz": "616b38dd551d2fcaf891d51ed742fbff3e064e4e859c4f8ebaf2fb887694105c"
+      }
+    }
+  },
+  "total_scan_features": 5041,
+  "total_candidate_rows": 50410,
+  "historical_8_estimator_retraining": false,
+  "gross_error_ground_truth_classification_run": false
+}

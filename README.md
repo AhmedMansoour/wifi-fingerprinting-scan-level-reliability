@@ -1,6 +1,6 @@
 # Wi-Fi Fingerprinting Scan-Level Integrity
 
-**Research implementation accompanying a manuscript under review in Expert Systems with Applications.** This repository distributes original source, synthetic demonstration inputs, and a distinct empirical HK U09 data file under the MIT license. See `LICENSE` and `THIRD_PARTY_NOTICES.md`.
+**Research implementation accompanying a manuscript under review in Expert Systems with Applications.** This repository distributes original source, synthetic demonstration inputs, and separate empirically measured HK U09 and CC BY 4.0 UJIIndoorLoc inputs; their data licenses are distinct from the MIT software license. See `LICENSE` and `THIRD_PARTY_NOTICES.md`.
 
 The Python package implements Wi-Fi fingerprinting estimators and diagnostic/reliability components. The Android Java application inspects scans using an imported, authorized local radio map. The project contains a deterministic **fully synthetic** ten-unit input fixture for exercising source code and data preparation, not the observations used in the study. HK U09 real RSS scans with AP1–AP525 tokens and origin-free local metric positions are separately published under `data/empirical/`. No original HK floor-map images/vectors, original BSSIDs, SSIDs, router names, or geodetic origins are included.
 
@@ -57,8 +57,7 @@ python scripts/verify_existing_research_assets.py
 ```
 
 The original coordinate origin and building-map images/vectors are not included.
-The remaining nine units' real input datasets are held for dataset-specific
-redistribution clearance; the original aggregate results are supplied.
+Three UJIIndoorLoc units are public under CC BY 4.0; six other source datasets are linked for users to download and prepare locally. Original aggregate results are supplied.
 
 ## Public UJI measurements and other dataset downloads
 
@@ -75,6 +74,22 @@ python scripts/stage_existing_units.py --input-dir data/empirical --units U01 U0
 Use `scripts/import_external_unit.py` to adapt independently downloaded
 RSS and coordinate tables. Independently chosen source splits do not
 reproduce the paper's original train/test assignments.
+
+## Compute the original scan-level integrity indicators on measured data
+
+The four publicly supplied empirical units, U01–U03 and U09, now have a
+single runnable source-to-output workflow:
+
+```bash
+python scripts/reproduce_public_integrity.py
+python scripts/check_public_integrity_release.py
+```
+
+The original indicator and SQS functions process **5,041 held-out scans**
+and produce **50,410** radio-map candidate records. The outputs are
+committed under [empirical integrity examples](examples/empirical_integrity/)
+and are verified in CI. These fresh native calculations are distinguished from
+the archived manuscript reference results. [Reproduction guide](docs/PUBLIC_EMPIRICAL_INTEGRITY.md).
 
 ## Android Studio
 

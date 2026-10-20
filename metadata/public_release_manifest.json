@@ -6,8 +6,8 @@
   "files": [
     {
       "path": ".github/workflows/ci.yml",
-      "size_bytes": 1729,
-      "sha256": "d604c5b3f93e33bf8b5caf6b3a361297148c94e7206256776f5d0fce4cf18b26"
+      "size_bytes": 1939,
+      "sha256": "74ed6a46633198d57bbdc22e2f0a06a0f8e34a24212bf5258df02011a595c095"
     },
     {
       "path": ".gitignore",
@@ -26,13 +26,13 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 6658,
-      "sha256": "71985cedc30f37438b501bcc048f522800d2c92fe89b29290c0c9552d4cef515"
+      "size_bytes": 7460,
+      "sha256": "3fd7f08fe37d633ad713fe9673ceaba49f7d1cd8257a4d2c02ac786b15b9f198"
     },
     {
       "path": "RELEASE_VALIDATION.md",
-      "size_bytes": 4302,
-      "sha256": "fdfa6fd1161a33417ea614a61d78606b6f768e74c19e9590a3353ea0bc62de25"
+      "size_bytes": 5049,
+      "sha256": "2e226fc9ac8a0752d372bcaef21f201b82a9a483bfae63c76319e43f7f0b170c"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -545,9 +545,14 @@
       "sha256": "a34a76f73af89e671e2c6075f1dc7d7633974e816c2ffb489da2d5d543edff55"
     },
     {
+      "path": "docs/PUBLIC_EMPIRICAL_INTEGRITY.md",
+      "size_bytes": 3667,
+      "sha256": "ecacb8bd678d48a8675e54a736f5bd94c7e1a3e1b3416b9bc08b422fa509e6f5"
+    },
+    {
       "path": "docs/REPRODUCIBILITY.md",
-      "size_bytes": 2367,
-      "sha256": "f63777f79f412c5425c980decd9966c61df276aa5366c8cd718f829653d3740c"
+      "size_bytes": 2995,
+      "sha256": "573d87509106183790586031da4c7ad371509cc771e4cbf4385513d007262dc3"
     },
     {
       "path": "docs/RESEARCH_OVERVIEW.md",
@@ -593,6 +598,51 @@
       "path": "examples/README.md",
       "size_bytes": 767,
       "sha256": "c4e41f5e1691bad20e9d7dfe67fbedfbdc32883b688e6613622fb99d2e5e6f14"
+    },
+    {
+      "path": "examples/empirical_integrity/U01_retrieved_candidates.csv.gz",
+      "size_bytes": 213159,
+      "sha256": "36e4b18eecf332f46abad5d566a3e2ffba48744cc5c9139834620aa989173666"
+    },
+    {
+      "path": "examples/empirical_integrity/U01_scan_reliability.csv.gz",
+      "size_bytes": 154178,
+      "sha256": "1c078ef74277582ae670392d5f032c4f7e0f8e209b718e7602b58cc10f3df1b5"
+    },
+    {
+      "path": "examples/empirical_integrity/U02_retrieved_candidates.csv.gz",
+      "size_bytes": 165170,
+      "sha256": "f62d4cd8f074c233c479601a7e89c00dc02a8e7b1823e666c74e439fd791920a"
+    },
+    {
+      "path": "examples/empirical_integrity/U02_scan_reliability.csv.gz",
+      "size_bytes": 130257,
+      "sha256": "b49b0c0c1ecbd1d3efc9755226ad4e321271061a710ece4d070f76cf7f62431a"
+    },
+    {
+      "path": "examples/empirical_integrity/U03_retrieved_candidates.csv.gz",
+      "size_bytes": 299117,
+      "sha256": "29a8cf0dd12cfdc7e2fe86da9947e06813164edd7417f025eaa440c0897898be"
+    },
+    {
+      "path": "examples/empirical_integrity/U03_scan_reliability.csv.gz",
+      "size_bytes": 247208,
+      "sha256": "c1a873154e4873fe97dd9272d2e28607006d85c15164bd6d8d01f90c699aad45"
+    },
+    {
+      "path": "examples/empirical_integrity/U09_retrieved_candidates.csv.gz",
+      "size_bytes": 140039,
+      "sha256": "1b4ad1ea0ef98419842056a9385ea9550b3c935191454b48b8c07de8f8253f02"
+    },
+    {
+      "path": "examples/empirical_integrity/U09_scan_reliability.csv.gz",
+      "size_bytes": 120094,
+      "sha256": "53153bde21c79afde8fc5bffb522b075e4de8f0c0afe932bed2b311f4ae598eb"
+    },
+    {
+      "path": "examples/empirical_integrity/summary.json",
+      "size_bytes": 2287,
+      "sha256": "c07ec81066a0b497a01e998b5283a2a5d51820c4c441ab81f4adb2b02a124eba"
     },
     {
       "path": "examples/synthetic_combined/README.md",
@@ -875,9 +925,14 @@
       "sha256": "a1b32b4bf355075ad80de275c2295847fa71db73c44b99dfbb73433e937a5bd0"
     },
     {
+      "path": "scripts/check_public_integrity_release.py",
+      "size_bytes": 4434,
+      "sha256": "20aee0e895ddd1827d1ca63aaf37d6e839daab903ec53231c47dd31387647b0f"
+    },
+    {
       "path": "scripts/check_public_release.py",
-      "size_bytes": 6202,
-      "sha256": "8c73f8dd5d0ac9541a5eb795c1095aefa9d23166eda12a95e4ebc1254e1bf270"
+      "size_bytes": 6744,
+      "sha256": "7b48dfa3f0582c48ecaa731e85eb1dacd6880ea7cfd88d97ed9c892dbcf899f1"
     },
     {
       "path": "scripts/create_public_synthetic_combined.py",
@@ -913,6 +968,11 @@
       "path": "scripts/refresh_release_manifest.py",
       "size_bytes": 2810,
       "sha256": "1874612a22ed7bbb989c0b8f5c525d179e755eb4c88f00c0e742c9cf52c26e80"
+    },
+    {
+      "path": "scripts/reproduce_public_integrity.py",
+      "size_bytes": 7224,
+      "sha256": "e22c2f3822431aa396e9041f569ad29fc9cdf2271301506a15b025d83d415191"
     },
     {
       "path": "scripts/reproduce_release.py",
@@ -1283,6 +1343,11 @@
       "path": "tests/test_external_unit_input.py",
       "size_bytes": 2347,
       "sha256": "60b3f9291e9fdfa3d70b959462f53f0ca0600a0d4ad5fcefe0c1f61ae317c82c"
+    },
+    {
+      "path": "tests/test_public_integrity.py",
+      "size_bytes": 1132,
+      "sha256": "826857d75e56b11133da56c6c2727b0f96f4e256db819c0f079a987690ce0b17"
     },
     {
       "path": "tests/unit/test_calibration.py",

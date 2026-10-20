@@ -20,7 +20,7 @@ APP_ICON_SHA256 = '62759400e1f289a522f3b7c1f441828a3f39908f0837ebb2ceb12e8cee78e
 WRAPPER = 'android/gradle/wrapper/gradle-wrapper.jar'
 WRAPPER_SHA256 = '81a82aaea5abcc8ff68b3dfcb58b3c3c429378efd98e7433460610fecd7ae45f'
 GZ_PREFIX = 'examples/synthetic_combined/'
-GZ_PATHS = {'data/empirical/U01.csv.gz','data/empirical/U02.csv.gz','data/empirical/U03.csv.gz'} | {'data/empirical/hk_u09_test_ordered.csv.gz','data/radio_maps/hk_u09_train.csv.gz'} | {'data/empirical/hk_u09_ap_relative.csv.gz'} | {GZ_PREFIX+'combined_all_datasets.csv.gz'} | {GZ_PREFIX+f'units/U{i:02d}.csv.gz' for i in range(1,11)}
+GZ_PATHS = {'examples/empirical_integrity/U01_retrieved_candidates.csv.gz','examples/empirical_integrity/U01_scan_reliability.csv.gz','examples/empirical_integrity/U02_retrieved_candidates.csv.gz','examples/empirical_integrity/U02_scan_reliability.csv.gz','examples/empirical_integrity/U03_retrieved_candidates.csv.gz','examples/empirical_integrity/U03_scan_reliability.csv.gz','examples/empirical_integrity/U09_retrieved_candidates.csv.gz','examples/empirical_integrity/U09_scan_reliability.csv.gz'} | {'data/empirical/U01.csv.gz','data/empirical/U02.csv.gz','data/empirical/U03.csv.gz'} | {'data/empirical/hk_u09_test_ordered.csv.gz','data/radio_maps/hk_u09_train.csv.gz'} | {'data/empirical/hk_u09_ap_relative.csv.gz'} | {GZ_PREFIX+'combined_all_datasets.csv.gz'} | {GZ_PREFIX+f'units/U{i:02d}.csv.gz' for i in range(1,11)}
 ALLOWED_DATA = {'data/.gitkeep','data/public/README.md','reference/.gitkeep','reference/README.md','data/empirical/hk_u09_ap_relative.csv.gz','data/empirical/hk_u09_test_ordered.csv.gz','data/radio_maps/hk_u09_train.csv.gz','data/empirical/U01.csv.gz','data/empirical/U02.csv.gz','data/empirical/U03.csv.gz'}
 EMBED = re.compile(rb'(?:data:image/|<svg\b|<image\b|\bpathData\s*=)', re.I)
 
@@ -81,7 +81,7 @@ def check(root=ROOT):
     if not license_file.is_file() or not license_file.read_text().startswith('MIT License'):
         fail.append('MIT source license missing or invalid')
     return {'result':'passed' if not fail else 'failed','files_scanned':scanned,
-        'synthetic_fixture':fixture,'hk_empirical':hk,'errors':fail,'scope':'source, synthetic example and HK empirical U09'}
+        'synthetic_fixture':fixture,'hk_empirical':hk,'errors':fail,'scope':'source, synthetic inputs, HK and UJI empirical units, and recomputed native reliability examples'}
 
 if __name__ == '__main__':
     x=check();print(json.dumps(x,indent=2));sys.exit(1 if x['errors'] else 0)

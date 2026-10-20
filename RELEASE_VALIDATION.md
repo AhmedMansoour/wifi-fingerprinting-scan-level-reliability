@@ -52,3 +52,7 @@ aggregate reference within a 0.03-m numerical tolerance.
 ## Public UJI source data and external input format (2026-10-21)
 
 UJIIndoorLoc U01–U03 have 16,838 measured training scans and 4,210 measured test scans; `scripts/validate_uji_release.py` verifies their original study split counts and AP labels, and `scripts/stage_existing_units.py` prepares their radio maps. The import adapter has tests for both original wide-table and paired RSS/coordinate formats. Unhosted units link to official publishers in `docs/DATASET_DOWNLOADS_AND_FORMAT.md`.
+
+## Native reliability results from the public empirical radio maps
+
+The existing original indicator/SQS implementation has been executed afresh on the public measured U01–U03/U09 input datasets (20,157 radio-map training fingerprints, 5,041 held-out test scans). The archived new-native outputs include 5,041 scan-level rows and 50,410 retrieved-candidate records. SQS component reconstruction differences were zero on all four units in the release environment. This computation neither retrains all eight historical estimator models nor substitutes for historical ground-truth warning-validation results. `scripts/check_public_integrity_release.py` checks these committed outputs, and CI separately recomputes U09 and verifies its SQS values.
