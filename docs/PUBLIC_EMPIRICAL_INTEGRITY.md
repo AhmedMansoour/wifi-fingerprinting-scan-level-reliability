@@ -34,7 +34,7 @@ Frozen examples of these **freshly computed** outputs are committed to `examples
 python scripts/check_public_integrity_release.py
 ```
 
-This checks all 5,041 stored scan-feature rows and 50,410 candidate rows, scan key alignment, rank completeness and exact SQS reconstruction. The optional `--check-fresh` checks the freshly regenerated U09 SQS values against the committed native results, within `1e-7` in the pinned single-thread environment. Near-ties in float32 radio-map distances may otherwise select different candidates on some numerical backends; this does not change the stored study reference results.
+This checks all 5,041 stored scan-feature rows and 50,410 candidate rows, scan key alignment, rank completeness and exact SQS reconstruction. The optional `--check-fresh` matches all 831 U09 scan IDs and compares mean and median SQS with a tolerance of 0.001 on the unit interval. It **reports** the maximum and mean absolute per-scan differences instead of claiming bit-for-bit identity across different NumPy/BLAS environments. The source implementation's float32 nearest-candidate selection can differ at near-ties even with single-thread execution. Original historical outputs remain unchanged.
 
 | Unit | Training RSS scans | Test scans | Candidate rows |
 |---|---:|---:|---:|

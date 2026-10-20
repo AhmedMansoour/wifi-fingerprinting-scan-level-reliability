@@ -31,8 +31,8 @@
     },
     {
       "path": "RELEASE_VALIDATION.md",
-      "size_bytes": 5049,
-      "sha256": "2e226fc9ac8a0752d372bcaef21f201b82a9a483bfae63c76319e43f7f0b170c"
+      "size_bytes": 5137,
+      "sha256": "2302c6a1faf8dc0d1d0a7932a4d4c3ed92adf867f728cc70bba815a212b0cdea"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -546,8 +546,8 @@
     },
     {
       "path": "docs/PUBLIC_EMPIRICAL_INTEGRITY.md",
-      "size_bytes": 3916,
-      "sha256": "f53a465984b53da243b21da9e8134117237e623c61258db6dc232c7711cd1866"
+      "size_bytes": 4037,
+      "sha256": "7680ce8de442a53c5e6139f5b0c6afb36b1e327773bb776191ae35b698e5be1c"
     },
     {
       "path": "docs/REPRODUCIBILITY.md",
@@ -926,8 +926,8 @@
     },
     {
       "path": "scripts/check_public_integrity_release.py",
-      "size_bytes": 4434,
-      "sha256": "20aee0e895ddd1827d1ca63aaf37d6e839daab903ec53231c47dd31387647b0f"
+      "size_bytes": 5674,
+      "sha256": "82517a047f649c7cc36a89482c015bb4511d16fe50c0f6e72d964dc9e356178a"
     },
     {
       "path": "scripts/check_public_release.py",
