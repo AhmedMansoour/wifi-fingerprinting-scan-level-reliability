@@ -40,4 +40,4 @@ Use the exact estimator identity expected by the Android importer. The command w
 
 `--role retrospective` explicitly labels a descriptive cohort profile. The Python online application function rejects retrospective roles and floor/estimator/M mismatches. The Android importer does not enforce the JSON provenance role; deployment owners must preserve and review that provenance themselves. No generic calibration fallback or independent deployment performance is claimed.
 
-Without a matching imported calibration, Android still supports available raw diagnostics. Calibrated composites and warning percentiles remain unavailable. See the [Android import format](../android/IMPORT_FORMAT.md).
+Without a matching imported calibration, Android still supports available raw diagnostics. Calibrated composites and warning percentiles remain unavailable. See the [Android import format](https://github.com/AhmedMansoour/wifi-fingerprinting-scan-level-reliability/blob/main/android/IMPORT_FORMAT.md).

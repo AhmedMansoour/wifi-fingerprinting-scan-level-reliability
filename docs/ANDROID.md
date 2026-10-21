@@ -14,11 +14,11 @@ cd android
 # Windows: gradlew.bat testDebugUnitTest assembleDebug
 ```
 
-The included wrapper uses the official distribution checksum. APKs, build outputs, local SDK paths, signing files, and scan histories are not committed. See [the current integration validation report](../RELEASE_VALIDATION.md) for independent checks and limitations.
+The included wrapper uses the official distribution checksum. APKs, build outputs, local SDK paths, signing files, and scan histories are not committed. See [the current integration validation report](https://github.com/AhmedMansoour/wifi-fingerprinting-scan-level-reliability/blob/main/RELEASE_VALIDATION.md) for independent checks and limitations.
 
 ## First launch and local data
 
-The app creates an empty SQLite database from `app/src/main/assets/database/schema.sql`. Import an authorized local radio-map package through the Radio Maps screen using [IMPORT_FORMAT.md](../android/IMPORT_FORMAT.md). No default private building or floor is selected in source.
+The app creates an empty SQLite database from `app/src/main/assets/database/schema.sql`. Import an authorized local radio-map package through the Radio Maps screen using [IMPORT_FORMAT.md](https://github.com/AhmedMansoour/wifi-fingerprinting-scan-level-reliability/blob/main/android/IMPORT_FORMAT.md). No default private building or floor is selected in source.
 
 The fabricated AP tokens in the public synthetic fixture cannot identify live access points and are not a replacement for an authorized local radio-map import. Imported calibrations must match the selected floor, WKNN setting, and diagnostic candidate count. Missing calibration leaves raw diagnostics available without pretending that calibrated warning outputs exist.
 

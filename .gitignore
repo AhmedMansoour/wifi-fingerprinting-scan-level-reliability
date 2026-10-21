@@ -74,3 +74,6 @@ Thumbs.db
 
 # Generated from ten versioned synthetic unit inputs
 /examples/synthetic_combined/combined_all_datasets.csv.gz
+
+# Generated documentation site
+/_site/

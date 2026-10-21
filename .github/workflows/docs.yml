@@ -23,16 +23,16 @@ jobs:
   build-and-publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.11'
       - name: Install documentation dependencies
         run: python -m pip install -r requirements-docs.txt
       - name: Build documentation
-        run: python -m mkdocs build --clean
+        run: python -m mkdocs build --clean --strict
       - name: Check generated pages and search index
         run: |
           python - <<'PYTEST'

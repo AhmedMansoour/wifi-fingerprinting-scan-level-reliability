@@ -1,6 +1,6 @@
 # Indicator guide
 
-[Home](../README.md) · [Research overview](RESEARCH_OVERVIEW.md)
+[Documentation home](index.md) · [Research overview](RESEARCH_OVERVIEW.md)
 
 The 18 retained indicators include three composites. The table preserves the supplied configuration identifiers and maps them to the historical output-column names where these differ. “Adverse direction” is the prespecified analysis convention, not a guarantee that the direction holds in every condition.
 

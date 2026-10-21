@@ -11,13 +11,13 @@
     },
     {
       "path": ".github/workflows/docs.yml",
-      "size_bytes": 2048,
-      "sha256": "c633e134db83286748da2d892e92e8842b113062ca3c5b274ebe9687b7a4680a"
+      "size_bytes": 2057,
+      "sha256": "1ec283c3c610bb7c433ec0eaa69d08e2ef9293ab06ed225996e5f4bc913a1be2"
     },
     {
       "path": ".gitignore",
-      "size_bytes": 1050,
-      "sha256": "90309878c2b591ebb1b2ea0e3a14bdd00979c926e5b994af49a0e32459d9bab3"
+      "size_bytes": 1090,
+      "sha256": "d0b75bc8b39a4d6f86a88eb3241bfad657fc210520bae35b6594a33bfac24870"
     },
     {
       "path": "LICENSE",
@@ -31,8 +31,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 18209,
-      "sha256": "83934670954069be57beb7d3ca37700661ad92a581edf0bbc6239bafe720b710"
+      "size_bytes": 18248,
+      "sha256": "050683a3dfa085cc4ce08747d1169ccdaa80bb21b3cb385bbcd186b0f7761812"
     },
     {
       "path": "RELEASE_VALIDATION.md",
@@ -491,8 +491,8 @@
     },
     {
       "path": "docs/ANDROID.md",
-      "size_bytes": 2703,
-      "sha256": "b19a2f993db8c563234fcbb6df134e5631bae21501e58283f1d1b3de2b21c477"
+      "size_bytes": 2869,
+      "sha256": "be996671a4601d58275cd2d5ede899967616cc88f5ad6713c1641a91ae76f040"
     },
     {
       "path": "docs/ANDROID_TIMING.md",
@@ -501,8 +501,8 @@
     },
     {
       "path": "docs/CALIBRATION.md",
-      "size_bytes": 4101,
-      "sha256": "ceb323c9900b0a1fca87508c2114524a1578aa7a8085f276f04c204f5ba24c77"
+      "size_bytes": 4184,
+      "sha256": "cdd592e10f95d66f17cb9efa9389f3acb4634ab50a571be605873158d2287179"
     },
     {
       "path": "docs/CLAIMS_AND_LIMITS.md",
@@ -546,8 +546,8 @@
     },
     {
       "path": "docs/INDICATORS.md",
-      "size_bytes": 3016,
-      "sha256": "a34a76f73af89e671e2c6075f1dc7d7633974e816c2ffb489da2d5d543edff55"
+      "size_bytes": 3026,
+      "sha256": "75e2e9a53ae32585cb53695b6e389e1beceb55680def423f22461cfeb0f566ae"
     },
     {
       "path": "docs/PUBLIC_EMPIRICAL_INTEGRITY.md",

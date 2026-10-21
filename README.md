@@ -8,7 +8,7 @@ A reproducible research implementation for **Wi-Fi fingerprinting, scan-level re
 [![License: MIT (code)](https://img.shields.io/badge/code_license-MIT-475569)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-2563eb)](pyproject.toml)
 
-**Start here:** [See how it works](#how-it-works) · [Explore without installing](#1-explore-without-installing) · [Run real measurements](#2-run-the-public-empirical-example) · [Use your own data](#3-use-your-own-fingerprints) · [Understand the results](#what-the-results-mean) · [Documentation](#documentation)
+**Start here:** [Documentation home](docs/index.md) · [See how it works](#how-it-works) · [Explore without installing](#1-explore-without-installing) · [Run real measurements](#2-run-the-public-empirical-example) · [Use your own data](#3-use-your-own-fingerprints) · [Understand the results](#what-the-results-mean) · [Documentation](#documentation)
 
 > **In one sentence:** A Wi-Fi fingerprinting system estimates a location; this project also examines **the signal match, nearby reference points, and spatial consistency that support that estimate**.
 
