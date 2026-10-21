@@ -4,11 +4,15 @@ The documentation is organized by **reader question**, not the source-code folde
 
 | Reader | Recommended journey | Key files |
 |---|---|---|
-| New to indoor Wi-Fi positioning | Why reliability matters → one-scan walkthrough → FAQ | `learn/overview.md`, `learn/walkthrough.md`, `help/faq.md` |
+| New to indoor Wi-Fi positioning | Why reliability matters → interactive measured scan → FAQ | `learn/overview.md`, `learn/interactive-explorer.md`, `help/faq.md` |
 | Wants to run the repository | Public empirical quick start → output interpretation | `start/quickstart.md`, `results/how-to-read.md` |
 | Has a new data source | Data format → import → local processing | `start/your-data.md`, `DATASET_DOWNLOADS_AND_FORMAT.md` |
 | Reviews the scientific evidence | Evidence levels → archived results → calibration | `results/evidence.md`, `EXISTING_RESEARCH_ASSETS.md`, `CALIBRATION.md` |
 | Builds Android applications | Android guide → radio-map import → warning calibration | `ANDROID.md`, `WARNING_CALIBRATION.md` |
+
+## Interactive measured-data visualization
+
+The [interactive explorer](learn/interactive-explorer.md) is generated exclusively from the stored public native U01–U03/U09 indicator outputs. `scripts/export_interactive_examples.py` verifies original component scaling and deterministically refreshes the small browser JSON. CI checks this output and site assets. It does **not** infer uncalibrated warning classes or substitute for the original ten-unit eight-estimator experiment.
 
 ## Navigation ownership
 

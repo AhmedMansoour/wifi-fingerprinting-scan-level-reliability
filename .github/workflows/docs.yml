@@ -1,7 +1,7 @@
 name: Documentation site
 on:
   push:
-    branches: [main, release/docs-site-option-b-20261021]
+    branches: [main, release/docs-site-option-b-20261021, release/measured-interactive-explorer-20261021]
     paths:
       - 'docs/**'
       - 'mkdocs.yml'
@@ -41,7 +41,9 @@ jobs:
           must = ['index.html', 'search/search_index.json', 'learn/overview/index.html',
                   'learn/walkthrough/index.html', 'start/quickstart/index.html',
                   'start/your-data/index.html', 'results/how-to-read/index.html',
-                  'results/evidence/index.html', 'help/faq/index.html']
+                  'results/evidence/index.html', 'help/faq/index.html',
+                  'learn/interactive-explorer/index.html', 'assets/interactive/index.html',
+                  'assets/interactive/sample_scans.json', 'assets/interactive/explorer.js']
           missing = [p for p in must if not (base / p).is_file()]
           if missing:
               raise SystemExit('Missing generated site files: ' + ', '.join(missing))

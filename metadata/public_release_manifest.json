@@ -11,8 +11,8 @@
     },
     {
       "path": ".github/workflows/docs.yml",
-      "size_bytes": 2057,
-      "sha256": "1ec283c3c610bb7c433ec0eaa69d08e2ef9293ab06ed225996e5f4bc913a1be2"
+      "size_bytes": 2289,
+      "sha256": "7e9fc1bbb907d13971c1d1dff5e1f1f8d34e5cf88106f685d7bf28b9f26a4c15"
     },
     {
       "path": ".gitignore",
@@ -31,8 +31,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 18248,
-      "sha256": "050683a3dfa085cc4ce08747d1169ccdaa80bb21b3cb385bbcd186b0f7761812"
+      "size_bytes": 18324,
+      "sha256": "ebab738f97f783609c41572b233f6175acdad0ccb789182da40c9286cf7aafd9"
     },
     {
       "path": "RELEASE_VALIDATION.md",
@@ -571,8 +571,8 @@
     },
     {
       "path": "docs/SITE_NAVIGATION.md",
-      "size_bytes": 2212,
-      "sha256": "331b0899e22794d9e157f5cfd6421abebc20a4835c9e3f7cc5edc294335e1c24"
+      "size_bytes": 2708,
+      "sha256": "e4f02f5f43a4a83525e006814290928842d21b8f4bf21135e70f4a6188055d91"
     },
     {
       "path": "docs/TEN_UNIT_LOCAL_REPRODUCTION.md",
