@@ -40,6 +40,7 @@ def test_site_links_and_dynamic_local_assets():
     css=(ROOT/'docs/assets/indicator-atlas/atlas.css').read_text()
     assert '../../assets/indicator-atlas/index.html' in doc
     assert 'atlas.js' in index and 'indicators.json' in js
+    assert 'diagram-container' in index and '<'+'svg' not in index
     assert '../interactive/sample_scans.json' in js
     assert 'nearest_rp_distance' in js
     assert 'Pause animation' in index and '@keyframes' in css

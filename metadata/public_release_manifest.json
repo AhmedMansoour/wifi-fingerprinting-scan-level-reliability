@@ -601,8 +601,8 @@
     },
     {
       "path": "docs/assets/indicator-atlas/atlas.js",
-      "size_bytes": 16289,
-      "sha256": "887de1af3b18d18c775bc4b81d1624ff080d13faeaf9fca3e19126dda3e687f3"
+      "size_bytes": 16570,
+      "sha256": "48c42b61f89f4451bd10e99bd0973d7e0f0ab278ba0b6fb9eeea56287a27b0ae"
     },
     {
       "path": "docs/assets/indicator-atlas/composites.json",
@@ -611,8 +611,8 @@
     },
     {
       "path": "docs/assets/indicator-atlas/index.html",
-      "size_bytes": 3724,
-      "sha256": "f636c2437498b0d7fc6bb6ab7a4f1ef6d488ba69c2b77d33c017b862425b8b3b"
+      "size_bytes": 3627,
+      "sha256": "a6195718c86e1903c0fe7b339b3d12edd4888ea456a94921e1ac9398b3ce74b0"
     },
     {
       "path": "docs/assets/indicator-atlas/indicators.json",
@@ -1486,8 +1486,8 @@
     },
     {
       "path": "tests/test_indicator_atlas.py",
-      "size_bytes": 2899,
-      "sha256": "99a1f0c3bf72c708c1700b692140d0a38c38b5648efc0ae1374d4c9b4dec10f3"
+      "size_bytes": 2966,
+      "sha256": "0c495ba645d0e2649181a06b495f32f548afeb109ba7938eaa4c5777e6df6b14"
     },
     {
       "path": "tests/test_interactive_examples.py",

@@ -22,7 +22,14 @@ const current=()=>state.data.units[state.unit].examples[state.scan];
 const num=(v,d=3)=>v===undefined||v===null||!Number.isFinite(Number(v))?'not available':Number(v).toFixed(d);
 const escaped=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const svg=(markup,label,caption,schematic=false)=>{
-  const root=el('diagram');root.innerHTML=`<title>${escaped(label)}</title>${markup}`;
+  let root=el('diagram');
+  if(!root){
+    root=document.createElementNS(ns,'svg');root.setAttribute('id','diagram');
+    root.setAttribute('viewBox','0 0 720 300');root.setAttribute('role','img');
+    root.setAttribute('preserveAspectRatio','xMidYMid meet');
+    el('diagram-container').append(root);
+  }
+  root.innerHTML=`<title>${escaped(label)}</title>${markup}`;
   root.setAttribute('aria-label',label);root.classList.toggle('motion',state.motion);
   el('figure-title').textContent=schematic?'Animated schematic':'Measured-scan visual representation';
   el('figure-caption').textContent=caption+(schematic?' The drawing is schematic; its coordinates are not measured predictions.':' Source coordinates are local 2D metres; no building floor plan is displayed.');
