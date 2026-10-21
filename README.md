@@ -8,9 +8,9 @@ This research software evaluates RSS observations, radio-map compatibility, spat
 [![License: MIT (code)](https://img.shields.io/badge/code_license-MIT-475569)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-2563eb)](pyproject.toml)
 
-**Start here:** [18 indicators: equations and animated atlas](docs/learn/indicator-atlas.md) · [Interactive measured-scan explorer](docs/learn/interactive-explorer.md) · [Documentation home](docs/index.md) · [See how it works](#how-it-works) · [Explore without installing](#1-explore-without-installing) · [Run real measurements](#2-run-the-public-empirical-example) · [Use your own data](#3-use-your-own-fingerprints) · [Understand the results](#what-the-results-mean) · [Documentation](#documentation)
+**Start here:** [Mathematical inventory and README illustrations](#diagnostic-framework-15-quantities-and-three-composites) · [Animated indicator atlas](https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/learn/indicator-atlas/) · [Measured-scan explorer](https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/learn/interactive-explorer/) · [Documentation homepage](https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/) · [Methodological architecture](#methodological-architecture) · [Explore without installing](#1-explore-without-installing) · [Run real measurements](#2-run-the-public-empirical-example) · [Use your own data](#3-use-your-own-fingerprints) · [Understand the results](#what-the-results-mean) · [Documentation](#documentation)
 
-> **In one sentence:** A Wi-Fi fingerprinting system estimates a location; this project also examines **the signal match, nearby reference points, and spatial consistency that support that estimate**.
+> **Research scope:** Scan-level diagnostic quantities characterize RSS observation structure, fingerprint compatibility, retrieved-candidate geometry and radio-map support alongside independently generated positioning estimates.
 
 ## Motivation: from aggregate error to scan-level diagnostics
 
@@ -20,59 +20,218 @@ The reliability layer computes these indicators directly from the query and its 
 
 **SQS is a cohort-normalized diagnostic support score**, not the probability that a predicted location is correct. Operational accept/reject rules require independent calibration and held-out evaluation.
 
-## How it works
+## Methodological architecture
+
+The implementation separates **position estimation** from **post-retrieval reliability assessment**. The positioning estimator produces an estimated coordinate; the diagnostic layer characterizes the evidence supporting that coordinate using the query, the retrieved fingerprint neighborhood and radio-map geometry. Only the estimator-specific nearest-RP distance requires the predicted coordinate.
+
+**Figure 1. Fingerprint retrieval, estimation and diagnostic inference**
 
 ```mermaid
 flowchart LR
-    A["Live or recorded<br/>Wi-Fi scan"] --> C["Compare Wi-Fi<br/>fingerprints"]
-    B["Radio map<br/>Reference scans + positions"] --> C
-    C --> D["Retrieved<br/>candidate locations"]
-    D --> E["Positioning<br/>estimator"]
-    D --> F["Scan-level<br/>diagnostics"]
-    A --> F
-    E --> G["Estimated<br/>position"]
-    F --> H["Five support<br/>components"]
-    H --> I["Composite<br/>SQS"]
-    G --> J["Position +<br/>reliability evidence"]
-    I --> J
-    J --> K["Inspect / flag / use in<br/>downstream decisions"]
-    classDef input fill:#eaf3ff,stroke:#3b82f6,color:#142d4e
-    classDef analysis fill:#eef9f6,stroke:#0f766e,color:#123b35
-    classDef output fill:#fff5e8,stroke:#c08428,color:#4b3514
-    class A,B input
-    class C,D,E,F,H,I analysis
-    class G,J,K output
+  subgraph Inputs["Observation and reference data"]
+    Q["Query RSS vector q<br/>and observed AP set A_q"]
+    M["Training radio map<br/>RSS templates t_j and coordinates p_j"]
+  end
+  Q --> R["RSS-template retrieval<br/>rank d_1 ≤ d_2 ≤ ..."]
+  M --> R
+  R --> C["Ten diagnostic candidates<br/>ordered reference coordinates"]
+  R --> E["Fingerprinting estimator"]
+  E --> X["Estimated position x-hat"]
+  Q --> D["Scan statistics and<br/>scan-map compatibility"]
+  C --> D
+  M --> D
+  C --> G["Candidate geometry,<br/>RP support and ambiguity"]
+  M --> G
+  X -. "Estimator-specific RP distance" .-> G
+  D --> S["15 diagnostic quantities<br/>one requires x-hat"]
+  G --> S
+  S --> F["SQS, C_sigma, FII"]
+  X --> O["Estimated position +<br/>diagnostic evidence"]
+  F --> O
+  O --> V["Retrospective analysis<br/>or separately calibrated decisions"]
+  classDef source fill:#eaf2fc,stroke:#557bb0,color:#173455
+  classDef method fill:#eaf7f2,stroke:#397f6c,color:#173c33
+  classDef final fill:#fff5e6,stroke:#af7d31,color:#513512
+  class Q,M source
+  class R,C,E,D,G,S,F method
+  class X,O,V final
 ```
 
-<details>
-<summary><strong>Explain the diagram, one step at a time</strong></summary>
+The first ten retrieved templates define the candidate neighborhood used for spatial and AP-overlap diagnostics. The source retrieval may probe up to 20 nearest templates before forming the diagnostic candidate set. Repeated training observations at a common coordinate and floor are aggregated into a template. The drawings below are **methodological schematics, not HK floor plans, radio maps, or observed spatial point clouds**.
 
-1. **Wi-Fi scan:** a device records which access points it can observe and their received signal strengths (RSS, in dBm).
-2. **Radio map:** a collection of reference fingerprints recorded at known local positions. It is a table of signals and positions, **not** a floor-plan image.
-3. **Candidate retrieval:** the scan is compared with stored fingerprints to find relevant reference points.
-4. **Positioning:** KNN, WKNN, or another estimator produces a location estimate from the available fingerprint evidence.
-5. **Reliability diagnostics:** the same scan and nearby candidate set are examined for signal support, compatibility, density, spatial spread, and ambiguity.
-6. **Interpretation:** the indicator values and composite scores help diagnose questionable scans. Warning rules require an explicitly stated reference distribution and calibration protocol.
+## Diagnostic framework: 15 quantities and three composites
 
-</details>
+Let $A_q$ and $A_j$ be the observed query and template AP sets; $r_a$ denotes a recorded RSS value (dBm). The aligned query and template RSS vectors are $\mathbf q,\mathbf t_j\in\mathbb R^D$, with absent AP features filled at $-110$ dBm for RSS-template comparison. Reference templates are ranked by $d_j=\|\mathbf q-\mathbf t_j\|_2/\sqrt D$. Let $\mathbf p_j$ be the 2D reference coordinate of candidate $j$, $\bar{\mathbf p}=\frac{1}{10}\sum_{j=1}^{10}\mathbf p_j$, and $\mathcal P$ the distinct training reference coordinates. The AP-set Jaccard overlap is $J(A,B)=|A\cap B|/|A\cup B|$.
 
-### What the extra integrity layer examines
+### 1. Query RSS statistics
 
-| A question a non-expert might ask | Examples of what the code measures |
-|---|---|
-| **Did the phone hear enough usable Wi-Fi signals?** | Observed AP count and RSS statistics |
-| **Does this scan resemble fingerprints we have seen before?** | RSS distance, cosine similarity, AP overlap, AP-set novelty |
-| **Are there reference points near the inferred location?** | Nearby reference-point support and local density |
-| **Do the best matches point to similar positions?** | Candidate spatial spread, diameter, neighborhood instability |
-| **Is the signal pattern ambiguous?** | RSS-gradient uncertainty proxy and composite support measures |
+**Figure 2. Scan-level observation descriptors**
 
-The research uses **18 selected diagnostic quantities**, including **SQS**, **C_sigma**, and **FII**. SQS combines **five equally weighted support components**: signal match, candidate geometry, AP count, AP overlap, and local reference-point density. See the [indicator reference](docs/INDICATORS.md) for precise names and interpretation.
+```mermaid
+flowchart LR
+  Q["One query scan<br/>observed (AP, RSS) pairs"]
+  Q --> A["Observed AP set A_q"]
+  Q --> B["RSS observations {r_a}"]
+  A --> N["AP count<br/>|A_q|"]
+  B --> U["RSS mean"]
+  U --> SD["Population RSS<br/>standard deviation"]
+  B --> V["Maximum and minimum RSS"]
+  V --> RG["RSS range"]
+  classDef data fill:#eaf2fc,stroke:#557bb0,color:#173455
+  classDef calc fill:#eaf7f2,stroke:#397f6c,color:#173c33
+  class Q,A,B data
+  class N,U,SD,V,RG calc
+```
+
+These quantities describe observed AP visibility and RSS dispersion, **not a direct estimate of positioning accuracy**. In particular, the prespecified adverse directions of RSS standard deviation and range were not consistent across evaluated conditions.
+
+### 2. Query–radio-map compatibility
+
+**Figure 3. RSS matching and AP-set agreement**
+
+```mermaid
+flowchart LR
+  Q["Aligned query q<br/>AP set A_q"]
+  T["Radio-map templates<br/>t_1, t_2, ..., t_10"]
+  Q --> D["Normalized RSS distances<br/>d_1 ≤ d_2 ≤ ... ≤ d_10"]
+  T --> D
+  D --> MIN["Nearest-template distance d_1"]
+  D --> ISO["Match isolation<br/>(d_2 - d_1)/(d_2 + eps)"]
+  Q --> COS["Offset cosine similarity"]
+  T --> COS
+  Q --> SET["Jaccard overlaps J_j"]
+  T --> SET
+  SET --> MAX["Maximum overlap"]
+  SET --> AVG["Mean overlap"]
+  MAX --> NOV["AP-set novelty<br/>1 - max overlap"]
+  classDef source fill:#eaf2fc,stroke:#557bb0,color:#173455
+  classDef result fill:#eaf7f2,stroke:#397f6c,color:#173c33
+  class Q,T source
+  class D,MIN,ISO,COS,SET,MAX,AVG,NOV result
+```
+
+The diagram distinguishes **signal-space distance**, **nearest-template separation**, **vector alignment** and **AP-set agreement**. These are different properties of a fingerprint match, not interchangeable measures of confidence.
+
+### 3. Spatial support and candidate geometry
+
+**Figure 4. Candidate-neighborhood descriptors**
+
+```mermaid
+flowchart TB
+  C["Ten ranked candidate coordinates<br/>p_1 ... p_10"]
+  C --> CENT["Candidate centroid<br/>p-bar"]
+  C --> PAIR["Pairwise candidate distances"]
+  CENT --> SP["Root-mean-square<br/>candidate spread"]
+  PAIR --> DIA["Maximum candidate<br/>diameter"]
+  C --> PREFIX["Rank-prefix centroids<br/>p-bar_(1:k)"]
+  CENT --> INST["Cumulative-neighborhood<br/>instability"]
+  PREFIX --> INST
+  M["Distinct training RPs P"] --> DENS["Adaptive-radius RP count<br/>around candidate centroid"]
+  CENT --> DENS
+  X["Estimator prediction x-hat"] --> NR["Nearest-RP distance<br/>from estimated position"]
+  M --> NR
+  classDef source fill:#eaf2fc,stroke:#557bb0,color:#173455
+  classDef result fill:#eaf7f2,stroke:#397f6c,color:#173c33
+  class C,M,X source
+  class CENT,PAIR,SP,DIA,PREFIX,INST,DENS,NR result
+```
+
+The candidate centroid, spread, diameter and instability describe the geometry of the retrieved neighborhood. Local RP density counts distinct training coordinates within the specified adaptive radius, **not just the ten candidates**. Nearest-RP distance is **estimator dependent**; it is not computed from the scan alone.
+
+### 4. Radio-map ambiguity
+
+**Figure 5. Spatial dispersion relative to signal-distance contrast**
+
+```mermaid
+flowchart LR
+  A["Candidate coordinates"] --> B["Spatial spread<br/>sigma_FP"]
+  C["Nearest and tenth RSS<br/>distances: d_1, d_10"] --> D["RSS-distance contrast<br/>max(d_10-d_1, eps)"]
+  B --> E["RSS-gradient proxy<br/>spread / distance contrast"]
+  D --> E
+  E --> F["Large ratio: spatially diffuse<br/>candidates with limited RSS separation"]
+  classDef calc fill:#eaf7f2,stroke:#397f6c,color:#173c33
+  class E,F calc
+```
+
+This is an **ambiguity proxy**, not a physical RSS gradient estimated from a floor-plan surface.
+
+### 5. Composite support scores
+
+**Figure 6. Exact component structure of SQS, Cσ and FII**
+
+```mermaid
+flowchart TB
+  R["Within-unit robust scaling R(z)<br/>clipped 5th–95th percentiles"]
+  R --> SIG["Signal support<br/>1 - R(d_1)"]
+  R --> GEO["Geometry support<br/>1 - mean(R(spread), R(diameter))"]
+  R --> APS["AP-count support<br/>R(N_AP)"]
+  R --> OVR["Overlap support<br/>R(J_max)"]
+  R --> DEN["Density support<br/>R(rho_RP)"]
+  SIG --> SQS["SQS<br/>equal mean of five terms"]
+  GEO --> SQS
+  APS --> SQS
+  OVR --> SQS
+  DEN --> SQS
+  SIG --> CS["C_sigma<br/>signal / (1 + R(spread))"]
+  R --> CS
+  SIG --> FII["FII<br/>equal mean of five terms"]
+  APS --> FII
+  OVR --> FII
+  R --> ISO["Isolation support<br/>R(I_near)"]
+  R --> NOV["Inverse novelty<br/>1 - R(N_novelty)"]
+  ISO --> FII
+  NOV --> FII
+  classDef base fill:#eaf2fc,stroke:#557bb0,color:#173455
+  classDef feature fill:#eaf7f2,stroke:#397f6c,color:#173c33
+  classDef composite fill:#fff5e6,stroke:#af7d31,color:#513512
+  class R base
+  class SIG,GEO,APS,OVR,DEN,ISO,NOV feature
+  class SQS,CS,FII composite
+```
+
+$R(z)=\operatorname{clip}[(z-Q_{0.05})/(Q_{0.95}-Q_{0.05}),0,1]$ uses the **complete evaluation unit**, not only the selected visual examples. For a degenerate finite range, the implementation returns $0.5$; unavailable values remain missing and are omitted from composite means. Higher composite values denote stronger relative support under their construction; they are **not calibrated probabilities of a correct position**.
+
+### Mathematical inventory
+
+All **18** implemented quantities are presented here; exact handling of missing values, calibration conditions and source-code mappings are in [the mathematical reference](docs/INDICATORS.md).
+
+| Family | Implemented quantity | Definition or operation | Prespecified adverse direction |
+|---|---|---|---|
+| RSS statistics | **AP count** | $N_{AP}=|A_q|$ | Low |
+| RSS statistics | **RSS standard deviation** | $\sigma_{RSS}=\sqrt{\frac1N\sum_{a\in A_q}(r_a-\bar r)^2}$ | High* |
+| RSS statistics | **RSS range** | $\max_a r_a-\min_a r_a$ | High* |
+| Scan–map compatibility | **Minimum RSS distance** | $d_1=\min_j\|\mathbf q-\mathbf t_j\|_2/\sqrt D$ | High |
+| Scan–map compatibility | **Nearest-match isolation** | $I_{\rm near}=\max(d_2-d_1,0)/(d_2+10^{-6})$ | Low |
+| Scan–map compatibility | **Cosine similarity** | $\cos(\mathbf q+110,\mathbf t_1+110)$ | Low |
+| Scan–map compatibility | **Maximum AP overlap** | $J_{\max}=\max_{j\leq10}J(A_q,A_j)$ | Low |
+| Scan–map compatibility | **Mean AP overlap** | $\bar J=\frac1{10}\sum_{j=1}^{10}J(A_q,A_j)$ | Low |
+| Scan–map compatibility | **AP-set novelty** | $N_{\rm novel}=1-J_{\max}$ | High |
+| Spatial support | **Nearest-RP distance** | $d_{RP}=\min_{\mathbf p\in\mathcal P}\|\hat{\mathbf x}-\mathbf p\|_2$ | High |
+| Spatial support | **Local RP density** | $\rho_{RP}=\sum_{\mathbf p\in\mathcal P}\mathbf1\{\|\mathbf p-\bar{\mathbf p}\|_2\leq r\}$ | Low |
+| Candidate geometry | **Candidate spatial spread** | $\sigma_{FP}=\sqrt{\frac1{10}\sum_j\|\mathbf p_j-\bar{\mathbf p}\|_2^2}$ | High |
+| Candidate geometry | **Candidate-set diameter** | $D_{cand}=\max_{i,j}\|\mathbf p_i-\mathbf p_j\|_2$ | High |
+| Candidate geometry | **Cumulative-neighborhood instability** | $I_k=\max_{1\leq k\leq10}\|\bar{\mathbf p}_{1:k}-\bar{\mathbf p}\|_2$ | High |
+| Radio-map ambiguity | **RSS-gradient proxy** | $G_{RSS}=\sigma_{FP}/\max(d_{10}-d_1,10^{-6})$ | High |
+| Composite support | **SQS** | $\operatorname{mean}\!\left(1-R(d_1),1-\frac{R(\sigma_{FP})+R(D_{cand})}{2},R(N_{AP}),R(J_{\max}),R(\rho_{RP})\right)$ | Low |
+| Composite support | **Cσ** | $(1-R(d_1))/(1+R(\sigma_{FP}))$ | Low |
+| Composite support | **FII** | $\operatorname{mean}\!\left(1-R(d_1),R(N_{AP}),R(J_{\max}),R(I_{\rm near}),1-R(N_{\rm novel})\right)$ | Low |
+
+*The adverse directions are prespecified analytical hypotheses, not universal empirical findings. In particular, higher RSS standard deviation or range did not consistently imply worse positioning accuracy.*
+
+### Interactive scientific illustrations
+
+The preceding six figures render **inside this GitHub README** using Mermaid. For source-derived animated diagrams, scanned RSS observations, candidate interactions and all 18 indicator views, use the live documentation:
+
+- **[Interactive indicator atlas: 18 equations, animated representations and measured values](https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/learn/indicator-atlas/)**
+- **[Measured-scan explorer: 88 selected query scans and native SQS breakdowns](https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/learn/interactive-explorer/)**
+
+GitHub Markdown renders diagrams but does not execute embedded JavaScript dashboards or iframes. The interactive tools therefore remain hosted on GitHub Pages; the README figures and complete indicator inventory remain readable without leaving the repository.
 
 ## Choose your starting point
 
-| I want to… | Start with… | What I will get |
+| Research workflow | Entry point | Available evidence |
 |---|---|---|
-| **Understand the idea without coding** | [Pipeline above](#how-it-works), [indicator guide](docs/INDICATORS.md), [output examples](examples/empirical_integrity/) | A plain-language explanation and real, precomputed scan-level records |
+| **Inspect diagnostic construction** | [README figures](#methodological-architecture), [implemented indicator equations](docs/INDICATORS.md), [measured outputs](examples/empirical_integrity/) | Source-mapped definitions and archived per-scan diagnostic records |
 | **Run it on included real Wi-Fi data** | [Public empirical quick start](#2-run-the-public-empirical-example) | Freshly computed scan diagnostics, SQS, and candidate tables |
 | **Try basic positioning estimators** | [HK U09 baseline](#positioning-baseline) | KNN / WKNN / Random Forest error summaries on held-out scans |
 | **Use my own radio map** | [Data-format guide](docs/DATASET_DOWNLOADS_AND_FORMAT.md) | A path from source RSS tables to the expected input and model matrices |
