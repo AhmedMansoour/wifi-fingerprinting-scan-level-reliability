@@ -1,0 +1,488 @@
+{
+  "schema_version": "1.0",
+  "kind": "approved_archived_aggregate_summaries",
+  "study_scope": "10 evaluation units and 8 estimators; aggregated study-level metric summaries, NOT a unit-by-estimator data matrix",
+  "units": 10,
+  "estimators_in_study": 8,
+  "unit_level_estimator_cells_included": false,
+  "source_files": [
+    "results/approved/legacy_canonical/estimator_error_summary.csv",
+    "results/approved/revision_summaries/A3/A3_indicator_error_association_summary_ci_bh.csv",
+    "results/approved/revision_summaries/A3/A3_gross_error_adaptive_summary_ci.csv",
+    "results/approved/revision_summaries/A3/A3_gross_error_fixed7m_summary_ci.csv"
+  ],
+  "estimators": [
+    {
+      "name": "KNN",
+      "units": 10,
+      "median": 1.8781106240366605,
+      "p90": 7.492919406473016,
+      "rmse": 6.1860687433006225
+    },
+    {
+      "name": "WKNN",
+      "units": 10,
+      "median": 1.8781106240366605,
+      "p90": 7.0526412080949985,
+      "rmse": 6.1860687433006225
+    },
+    {
+      "name": "Random Forest",
+      "units": 10,
+      "median": 3.739717947159389,
+      "p90": 11.538490780720114,
+      "rmse": 7.994376750411357
+    },
+    {
+      "name": "Extra Trees",
+      "units": 10,
+      "median": 3.651944022135466,
+      "p90": 10.62740646843109,
+      "rmse": 9.215713766337828
+    },
+    {
+      "name": "Gradient Boosting",
+      "units": 10,
+      "median": 3.678584570944241,
+      "p90": 9.004524498535439,
+      "rmse": 7.384546256403831
+    },
+    {
+      "name": "CatBoost",
+      "units": 10,
+      "median": 4.508093595504761,
+      "p90": 11.819151592254642,
+      "rmse": 9.890252171216092
+    },
+    {
+      "name": "Transformer",
+      "units": 10,
+      "median": 6.15700626373291,
+      "p90": 16.22334423065186,
+      "rmse": 11.987189181439819
+    },
+    {
+      "name": "Residual CNN",
+      "units": 10,
+      "median": 4.928813457489014,
+      "p90": 11.806739568710327,
+      "rmse": 9.468411536678374
+    }
+  ],
+  "indicators": [
+    {
+      "id": "SQS",
+      "label": "Scan Quality and Support Score",
+      "family": "Composite support",
+      "association": {
+        "median": 0.290433150707568,
+        "low": 0.2529911768688439,
+        "high": 0.32474658807640555,
+        "n": 80
+      },
+      "adaptive": {
+        "median": 0.7687498326505475,
+        "low": 0.7127356699987347,
+        "high": 0.8260802575610007,
+        "n": 79
+      },
+      "fixed7m": {
+        "median": 0.6860799069568029,
+        "low": 0.6315581277663344,
+        "high": 0.7182329299132948,
+        "n": 80
+      }
+    },
+    {
+      "id": "nearest_rp_distance",
+      "label": "Nearest-RP distance",
+      "family": "Local spatial support",
+      "association": {
+        "median": 0.28586176339706504,
+        "low": 0.1887780846013232,
+        "high": 0.38940252397213065,
+        "n": 69
+      },
+      "adaptive": {
+        "median": 0.6965920651068159,
+        "low": 0.6453170036130395,
+        "high": 0.769138697035794,
+        "n": 79
+      },
+      "fixed7m": {
+        "median": 0.6186857877303089,
+        "low": 0.5871164792447591,
+        "high": 0.6797027073541281,
+        "n": 80
+      }
+    },
+    {
+      "id": "sigma_fps",
+      "label": "Candidate spatial spread",
+      "family": "Candidate geometry",
+      "association": {
+        "median": 0.2852895258272095,
+        "low": 0.19310452513178605,
+        "high": 0.3787819831577832,
+        "n": 80
+      },
+      "adaptive": {
+        "median": 0.7600203717850776,
+        "low": 0.6796631473102062,
+        "high": 0.806488391376451,
+        "n": 79
+      },
+      "fixed7m": {
+        "median": 0.6781718593962689,
+        "low": 0.6167786421499293,
+        "high": 0.7363062935288345,
+        "n": 80
+      }
+    },
+    {
+      "id": "I_k",
+      "label": "Cumulative-neighborhood instability",
+      "family": "Candidate geometry",
+      "association": {
+        "median": 0.2781409703930122,
+        "low": 0.189342982441162,
+        "high": 0.36554452044435265,
+        "n": 80
+      },
+      "adaptive": {
+        "median": 0.7442416585309826,
+        "low": 0.688251296975832,
+        "high": 0.801908593829715,
+        "n": 79
+      },
+      "fixed7m": {
+        "median": 0.6869143094634378,
+        "low": 0.6233214202435453,
+        "high": 0.7384320193690912,
+        "n": 80
+      }
+    },
+    {
+      "id": "rss_gradient_proxy",
+      "label": "RSS-gradient uncertainty proxy",
+      "family": "Map ambiguity",
+      "association": {
+        "median": 0.26577477897687285,
+        "low": 0.22275513874560368,
+        "high": 0.36790785633261386,
+        "n": 80
+      },
+      "adaptive": {
+        "median": 0.7586659663865547,
+        "low": 0.6770315091210614,
+        "high": 0.8323801983282281,
+        "n": 79
+      },
+      "fixed7m": {
+        "median": 0.6933169426457733,
+        "low": 0.6026464023300773,
+        "high": 0.7282797162612138,
+        "n": 80
+      }
+    },
+    {
+      "id": "D_cand",
+      "label": "Candidate-set diameter",
+      "family": "Candidate geometry",
+      "association": {
+        "median": 0.25343339878200766,
+        "low": 0.1798785409375104,
+        "high": 0.36493668358329256,
+        "n": 80
+      },
+      "adaptive": {
+        "median": 0.7390125009827816,
+        "low": 0.6790459319245856,
+        "high": 0.7942412242473369,
+        "n": 79
+      },
+      "fixed7m": {
+        "median": 0.6761009410864025,
+        "low": 0.6021095477179281,
+        "high": 0.7347178161449522,
+        "n": 80
+      }
+    },
+    {
+      "id": "local_rp_density",
+      "label": "Local RP density",
+      "family": "Local spatial support",
+      "association": {
+        "median": 0.1763112460321755,
+        "low": 0.12743294738919547,
+        "high": 0.2008189781652527,
+        "n": 80
+      },
+      "adaptive": {
+        "median": 0.6645326504481434,
+        "low": 0.551172004531889,
+        "high": 0.7383158681485995,
+        "n": 79
+      },
+      "fixed7m": {
+        "median": 0.6007881681425371,
+        "low": 0.5756436207225718,
+        "high": 0.6439667400855935,
+        "n": 80
+      }
+    },
+    {
+      "id": "FII",
+      "label": "Fingerprint Integrity Index",
+      "family": "Composite support",
+      "association": {
+        "median": 0.16634446178878542,
+        "low": 0.1263343593976583,
+        "high": 0.19998924910327018,
+        "n": 80
+      },
+      "adaptive": {
+        "median": 0.6360911701363963,
+        "low": 0.6099604645416358,
+        "high": 0.6869979374728615,
+        "n": 79
+      },
+      "fixed7m": {
+        "median": 0.6032725495286644,
+        "low": 0.576692101971876,
+        "high": 0.6191210754422573,
+        "n": 80
+      }
+    },
+    {
+      "id": "C_sigma",
+      "label": "Signal-to-spread support score",
+      "family": "Composite support",
+      "association": {
+        "median": 0.14633299703368582,
+        "low": 0.020500783649893165,
+        "high": 0.22054991589150208,
+        "n": 80
+      },
+      "adaptive": {
+        "median": 0.5724813017279782,
+        "low": 0.5070933136039952,
+        "high": 0.644829529444914,
+        "n": 79
+      },
+      "fixed7m": {
+        "median": 0.5842090545401915,
+        "low": 0.5431655656426428,
+        "high": 0.6109426351684282,
+        "n": 80
+      }
+    },
+    {
+      "id": "ap_overlap",
+      "label": "Maximum AP overlap",
+      "family": "Radio-map compatibility",
+      "association": {
+        "median": 0.12337217721324972,
+        "low": 0.06126958184070064,
+        "high": 0.18237480612018664,
+        "n": 80
+      },
+      "adaptive": {
+        "median": 0.6015611003945455,
+        "low": 0.5526762956669499,
+        "high": 0.6688405797101449,
+        "n": 79
+      },
+      "fixed7m": {
+        "median": 0.5690924370229877,
+        "low": 0.542238863498706,
+        "high": 0.6008497062457412,
+        "n": 80
+      }
+    },
+    {
+      "id": "ap_set_novelty",
+      "label": "AP-set novelty",
+      "family": "Radio-map compatibility",
+      "association": {
+        "median": 0.12337217721324972,
+        "low": 0.061109945955459516,
+        "high": 0.18866312946686542,
+        "n": 80
+      },
+      "adaptive": {
+        "median": 0.6015611003945455,
+        "low": 0.5526762956669499,
+        "high": 0.6688405797101449,
+        "n": 79
+      },
+      "fixed7m": {
+        "median": 0.5690924370229877,
+        "low": 0.5421907915919794,
+        "high": 0.6008497062457412,
+        "n": 80
+      }
+    },
+    {
+      "id": "max_cosine_similarity",
+      "label": "Nearest-match cosine similarity",
+      "family": "Radio-map compatibility",
+      "association": {
+        "median": 0.1076495658956235,
+        "low": -0.04060608781839877,
+        "high": 0.21991921774275935,
+        "n": 80
+      },
+      "adaptive": {
+        "median": 0.5462034591281193,
+        "low": 0.4513164990876114,
+        "high": 0.6645408163265306,
+        "n": 79
+      },
+      "fixed7m": {
+        "median": 0.5746252744888052,
+        "low": 0.5008449248645328,
+        "high": 0.619247749547315,
+        "n": 80
+      }
+    },
+    {
+      "id": "mean_ap_overlap",
+      "label": "Mean AP overlap",
+      "family": "Radio-map compatibility",
+      "association": {
+        "median": 0.09903857663772074,
+        "low": 0.05704510993824056,
+        "high": 0.16147154053210405,
+        "n": 80
+      },
+      "adaptive": {
+        "median": 0.6189045936395761,
+        "low": 0.5622328957367366,
+        "high": 0.67556351721158,
+        "n": 79
+      },
+      "fixed7m": {
+        "median": 0.5698072792191144,
+        "low": 0.5519558128827584,
+        "high": 0.6011786254074429,
+        "n": 80
+      }
+    },
+    {
+      "id": "ap_count",
+      "label": "AP count",
+      "family": "Scan statistics",
+      "association": {
+        "median": 0.08662999535319764,
+        "low": 0.01586946018975904,
+        "high": 0.1840236266983187,
+        "n": 80
+      },
+      "adaptive": {
+        "median": 0.6385524372230429,
+        "low": 0.5364893078577755,
+        "high": 0.7354341995745862,
+        "n": 79
+      },
+      "fixed7m": {
+        "median": 0.5331761415899519,
+        "low": 0.5053474066825109,
+        "high": 0.6442913589174113,
+        "n": 80
+      }
+    },
+    {
+      "id": "nearest_match_isolation",
+      "label": "Nearest-match isolation",
+      "family": "Radio-map compatibility",
+      "association": {
+        "median": 0.08431426284488114,
+        "low": 0.04390277160559827,
+        "high": 0.13115879144584414,
+        "n": 80
+      },
+      "adaptive": {
+        "median": 0.6043761088113543,
+        "low": 0.526007442220621,
+        "high": 0.6532975364761799,
+        "n": 79
+      },
+      "fixed7m": {
+        "median": 0.5592799743454193,
+        "low": 0.5207846832452511,
+        "high": 0.592716152646901,
+        "n": 80
+      }
+    },
+    {
+      "id": "min_rss_distance",
+      "label": "Minimum RSS distance",
+      "family": "Radio-map compatibility",
+      "association": {
+        "median": 0.04161405880760624,
+        "low": -0.06512518065924824,
+        "high": 0.1406982232587398,
+        "n": 80
+      },
+      "adaptive": {
+        "median": 0.4916877104377105,
+        "low": 0.3576736335891982,
+        "high": 0.5851540616246499,
+        "n": 79
+      },
+      "fixed7m": {
+        "median": 0.5309671044227611,
+        "low": 0.4283495939886074,
+        "high": 0.5802656794425087,
+        "n": 80
+      }
+    },
+    {
+      "id": "rss_std",
+      "label": "RSS standard deviation",
+      "family": "Scan statistics",
+      "association": {
+        "median": -0.07502312347051415,
+        "low": -0.15141471176056115,
+        "high": -0.021206941214459558,
+        "n": 80
+      },
+      "adaptive": {
+        "median": 0.4206804957637946,
+        "low": 0.2805401387093776,
+        "high": 0.5021113983397826,
+        "n": 79
+      },
+      "fixed7m": {
+        "median": 0.42984032768070285,
+        "low": 0.3711547145953757,
+        "high": 0.4736947457673557,
+        "n": 80
+      }
+    },
+    {
+      "id": "rss_range",
+      "label": "RSS range",
+      "family": "Scan statistics",
+      "association": {
+        "median": -0.11491095545482014,
+        "low": -0.20077188698677267,
+        "high": -0.012779698732552483,
+        "n": 80
+      },
+      "adaptive": {
+        "median": 0.3936574138652531,
+        "low": 0.3092371769270268,
+        "high": 0.4751360242945717,
+        "n": 79
+      },
+      "fixed7m": {
+        "median": 0.42061717633516627,
+        "low": 0.37072479404870573,
+        "high": 0.4728107344632768,
+        "n": 80
+      }
+    }
+  ]
+}

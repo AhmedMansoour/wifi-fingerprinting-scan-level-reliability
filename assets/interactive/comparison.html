@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light">
+<title>Compare measured Wi-Fi scans · Wi-Fi Integrity</title><link rel="stylesheet" href="comparison.css"><script src="comparison.js" defer></script></head>
+<body><main>
+<header class="hero"><div class="eyebrow">MEASURED WI-FI SCANS · SIDE-BY-SIDE ANALYSIS</div><h1>How can two fingerprints differ in reliability evidence?</h1><p>Compare two previously evaluated scans using the original RSS observations, candidate retrieval distances, five native SQS components, and recorded diagnostic quantities. All values come from the public native export.</p></header>
+<section class="toolbar" aria-label="Compare query scans">
+<div><label for="unit">Evaluation unit</label><select id="unit"><option>Loading verified samples…</option></select></div>
+<div><label for="left">Scan A</label><select id="left" disabled></select></div>
+<div><label for="right">Scan B</label><select id="right" disabled></select></div>
+<button type="button" id="lowhigh">Compare lowest and highest SQS</button></section>
+<div class="notice" id="status" role="status">Loading stored scan records…</div>
+<div class="compare"><article class="scan" id="scan-a" aria-label="First measured scan"></article><article class="scan" id="scan-b" aria-label="Second measured scan"></article></div>
+<p class="source"><strong>Scientific scope:</strong> The 22 deterministic examples for each of the four measured units were sampled across SQS values from the full evaluation. SQS uses normalization fitted to the complete unit, not these 22 examples. No estimator predictions, positioning errors, warning thresholds, or building maps are inferred here. Different units have independently normalized scores. Source: <a href="../../PUBLIC_EMPIRICAL_INTEGRITY/">native measured-data computation</a> · <a href="../../REPRODUCIBILITY/">reproducibility boundary</a> · <a href="../index.html">single-scan explorer</a>.</p>
+</main></body></html>
