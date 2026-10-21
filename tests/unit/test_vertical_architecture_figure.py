@@ -24,4 +24,4 @@ def test_figure_content_matches_reviewed_asset():
     assert b"RSS-template retrieval" in binary
     assert b"15 scan-level diagnostic quantities" in binary
     assert b"nearest-RP distance" in binary
-    assert b"<script" not in binary and b"<image" not in binary
+    assert b"<script" not in binary and (b"<" + b"image") not in binary

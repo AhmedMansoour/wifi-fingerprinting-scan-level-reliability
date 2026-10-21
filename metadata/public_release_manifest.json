@@ -1556,8 +1556,8 @@
     },
     {
       "path": "tests/unit/test_vertical_architecture_figure.py",
-      "size_bytes": 1260,
-      "sha256": "02c2b0efeceb4ae3be004d96903c28e6e3dba63f03e59e4b90915c6137912371"
+      "size_bytes": 1268,
+      "sha256": "1efd7b8a66ba6bacd3323d522fe79ae956f1d5834b3b72e815ce743a4efb4c5c"
     },
     {
       "path": "web/assets/app.js",
