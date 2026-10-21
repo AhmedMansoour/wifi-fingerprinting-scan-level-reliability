@@ -20,49 +20,9 @@
       "sha256": "d0b75bc8b39a4d6f86a88eb3241bfad657fc210520bae35b6594a33bfac24870"
     },
     {
-      "path": "LICENSE",
-      "size_bytes": 1094,
-      "sha256": "5b0fc0b213c6c71e58b3b94002fc079daab7e5da60f6b151982420be389905f0"
-    },
-    {
-      "path": "PUBLICATION_APPROVAL_REQUIRED.md",
-      "size_bytes": 924,
-      "sha256": "9dce1e51d1e02ddc04ca4c894fe94f6b4e087d6e28692a6e71f529fe8c5e4e8b"
-    },
-    {
-      "path": "README.md",
-      "size_bytes": 28756,
-      "sha256": "f599efab0b7665d0849a9eab2655832fdf7ea09afa548630fcc35da392b6aaad"
-    },
-    {
-      "path": "RELEASE_VALIDATION.md",
-      "size_bytes": 7148,
-      "sha256": "37d49e017f5772d0973e7ff6a535f9ab1c9f92bd4d068996518a2398b72e7693"
-    },
-    {
-      "path": "THIRD_PARTY_NOTICES.md",
-      "size_bytes": 1169,
-      "sha256": "34e61b7df8f896a081c6446327bf06117c428455606d14c34e69cf793d39f8f3"
-    },
-    {
       "path": "android/.gitkeep",
       "size_bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "path": "android/IMPORT_FORMAT.md",
-      "size_bytes": 1531,
-      "sha256": "4793906783e706cd029c55431b12184f86fbb06ef1365305917dad5aee5c811f"
-    },
-    {
-      "path": "android/INDICATOR_DEFINITIONS.md",
-      "size_bytes": 1499,
-      "sha256": "d79c65f50b46757f1b8f08d8def259d61ada076295cdec54ec36279d62640357"
-    },
-    {
-      "path": "android/README.md",
-      "size_bytes": 651,
-      "sha256": "c4e85c1339af8841232db242d46b2356eb6a91620dcd6e27c4500d2b45790942"
     },
     {
       "path": "android/app/build.gradle",
@@ -295,12 +255,12 @@
       "sha256": "8d5d32985979d9b52c1f0e7828aa1db232f80b066706d83ed74b0127b841a55e"
     },
     {
-      "path": "android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml",
+      "path": "android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml",
       "size_bytes": 255,
       "sha256": "57ac59dc7673860d50a21a8a4cc05ca7ebb9bd1a7c28dd0958751f888a46f44c"
     },
     {
-      "path": "android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml",
+      "path": "android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml",
       "size_bytes": 255,
       "sha256": "57ac59dc7673860d50a21a8a4cc05ca7ebb9bd1a7c28dd0958751f888a46f44c"
     },
@@ -358,6 +318,21 @@
       "path": "android/gradlew.bat",
       "size_bytes": 2894,
       "sha256": "0f3ed8f03b50934cb8c48b15a470d5c20a30a5385825e48b55bcc8ea3d8f8e18"
+    },
+    {
+      "path": "android/IMPORT_FORMAT.md",
+      "size_bytes": 1531,
+      "sha256": "4793906783e706cd029c55431b12184f86fbb06ef1365305917dad5aee5c811f"
+    },
+    {
+      "path": "android/INDICATOR_DEFINITIONS.md",
+      "size_bytes": 1499,
+      "sha256": "d79c65f50b46757f1b8f08d8def259d61ada076295cdec54ec36279d62640357"
+    },
+    {
+      "path": "android/README.md",
+      "size_bytes": 651,
+      "sha256": "c4e85c1339af8841232db242d46b2356eb6a91620dcd6e27c4500d2b45790942"
     },
     {
       "path": "android/schema/empty_database.sql",
@@ -450,6 +425,16 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
+      "path": "data/empirical/hk_u09_ap_relative.csv.gz",
+      "size_bytes": 792004,
+      "sha256": "b99bac3454e8f0f306c7fb8c012a7def5e277251c8013304e50e02ae51717078"
+    },
+    {
+      "path": "data/empirical/hk_u09_test_ordered.csv.gz",
+      "size_bytes": 140595,
+      "sha256": "616b38dd551d2fcaf891d51ed742fbff3e064e4e859c4f8ebaf2fb887694105c"
+    },
+    {
       "path": "data/empirical/U01.csv.gz",
       "size_bytes": 271420,
       "sha256": "9fbb0a623b7414218f219dfdbfb0d0652f556fa46001766d262e737cd8e87ede"
@@ -463,16 +448,6 @@
       "path": "data/empirical/U03.csv.gz",
       "size_bytes": 443484,
       "sha256": "2fac9689f508b46cf83775a05337c3fdceb3cee517008377ae5e298b7c1715c1"
-    },
-    {
-      "path": "data/empirical/hk_u09_ap_relative.csv.gz",
-      "size_bytes": 792004,
-      "sha256": "b99bac3454e8f0f306c7fb8c012a7def5e277251c8013304e50e02ae51717078"
-    },
-    {
-      "path": "data/empirical/hk_u09_test_ordered.csv.gz",
-      "size_bytes": 140595,
-      "sha256": "616b38dd551d2fcaf891d51ed742fbff3e064e4e859c4f8ebaf2fb887694105c"
     },
     {
       "path": "data/public/README.md",
@@ -490,114 +465,19 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "path": "docs/ANDROID.md",
-      "size_bytes": 2869,
-      "sha256": "be996671a4601d58275cd2d5ede899967616cc88f5ad6713c1641a91ae76f040"
-    },
-    {
       "path": "docs/ANDROID_TIMING.md",
       "size_bytes": 1039,
       "sha256": "6579e681d1eb6dc3c26b1345522a7362e820b4a70a1ea06fc2fccae9bffa3e91"
     },
     {
-      "path": "docs/CALIBRATION.md",
-      "size_bytes": 4184,
-      "sha256": "cdd592e10f95d66f17cb9efa9389f3acb4634ab50a571be605873158d2287179"
+      "path": "docs/ANDROID.md",
+      "size_bytes": 2869,
+      "sha256": "be996671a4601d58275cd2d5ede899967616cc88f5ad6713c1641a91ae76f040"
     },
     {
-      "path": "docs/CLAIMS_AND_LIMITS.md",
-      "size_bytes": 1917,
-      "sha256": "fabaced91395207c32f1e045f9437f7afe8406ab1b3998ed9d108e6cdf3e3f26"
-    },
-    {
-      "path": "docs/DATASET_DOWNLOADS_AND_FORMAT.md",
-      "size_bytes": 10761,
-      "sha256": "7236ff8964d179a8754f7e126a758ba4706defdafd845639a07f361f7635eee4"
-    },
-    {
-      "path": "docs/DATA_AND_PRIVACY.md",
-      "size_bytes": 1156,
-      "sha256": "9753093db97e82cdb0be345a6d86ce85a15e92bc275b309f2b8d1c400e25f3a7"
-    },
-    {
-      "path": "docs/ESTIMATORS.md",
-      "size_bytes": 2085,
-      "sha256": "7cc6c5e72bdeaf7aeabc27af3e2a24945521389e2731bd8fcef3ee92933f07e3"
-    },
-    {
-      "path": "docs/EXISTING_RESEARCH_ASSETS.md",
-      "size_bytes": 3005,
-      "sha256": "c8de2db44f14801e7564cf79636ca0f45f268790544ea5608b13990aea37ba68"
-    },
-    {
-      "path": "docs/GETTING_STARTED.md",
-      "size_bytes": 672,
-      "sha256": "ec677708941c48e8ba5e01b76f1fc3efef7346a364b858052657d03a1913a1d6"
-    },
-    {
-      "path": "docs/HK_PRIVACY_RELEASE_POLICY.md",
-      "size_bytes": 5189,
-      "sha256": "61c6072caf2692c183a0786b72369ceb020244f8a23875271d56ce74e22d2946"
-    },
-    {
-      "path": "docs/HK_U09_EMPIRICAL_REPRODUCIBILITY.md",
-      "size_bytes": 3141,
-      "sha256": "89baf4c1a1a08cc0a2d913d5c8d19934ee81975fbdfd43d6894d1f1fbebadee4"
-    },
-    {
-      "path": "docs/INDICATORS.md",
-      "size_bytes": 10404,
-      "sha256": "174de56621d3cfeb35745dc5b4d266eacd60d41f4050a7f808c2f9997c5a253f"
-    },
-    {
-      "path": "docs/PUBLIC_EMPIRICAL_INTEGRITY.md",
-      "size_bytes": 4037,
-      "sha256": "7680ce8de442a53c5e6139f5b0c6afb36b1e327773bb776191ae35b698e5be1c"
-    },
-    {
-      "path": "docs/REPRODUCIBILITY.md",
-      "size_bytes": 2995,
-      "sha256": "573d87509106183790586031da4c7ad371509cc771e4cbf4385513d007262dc3"
-    },
-    {
-      "path": "docs/RESEARCH_OVERVIEW.md",
-      "size_bytes": 1513,
-      "sha256": "8f458b695ac315fcff461b1aca14d996f9a2a22650fde40f4cef2caa126dff63"
-    },
-    {
-      "path": "docs/ROADMAP.md",
-      "size_bytes": 1217,
-      "sha256": "7077e38758bff8ecf960e28cd37b3965a7474174f8ec137171666a0b0b40b088"
-    },
-    {
-      "path": "docs/SITE_NAVIGATION.md",
-      "size_bytes": 2708,
-      "sha256": "e4f02f5f43a4a83525e006814290928842d21b8f4bf21135e70f4a6188055d91"
-    },
-    {
-      "path": "docs/TEN_UNIT_LOCAL_REPRODUCTION.md",
-      "size_bytes": 3999,
-      "sha256": "baa5f5b30287d76fd616ac65ee1dc02d3ac226da733eb9c454414f1f42d0d1bd"
-    },
-    {
-      "path": "docs/UI_SCOPE.md",
-      "size_bytes": 642,
-      "sha256": "bc9e504bd8c518259810fb1cbd6a6b1065faa21e1f1c97f3d29a93f0a9b86dd7"
-    },
-    {
-      "path": "docs/UJI_DATA_ATTRIBUTION.md",
-      "size_bytes": 1341,
-      "sha256": "88f2428276f0686e285c6e4e897eca9460ddf00c5a11996f13d6ec7c91357a5f"
-    },
-    {
-      "path": "docs/WARNING_CALIBRATION.md",
-      "size_bytes": 1907,
-      "sha256": "8d1d7f597ac3b6c5c7bdd6125aed3237e6f20976f42fca1522822651a2461b81"
-    },
-    {
-      "path": "docs/assets/android/android_inspector_ui_public.webp",
-      "size_bytes": 54730,
-      "sha256": "f275dcc1cbf66a1489b0989e63c57e0485c9c084f19442adc300b1ba5ff93e8f"
+      "path": "docs/assets/android/android_inspector_four_panel_privacy_safe.webp",
+      "size_bytes": 132692,
+      "sha256": "6f3df4622813c2a13e88f5ab608134835c8f2d3ab5e378d8df9be04a4e5735a6"
     },
     {
       "path": "docs/assets/indicator-atlas/atlas.css",
@@ -660,9 +540,54 @@
       "sha256": "340709c243563ebfc46c8cef7de280abe466510216b6b47d8b04d1d4a9d4d22b"
     },
     {
+      "path": "docs/CALIBRATION.md",
+      "size_bytes": 4184,
+      "sha256": "cdd592e10f95d66f17cb9efa9389f3acb4634ab50a571be605873158d2287179"
+    },
+    {
+      "path": "docs/CLAIMS_AND_LIMITS.md",
+      "size_bytes": 1917,
+      "sha256": "fabaced91395207c32f1e045f9437f7afe8406ab1b3998ed9d108e6cdf3e3f26"
+    },
+    {
+      "path": "docs/DATA_AND_PRIVACY.md",
+      "size_bytes": 1156,
+      "sha256": "9753093db97e82cdb0be345a6d86ce85a15e92bc275b309f2b8d1c400e25f3a7"
+    },
+    {
+      "path": "docs/DATASET_DOWNLOADS_AND_FORMAT.md",
+      "size_bytes": 10761,
+      "sha256": "7236ff8964d179a8754f7e126a758ba4706defdafd845639a07f361f7635eee4"
+    },
+    {
+      "path": "docs/ESTIMATORS.md",
+      "size_bytes": 2085,
+      "sha256": "7cc6c5e72bdeaf7aeabc27af3e2a24945521389e2731bd8fcef3ee92933f07e3"
+    },
+    {
+      "path": "docs/EXISTING_RESEARCH_ASSETS.md",
+      "size_bytes": 3005,
+      "sha256": "c8de2db44f14801e7564cf79636ca0f45f268790544ea5608b13990aea37ba68"
+    },
+    {
+      "path": "docs/GETTING_STARTED.md",
+      "size_bytes": 672,
+      "sha256": "ec677708941c48e8ba5e01b76f1fc3efef7346a364b858052657d03a1913a1d6"
+    },
+    {
       "path": "docs/help/faq.md",
       "size_bytes": 3295,
       "sha256": "1183ce9dfd362060bb262f4329e97611482ae59e0b3b624276895262e7176a46"
+    },
+    {
+      "path": "docs/HK_PRIVACY_RELEASE_POLICY.md",
+      "size_bytes": 5189,
+      "sha256": "61c6072caf2692c183a0786b72369ceb020244f8a23875271d56ce74e22d2946"
+    },
+    {
+      "path": "docs/HK_U09_EMPIRICAL_REPRODUCIBILITY.md",
+      "size_bytes": 3141,
+      "sha256": "89baf4c1a1a08cc0a2d913d5c8d19934ee81975fbdfd43d6894d1f1fbebadee4"
     },
     {
       "path": "docs/hk_u09_expected_summary.json",
@@ -673,6 +598,11 @@
       "path": "docs/index.md",
       "size_bytes": 6080,
       "sha256": "a173acd544940bce98c81d6cd47b52f1e36045f62af4bd41832c96aedd5222b2"
+    },
+    {
+      "path": "docs/INDICATORS.md",
+      "size_bytes": 10404,
+      "sha256": "174de56621d3cfeb35745dc5b4d266eacd60d41f4050a7f808c2f9997c5a253f"
     },
     {
       "path": "docs/learn/indicator-atlas.md",
@@ -695,6 +625,21 @@
       "sha256": "5de0c0ed4b29a3b82bc3c7476afad1cc5fc7752baf371c50ad51a6605cf24418"
     },
     {
+      "path": "docs/PUBLIC_EMPIRICAL_INTEGRITY.md",
+      "size_bytes": 4037,
+      "sha256": "7680ce8de442a53c5e6139f5b0c6afb36b1e327773bb776191ae35b698e5be1c"
+    },
+    {
+      "path": "docs/REPRODUCIBILITY.md",
+      "size_bytes": 2995,
+      "sha256": "573d87509106183790586031da4c7ad371509cc771e4cbf4385513d007262dc3"
+    },
+    {
+      "path": "docs/RESEARCH_OVERVIEW.md",
+      "size_bytes": 1513,
+      "sha256": "8f458b695ac315fcff461b1aca14d996f9a2a22650fde40f4cef2caa126dff63"
+    },
+    {
       "path": "docs/results/evidence.md",
       "size_bytes": 3362,
       "sha256": "2dd035399cd890b4ab7fdf3e9c12fa482bb279a302febccde0f70b70706f15e1"
@@ -703,6 +648,16 @@
       "path": "docs/results/how-to-read.md",
       "size_bytes": 3434,
       "sha256": "6700f0d96e13e5f5fbc4a1b402386fc60b22d7897c1cff2b210a31dd70577563"
+    },
+    {
+      "path": "docs/ROADMAP.md",
+      "size_bytes": 1217,
+      "sha256": "7077e38758bff8ecf960e28cd37b3965a7474174f8ec137171666a0b0b40b088"
+    },
+    {
+      "path": "docs/SITE_NAVIGATION.md",
+      "size_bytes": 2708,
+      "sha256": "e4f02f5f43a4a83525e006814290928842d21b8f4bf21135e70f4a6188055d91"
     },
     {
       "path": "docs/start/quickstart.md",
@@ -715,14 +670,34 @@
       "sha256": "50ee4be752e31570a334b84b6f8ca616f8ae54dc775a6221eae90b57ac6cdd1a"
     },
     {
+      "path": "docs/TEN_UNIT_LOCAL_REPRODUCTION.md",
+      "size_bytes": 3999,
+      "sha256": "baa5f5b30287d76fd616ac65ee1dc02d3ac226da733eb9c454414f1f42d0d1bd"
+    },
+    {
+      "path": "docs/UI_SCOPE.md",
+      "size_bytes": 642,
+      "sha256": "bc9e504bd8c518259810fb1cbd6a6b1065faa21e1f1c97f3d29a93f0a9b86dd7"
+    },
+    {
+      "path": "docs/UJI_DATA_ATTRIBUTION.md",
+      "size_bytes": 1341,
+      "sha256": "88f2428276f0686e285c6e4e897eca9460ddf00c5a11996f13d6ec7c91357a5f"
+    },
+    {
+      "path": "docs/WARNING_CALIBRATION.md",
+      "size_bytes": 1907,
+      "sha256": "8d1d7f597ac3b6c5c7bdd6125aed3237e6f20976f42fca1522822651a2461b81"
+    },
+    {
       "path": "examples/.gitkeep",
       "size_bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "path": "examples/README.md",
-      "size_bytes": 767,
-      "sha256": "c4e41f5e1691bad20e9d7dfe67fbedfbdc32883b688e6613622fb99d2e5e6f14"
+      "path": "examples/empirical_integrity/summary.json",
+      "size_bytes": 2287,
+      "sha256": "c07ec81066a0b497a01e998b5283a2a5d51820c4c441ab81f4adb2b02a124eba"
     },
     {
       "path": "examples/empirical_integrity/U01_retrieved_candidates.csv.gz",
@@ -765,9 +740,9 @@
       "sha256": "53153bde21c79afde8fc5bffb522b075e4de8f0c0afe932bed2b311f4ae598eb"
     },
     {
-      "path": "examples/empirical_integrity/summary.json",
-      "size_bytes": 2287,
-      "sha256": "c07ec81066a0b497a01e998b5283a2a5d51820c4c441ab81f4adb2b02a124eba"
+      "path": "examples/README.md",
+      "size_bytes": 767,
+      "sha256": "c4e41f5e1691bad20e9d7dfe67fbedfbdc32883b688e6613622fb99d2e5e6f14"
     },
     {
       "path": "examples/synthetic_combined/README.md",
@@ -830,6 +805,11 @@
       "sha256": "e398e978a24dd805a64450e89cb5dfd731f3072fdb44a706f449476b235a31a6"
     },
     {
+      "path": "LICENSE",
+      "size_bytes": 1094,
+      "sha256": "5b0fc0b213c6c71e58b3b94002fc079daab7e5da60f6b151982420be389905f0"
+    },
+    {
       "path": "metadata/.gitkeep",
       "size_bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -855,9 +835,19 @@
       "sha256": "f174d71facd2a3190eb232fe832bad1ea14e424a31634b1f909377a1d9f0f555"
     },
     {
+      "path": "PUBLICATION_APPROVAL_REQUIRED.md",
+      "size_bytes": 924,
+      "sha256": "9dce1e51d1e02ddc04ca4c894fe94f6b4e087d6e28692a6e71f529fe8c5e4e8b"
+    },
+    {
       "path": "pyproject.toml",
       "size_bytes": 1321,
       "sha256": "127824fb73ef98aa5766ddcf69e0c11b64319acfe8c1e2dd2d9f7551d2e1ac91"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 28813,
+      "sha256": "f543b9ff4b50248fce3f62c78cc130691646f7e1c46cc76a87ebcc722d8c8cce"
     },
     {
       "path": "reference/.gitkeep",
@@ -868,6 +858,11 @@
       "path": "reference/README.md",
       "size_bytes": 302,
       "sha256": "7b0c1b2c916b43720ef47e83a960c062963475e4d2d773eb8f23f8c344eb24f7"
+    },
+    {
+      "path": "RELEASE_VALIDATION.md",
+      "size_bytes": 7148,
+      "sha256": "37d49e017f5772d0973e7ff6a535f9ab1c9f92bd4d068996518a2398b72e7693"
     },
     {
       "path": "requirements-docs.txt",
@@ -1066,8 +1061,8 @@
     },
     {
       "path": "scripts/check_public_release.py",
-      "size_bytes": 7467,
-      "sha256": "de4129f2266dfc761e48150bc30fde6e5b56572096ffe0bcd04dc28a6b7c84cf"
+      "size_bytes": 7481,
+      "sha256": "20e165b63ffb7d540a8ae7c46f59db42499ffa9c73c8bebd02473c60f75a2487"
     },
     {
       "path": "scripts/create_public_synthetic_combined.py",
@@ -1130,11 +1125,6 @@
       "sha256": "481676e1fad153a4bd137d71a9cf2620e45a5702a16cddea37c7ed8cecf2b914"
     },
     {
-      "path": "scripts/research/README.md",
-      "size_bytes": 2542,
-      "sha256": "c8cb346ed87da4138f28500d9efa0a04a5c59e65f4ddc507ccb617340dface4b"
-    },
-    {
       "path": "scripts/research/legacy/20_make_indicator_tables_and_association_figure.py",
       "size_bytes": 36388,
       "sha256": "66a87632ca6201ceecc937a02a8fedf219f12fdcc601904c534cb2d1eb3f497e"
@@ -1153,6 +1143,11 @@
       "path": "scripts/research/legacy/24_build_cross_dataset_robustness.py",
       "size_bytes": 27919,
       "sha256": "21c2c93fda181c4da810d3e897bb91c88d0cf291b4836ed23cfb023431884ce3"
+    },
+    {
+      "path": "scripts/research/README.md",
+      "size_bytes": 2542,
+      "sha256": "c8cb346ed87da4138f28500d9efa0a04a5c59e65f4ddc507ccb617340dface4b"
     },
     {
       "path": "scripts/research/research_paths.py",
@@ -1506,8 +1501,8 @@
     },
     {
       "path": "tests/unit/test_android_readme_gallery.py",
-      "size_bytes": 1118,
-      "sha256": "bc40f27ec229eb1bd754273e0c048337f1eead5034965ab5cbe50999a81c8338"
+      "size_bytes": 1152,
+      "sha256": "587a2137ff3e967665d4dbd1db1c7d7c51f45e3a2065ff9ae948248053c334d5"
     },
     {
       "path": "tests/unit/test_calibration.py",
@@ -1548,6 +1543,11 @@
       "path": "tests/unit/test_schemas.py",
       "size_bytes": 435,
       "sha256": "471a40e568943290367a3615b4542c2ec3f70d561cce2282ee0372ccc5ea6f1c"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "size_bytes": 1169,
+      "sha256": "34e61b7df8f896a081c6446327bf06117c428455606d14c34e69cf793d39f8f3"
     },
     {
       "path": "web/assets/app.js",

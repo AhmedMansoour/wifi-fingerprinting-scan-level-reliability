@@ -370,10 +370,10 @@ On Windows use `gradlew.bat`. First-launch radio-map import, profile provenance,
 The Android implementation displays the latest scan-level inspection result, including the inferred floor, the scan-level diagnostic state, AP coverage, and SQS. The diagnostic views report the raw indicator values alongside their adverse-percentile positions and threshold exceedances, organized by composite indicators, RSS statistics, scan–radio-map compatibility, spatial support, candidate geometry, and radio-map ambiguity.
 
 <p align="center">
-  <img src="docs/assets/android/android_inspector_ui_public.webp" alt="Three Android Wi-Fi integrity inspector screens: scan-level inspection summary, composite and fingerprint compatibility indicators, and spatial support and ambiguity diagnostics." width="100%">
+  <img src="docs/assets/android/android_inspector_four_panel_privacy_safe.webp" alt="Four Android Wi-Fi integrity inspector screens: redacted local map view, scan-level inspection summary, composite and compatibility indicators, and spatial support and ambiguity diagnostics." width="100%">
 </p>
 
-*Android interface excerpts from the manuscript implementation.* Left: scan inspection summary and SQS; center: composite scores and RSS/fingerprint compatibility indicators; right: AP-overlap, spatial-support, candidate-geometry and radio-map-ambiguity diagnostics. The original site name is redacted, coordinate detail views are omitted, and the real floor-plan panel is excluded. The displayed warning is an example of the application's **provisional diagnostic interpretation**, not an independently validated prospective error guarantee.
+*Android interface excerpts from the manuscript implementation.* From left: full-height local-map screen with the confidential floor-plan content masked; scan inspection and SQS; composite and RSS/fingerprint compatibility indicators; and AP-overlap, spatial-support, candidate-geometry and radio-map-ambiguity diagnostics. Identifying site references and coordinates are masked; the screen itself is not cropped. The displayed warning is an example of the application's **provisional diagnostic interpretation**, not an independently validated prospective error guarantee.
 
 ## Documentation
 

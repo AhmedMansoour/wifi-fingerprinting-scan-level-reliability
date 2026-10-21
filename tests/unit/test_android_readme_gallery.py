@@ -3,17 +3,17 @@ from pathlib import Path
 import hashlib
 
 ROOT = Path(__file__).resolve().parents[2]
-ASSET = ROOT / "docs/assets/android/android_inspector_ui_public.webp"
-EXPECTED_SHA256 = "f275dcc1cbf66a1489b0989e63c57e0485c9c084f19442adc300b1ba5ff93e8f"
+ASSET = ROOT / "docs/assets/android/android_inspector_four_panel_privacy_safe.webp"
+EXPECTED_SHA256 = "6f3df4622813c2a13e88f5ab608134835c8f2d3ab5e378d8df9be04a4e5735a6"
 
 
 def test_android_gallery_links_to_hash_pinned_image():
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
-    assert readme.count("docs/assets/android/android_inspector_ui_public.webp") == 1
+    assert readme.count("docs/assets/android/android_inspector_four_panel_privacy_safe.webp") == 1
     assert "original site name is redacted" in readme
-    assert "real floor-plan panel is excluded" in readme
+    assert "confidential floor-plan content masked" in readme
     binary = ASSET.read_bytes()
-    assert len(binary) == 54730
+    assert len(binary) == 132692
     assert binary[:4] == b"RIFF" and binary[8:12] == b"WEBP"
     assert hashlib.sha256(binary).hexdigest() == EXPECTED_SHA256
 
