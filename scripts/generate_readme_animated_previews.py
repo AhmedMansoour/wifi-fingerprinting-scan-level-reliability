@@ -117,6 +117,8 @@ def publish(paths):
     readme = ROOT / "README.md"
     text = readme.read_text(encoding="utf8")
     for path in pins:
+        if path.endswith(("preview_additional_scan_cases.gif", "preview_xy_candidate_cases.gif")):
+            continue
         old = path.replace(".gif", ".svg")
         if text.count(old) == 1:
             text = text.replace(old, path, 1)
@@ -126,6 +128,33 @@ def publish(paths):
         "Three compact previews of the public research tools.",
         "Three animated previews of the public research tools. "
         "Bars reveal recorded values; the underlying measurements do not change.")
+    # Add only the two additional, reviewed native-example previews.
+    section = """### Additional measured scan cases
+
+<a href="https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/learn/interactive-explorer/">
+  <img src="docs/assets/figures/preview_additional_scan_cases.gif" width="920" alt="Three UJIIndoorLoc Building 1 measured query scans: lower, middle, and higher SQS support-component profiles.">
+</a>
+
+*Three held-out UJIIndoorLoc U02 queries, cycling from lower to middle to higher SQS within the same unit. All values were exported from the original source; none are calibrated warning states.* [Explore measured scans](https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/learn/interactive-explorer/).
+
+### Relative x–y candidate geometry
+
+<a href="https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/learn/interactive-explorer/">
+  <img src="docs/assets/figures/preview_xy_candidate_cases.gif" width="920" alt="Progressive top-ten candidate retrieval showing a compact and dispersed UJIIndoorLoc Building 2 neighborhood in independent centroid-relative rotated local x-y axes.">
+</a>
+
+*Two measured UJIIndoorLoc U03 neighborhoods. The animation reveals the ten ranked retrieval candidates and their centroid-relative spatial dispersion. Each frame is independently rotated and centered to prevent a common building-coordinate reference; no floor plan, floor label, original x–y location, or absolute spatial origin is shown.* [Explore candidate geometry](https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/learn/interactive-explorer/).
+
+"""
+    if "### Additional measured scan cases" not in text:
+        anchor = "## Motivation: from aggregate error to scan-level diagnostics"
+        assert text.count(anchor) == 1
+        text = text.replace(anchor, section + anchor, 1)
+    else:
+        for filename in ("preview_additional_scan_cases.gif", "preview_xy_candidate_cases.gif"):
+            assert text.count("docs/assets/figures/" + filename) == 1
+    text = text.replace("Three animated previews of the public research tools.",
+                        "Five animated previews of the public research tools.")
     readme.write_text(text, encoding="utf8")
 
     checker_path = ROOT / "scripts/check_public_release.py"
@@ -168,7 +197,51 @@ def publish(paths):
         raise ValueError("Preview regression test does not match expected structure")
     test_path.write_text(tests, encoding="utf8")
 
-    files = [readme, checker_path, test_path] + paths
+    extra_test_path = ROOT / "tests/unit/test_additional_readme_gifs.py"
+    test_content = '''"""Validate public additional README GIFs and their measured UJI source boundaries."""
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+FIGURES = ROOT / "docs/assets/figures"
+FILES = ("preview_additional_scan_cases.gif", "preview_xy_candidate_cases.gif")
+
+
+def test_two_additional_readme_gifs_are_clickable_and_hash_pinned():
+    readme = (ROOT / "README.md").read_text(encoding="utf8")
+    checker = (ROOT / "scripts/check_public_release.py").read_text(encoding="utf8")
+    for filename in FILES:
+        path = FIGURES / filename
+        assert path.is_file() and path.read_bytes()[:6] == b"GIF89a"
+        assert 0 < path.stat().st_size < 2_000_000
+        assert readme.count("docs/assets/figures/" + filename) == 1
+        assert "docs/assets/figures/" + filename in checker
+    assert "learn/interactive-explorer/" in readme
+    assert readme.index("### Additional measured scan cases") < readme.index("## Motivation:")
+    assert readme.index("### Relative x–y candidate geometry") < readme.index("## Motivation:")
+
+
+def test_native_source_and_privacy_scope_of_animated_cases():
+    data = json.loads((ROOT / "docs/assets/interactive/sample_scans.json").read_text("utf8"))
+    assert data["no_calibrated_warning_labels"] is True
+    assert len(data["units"]["U02"]["examples"]) == 22
+    assert len(data["units"]["U03"]["examples"]) == 22
+    scans = sorted(data["units"]["U02"]["examples"], key=lambda v:v["sqs"])
+    chosen = (scans[0], scans[11], scans[-1])
+    assert len({v["row_id"] for v in chosen}) == 3
+    assert all(v["row_id"].startswith("U02-test-") for v in chosen)
+    spatial = sorted(data["units"]["U03"]["examples"],
+                     key=lambda v:v["indicators"]["sigma_fps"])
+    assert spatial[0]["indicators"]["sigma_fps"] < spatial[-1]["indicators"]["sigma_fps"]
+    generator = (ROOT / "scripts/generate_additional_readme_gifs.py").read_text("utf8")
+    assert 'data["units"]["U02"]' in generator
+    assert 'data["units"]["U03"]' in generator
+    assert 'scan["diagnostic_centroid"]' in generator
+    assert "rotate_relative" in generator
+    assert "U09" not in generator
+'''
+    extra_test_path.write_text(test_content, encoding="utf8")
+    files = [readme, checker_path, test_path, extra_test_path] + paths
     subprocess.run(["git", "add", *[p.relative_to(ROOT).as_posix() for p in files]],
                    cwd=ROOT, check=True)
     subprocess.run([sys.executable, "scripts/refresh_release_manifest.py", "--write"],
@@ -180,6 +253,7 @@ def publish(paths):
 
 
 if __name__ == "__main__":
-    results = [render(key) for key in KEYS]
+    from generate_additional_readme_gifs import main as generate_additional
+    results = [render(key) for key in KEYS] + list(generate_additional())
     if "--publish" in sys.argv:
         publish(results)

@@ -1215,9 +1215,14 @@
       "sha256": "a897ab35c379d9dc60eeedde8f3c132858f9e4215a8adc521a551bd4f7901360"
     },
     {
+      "path": "scripts/generate_additional_readme_gifs.py",
+      "sha256": "c4a9712220396227a41ecc52337f69c5d8f2fd66c6d2d149c688f9936aad0607",
+      "size_bytes": 8611
+    },
+    {
       "path": "scripts/generate_readme_animated_previews.py",
-      "size_bytes": 8199,
-      "sha256": "42262aedf2cc633f46b8780fa7c8308ef480c10c6cfb129a51767d236c589e9a"
+      "size_bytes": 12971,
+      "sha256": "139f94a369a592848a330d664e88823bc8415a09ec0db6cc270d0bafaf0862d0"
     },
     {
       "path": "scripts/generate_synthetic_demo.py",
