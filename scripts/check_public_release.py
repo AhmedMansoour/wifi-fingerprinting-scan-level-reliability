@@ -21,6 +21,8 @@ WRAPPER = 'android/gradle/wrapper/gradle-wrapper.jar'
 WRAPPER_SHA256 = '81a82aaea5abcc8ff68b3dfcb58b3c3c429378efd98e7433460610fecd7ae45f'
 UI_SCREENSHOT = 'docs/assets/android/android_inspector_four_panel_privacy_safe.webp'
 UI_SCREENSHOT_SHA256 = '6f3df4622813c2a13e88f5ab608134835c8f2d3ab5e378d8df9be04a4e5735a6'
+METHOD_FIGURE = 'docs/assets/figures/fig_fingerprint_retrieval_vertical.svg'
+METHOD_FIGURE_SHA256 = '63c8b0b5776bdbb7ffd756cb030c3822affed0e14967c814e5edcbba7d78a9be'
 GZ_PREFIX = 'examples/synthetic_combined/'
 GZ_PATHS = {'examples/empirical_integrity/U01_retrieved_candidates.csv.gz','examples/empirical_integrity/U01_scan_reliability.csv.gz','examples/empirical_integrity/U02_retrieved_candidates.csv.gz','examples/empirical_integrity/U02_scan_reliability.csv.gz','examples/empirical_integrity/U03_retrieved_candidates.csv.gz','examples/empirical_integrity/U03_scan_reliability.csv.gz','examples/empirical_integrity/U09_retrieved_candidates.csv.gz','examples/empirical_integrity/U09_scan_reliability.csv.gz'} | {'data/empirical/U01.csv.gz','data/empirical/U02.csv.gz','data/empirical/U03.csv.gz'} | {'data/empirical/hk_u09_test_ordered.csv.gz','data/radio_maps/hk_u09_train.csv.gz'} | {'data/empirical/hk_u09_ap_relative.csv.gz'} | {GZ_PREFIX+'combined_all_datasets.csv.gz'} | {GZ_PREFIX+f'units/U{i:02d}.csv.gz' for i in range(1,11)}
 ALLOWED_DATA = {'data/.gitkeep','data/public/README.md','reference/.gitkeep','reference/README.md','data/empirical/hk_u09_ap_relative.csv.gz','data/empirical/hk_u09_test_ordered.csv.gz','data/radio_maps/hk_u09_train.csv.gz','data/empirical/U01.csv.gz','data/empirical/U02.csv.gz','data/empirical/U03.csv.gz'}
@@ -36,6 +38,13 @@ def check(root=ROOT):
         if path.is_symlink():fail.append(rel+': symlink not permitted');continue
         # One manually reviewed and hash-pinned, location-redacted Android UI gallery.
         # All other raster/vector screenshot extensions remain prohibited.
+        # Hash-pinned conceptual SVG: no measured points or source floor plans.
+        if rel == METHOD_FIGURE:
+            if path.suffix.lower() != '.svg' or not data.lstrip().startswith(b'<svg'):
+                fail.append(rel+': invalid methodological figure format')
+            if hashlib.sha256(data).hexdigest() != METHOD_FIGURE_SHA256:
+                fail.append(rel+': methodological figure differs from reviewed asset')
+            continue
         if rel == UI_SCREENSHOT:
             if path.suffix.lower() != '.webp' or not data.startswith(b'RIFF') or data[8:12] != b'WEBP':
                 fail.append(rel+': invalid approved Android screenshot format')

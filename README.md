@@ -36,36 +36,9 @@ The implementation separates **position estimation** from **post-retrieval relia
 
 **Figure 1. Fingerprint retrieval, estimation and diagnostic inference**
 
-```mermaid
-flowchart LR
-  subgraph Inputs["Observation and reference data"]
-    Q["Query RSS vector q<br/>and observed AP set A_q"]
-    M["Training radio map<br/>RSS templates t_j and coordinates p_j"]
-  end
-  Q --> R["RSS-template retrieval<br/>rank d_1 ≤ d_2 ≤ ..."]
-  M --> R
-  R --> C["Ten diagnostic candidates<br/>ordered reference coordinates"]
-  R --> E["Fingerprinting estimator"]
-  E --> X["Estimated position x-hat"]
-  Q --> D["Scan statistics and<br/>scan-map compatibility"]
-  C --> D
-  M --> D
-  C --> G["Candidate geometry,<br/>RP support and ambiguity"]
-  M --> G
-  X -. "Estimator-specific RP distance" .-> G
-  D --> S["15 diagnostic quantities<br/>one requires x-hat"]
-  G --> S
-  S --> F["SQS, C_sigma, FII"]
-  X --> O["Estimated position +<br/>diagnostic evidence"]
-  F --> O
-  O --> V["Retrospective analysis<br/>or separately calibrated decisions"]
-  classDef source fill:#eaf2fc,stroke:#557bb0,color:#173455
-  classDef method fill:#eaf7f2,stroke:#397f6c,color:#173c33
-  classDef final fill:#fff5e6,stroke:#af7d31,color:#513512
-  class Q,M source
-  class R,C,E,D,G,S,F method
-  class X,O,V final
-```
+<p align="center">
+  <img src="docs/assets/figures/fig_fingerprint_retrieval_vertical.svg" width="760" alt="Vertical diagram of Wi-Fi fingerprint retrieval, estimator position, ten diagnostic candidates, fifteen reliability quantities, and composite scores preceding calibrated decisions.">
+</p>
 
 The first ten retrieved templates define the candidate neighborhood used for spatial and AP-overlap diagnostics. The source retrieval may probe up to 20 nearest templates before forming the diagnostic candidate set. Repeated training observations at a common coordinate and floor are aggregated into a template. The drawings below are **methodological schematics, not HK floor plans, radio maps, or observed spatial point clouds**.
 

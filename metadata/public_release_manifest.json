@@ -31,8 +31,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 29074,
-      "sha256": "4bc3ab963b26c1f97d07005a6e89429504d71bf9b13a6732eaab5a13ce3b5be5"
+      "size_bytes": 28244,
+      "sha256": "b01c8f1dcb8f8d22acf7bbfc48cffcaa94022354e2628f5a9d367465ed363467"
     },
     {
       "path": "RELEASE_VALIDATION.md",
@@ -600,6 +600,11 @@
       "sha256": "6f3df4622813c2a13e88f5ab608134835c8f2d3ab5e378d8df9be04a4e5735a6"
     },
     {
+      "path": "docs/assets/figures/fig_fingerprint_retrieval_vertical.svg",
+      "size_bytes": 11554,
+      "sha256": "63c8b0b5776bdbb7ffd756cb030c3822affed0e14967c814e5edcbba7d78a9be"
+    },
+    {
       "path": "docs/assets/indicator-atlas/atlas.css",
       "size_bytes": 6646,
       "sha256": "914bc1dfd6c2617e8720170d0d50b7cd5c314a5e4e612c972681b513f462f42f"
@@ -1066,8 +1071,8 @@
     },
     {
       "path": "scripts/check_public_release.py",
-      "size_bytes": 7481,
-      "sha256": "20e165b63ffb7d540a8ae7c46f59db42499ffa9c73c8bebd02473c60f75a2487"
+      "size_bytes": 8103,
+      "sha256": "029148198ca4b2c69a64636ded334973c48a16de7e08d2a0b272055cdfbe78ed"
     },
     {
       "path": "scripts/create_public_synthetic_combined.py",
@@ -1548,6 +1553,11 @@
       "path": "tests/unit/test_schemas.py",
       "size_bytes": 435,
       "sha256": "471a40e568943290367a3615b4542c2ec3f70d561cce2282ee0372ccc5ea6f1c"
+    },
+    {
+      "path": "tests/unit/test_vertical_architecture_figure.py",
+      "size_bytes": 1260,
+      "sha256": "02c2b0efeceb4ae3be004d96903c28e6e3dba63f03e59e4b90915c6137912371"
     },
     {
       "path": "web/assets/app.js",
