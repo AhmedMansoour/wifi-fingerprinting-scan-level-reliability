@@ -2,6 +2,17 @@
 
 **Reproducible methods, measured data, and software for evaluating the reliability evidence associated with individual Wi-Fi fingerprints.**
 
+### Animated interface concept: four illustrative cases
+
+<p align="center">
+  <a href="https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/learn/interactive-explorer/">
+    <img src="docs/assets/figures/preview_illustrative_four_ai_cases.gif" alt="Looping four-frame illustrative interface: two AI-generated higher-support examples and two lower-support examples, each with a fictional floor plan, estimated and ground-truth positions, ten candidate reference points, and changing diagnostic bars. Not experimental data." width="1000">
+  </a>
+</p>
+
+> **Illustrative concept only, not research evidence.** These four frames are AI-generated UI mock-ups. The depicted third-floor plan, radio map, reference points, estimated and ground-truth locations, distance errors, indicator readings, and reliable/unreliable classifications are **fictional**, not measured research outputs or independently calibrated warning decisions. For actual study-derived observations, open the [measured-scan explorer](https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/learn/interactive-explorer/) and [scientific evidence matrix](https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/results/evidence-matrix/).
+
+
 This research software evaluates RSS observations, radio-map compatibility, spatial consistency, and ambiguity alongside Wi-Fi fingerprinting position estimates. It implements **15 individual diagnostic quantities and three composite scores** (SQS, Cσ, and FII), with reproducible Python/Android source, measured public examples, and archived evaluation results.
 
 [![Python and Android CI](https://github.com/AhmedMansoour/wifi-fingerprinting-scan-level-reliability/actions/workflows/ci.yml/badge.svg)](https://github.com/AhmedMansoour/wifi-fingerprinting-scan-level-reliability/actions/workflows/ci.yml)

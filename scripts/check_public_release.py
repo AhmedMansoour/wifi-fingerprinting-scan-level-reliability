@@ -24,6 +24,7 @@ UI_SCREENSHOT_SHA256 = '6f3df4622813c2a13e88f5ab608134835c8f2d3ab5e378d8df9be04a
 METHOD_FIGURE = 'docs/assets/figures/fig_fingerprint_retrieval_vertical.svg'
 METHOD_FIGURE_SHA256 = '63c8b0b5776bdbb7ffd756cb030c3822affed0e14967c814e5edcbba7d78a9be'
 README_ANIMATED_PREVIEWS = {
+    'docs/assets/figures/preview_illustrative_four_ai_cases.gif': '7d3f8c91e207d9f2b18a385858fa330788909735ca515359ead08b5d621748ba',
     'docs/assets/figures/preview_additional_scan_cases.gif': 'b32d97002a85fe538a82edce94d2029ec878185f2ccb42825756f1c0cb28969d',
     'docs/assets/figures/preview_evidence_matrix.gif': '80f31551757d8c162ef50e2a58f4684b9adfd982860612beb5b31ce4bdcec8a8',
     'docs/assets/figures/preview_scan_comparison.gif': '0f312626b76cf4c43414461050ee44da0721ce76b031f257b34c22ee282bbdd4',

@@ -46,8 +46,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 32934,
-      "sha256": "c2ea2c22ba5ed09c61865597f2a4282d52571708f44a88c32a33390cb71ec33a"
+      "size_bytes": 34195,
+      "sha256": "a6e8d616d7f62a2b475a3a80a678c030dad72facfbe5cb4b0885a3ca781814c0"
     },
     {
       "path": "RELEASE_VALIDATION.md",
@@ -635,6 +635,11 @@
       "sha256": "03a3d4a57b6aabf5f18734f890bfe9e13aad229992cd40e0009d7164c2b679c4"
     },
     {
+      "path": "docs/assets/figures/preview_illustrative_four_ai_cases.gif",
+      "size_bytes": 1347110,
+      "sha256": "7d3f8c91e207d9f2b18a385858fa330788909735ca515359ead08b5d621748ba"
+    },
+    {
       "path": "docs/assets/figures/preview_scan_comparison.gif",
       "size_bytes": 752615,
       "sha256": "0f312626b76cf4c43414461050ee44da0721ce76b031f257b34c22ee282bbdd4"
@@ -1196,8 +1201,8 @@
     },
     {
       "path": "scripts/check_public_release.py",
-      "size_bytes": 10114,
-      "sha256": "dc6c89d11af5bb2816b9c00e7fc1b762d19e31625cdf76bd6ceeddb49fbf5fea"
+      "size_bytes": 10248,
+      "sha256": "567a1a8491d26b2aeec458c9d061864ba8675c7669bbd74adac6a34576f7e556"
     },
     {
       "path": "scripts/create_public_synthetic_combined.py",
@@ -1688,6 +1693,11 @@
       "path": "tests/unit/test_hk_u09_empirical.py",
       "size_bytes": 1850,
       "sha256": "7bfb6425d937050f5db9979eea878785bd79a778617982c33036c5aa400c2b5e"
+    },
+    {
+      "path": "tests/unit/test_illustrative_hero_animation.py",
+      "size_bytes": 1355,
+      "sha256": "d5877a20ab8ac2869b006399b4c9a4603ef520b031e65ff398d794cbae4be7b0"
     },
     {
       "path": "tests/unit/test_public_data.py",
