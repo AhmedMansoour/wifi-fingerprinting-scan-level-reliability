@@ -1,12 +1,16 @@
 # Verified reproducibility scope and release status
 
-The source repository was published on `main` in commit `4178c3bf559004e223c437a74dc6c06b7057d748` on **2026-10-20**. The public source and completely synthetic fixtures are available at:
+The public repository was independently reviewed on **2026-10-21**, including commit `c2d10ed0b5b4ee09be9ce9150e492d416a5edb4f`. It contains software, wholly synthetic fixtures, and a separately identified measured-data release:
 
 https://github.com/AhmedMansoour/wifi-fingerprinting-scan-level-reliability
 
-The GitHub Actions workflow for that commit completed successfully:
+Confirmed successful runs for commit `c2d10ed`:
 
-https://github.com/AhmedMansoour/wifi-fingerprinting-scan-level-reliability/actions/runs/39465309756
+- [Python tests, privacy checks and Android build](https://github.com/AhmedMansoour/wifi-fingerprinting-scan-level-reliability/actions/runs/39525055190)
+- [Strict documentation build](https://github.com/AhmedMansoour/wifi-fingerprinting-scan-level-reliability/actions/runs/39525055156)
+- [GitHub Pages deployment](https://github.com/AhmedMansoour/wifi-fingerprinting-scan-level-reliability/actions/runs/39525081907)
+
+The [public homepage](https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/), [interactive scan explorer](https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/learn/interactive-explorer/), and [indicator atlas](https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/learn/indicator-atlas/) were independently fetched without HTTP errors. A successful build and page fetch do not substitute for every browser/device interaction test.
 
 | Verification | Status and scope |
 |---|---|
@@ -19,9 +23,12 @@ https://github.com/AhmedMansoour/wifi-fingerprinting-scan-level-reliability/acti
 | Real smartphone deployment/field test | Not established by GitHub CI |
 | Historical Android 99-run timing experiment | Separate study; its reported timing is post-retrieval indicator/composite/warning computation only |
 | Complete original empirical training/evaluation | Not established; required real research inputs are withheld |
-| Empirical scalar-reference replay and native SQS equivalence | Not established by the public checkout |
+| New public four-unit native scan diagnostics | 5,041 scan records, 50,410 candidate records, and 88 browser examples with native SQS component reconstruction checks passed. These checks do not establish full ten-unit historical estimator-result equivalence. |
+| Documentation and interactive publishing | Homepage and both interactive guide pages are accessible; strict documentation build and Pages deployment passed. |
 
-The public ten-unit fixture is **100% synthetic**, not a sanitized or shifted copy of the empirical study. No private HK map, vector floor plan, real BSSID, original HK reference coordinates or empirical radio map is licensed for repository distribution. The code archive does not establish dataset-specific redistribution rights.
+The public ten-unit synthetic fixture is **100% fabricated**, not a sanitized version of the empirical study. Separately, measured UJIIndoorLoc U01–U03 and HK U09 fingerprint tables with relative metric locations are present in the public checkout. Hardware BSSIDs, coordinate origins and floor-plan assets are not supplied by the explicitly inventoried release paths; nevertheless, relative HK point arrangements and candidate plots can carry reconstructable spatial information. The code license does not itself authorize redistribution of the measured datasets.
+
+**Unresolved disclosure boundary:** The current release of HK U09 measured input and candidate coordinates is inconsistent with the stricter source-only geometry prohibition in `docs/HK_PRIVACY_RELEASE_POLICY.md`. Existing CI allowlists some measured gzip files and cannot establish spatial non-reconstructability or derivative-data release permission. Obtain documented clearance for these exact artifacts or replace them with synthetic-only inputs, including a separate assessment of historical Git objects, releases, and already published site assets. Deleting files in a later commit does not remove past Git versions.
 
 **Maintainer checks still needed:** software/contributor license clearance, journal double-blind policy, tests on physical Android hardware where claimed, and any empirical reproduction undertaken privately using licensed datasets. Do not claim statistical empirical reproducibility from the synthetic fixture or infer new-environment robustness from the ten original evaluation units.
 

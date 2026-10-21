@@ -2,7 +2,7 @@
 
 | R3 issue | Evidence present | Remaining limitation |
 | --- | --- | --- |
-| Replace repository placeholder and verify accessibility | The GitHub repository exists and its link can be verified; this local package contains a reproducible scalar-reference analyzer | Candidate is not yet uploaded/approved; public links in manuscript must match actually released files |
+| Replace repository placeholder and verify accessibility | Public GitHub source, documentation homepage, interactive explorer and indicator atlas verified on 2026-10-21 | Empirical HK derived-data disclosure approval remains separate from software and website verification |
 | Warning calibration | Java percentile direction/ties/0.80 cutoff and an explicit split-isolation script; `docs/WARNING_CALIBRATION.md` | Retrospective study references must not be presented as prospective withheld calibration |
 | 99-run timing | Java source and `docs/ANDROID_TIMING.md` record the exact post-candidate diagnostic computation boundary | Device build/raw 99-run logfile still requires separate verification |
 | Cross-dataset robustness | Per-query 10-unit, 8-estimator evaluation residuals and scale-free indicators | Evidence limited to observed units, source conditions, estimators and the manuscript evaluation design |

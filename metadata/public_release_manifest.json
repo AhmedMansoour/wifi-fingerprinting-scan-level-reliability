@@ -36,8 +36,8 @@
     },
     {
       "path": "RELEASE_VALIDATION.md",
-      "size_bytes": 5137,
-      "sha256": "2302c6a1faf8dc0d1d0a7932a4d4c3ed92adf867f728cc70bba815a212b0cdea"
+      "size_bytes": 7148,
+      "sha256": "37d49e017f5772d0973e7ff6a535f9ab1c9f92bd4d068996518a2398b72e7693"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -506,8 +506,8 @@
     },
     {
       "path": "docs/CLAIMS_AND_LIMITS.md",
-      "size_bytes": 1935,
-      "sha256": "220052e888d888a8b2dac5cac85de84b1c8883cb8c92617e099cbd43b230ae54"
+      "size_bytes": 1917,
+      "sha256": "fabaced91395207c32f1e045f9437f7afe8406ab1b3998ed9d108e6cdf3e3f26"
     },
     {
       "path": "docs/DATASET_DOWNLOADS_AND_FORMAT.md",
@@ -536,8 +536,8 @@
     },
     {
       "path": "docs/HK_PRIVACY_RELEASE_POLICY.md",
-      "size_bytes": 4250,
-      "sha256": "03894d174ee1231ac652b187152670d4bcf2402627f629497cdbcc477b8e0f4f"
+      "size_bytes": 5189,
+      "sha256": "61c6072caf2692c183a0786b72369ceb020244f8a23875271d56ce74e22d2946"
     },
     {
       "path": "docs/HK_U09_EMPIRICAL_REPRODUCIBILITY.md",
