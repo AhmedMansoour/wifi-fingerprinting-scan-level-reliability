@@ -10,6 +10,11 @@
       "sha256": "120e0e718d94f9c3a63ed8e4ce8dd3c6b1f6999f7568a8642ca7f24d0ce52518"
     },
     {
+      "path": ".github/workflows/docs.yml",
+      "size_bytes": 2048,
+      "sha256": "c633e134db83286748da2d892e92e8842b113062ca3c5b274ebe9687b7a4680a"
+    },
+    {
       "path": ".gitignore",
       "size_bytes": 1050,
       "sha256": "90309878c2b591ebb1b2ea0e3a14bdd00979c926e5b994af49a0e32459d9bab3"
@@ -565,6 +570,11 @@
       "sha256": "7077e38758bff8ecf960e28cd37b3965a7474174f8ec137171666a0b0b40b088"
     },
     {
+      "path": "docs/SITE_NAVIGATION.md",
+      "size_bytes": 2212,
+      "sha256": "331b0899e22794d9e157f5cfd6421abebc20a4835c9e3f7cc5edc294335e1c24"
+    },
+    {
       "path": "docs/TEN_UNIT_LOCAL_REPRODUCTION.md",
       "size_bytes": 3999,
       "sha256": "baa5f5b30287d76fd616ac65ee1dc02d3ac226da733eb9c454414f1f42d0d1bd"
@@ -585,9 +595,54 @@
       "sha256": "8d1d7f597ac3b6c5c7bdd6125aed3237e6f20976f42fca1522822651a2461b81"
     },
     {
+      "path": "docs/assets/stylesheets/site.css",
+      "size_bytes": 3019,
+      "sha256": "96460e1421c13d604f856523f59eec06e746db24afdd681e48d1b5f5b266d9a9"
+    },
+    {
+      "path": "docs/help/faq.md",
+      "size_bytes": 2889,
+      "sha256": "f62dc080eb6ac0b9894b7fdf8224de364693954d223f75170e53bedb4990db62"
+    },
+    {
       "path": "docs/hk_u09_expected_summary.json",
       "size_bytes": 1150,
       "sha256": "f6c8406138abf342b5bed63a040653aa11ab85579795db7497875bb2eebe1c98"
+    },
+    {
+      "path": "docs/index.md",
+      "size_bytes": 4977,
+      "sha256": "ce3030d6d4955833b758bae141c18a764b8bc487d38c57333cfe9feb1b034d97"
+    },
+    {
+      "path": "docs/learn/overview.md",
+      "size_bytes": 3178,
+      "sha256": "ea20567ae3dfbaef4f76eb7a84643f73a55b0cc1e68e01fd48c5e55d13dbafb5"
+    },
+    {
+      "path": "docs/learn/walkthrough.md",
+      "size_bytes": 3378,
+      "sha256": "a8e938ead407f678081534b16bbe5be024b8b81216d2ab3cec65f34fe6249958"
+    },
+    {
+      "path": "docs/results/evidence.md",
+      "size_bytes": 3362,
+      "sha256": "2dd035399cd890b4ab7fdf3e9c12fa482bb279a302febccde0f70b70706f15e1"
+    },
+    {
+      "path": "docs/results/how-to-read.md",
+      "size_bytes": 3434,
+      "sha256": "6700f0d96e13e5f5fbc4a1b402386fc60b22d7897c1cff2b210a31dd70577563"
+    },
+    {
+      "path": "docs/start/quickstart.md",
+      "size_bytes": 3236,
+      "sha256": "424c97e7cf07fa87af292f84a7f633b91bd014ce64a0496a7f1ccb2cd5d4cb9a"
+    },
+    {
+      "path": "docs/start/your-data.md",
+      "size_bytes": 2609,
+      "sha256": "50ee4be752e31570a334b84b6f8ca616f8ae54dc775a6221eae90b57ac6cdd1a"
     },
     {
       "path": "examples/.gitkeep",
@@ -725,6 +780,11 @@
       "sha256": "158d2f8f46710878a1965e99dfefd94cffda96091ffd2722667be7d894cce101"
     },
     {
+      "path": "mkdocs.yml",
+      "size_bytes": 3549,
+      "sha256": "b7c4d27502ee3e7e78887fe275b68c65b6220b4f28069dcc00aa99f2cf6da986"
+    },
+    {
       "path": "pyproject.toml",
       "size_bytes": 1321,
       "sha256": "127824fb73ef98aa5766ddcf69e0c11b64319acfe8c1e2dd2d9f7551d2e1ac91"
@@ -738,6 +798,11 @@
       "path": "reference/README.md",
       "size_bytes": 302,
       "sha256": "7b0c1b2c916b43720ef47e83a960c062963475e4d2d773eb8f23f8c344eb24f7"
+    },
+    {
+      "path": "requirements-docs.txt",
+      "size_bytes": 151,
+      "sha256": "934e849f24622efd5e11b1422538f1e845b040cbcd52e5a4d699970894bcafb3"
     },
     {
       "path": "results/.gitkeep",

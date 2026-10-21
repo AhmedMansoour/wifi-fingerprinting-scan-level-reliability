@@ -1,0 +1,116 @@
+site_name: Wi-Fi Fingerprinting Integrity
+site_description: From a Wi-Fi scan to interpretable positioning reliability diagnostics and reproducible evidence.
+site_author: Wi-Fi Integrity research contributors
+site_url: https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/
+repo_name: AhmedMansoour/wifi-fingerprinting-scan-level-reliability
+repo_url: https://github.com/AhmedMansoour/wifi-fingerprinting-scan-level-reliability
+edit_uri: edit/main/docs/
+docs_dir: docs
+site_dir: _site
+use_directory_urls: true
+copyright: Research software documentation. Code and dataset licenses are separate.
+
+validation:
+  nav:
+    not_found: warn
+  links:
+    not_found: warn
+    unrecognized_links: info
+    absolute_links: info
+
+theme:
+  name: material
+  language: en
+  icon:
+    logo: material/wifi
+    repo: fontawesome/brands/github
+  palette:
+    - media: '(prefers-color-scheme: light)'
+      scheme: default
+      primary: indigo
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+    - media: '(prefers-color-scheme: dark)'
+      scheme: slate
+      primary: indigo
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - navigation.footer
+    - content.code.copy
+    - content.action.edit
+    - search.suggest
+    - search.highlight
+    - toc.follow
+  font: false
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - def_list
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra_css:
+  - assets/stylesheets/site.css
+
+nav:
+  - Home: index.md
+  - Understand:
+      - The problem in plain language: learn/overview.md
+      - Follow one Wi-Fi scan: learn/walkthrough.md
+      - The 18 diagnostics: INDICATORS.md
+      - Research overview: RESEARCH_OVERVIEW.md
+  - Get started:
+      - Run with public measurements: start/quickstart.md
+      - Use your own fingerprints: start/your-data.md
+      - Original Getting Started guide: GETTING_STARTED.md
+      - Android Studio setup: ANDROID.md
+  - Data:
+      - Dataset availability and formats: DATASET_DOWNLOADS_AND_FORMAT.md
+      - UJIIndoorLoc attribution: UJI_DATA_ATTRIBUTION.md
+      - Data & privacy: DATA_AND_PRIVACY.md
+      - Ten-unit local reproduction: TEN_UNIT_LOCAL_REPRODUCTION.md
+  - Results:
+      - How to read outputs: results/how-to-read.md
+      - Which results prove what?: results/evidence.md
+      - Native empirical integrity run: PUBLIC_EMPIRICAL_INTEGRITY.md
+      - HK U09 empirical baseline: HK_U09_EMPIRICAL_REPRODUCIBILITY.md
+      - Saved original research assets: EXISTING_RESEARCH_ASSETS.md
+  - Research reference:
+      - Reproducibility boundaries: REPRODUCIBILITY.md
+      - Estimators: ESTIMATORS.md
+      - Calibration: CALIBRATION.md
+      - Warning calibration: WARNING_CALIBRATION.md
+      - Runtime measurement: ANDROID_TIMING.md
+      - Claims and limitations: CLAIMS_AND_LIMITS.md
+      - HK release policy: HK_PRIVACY_RELEASE_POLICY.md
+      - UI scope: UI_SCOPE.md
+      - Roadmap: ROADMAP.md
+  - Help:
+      - Frequently asked questions: help/faq.md
+      - Documentation map: SITE_NAVIGATION.md
