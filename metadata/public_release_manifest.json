@@ -46,8 +46,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 31371,
-      "sha256": "19d695bb878646e343056cb9b5f2d0f46553863de4e8280fc04d741b68d0020c"
+      "size_bytes": 32934,
+      "sha256": "c2ea2c22ba5ed09c61865597f2a4282d52571708f44a88c32a33390cb71ec33a"
     },
     {
       "path": "RELEASE_VALIDATION.md",
@@ -620,6 +620,11 @@
       "sha256": "63c8b0b5776bdbb7ffd756cb030c3822affed0e14967c814e5edcbba7d78a9be"
     },
     {
+      "path": "docs/assets/figures/preview_additional_scan_cases.gif",
+      "size_bytes": 879080,
+      "sha256": "b32d97002a85fe538a82edce94d2029ec878185f2ccb42825756f1c0cb28969d"
+    },
+    {
       "path": "docs/assets/figures/preview_evidence_matrix.gif",
       "size_bytes": 767935,
       "sha256": "80f31551757d8c162ef50e2a58f4684b9adfd982860612beb5b31ce4bdcec8a8"
@@ -648,6 +653,11 @@
       "path": "docs/assets/figures/preview_sqs_ablation.svg",
       "size_bytes": 5979,
       "sha256": "8cb98a232ef50d3d3bb61055b8143d9e0719aacc5575c096099a13caf99085da"
+    },
+    {
+      "path": "docs/assets/figures/preview_xy_candidate_cases.gif",
+      "size_bytes": 251855,
+      "sha256": "6ddc25764f25ce2180f6f806d70d5a067fb891607f897b306b06f9144e791845"
     },
     {
       "path": "docs/assets/indicator-atlas/atlas.css",
@@ -1186,8 +1196,8 @@
     },
     {
       "path": "scripts/check_public_release.py",
-      "size_bytes": 9859,
-      "sha256": "fd211300a3af392c8a9305d59d23625d35771d61ec1b92d4ea76f61e68d73b59"
+      "size_bytes": 10114,
+      "sha256": "dc6c89d11af5bb2816b9c00e7fc1b762d19e31625cdf76bd6ceeddb49fbf5fea"
     },
     {
       "path": "scripts/create_public_synthetic_combined.py",
@@ -1216,8 +1226,8 @@
     },
     {
       "path": "scripts/generate_additional_readme_gifs.py",
-      "sha256": "c4a9712220396227a41ecc52337f69c5d8f2fd66c6d2d149c688f9936aad0607",
-      "size_bytes": 8611
+      "size_bytes": 8611,
+      "sha256": "c4a9712220396227a41ecc52337f69c5d8f2fd66c6d2d149c688f9936aad0607"
     },
     {
       "path": "scripts/generate_readme_animated_previews.py",
@@ -1633,6 +1643,11 @@
       "path": "tests/test_public_integrity.py",
       "size_bytes": 1132,
       "sha256": "826857d75e56b11133da56c6c2727b0f96f4e256db819c0f079a987690ce0b17"
+    },
+    {
+      "path": "tests/unit/test_additional_readme_gifs.py",
+      "size_bytes": 2142,
+      "sha256": "8ab4a26676def053d03a2f73c33b159425cb3a03ebfbd5958b91ee241d3551a2"
     },
     {
       "path": "tests/unit/test_android_readme_gallery.py",

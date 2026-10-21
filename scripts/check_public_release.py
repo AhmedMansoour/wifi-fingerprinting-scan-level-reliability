@@ -24,9 +24,11 @@ UI_SCREENSHOT_SHA256 = '6f3df4622813c2a13e88f5ab608134835c8f2d3ab5e378d8df9be04a
 METHOD_FIGURE = 'docs/assets/figures/fig_fingerprint_retrieval_vertical.svg'
 METHOD_FIGURE_SHA256 = '63c8b0b5776bdbb7ffd756cb030c3822affed0e14967c814e5edcbba7d78a9be'
 README_ANIMATED_PREVIEWS = {
+    'docs/assets/figures/preview_additional_scan_cases.gif': 'b32d97002a85fe538a82edce94d2029ec878185f2ccb42825756f1c0cb28969d',
     'docs/assets/figures/preview_evidence_matrix.gif': '80f31551757d8c162ef50e2a58f4684b9adfd982860612beb5b31ce4bdcec8a8',
     'docs/assets/figures/preview_scan_comparison.gif': '0f312626b76cf4c43414461050ee44da0721ce76b031f257b34c22ee282bbdd4',
     'docs/assets/figures/preview_sqs_ablation.gif': 'a54b8ff12f6674f84ed15da1a9b1ccc5d049311c4f995330a520de8d2e4d53e1',
+    'docs/assets/figures/preview_xy_candidate_cases.gif': '6ddc25764f25ce2180f6f806d70d5a067fb891607f897b306b06f9144e791845',
 }
 README_PREVIEW_FIGURES = {
     'docs/assets/figures/preview_evidence_matrix.svg': '03a3d4a57b6aabf5f18734f890bfe9e13aad229992cd40e0009d7164c2b679c4',

@@ -26,7 +26,7 @@ The Android implementation displays the latest scan-level inspection result, inc
 
 ## Visual research explorer
 
-Three animated previews of the public research tools. Bars reveal recorded values; the underlying measurements do not change. **Select a figure to open its interactive version** on GitHub Pages. The diagrams below display source-derived values, not simulated positioning performance.
+Five animated previews of the public research tools. Bars reveal recorded values; the underlying measurements do not change. **Select a figure to open its interactive version** on GitHub Pages. The diagrams below display source-derived values, not simulated positioning performance.
 
 ### Compare individual Wi-Fi scans
 
@@ -52,6 +52,22 @@ Three animated previews of the public research tools. Bars reveal recorded value
 
 *Eight of 18 archived A3 indicator summaries. The full page includes additional statistics, uncertainty intervals, and estimator-level aggregate results.* [Open the full evidence matrix](https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/results/evidence-matrix/).
 
+
+### Additional measured scan cases
+
+<a href="https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/learn/interactive-explorer/">
+  <img src="docs/assets/figures/preview_additional_scan_cases.gif" width="920" alt="Three UJIIndoorLoc Building 1 measured query scans: lower, middle, and higher SQS support-component profiles.">
+</a>
+
+*Three held-out UJIIndoorLoc U02 queries, cycling from lower to middle to higher SQS within the same unit. All values were exported from the original source; none are calibrated warning states.* [Explore measured scans](https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/learn/interactive-explorer/).
+
+### Relative x–y candidate geometry
+
+<a href="https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/learn/interactive-explorer/">
+  <img src="docs/assets/figures/preview_xy_candidate_cases.gif" width="920" alt="Progressive top-ten candidate retrieval showing a compact and dispersed UJIIndoorLoc Building 2 neighborhood in independent centroid-relative rotated local x-y axes.">
+</a>
+
+*Two measured UJIIndoorLoc U03 neighborhoods. The animation reveals the ten ranked retrieval candidates and their centroid-relative spatial dispersion. Each frame is independently rotated and centered to prevent a common building-coordinate reference; no floor plan, floor label, original x–y location, or absolute spatial origin is shown.* [Explore candidate geometry](https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/learn/interactive-explorer/).
 
 ## Motivation: from aggregate error to scan-level diagnostics
 
