@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="540" viewBox="0 0 1100 540" role="img" aria-label="Contrast two measured Wi-Fi scans">
+<title>Contrast two measured Wi-Fi scans</title><desc>Two UJIIndoorLoc U01 query records and five original support components.</desc>
+<rect x="0" y="0" width="1100" height="540" rx="18" fill="#f3f7fa"/><rect x="0" y="0" width="1100" height="114" rx="18" fill="#102c46"/><rect x="0" y="95" width="1100" height="19" rx="0" fill="#102c46"/>
+<text x="37" y="35" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="750" text-anchor="start" fill="#8fe5dd">01 / SCAN-LEVEL EXPLORER</text>
+<text x="37" y="78" font-family="DejaVu Sans, Arial, sans-serif" font-size="31" font-weight="750" text-anchor="start" fill="#ffffff">Contrast two measured Wi-Fi scans</text>
+<text x="1062" y="36" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="end" fill="#c6e3f1">INTERACTIVE RESEARCH</text>
+<rect x="36" y="135" width="498" height="335" rx="15" fill="#ffffff" stroke="#dbe6ed" stroke-width="1"/>
+<rect x="54" y="153" width="6" height="39" rx="3" fill="#3279a9"/>
+<text x="72" y="165" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="750" text-anchor="start" fill="#607a8c">LOWER-SUPPORT EXAMPLE</text>
+<text x="72" y="188" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="start" fill="#17354b">U01-test-000790</text>
+<text x="497" y="193" font-family="DejaVu Sans, Arial, sans-serif" font-size="42" font-weight="750" text-anchor="end" fill="#3279a9">0.056</text>
+<text x="72" y="222" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start" fill="#607a8c">11 observed APs</text>
+<text x="497" y="222" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="end" fill="#607a8c">Candidate spread  17.4 m</text>
+<line x1="60" y1="243" x2="510" y2="243" stroke="#dbe6ed"/>
+<text x="64" y="279" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="start" fill="#17354b">RSS matching</text>
+<rect x="250" y="267" width="185" height="13" rx="6" fill="#e5edf2"/>
+<rect x="250" y="267" width="27.3213075105" height="13" rx="6" fill="#3279a9"/>
+<text x="495" y="279" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="end" fill="#17354b">0.148</text>
+<text x="64" y="315" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="start" fill="#17354b">Candidate geometry</text>
+<rect x="250" y="303" width="185" height="13" rx="6" fill="#e5edf2"/>
+<rect x="250" y="303" width="0" height="13" rx="6" fill="#3279a9"/>
+<text x="495" y="315" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="end" fill="#17354b">0.000</text>
+<text x="64" y="351" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="start" fill="#17354b">AP-count support</text>
+<rect x="250" y="339" width="185" height="13" rx="6" fill="#e5edf2"/>
+<rect x="250" y="339" width="24.6666666605" height="13" rx="6" fill="#3279a9"/>
+<text x="495" y="351" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="end" fill="#17354b">0.133</text>
+<text x="64" y="387" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="start" fill="#17354b">AP-set overlap</text>
+<rect x="250" y="375" width="185" height="13" rx="6" fill="#e5edf2"/>
+<rect x="250" y="375" width="0" height="13" rx="6" fill="#3279a9"/>
+<text x="495" y="387" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="end" fill="#17354b">0.000</text>
+<text x="64" y="423" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="start" fill="#17354b">Local RP density</text>
+<rect x="250" y="411" width="185" height="13" rx="6" fill="#e5edf2"/>
+<rect x="250" y="411" width="0" height="13" rx="6" fill="#3279a9"/>
+<text x="495" y="423" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="end" fill="#17354b">0.000</text>
+<rect x="552" y="135" width="498" height="335" rx="15" fill="#ffffff" stroke="#dbe6ed" stroke-width="1"/>
+<rect x="570" y="153" width="6" height="39" rx="3" fill="#08877e"/>
+<text x="588" y="165" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="750" text-anchor="start" fill="#607a8c">HIGHER-SUPPORT EXAMPLE</text>
+<text x="588" y="188" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="start" fill="#17354b">U01-test-000247</text>
+<text x="1013" y="193" font-family="DejaVu Sans, Arial, sans-serif" font-size="42" font-weight="750" text-anchor="end" fill="#08877e">0.856</text>
+<text x="588" y="222" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start" fill="#607a8c">14 observed APs</text>
+<text x="1013" y="222" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="end" fill="#607a8c">Candidate spread  3.9 m</text>
+<line x1="576" y1="243" x2="1026" y2="243" stroke="#dbe6ed"/>
+<text x="580" y="279" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="start" fill="#17354b">RSS matching</text>
+<rect x="766" y="267" width="185" height="13" rx="6" fill="#e5edf2"/>
+<rect x="766" y="267" width="185" height="13" rx="6" fill="#08877e"/>
+<text x="1011" y="279" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="end" fill="#17354b">1.000</text>
+<text x="580" y="315" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="start" fill="#17354b">Candidate geometry</text>
+<rect x="766" y="303" width="185" height="13" rx="6" fill="#e5edf2"/>
+<rect x="766" y="303" width="175.244744095" height="13" rx="6" fill="#08877e"/>
+<text x="1011" y="315" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="end" fill="#17354b">0.947</text>
+<text x="580" y="351" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="start" fill="#17354b">AP-count support</text>
+<rect x="766" y="339" width="185" height="13" rx="6" fill="#e5edf2"/>
+<rect x="766" y="339" width="61.6666666605" height="13" rx="6" fill="#08877e"/>
+<text x="1011" y="351" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="end" fill="#17354b">0.333</text>
+<text x="580" y="387" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="start" fill="#17354b">AP-set overlap</text>
+<rect x="766" y="375" width="185" height="13" rx="6" fill="#e5edf2"/>
+<rect x="766" y="375" width="185" height="13" rx="6" fill="#08877e"/>
+<text x="1011" y="387" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="end" fill="#17354b">1.000</text>
+<text x="580" y="423" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="start" fill="#17354b">Local RP density</text>
+<rect x="766" y="411" width="185" height="13" rx="6" fill="#e5edf2"/>
+<rect x="766" y="411" width="185" height="13" rx="6" fill="#08877e"/>
+<text x="1011" y="423" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="end" fill="#17354b">1.000</text>
+<text x="37" y="508" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start" fill="#607a8c">UJIIndoorLoc U01  |  Original query observations  |  SQS is not a correctness probability</text>
+<rect x="868" y="483" width="195" height="37" rx="17" fill="#e2f2ef"/><text x="963" y="507" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="750" text-anchor="middle" fill="#096e69">EXPLORE LIVE  ↗</text>
+</svg>

@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="540" viewBox="0 0 1100 540" role="img" aria-label="Examine archived scientific evidence">
+<title>Examine archived scientific evidence</title><desc>Eight of eighteen indicator summaries from approved A3 research assets.</desc>
+<rect x="0" y="0" width="1100" height="540" rx="18" fill="#f3f7fa"/><rect x="0" y="0" width="1100" height="114" rx="18" fill="#102c46"/><rect x="0" y="95" width="1100" height="19" rx="0" fill="#102c46"/>
+<text x="37" y="35" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="750" text-anchor="start" fill="#8fe5dd">03 / ESTIMATOR &amp; INDICATOR EVIDENCE</text>
+<text x="37" y="78" font-family="DejaVu Sans, Arial, sans-serif" font-size="31" font-weight="750" text-anchor="start" fill="#ffffff">Examine archived scientific evidence</text>
+<text x="1062" y="36" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="end" fill="#c6e3f1">INTERACTIVE RESEARCH</text>
+<rect x="36" y="135" width="1028" height="334" rx="15" fill="#ffffff" stroke="#dbe6ed" stroke-width="1"/>
+<text x="56" y="172" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="750" text-anchor="start" fill="#607a8c">Representative diagnostic quantity</text>
+<text x="550" y="166" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="730" text-anchor="middle" fill="#607a8c">Aligned ρ</text>
+<text x="749" y="166" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="730" text-anchor="middle" fill="#607a8c">Adaptive AUROC</text>
+<text x="950" y="166" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="730" text-anchor="middle" fill="#607a8c">Fixed 7 m AUROC</text>
+<rect x="49" y="178" width="1000" height="30" rx="5" fill="#f6f9fb"/>
+<text x="58" y="199" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="675" text-anchor="start" fill="#17354b">Scan Quality and Support Score</text>
+<rect x="486" y="184" width="130" height="20" rx="5" fill="#edf3f6"/>
+<rect x="486" y="184" width="104.87863775551067" height="20" rx="5" fill="#08877e"/>
+<text x="631" y="199" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="730" text-anchor="end" fill="#17354b">0.290</text>
+<rect x="685" y="184" width="130" height="20" rx="5" fill="#edf3f6"/>
+<rect x="685" y="184" width="111.04164249396797" height="20" rx="5" fill="#3279a9"/>
+<text x="830" y="199" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="730" text-anchor="end" fill="#17354b">0.769</text>
+<rect x="884" y="184" width="130" height="20" rx="5" fill="#edf3f6"/>
+<rect x="884" y="184" width="104.92986812280515" height="20" rx="5" fill="#3279a9"/>
+<text x="1029" y="199" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="730" text-anchor="end" fill="#17354b">0.686</text>
+<text x="58" y="231" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="460" text-anchor="start" fill="#17354b">Nearest-RP distance</text>
+<rect x="486" y="216" width="130" height="20" rx="5" fill="#edf3f6"/>
+<rect x="486" y="216" width="103.22785900449571" height="20" rx="5" fill="#08877e"/>
+<text x="631" y="231" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="730" text-anchor="end" fill="#17354b">0.286</text>
+<rect x="685" y="216" width="130" height="20" rx="5" fill="#edf3f6"/>
+<rect x="685" y="216" width="100.6188538487623" height="20" rx="5" fill="#3279a9"/>
+<text x="830" y="231" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="730" text-anchor="end" fill="#17354b">0.697</text>
+<rect x="884" y="216" width="130" height="20" rx="5" fill="#edf3f6"/>
+<rect x="884" y="216" width="94.62253224110607" height="20" rx="5" fill="#3279a9"/>
+<text x="1029" y="231" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="730" text-anchor="end" fill="#17354b">0.619</text>
+<rect x="49" y="242" width="1000" height="30" rx="5" fill="#f6f9fb"/>
+<text x="58" y="263" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="460" text-anchor="start" fill="#17354b">Candidate spatial spread</text>
+<rect x="486" y="248" width="130" height="20" rx="5" fill="#edf3f6"/>
+<rect x="486" y="248" width="103.02121765982567" height="20" rx="5" fill="#08877e"/>
+<text x="631" y="263" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="730" text-anchor="end" fill="#17354b">0.285</text>
+<rect x="685" y="248" width="130" height="20" rx="5" fill="#edf3f6"/>
+<rect x="685" y="248" width="109.78072036895566" height="20" rx="5" fill="#3279a9"/>
+<text x="830" y="263" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="730" text-anchor="end" fill="#17354b">0.760</text>
+<rect x="884" y="248" width="130" height="20" rx="5" fill="#edf3f6"/>
+<rect x="884" y="248" width="103.72040202531173" height="20" rx="5" fill="#3279a9"/>
+<text x="1029" y="263" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="730" text-anchor="end" fill="#17354b">0.678</text>
+<text x="58" y="295" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="460" text-anchor="start" fill="#17354b">Cumulative neighborhood instability</text>
+<rect x="486" y="280" width="130" height="20" rx="5" fill="#edf3f6"/>
+<rect x="486" y="280" width="100.43979486414331" height="20" rx="5" fill="#08877e"/>
+<text x="631" y="295" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="730" text-anchor="end" fill="#17354b">0.278</text>
+<rect x="685" y="280" width="130" height="20" rx="5" fill="#edf3f6"/>
+<rect x="685" y="280" width="107.5015728989197" height="20" rx="5" fill="#3279a9"/>
+<text x="830" y="295" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="730" text-anchor="end" fill="#17354b">0.744</text>
+<rect x="884" y="280" width="130" height="20" rx="5" fill="#edf3f6"/>
+<rect x="884" y="280" width="105.05748262381991" height="20" rx="5" fill="#3279a9"/>
+<text x="1029" y="295" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="730" text-anchor="end" fill="#17354b">0.687</text>
+<rect x="49" y="306" width="1000" height="30" rx="5" fill="#f6f9fb"/>
+<text x="58" y="327" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="460" text-anchor="start" fill="#17354b">RSS-gradient uncertainty proxy</text>
+<rect x="486" y="312" width="130" height="20" rx="5" fill="#edf3f6"/>
+<rect x="486" y="312" width="95.97422574164854" height="20" rx="5" fill="#08877e"/>
+<text x="631" y="327" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="730" text-anchor="end" fill="#17354b">0.266</text>
+<rect x="685" y="312" width="130" height="20" rx="5" fill="#edf3f6"/>
+<rect x="685" y="312" width="109.58508403361346" height="20" rx="5" fill="#3279a9"/>
+<text x="830" y="327" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="730" text-anchor="end" fill="#17354b">0.759</text>
+<rect x="884" y="312" width="130" height="20" rx="5" fill="#edf3f6"/>
+<rect x="884" y="312" width="106.03670887523592" height="20" rx="5" fill="#3279a9"/>
+<text x="1029" y="327" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="730" text-anchor="end" fill="#17354b">0.693</text>
+<text x="58" y="359" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="460" text-anchor="start" fill="#17354b">Candidate-set diameter</text>
+<rect x="486" y="344" width="130" height="20" rx="5" fill="#edf3f6"/>
+<rect x="486" y="344" width="91.51761622683611" height="20" rx="5" fill="#08877e"/>
+<text x="631" y="359" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="730" text-anchor="end" fill="#17354b">0.253</text>
+<rect x="685" y="344" width="130" height="20" rx="5" fill="#edf3f6"/>
+<rect x="685" y="344" width="106.74625014195733" height="20" rx="5" fill="#3279a9"/>
+<text x="830" y="359" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="730" text-anchor="end" fill="#17354b">0.739</text>
+<rect x="884" y="344" width="130" height="20" rx="5" fill="#edf3f6"/>
+<rect x="884" y="344" width="103.40367334262626" height="20" rx="5" fill="#3279a9"/>
+<text x="1029" y="359" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="730" text-anchor="end" fill="#17354b">0.676</text>
+<rect x="49" y="370" width="1000" height="30" rx="5" fill="#f6f9fb"/>
+<text x="58" y="391" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="460" text-anchor="start" fill="#17354b">Local RP density</text>
+<rect x="486" y="376" width="130" height="20" rx="5" fill="#edf3f6"/>
+<rect x="486" y="376" width="63.66794995606337" height="20" rx="5" fill="#08877e"/>
+<text x="631" y="391" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="730" text-anchor="end" fill="#17354b">0.176</text>
+<rect x="685" y="376" width="130" height="20" rx="5" fill="#edf3f6"/>
+<rect x="685" y="376" width="95.98804950917625" height="20" rx="5" fill="#3279a9"/>
+<text x="830" y="391" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="730" text-anchor="end" fill="#17354b">0.665</text>
+<rect x="884" y="376" width="130" height="20" rx="5" fill="#edf3f6"/>
+<rect x="884" y="376" width="91.88524924532922" height="20" rx="5" fill="#3279a9"/>
+<text x="1029" y="391" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="730" text-anchor="end" fill="#17354b">0.601</text>
+<text x="58" y="423" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="460" text-anchor="start" fill="#17354b">Fingerprint Integrity Index</text>
+<rect x="486" y="408" width="130" height="20" rx="5" fill="#edf3f6"/>
+<rect x="486" y="408" width="60.06883342372807" height="20" rx="5" fill="#08877e"/>
+<text x="631" y="423" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="730" text-anchor="end" fill="#17354b">0.166</text>
+<rect x="685" y="408" width="130" height="20" rx="5" fill="#edf3f6"/>
+<rect x="685" y="408" width="91.87983568636835" height="20" rx="5" fill="#3279a9"/>
+<text x="830" y="423" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="730" text-anchor="end" fill="#17354b">0.636</text>
+<rect x="884" y="408" width="130" height="20" rx="5" fill="#edf3f6"/>
+<rect x="884" y="408" width="92.26521345732513" height="20" rx="5" fill="#3279a9"/>
+<text x="1029" y="423" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="730" text-anchor="end" fill="#17354b">0.603</text>
+<text x="37" y="508" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start" fill="#607a8c">Approved A3 summaries  |  Eight of 18 indicators shown  |  Open the matrix for all results</text>
+<rect x="868" y="483" width="195" height="37" rx="17" fill="#e2f2ef"/><text x="963" y="507" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="750" text-anchor="middle" fill="#096e69">EXPLORE LIVE  ↗</text>
+</svg>

@@ -31,8 +31,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 28708,
-      "sha256": "cc20def963e3ede57ab6cf6d8bcc287c50b184631883191184399434cd11e033"
+      "size_bytes": 30818,
+      "sha256": "dee2ad7ea92b92310c266c12c5777298b2ad5d17d96e127442812ccaa2b03dac"
     },
     {
       "path": "RELEASE_VALIDATION.md",
@@ -605,6 +605,21 @@
       "sha256": "63c8b0b5776bdbb7ffd756cb030c3822affed0e14967c814e5edcbba7d78a9be"
     },
     {
+      "path": "docs/assets/figures/preview_evidence_matrix.svg",
+      "sha256": "03a3d4a57b6aabf5f18734f890bfe9e13aad229992cd40e0009d7164c2b679c4",
+      "size_bytes": 11072
+    },
+    {
+      "path": "docs/assets/figures/preview_scan_comparison.svg",
+      "sha256": "0547b93f77bb0a345ac7da601271b11e37f27a7bc4970501d81155eddd793a20",
+      "size_bytes": 7980
+    },
+    {
+      "path": "docs/assets/figures/preview_sqs_ablation.svg",
+      "sha256": "8cb98a232ef50d3d3bb61055b8143d9e0719aacc5575c096099a13caf99085da",
+      "size_bytes": 5979
+    },
+    {
       "path": "docs/assets/indicator-atlas/atlas.css",
       "size_bytes": 6646,
       "sha256": "914bc1dfd6c2617e8720170d0d50b7cd5c314a5e4e612c972681b513f462f42f"
@@ -1141,8 +1156,8 @@
     },
     {
       "path": "scripts/check_public_release.py",
-      "size_bytes": 8103,
-      "sha256": "029148198ca4b2c69a64636ded334973c48a16de7e08d2a0b272055cdfbe78ed"
+      "size_bytes": 8982,
+      "sha256": "292c72df36d46f4c23723abaf66071212d1122c2b3248c9a188c447b93f46bdc"
     },
     {
       "path": "scripts/create_public_synthetic_combined.py",
@@ -1618,6 +1633,11 @@
       "path": "tests/unit/test_public_data.py",
       "size_bytes": 2077,
       "sha256": "212ac30edcf21212e1bfac09894cfb14c7df3419cd24f12d64aac0fad730e1bf"
+    },
+    {
+      "path": "tests/unit/test_readme_visual_previews.py",
+      "sha256": "ed0298fbc0d04db13eee6ca96bdd09b8a26ea582c147b8cb78a98545bff62e21",
+      "size_bytes": 2690
     },
     {
       "path": "tests/unit/test_schemas.py",

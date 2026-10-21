@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="540" viewBox="0 0 1100 540" role="img" aria-label="Understand the SQS component contribution">
+<title>Understand the SQS component contribution</title><desc>Archived A1 median AUROC for full SQS versus five conceptual leave-one-out variants.</desc>
+<rect x="0" y="0" width="1100" height="540" rx="18" fill="#f3f7fa"/><rect x="0" y="0" width="1100" height="114" rx="18" fill="#102c46"/><rect x="0" y="95" width="1100" height="19" rx="0" fill="#102c46"/>
+<text x="37" y="35" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="750" text-anchor="start" fill="#8fe5dd">02 / A1 ABLATION EVIDENCE</text>
+<text x="37" y="78" font-family="DejaVu Sans, Arial, sans-serif" font-size="31" font-weight="750" text-anchor="start" fill="#ffffff">Understand the SQS component contribution</text>
+<text x="1062" y="36" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="end" fill="#c6e3f1">INTERACTIVE RESEARCH</text>
+<rect x="36" y="135" width="707" height="334" rx="15" fill="#ffffff" stroke="#dbe6ed" stroke-width="1"/>
+<rect x="762" y="135" width="302" height="334" rx="15" fill="#ffffff" stroke="#dbe6ed" stroke-width="1"/>
+<text x="59" y="170" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#607a8c">Study variant</text>
+<text x="699" y="170" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="700" text-anchor="end" fill="#607a8c">Median AUROC</text>
+<text x="58" y="210" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="730" text-anchor="start" fill="#17354b">Full SQS</text>
+<rect x="280" y="196" width="323" height="15" rx="7" fill="#e8eff3"/>
+<rect x="280" y="196" width="248.30619594612685" height="15" rx="7" fill="#cb7e43"/>
+<text x="701" y="210" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="780" text-anchor="end" fill="#cb7e43">0.769</text>
+<text x="58" y="251" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="start" fill="#17354b">Without signal matching</text>
+<rect x="280" y="237" width="323" height="15" rx="7" fill="#e8eff3"/>
+<rect x="280" y="237" width="245.17189016903657" height="15" rx="7" fill="#3279a9"/>
+<text x="701" y="251" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="780" text-anchor="end" fill="#17354b">0.759</text>
+<text x="58" y="292" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="start" fill="#17354b">Without candidate geometry</text>
+<rect x="280" y="278" width="323" height="15" rx="7" fill="#e8eff3"/>
+<rect x="280" y="278" width="230.41864680545584" height="15" rx="7" fill="#3279a9"/>
+<text x="701" y="292" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="780" text-anchor="end" fill="#17354b">0.713</text>
+<text x="58" y="333" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="start" fill="#17354b">Without AP-count support</text>
+<rect x="280" y="319" width="323" height="15" rx="7" fill="#e8eff3"/>
+<rect x="280" y="319" width="227.7157587511075" height="15" rx="7" fill="#3279a9"/>
+<text x="701" y="333" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="780" text-anchor="end" fill="#17354b">0.705</text>
+<text x="58" y="374" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="start" fill="#17354b">Without AP overlap</text>
+<rect x="280" y="360" width="323" height="15" rx="7" fill="#e8eff3"/>
+<rect x="280" y="360" width="247.6779026217228" height="15" rx="7" fill="#3279a9"/>
+<text x="701" y="374" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="780" text-anchor="end" fill="#17354b">0.767</text>
+<text x="58" y="415" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="start" fill="#17354b">Without local density</text>
+<rect x="280" y="401" width="323" height="15" rx="7" fill="#e8eff3"/>
+<rect x="280" y="401" width="242.75954784409282" height="15" rx="7" fill="#3279a9"/>
+<text x="701" y="415" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="780" text-anchor="end" fill="#17354b">0.752</text>
+<text x="784" y="174" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="750" text-anchor="start" fill="#607a8c">FULL FIVE-PART SCORE</text>
+<text x="784" y="231" font-family="DejaVu Sans, Arial, sans-serif" font-size="53" font-weight="750" text-anchor="start" fill="#08877e">0.769</text>
+<line x1="784" y1="254" x2="1041" y2="254" stroke="#dbe6ed"/>
+<text x="784" y="284" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="740" text-anchor="start" fill="#607a8c">LARGEST REMOVAL CHANGE</text>
+<text x="784" y="335" font-family="DejaVu Sans, Arial, sans-serif" font-size="41" font-weight="750" text-anchor="start" fill="#b56c35">-0.064</text>
+<text x="784" y="364" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start" fill="#607a8c">without AP-count support</text>
+<text x="784" y="415" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="start" fill="#17354b">79 valid conditions</text>
+<text x="784" y="438" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start" fill="#607a8c">Across 10 units / 8 estimators</text>
+<text x="37" y="508" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start" fill="#607a8c">Archived A1 experiment  |  Median adaptive gross-error AUROC  |  Descriptive, not calibrated</text>
+<rect x="868" y="483" width="195" height="37" rx="17" fill="#e2f2ef"/><text x="963" y="507" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="750" text-anchor="middle" fill="#096e69">EXPLORE LIVE  ↗</text>
+</svg>

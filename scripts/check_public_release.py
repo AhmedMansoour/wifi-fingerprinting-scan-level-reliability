@@ -23,6 +23,11 @@ UI_SCREENSHOT = 'docs/assets/android/android_inspector_four_panel_privacy_safe.w
 UI_SCREENSHOT_SHA256 = '6f3df4622813c2a13e88f5ab608134835c8f2d3ab5e378d8df9be04a4e5735a6'
 METHOD_FIGURE = 'docs/assets/figures/fig_fingerprint_retrieval_vertical.svg'
 METHOD_FIGURE_SHA256 = '63c8b0b5776bdbb7ffd756cb030c3822affed0e14967c814e5edcbba7d78a9be'
+README_PREVIEW_FIGURES = {
+    'docs/assets/figures/preview_evidence_matrix.svg': '03a3d4a57b6aabf5f18734f890bfe9e13aad229992cd40e0009d7164c2b679c4',
+    'docs/assets/figures/preview_scan_comparison.svg': '0547b93f77bb0a345ac7da601271b11e37f27a7bc4970501d81155eddd793a20',
+    'docs/assets/figures/preview_sqs_ablation.svg': '8cb98a232ef50d3d3bb61055b8143d9e0719aacc5575c096099a13caf99085da',
+}
 GZ_PREFIX = 'examples/synthetic_combined/'
 GZ_PATHS = {'examples/empirical_integrity/U01_retrieved_candidates.csv.gz','examples/empirical_integrity/U01_scan_reliability.csv.gz','examples/empirical_integrity/U02_retrieved_candidates.csv.gz','examples/empirical_integrity/U02_scan_reliability.csv.gz','examples/empirical_integrity/U03_retrieved_candidates.csv.gz','examples/empirical_integrity/U03_scan_reliability.csv.gz','examples/empirical_integrity/U09_retrieved_candidates.csv.gz','examples/empirical_integrity/U09_scan_reliability.csv.gz'} | {'data/empirical/U01.csv.gz','data/empirical/U02.csv.gz','data/empirical/U03.csv.gz'} | {'data/empirical/hk_u09_test_ordered.csv.gz','data/radio_maps/hk_u09_train.csv.gz'} | {'data/empirical/hk_u09_ap_relative.csv.gz'} | {GZ_PREFIX+'combined_all_datasets.csv.gz'} | {GZ_PREFIX+f'units/U{i:02d}.csv.gz' for i in range(1,11)}
 ALLOWED_DATA = {'data/.gitkeep','data/public/README.md','reference/.gitkeep','reference/README.md','data/empirical/hk_u09_ap_relative.csv.gz','data/empirical/hk_u09_test_ordered.csv.gz','data/radio_maps/hk_u09_train.csv.gz','data/empirical/U01.csv.gz','data/empirical/U02.csv.gz','data/empirical/U03.csv.gz'}
@@ -39,6 +44,13 @@ def check(root=ROOT):
         # One manually reviewed and hash-pinned, location-redacted Android UI gallery.
         # All other raster/vector screenshot extensions remain prohibited.
         # Hash-pinned conceptual SVG: no measured points or source floor plans.
+        # Approved research previews are vector-only, externally linked, and hash pinned.
+        if rel in README_PREVIEW_FIGURES:
+            if path.suffix.lower() != '.svg' or not data.lstrip().startswith(b'<svg'):
+                fail.append(rel+': invalid approved scientific preview format')
+            if hashlib.sha256(data).hexdigest() != README_PREVIEW_FIGURES[rel]:
+                fail.append(rel+': scientific preview differs from reviewed asset')
+            continue
         if rel == METHOD_FIGURE:
             if path.suffix.lower() != '.svg' or not data.lstrip().startswith(b'<svg'):
                 fail.append(rel+': invalid methodological figure format')

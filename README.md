@@ -24,6 +24,35 @@ The Android implementation displays the latest scan-level inspection result, inc
 
 *Android interface excerpts from the manuscript implementation.* From left: full-height local-map screen with the confidential floor-plan content masked; scan inspection and SQS; composite and RSS/fingerprint compatibility indicators; and AP-overlap, spatial-support, candidate-geometry and radio-map-ambiguity diagnostics. Identifying site references and coordinates are masked; the screen itself is not cropped. The displayed warning is an example of the application's **provisional diagnostic interpretation**, not an independently validated prospective error guarantee.
 
+## Visual research explorer
+
+Three compact previews of the public research tools. **Select a figure to open its interactive version** on GitHub Pages. The diagrams below display source-derived values, not simulated positioning performance.
+
+### Compare individual Wi-Fi scans
+
+<a href="https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/learn/compare-scans/">
+  <img src="docs/assets/figures/preview_scan_comparison.svg" width="920" alt="Click to compare two original UJIIndoorLoc U01 scans, their SQS values, and five normalized support components.">
+</a>
+
+*Measured U01 queries with contrasting diagnostic support. Individual SQS values are not calibrated probabilities of positioning correctness.* [Open the interactive scan comparison](https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/learn/compare-scans/).
+
+### Explore SQS components and ablations
+
+<a href="https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/learn/sqs-ablation/">
+  <img src="docs/assets/figures/preview_sqs_ablation.svg" width="920" alt="Click to explore archived A1 full SQS and leave-one-component-out median gross-error AUROC results.">
+</a>
+
+*Archived A1 results across 79 valid adaptive gross-error conditions. Values are retrospective medians, not new scan-level predictions.* [Open the interactive SQS explorer](https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/learn/sqs-ablation/).
+
+### Compare the scientific evidence
+
+<a href="https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/results/evidence-matrix/">
+  <img src="docs/assets/figures/preview_evidence_matrix.svg" width="920" alt="Click to explore the archived indicator association and gross-error AUROC matrix; eight of 18 indicators are previewed.">
+</a>
+
+*Eight of 18 archived A3 indicator summaries. The full page includes additional statistics, uncertainty intervals, and estimator-level aggregate results.* [Open the full evidence matrix](https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/results/evidence-matrix/).
+
+
 ## Motivation: from aggregate error to scan-level diagnostics
 
 Average positioning accuracy and error percentiles summarize a model across many scans, but they do not describe the evidence supporting a particular prediction. Two queries can yield apparently plausible coordinates while differing substantially in **observed AP coverage, signal-space matching, candidate spatial consistency, and local radio-map support**.
