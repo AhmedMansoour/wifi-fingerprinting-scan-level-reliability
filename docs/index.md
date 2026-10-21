@@ -5,13 +5,14 @@ hide:
 ---
 
 <div class="wf-hero" markdown="1">
-<div class="wf-kicker">EXPLAIN · IMPLEMENT · VERIFY</div>
+<div class="wf-kicker">RESEARCH SOFTWARE · METHODS · REPRODUCIBILITY</div>
 
-# From a Wi-Fi location to the evidence behind it
+# Scan-level reliability for Wi-Fi fingerprinting
 
-A Wi-Fi fingerprinting system gives you a position. **This research adds scan-level evidence for judging how well the Wi-Fi observations and radio-map matches support that position.**
+A reproducible framework for characterizing **scan-level reliability** and diagnosing conditions associated with large positioning errors. It evaluates measured RSS observations, radio-map matches and the spatial consistency of retrieved reference points alongside conventional Wi-Fi positioning estimates.
 
-[Explore real scan evidence](learn/interactive-explorer.md){ .md-button .md-button--primary }
+[Explore indicator definitions](learn/indicator-atlas.md){ .md-button .md-button--primary }
+[Inspect measured scan diagnostics](learn/interactive-explorer.md){ .md-button }
 [Get started with real data](start/quickstart.md){ .md-button }
 [Understand the idea](learn/overview.md){ .md-button }
 
@@ -25,19 +26,20 @@ A Wi-Fi fingerprinting system gives you a position. **This research adds scan-le
   <div><strong>10</strong><span>Units in the original research evaluation</span></div>
 </div>
 
-## Start with the question you have
+## Explore the methodology and implementation
 
 <div class="wf-card-grid">
-  <a class="wf-card" href="learn/interactive-explorer/"><span class="wf-card-mark">INTERACTIVE · MEASURED DATA</span><strong>Follow one real scan to its SQS</strong><span>Switch between scans, inspect candidate coordinates and the five original components, and compare examples.</span><em>Open interactive explorer →</em></a>
-  <a class="wf-card" href="learn/overview/"><span class="wf-card-mark">01 · LEARN</span><strong>Why does reliability matter?</strong><span>Two similar-looking location estimates can have very different levels of supporting evidence.</span><em>Understand the problem →</em></a>
-  <a class="wf-card" href="learn/walkthrough/"><span class="wf-card-mark">02 · FOLLOW</span><strong>What happens to one scan?</strong><span>Trace the input, reference radio map, retrieved candidates, indicators, SQS, and interpretation.</span><em>Follow the pipeline →</em></a>
-  <a class="wf-card" href="start/quickstart/"><span class="wf-card-mark">03 · RUN</span><strong>Can I execute the research code?</strong><span>Run the released measured UJI and HK scans and inspect generated indicators.</span><em>Run the public example →</em></a>
-  <a class="wf-card" href="results/how-to-read/"><span class="wf-card-mark">04 · INTERPRET</span><strong>What does the output tell me?</strong><span>Find out what SQS, candidate spread, AP overlap and the results files actually mean.</span><em>Read the outputs →</em></a>
-  <a class="wf-card" href="start/your-data/"><span class="wf-card-mark">05 · ADAPT</span><strong>What if I have my own scans?</strong><span>Use the canonical eight-column format and prepare a local radio map.</span><em>Prepare a dataset →</em></a>
-  <a class="wf-card" href="results/evidence/"><span class="wf-card-mark">06 · VERIFY</span><strong>Which results can I reproduce?</strong><span>Distinguish fresh runs, the historical HK predictions, ten-unit summaries, and synthetic examples.</span><em>Check evidence scope →</em></a>
+  <a class="wf-card" href="learn/indicator-atlas/"><span class="wf-card-mark">EQUATIONS · ANIMATED FIGURES</span><strong>Indicator definitions and computation</strong><span>Explore all 15 diagnostic measurements and three composites, including equations, units, measured examples, and animated signal/geometry explanations.</span><em>Open indicator atlas →</em></a>
+  <a class="wf-card" href="learn/interactive-explorer/"><span class="wf-card-mark">INTERACTIVE · MEASURED DATA</span><strong>Inspect a measured scan and its SQS</strong><span>Switch between scans, inspect candidate coordinates and the five original components, and compare examples.</span><em>Open interactive explorer →</em></a>
+  <a class="wf-card" href="learn/overview/"><span class="wf-card-mark">01 · LEARN</span><strong>Why evaluate scan-level reliability?</strong><span>Aggregate accuracy conceals scan-to-scan variation in reference support and spatial ambiguity.</span><em>Understand the problem →</em></a>
+  <a class="wf-card" href="learn/walkthrough/"><span class="wf-card-mark">02 · FOLLOW</span><strong>How is each diagnostic computed?</strong><span>Trace RSS normalization, template matching, retrieved candidate geometry, composite scores and output verification.</span><em>Follow the pipeline →</em></a>
+  <a class="wf-card" href="start/quickstart/"><span class="wf-card-mark">03 · RUN</span><strong>Run the native Python pipeline</strong><span>Run the released measured UJI and HK scans and inspect generated indicators.</span><em>Run the public example →</em></a>
+  <a class="wf-card" href="results/how-to-read/"><span class="wf-card-mark">04 · INTERPRET</span><strong>Interpret outputs and indicators</strong><span>Find out what SQS, candidate spread, AP overlap and the results files actually mean.</span><em>Read the outputs →</em></a>
+  <a class="wf-card" href="start/your-data/"><span class="wf-card-mark">05 · ADAPT</span><strong>Prepare your own radio map</strong><span>Use the canonical eight-column format and prepare a local radio map.</span><em>Prepare a dataset →</em></a>
+  <a class="wf-card" href="results/evidence/"><span class="wf-card-mark">06 · VERIFY</span><strong>Verify the evidence and reproducibility scope</strong><span>Distinguish fresh runs, the historical HK predictions, ten-unit summaries, and synthetic examples.</span><em>Check evidence scope →</em></a>
 </div>
 
-## The idea in one diagram
+## Processing architecture
 
 ```mermaid
 flowchart LR
@@ -54,8 +56,8 @@ flowchart LR
     I --> J[Inspect or apply a calibrated decision rule]
 ```
 
-!!! info "A score is not a certainty"
-    The Scan Quality and Support Score (SQS) summarizes support from the recorded scan and radio map. It is **not** a calibrated probability that an estimated position is correct. A decision threshold must be fitted and evaluated separately.
+!!! info "Interpretation of composite scores"
+    The Scan Quality and Support Score (SQS) combines five cohort-normalized support components. It is **not a calibrated probability of correct localization**. Operational acceptance or warning thresholds require separately specified training, calibration, and held-out evaluation.
 
 ## What can you run today?
 

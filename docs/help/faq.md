@@ -1,15 +1,15 @@
 # Frequently asked questions
 
-??? question "What is Wi-Fi fingerprinting?"
+??? question "How does Wi-Fi fingerprinting estimate position?"
     It estimates a location by comparing observed Wi-Fi signal strengths with a radio map collected at reference positions.
 
 ??? question "What is a radio map? Do I need a building floor plan?"
     A radio map is an RSS/position table, not an architectural map. No original HK floor-plan image or vector file is needed to run the released examples.
 
-??? question "What does SQS mean?"
+??? question "How is SQS constructed?"
     The **Scan Quality and Support Score** combines five kinds of diagnostic support (signal match, candidate geometry, AP count, AP overlap and local density). It is not a calibrated probability of correctness.
 
-??? question "Does a high SQS prove that a position is accurate?"
+??? question "Does SQS provide a calibrated accuracy probability?"
     No. Some strong-looking fingerprint matches can produce large errors. Use SQS as diagnostic evidence, and calibrate and evaluate any operational warning rule separately.
 
 ??? question "Do I need ten datasets just to try the method?"
@@ -31,3 +31,6 @@
     Yes, the [interactive measured-scan explorer](../learn/interactive-explorer.md) visualizes 88 selected query scans from the four available measured units. It uses the original computed indicator/SQS values. The separate `dashboard/` is synthetic, and the original `web/` research interface is not a complete public live-positioning service.
 
 **Still need help?** [Open a GitHub issue](https://github.com/AhmedMansoour/wifi-fingerprinting-scan-level-reliability/issues) with the unit ID, command, error message and non-sensitive input schema.
+
+??? question "Where are the equations for all 18 indicators?"
+    The [indicator atlas](../learn/indicator-atlas.md) provides definitions, units, original source formulas, and animated signal/geometry diagrams. The [complete mathematical reference](../INDICATORS.md) preserves all 18 indicator names and adverse-direction conventions.

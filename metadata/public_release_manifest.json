@@ -11,8 +11,8 @@
     },
     {
       "path": ".github/workflows/docs.yml",
-      "size_bytes": 2289,
-      "sha256": "7e9fc1bbb907d13971c1d1dff5e1f1f8d34e5cf88106f685d7bf28b9f26a4c15"
+      "size_bytes": 2601,
+      "sha256": "e42a44815de45d2627c4cc4ccf2a2c827fc3e4842768f627981f4c4480fa8860"
     },
     {
       "path": ".gitignore",
@@ -31,8 +31,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 18324,
-      "sha256": "ebab738f97f783609c41572b233f6175acdad0ccb789182da40c9286cf7aafd9"
+      "size_bytes": 18506,
+      "sha256": "4fca6a06e4de102d53c4e44e13ac6628c0a9f5a0bc4b291bc30047e7f005131f"
     },
     {
       "path": "RELEASE_VALIDATION.md",
@@ -546,8 +546,8 @@
     },
     {
       "path": "docs/INDICATORS.md",
-      "size_bytes": 3026,
-      "sha256": "75e2e9a53ae32585cb53695b6e389e1beceb55680def423f22461cfeb0f566ae"
+      "size_bytes": 10404,
+      "sha256": "174de56621d3cfeb35745dc5b4d266eacd60d41f4050a7f808c2f9997c5a253f"
     },
     {
       "path": "docs/PUBLIC_EMPIRICAL_INTEGRITY.md",
@@ -595,6 +595,31 @@
       "sha256": "8d1d7f597ac3b6c5c7bdd6125aed3237e6f20976f42fca1522822651a2461b81"
     },
     {
+      "path": "docs/assets/indicator-atlas/atlas.css",
+      "size_bytes": 6646,
+      "sha256": "914bc1dfd6c2617e8720170d0d50b7cd5c314a5e4e612c972681b513f462f42f"
+    },
+    {
+      "path": "docs/assets/indicator-atlas/atlas.js",
+      "size_bytes": 16289,
+      "sha256": "887de1af3b18d18c775bc4b81d1624ff080d13faeaf9fca3e19126dda3e687f3"
+    },
+    {
+      "path": "docs/assets/indicator-atlas/composites.json",
+      "size_bytes": 14352,
+      "sha256": "ffd4c11bd89110052e910c35f8f5d96df39840bdd5ae08a6995161d6c733c2f0"
+    },
+    {
+      "path": "docs/assets/indicator-atlas/index.html",
+      "size_bytes": 3724,
+      "sha256": "f636c2437498b0d7fc6bb6ab7a4f1ef6d488ba69c2b77d33c017b862425b8b3b"
+    },
+    {
+      "path": "docs/assets/indicator-atlas/indicators.json",
+      "size_bytes": 9455,
+      "sha256": "4bde8bd7f9e832ce98010731df8ac0e990df5369d2d57c48f36f228b35e11d51"
+    },
+    {
       "path": "docs/assets/interactive/explorer.css",
       "size_bytes": 10944,
       "sha256": "8f7fb37c6b859f59a4853fd91b67349bb141c531e2369de978fe2ba52316af4a"
@@ -606,8 +631,8 @@
     },
     {
       "path": "docs/assets/interactive/index.html",
-      "size_bytes": 8852,
-      "sha256": "33840a4c2c55298bf30c74029b3008984fcdd3ad8397cdbbc4d73d068ea2df7a"
+      "size_bytes": 8891,
+      "sha256": "0c20d053caa4e9cacdd82205110ca75dd1a3607f538dc4f3eb03f7f1f90bbc4a"
     },
     {
       "path": "docs/assets/interactive/sample_scans.json",
@@ -616,8 +641,13 @@
     },
     {
       "path": "docs/assets/javascripts/interactive-embed.js",
-      "size_bytes": 712,
-      "sha256": "1728ce67bd3ece8280bf1c1c67f9bc0826998c38a0301780d52f74ebe2faf66f"
+      "size_bytes": 794,
+      "sha256": "12bc4d42312eb46adadf4c7e6f3c4d8a8eaa64f874a71bc80739c987405bbcc8"
+    },
+    {
+      "path": "docs/assets/javascripts/mathjax-config.js",
+      "size_bytes": 113,
+      "sha256": "6dabdab31bdae2dad21e71fa8d55f9a343ebccc3831c73d5f165ab48bf7b5518"
     },
     {
       "path": "docs/assets/stylesheets/site.css",
@@ -626,8 +656,8 @@
     },
     {
       "path": "docs/help/faq.md",
-      "size_bytes": 2935,
-      "sha256": "1c1c299eec3ba718346683e596beeb81fa928403a8cd969c085abcb0a3d3d88e"
+      "size_bytes": 3295,
+      "sha256": "1183ce9dfd362060bb262f4329e97611482ae59e0b3b624276895262e7176a46"
     },
     {
       "path": "docs/hk_u09_expected_summary.json",
@@ -636,8 +666,13 @@
     },
     {
       "path": "docs/index.md",
-      "size_bytes": 5380,
-      "sha256": "d2eabd0e954afd39e1e7181568847248893cc7c415407d5536d2223e89818db2"
+      "size_bytes": 6080,
+      "sha256": "a173acd544940bce98c81d6cd47b52f1e36045f62af4bd41832c96aedd5222b2"
+    },
+    {
+      "path": "docs/learn/indicator-atlas.md",
+      "size_bytes": 1847,
+      "sha256": "530c2346636b997593db23ad1d8bc6a4ff55afb9616c5208d3e9fffcfff6e4ec"
     },
     {
       "path": "docs/learn/interactive-explorer.md",
@@ -646,13 +681,13 @@
     },
     {
       "path": "docs/learn/overview.md",
-      "size_bytes": 3178,
-      "sha256": "ea20567ae3dfbaef4f76eb7a84643f73a55b0cc1e68e01fd48c5e55d13dbafb5"
+      "size_bytes": 2776,
+      "sha256": "277f88d1bfe1a88d7ec1e293efeb3b9dd8f6ddeba7e949fae98c0d0469c972d8"
     },
     {
       "path": "docs/learn/walkthrough.md",
-      "size_bytes": 3477,
-      "sha256": "1ffb983685f46194a4bb642829fa66e1a312ff1223a722b0fae7d3841a887c26"
+      "size_bytes": 3587,
+      "sha256": "5de0c0ed4b29a3b82bc3c7476afad1cc5fc7752baf371c50ad51a6605cf24418"
     },
     {
       "path": "docs/results/evidence.md",
@@ -811,8 +846,8 @@
     },
     {
       "path": "mkdocs.yml",
-      "size_bytes": 3689,
-      "sha256": "956ca3c4c9496cc18cc9998950239871c608aa8735ce8a7f22a220a1063dd763"
+      "size_bytes": 3916,
+      "sha256": "f174d71facd2a3190eb232fe832bad1ea14e424a31634b1f909377a1d9f0f555"
     },
     {
       "path": "pyproject.toml",
@@ -1038,6 +1073,11 @@
       "path": "scripts/evaluate_hk_u09.py",
       "size_bytes": 9482,
       "sha256": "fc33fb1c6929ec8df0c1db31ccf4ac27f769fb653ddd5cc7b620c57f78b6cbcb"
+    },
+    {
+      "path": "scripts/export_indicator_composites.py",
+      "size_bytes": 3080,
+      "sha256": "a57d38c8b71ac103c06c5024a640130a9134489453f5fe4e437b191cd33a7252"
     },
     {
       "path": "scripts/export_interactive_examples.py",
@@ -1443,6 +1483,11 @@
       "path": "tests/test_external_unit_input.py",
       "size_bytes": 2347,
       "sha256": "60b3f9291e9fdfa3d70b959462f53f0ca0600a0d4ad5fcefe0c1f61ae317c82c"
+    },
+    {
+      "path": "tests/test_indicator_atlas.py",
+      "size_bytes": 2899,
+      "sha256": "99a1f0c3bf72c708c1700b692140d0a38c38b5648efc0ae1374d4c9b4dec10f3"
     },
     {
       "path": "tests/test_interactive_examples.py",

@@ -69,6 +69,8 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
@@ -79,15 +81,18 @@ extra_css:
   - assets/stylesheets/site.css
 extra_javascript:
   - assets/javascripts/interactive-embed.js
+  - assets/javascripts/mathjax-config.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
   - Home: index.md
   - Explore:
-      - Interactive scan explorer: learn/interactive-explorer.md
+      - Measured scan explorer: learn/interactive-explorer.md
+      - Interactive indicator atlas: learn/indicator-atlas.md
   - Understand:
-      - The problem in plain language: learn/overview.md
-      - Follow one Wi-Fi scan: learn/walkthrough.md
-      - The 18 diagnostics: INDICATORS.md
+      - Why scan-level integrity matters: learn/overview.md
+      - Processing pipeline: learn/walkthrough.md
+      - Indicator definitions and equations: INDICATORS.md
       - Research overview: RESEARCH_OVERVIEW.md
   - Get started:
       - Run with public measurements: start/quickstart.md

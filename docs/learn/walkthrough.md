@@ -1,6 +1,6 @@
-# Follow one Wi-Fi scan through the pipeline
+# Processing pipeline: scan to reliability diagnostics
 
-This guided walkthrough explains what the repository **does to one scan**. The descriptions are conceptual; numeric examples are illustrative and should not be read as archived study findings.
+The pipeline combines RSS-template retrieval, position estimation, and estimator-independent diagnostic computation. The example RSS values below illustrate the input schema; they are not an archived measurement.
 
 ## Step 1. Receive a query scan
 
@@ -61,6 +61,6 @@ For the four public empirical units, the code generates **5,041 scan-feature row
 !!! note "What this walkthrough does not claim"
     Running the indicator layer on public input does not retrain the eight original ESWA estimators, independently calibrate an online warning system, or regenerate every historical manuscript value.
 
-**Explore an actual measured scan:** [Interactive scan-to-SQS explorer](interactive-explorer.md).
+**Inspect the definitions and equations:** [Interactive indicator atlas](indicator-atlas.md). **Examine actual measured scans:** [Scan-to-SQS explorer](interactive-explorer.md).
 
 **Next:** [Run the actual code](../start/quickstart.md) · [Read the generated outputs](../results/how-to-read.md).

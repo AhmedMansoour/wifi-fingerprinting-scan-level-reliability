@@ -1,27 +1,24 @@
-# Wi-Fi Fingerprinting: From Position Estimates to Scan-Level Integrity
+# Scan-Level Reliability and Gross-Error Diagnosis in Wi-Fi Fingerprinting
 
-**Where am I? How much support does this Wi-Fi scan provide for that answer?**
+**Reproducible methods, measured data, and software for evaluating the reliability evidence associated with individual Wi-Fi fingerprints.**
 
-A reproducible research implementation for **Wi-Fi fingerprinting, scan-level reliability diagnostics, and gross-error analysis**. It extends a conventional positioning workflow with evidence about the *individual scan* behind a location estimate, rather than relying on average accuracy alone.
+This research software evaluates RSS observations, radio-map compatibility, spatial consistency, and ambiguity alongside Wi-Fi fingerprinting position estimates. It implements **15 individual diagnostic quantities and three composite scores** (SQS, Cσ, and FII), with reproducible Python/Android source, measured public examples, and archived evaluation results.
 
 [![Python and Android CI](https://github.com/AhmedMansoour/wifi-fingerprinting-scan-level-reliability/actions/workflows/ci.yml/badge.svg)](https://github.com/AhmedMansoour/wifi-fingerprinting-scan-level-reliability/actions/workflows/ci.yml)
 [![License: MIT (code)](https://img.shields.io/badge/code_license-MIT-475569)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-2563eb)](pyproject.toml)
 
-**Start here:** [Interactive measured-scan explorer](docs/learn/interactive-explorer.md) · [Documentation home](docs/index.md) · [See how it works](#how-it-works) · [Explore without installing](#1-explore-without-installing) · [Run real measurements](#2-run-the-public-empirical-example) · [Use your own data](#3-use-your-own-fingerprints) · [Understand the results](#what-the-results-mean) · [Documentation](#documentation)
+**Start here:** [18 indicators: equations and animated atlas](docs/learn/indicator-atlas.md) · [Interactive measured-scan explorer](docs/learn/interactive-explorer.md) · [Documentation home](docs/index.md) · [See how it works](#how-it-works) · [Explore without installing](#1-explore-without-installing) · [Run real measurements](#2-run-the-public-empirical-example) · [Use your own data](#3-use-your-own-fingerprints) · [Understand the results](#what-the-results-mean) · [Documentation](#documentation)
 
 > **In one sentence:** A Wi-Fi fingerprinting system estimates a location; this project also examines **the signal match, nearby reference points, and spatial consistency that support that estimate**.
 
-## The problem in everyday terms
+## Motivation: from aggregate error to scan-level diagnostics
 
-Imagine two phones reporting locations inside a building. Both return a coordinate, but their Wi-Fi scans may tell very different stories:
+Average positioning accuracy and error percentiles summarize a model across many scans, but they do not describe the evidence supporting a particular prediction. Two queries can yield apparently plausible coordinates while differing substantially in **observed AP coverage, signal-space matching, candidate spatial consistency, and local radio-map support**.
 
-- **Scan A:** several familiar access points, a plausible match to the reference database, and nearby candidate positions that agree.
-- **Scan B:** few familiar access points, weak or ambiguous matching, and candidate positions scattered over a wider area.
+The reliability layer computes these indicators directly from the query and its reference neighborhood. They can support retrospective error analysis and development of calibrated gross-error detection rules, without treating a nominally close fingerprint match as proof of low positioning error.
 
-A positioning algorithm can return a location for *both* scans. Their reported coordinates alone do not explain why one deserves more scrutiny. The purpose of **scan-level integrity diagnostics** is to expose such supporting evidence so that a positioning system or analyst can recognize questionable estimates and investigate gross errors.
-
-These diagnostics are **decision-support signals**, not a guarantee of correctness. In particular, the composite SQS is **not a calibrated probability** that the position is correct.
+**SQS is a cohort-normalized diagnostic support score**, not the probability that a predicted location is correct. Operational accept/reject rules require independent calibration and held-out evaluation.
 
 ## How it works
 

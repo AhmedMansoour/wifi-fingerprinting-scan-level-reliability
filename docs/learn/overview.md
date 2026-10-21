@@ -1,49 +1,36 @@
-# Why inspect the reliability of a Wi-Fi position?
+# Why scan-level integrity matters in Wi-Fi fingerprinting
 
-A smartphone can estimate an indoor position without GPS by comparing the strengths of nearby Wi-Fi signals with a previously collected **radio map**. The radio map contains Wi-Fi observations and known reference positions. A typical estimator returns a location, often summarized by its average error over many test scans.
+Fingerprinting-based indoor positioning estimates a coordinate by comparing a query Wi-Fi RSS vector with previously surveyed reference fingerprints. Accuracy statistics, such as the median and 90th-percentile positioning errors, describe aggregate estimator performance but do not establish whether **one individual estimate has sufficient observable support**.
 
-But a single estimate can be unexpectedly wrong even when the average performance is acceptable. **For a navigation or sensor-fusion system, the question is not only _Where am I?_ but also _What evidence supports this particular estimate?_**
+The proposed reliability layer examines the query and the supporting radio-map neighborhood to extract **15 individual diagnostic quantities**. These describe AP availability, signal-space compatibility, retrieved-candidate geometry, spatial reference-point support, and ambiguity. Three composite scores, SQS, Cσ, and FII, summarize complementary aspects of that evidence.
 
-## Two scans, one positioning system
-
-| | Scan with stronger support | Scan worth inspecting |
-|---|---|---|
-| Observable access points | Several known APs | Few known APs |
-| Fingerprint similarity | Closely matches stored fingerprints | Poor or ambiguous matches |
-| Retrieved candidate positions | Cluster reasonably together | Scattered between different areas |
-| Interpretation | More supporting evidence | Less consistent supporting evidence |
-
-The examples are **illustrative**, not measured cases or a fixed warning rule. A signal match that looks convincing can still produce a large error.
-
-## The extra layer this project provides
-
-Wi-Fi scan and radio-map data are used to calculate **18 selected diagnostic quantities**, including three composite indicators. The individual quantities describe signal observations, match quality, geometric support and ambiguity. Five support components are combined into a **Scan Quality and Support Score (SQS)**.
+## Processing architecture
 
 ```mermaid
-flowchart TB
-    S[Single Wi-Fi scan] --> P[Positioning system]
-    S --> R[Scan-level reliability layer]
-    M[Reference radio map] --> P
-    M --> R
-    P --> O[Estimated position]
-    R --> Q[18 diagnostic quantities, including SQS]
-    O --> I[Estimate with evidence]
-    Q --> I
+flowchart LR
+  Q[Query RSS vector] --> R[RSS-template retrieval]
+  M[Reference radio map] --> R
+  R --> E[Position estimator]
+  R --> I[Scan-level diagnostics]
+  Q --> I
+  I --> C[SQS, Cσ, FII]
+  E --> P[Predicted coordinates]
+  P --> O[Estimator result + diagnostics]
+  C --> O
+  O --> V[Retrospective error analysis or independently calibrated decision rule]
 ```
 
-The scores can help **inspect, rank, compare, or flag** scans. They do not automatically justify deployment decisions, and an SQS value is not an error probability.
+The diagnostic stream and the location estimator are related but **not equivalent**. A close RSS match can correspond to several spatially separated training positions, or to a different floor. Conversely, a spatially coherent neighborhood may have poor AP visibility. The individual measurements expose these cases rather than relying solely on an averaged error statistic.
 
 ## Five SQS support components
 
-1. **Signal-match support:** how compatible the scan appears with its best reference fingerprints.
-2. **Candidate-geometry support:** whether candidate reference positions form a coherent neighborhood.
-3. **AP-count support:** how much access-point evidence was observed.
-4. **AP-overlap support:** how well the observed access-point set overlaps the radio map.
-5. **Local-density support:** how well the retrieved neighborhood is supported by nearby reference points.
+The **Scan Quality and Support Score (SQS)** combines normalized signal-match distance, candidate spatial coherence, AP count, AP-set overlap, and local reference-point density. Scaling uses the 5th and 95th percentiles of the **complete evaluation unit**, and the five component weights are equal. The value ranks relative support under the stated normalization; it is not a confidence probability or certified error bound.
 
-The documented SQS combines these five components with equal nominal weights and cohort-relative scaling. See [the full indicator table](../INDICATORS.md) for their scientific definitions and directional conventions.
+For a particular deployed system, an acceptance threshold must be calibrated against appropriate labelled data and evaluated with the intended floor model, positioning estimator, and gross-error criterion.
 
-!!! warning "Do not mistake high support for ground-truth correctness"
-    The SQS is not a calibrated accuracy percentage, confidence interval, or guaranteed bound on positioning error. Gross-error classification requires the specified reference distribution and evaluation protocol.
+## Inspect the actual formulas and examples
 
-**Next:** [Follow the pipeline on one scan](walkthrough.md) · [Run the public measured example](../start/quickstart.md).
+[Indicator atlas: 18 equations and animated diagrams](indicator-atlas.md){ .md-button .md-button--primary }
+[Measured scan explorer](interactive-explorer.md){ .md-button }
+
+**Evidence base:** the original study uses 10 evaluation units, eight estimators, 54,520 training scans, and 13,629 queries. The public executable examples currently contain four measured units. The [reproducibility notes](../REPRODUCIBILITY.md) separate original stored results from fresh native computations.
