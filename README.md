@@ -446,4 +446,4 @@ On Windows use `gradlew.bat`. First-launch radio-map import, profile provenance,
 
 The citation uses the manuscript's full author order and exact current title. **This work is not yet published**: no DOI, volume, article number, or acceptance date is claimed. The manuscript PDF is not distributed through this repository.
 
-**BibTeX:** [Download the companion manuscript citation](CITATION.bib). **Repository citation:** GitHub's `Cite this repository` control uses [`CITATION.cff`](CITATION.cff). Please also cite the original datasets under their respective licenses.
+**BibTeX:** [Download the companion manuscript citation](CITATION.bib) (formatted as `@article` for the target journal; manuscript remains under revision). **Repository citation:** GitHub's `Cite this repository` control uses [`CITATION.cff`](CITATION.cff). Please also cite the original datasets under their respective licenses.

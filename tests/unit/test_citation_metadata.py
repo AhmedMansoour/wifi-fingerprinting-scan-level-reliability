@@ -13,7 +13,8 @@ MANUSCRIPT = "ESWA-D-26-23796R2"
 
 def test_companion_bibtex_has_verified_bibliography_without_invented_doi():
     bib = (ROOT / "CITATION.bib").read_text(encoding="utf-8")
-    assert bib.count("@unpublished{mansour2026wifiintegrity") == 1
+    assert bib.count("@article{mansour2026wifiintegrity") == 1
+    assert "@unpublished" not in bib
     assert f"author = {{{AUTHORS}}}" in bib
     assert f"title = {{{TITLE}}}" in bib
     assert f"journal = {{{JOURNAL}}}" in bib
@@ -30,6 +31,7 @@ def test_readme_displays_full_title_and_all_seven_authors():
     assert JOURNAL in readme and MANUSCRIPT in readme
     assert "Mansour, A., Chen, W., Luo, H., Adham, M., Wang, J., Abdallah, M., and Weng, D." in readme
     assert "CITATION.bib" in readme and "CITATION.cff" in readme
+    assert "formatted as `@article`" in readme
     assert "not yet published" in readme.lower()
 
 

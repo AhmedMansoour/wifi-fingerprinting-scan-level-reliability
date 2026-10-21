@@ -26,8 +26,8 @@
     },
     {
       "path": "CITATION.bib",
-      "size_bytes": 620,
-      "sha256": "fc74f3221c26276fdb7e13d31a87297a2042461e6f6a2b804d8f4ecf993a7c9b"
+      "size_bytes": 616,
+      "sha256": "be4824496294bf6396a34f3d4b19de3147ecad8cd78db3cefc993ed2a7c4c10f"
     },
     {
       "path": "CITATION.cff",
@@ -46,8 +46,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 34195,
-      "sha256": "a6e8d616d7f62a2b475a3a80a678c030dad72facfbe5cb4b0885a3ca781814c0"
+      "size_bytes": 34279,
+      "sha256": "21c8e2f6c92705091b7e5e9d4fc066fd8f781b2558d47f50772c645f34ba3585"
     },
     {
       "path": "RELEASE_VALIDATION.md",
@@ -1671,8 +1671,8 @@
     },
     {
       "path": "tests/unit/test_citation_metadata.py",
-      "size_bytes": 1914,
-      "sha256": "b613f473ad48a399437e9e6c0cae5ac77a23dda3c109bff037373c9d2bcaa4bd"
+      "size_bytes": 1994,
+      "sha256": "fe7e75a0104177ee0fcb8c529d3a7d0a81936cf489e868872de8e85d0894ef9e"
     },
     {
       "path": "tests/unit/test_config.py",
