@@ -14,6 +14,7 @@ A reproducible framework for characterizing **scan-level reliability** and diagn
 [Explore indicator definitions](learn/indicator-atlas.md){ .md-button .md-button--primary }
 [Inspect measured scan diagnostics](learn/interactive-explorer.md){ .md-button }
 [Compare two measured scans](learn/compare-scans.md){ .md-button }
+[Explore SQS ablation results](learn/sqs-ablation.md){ .md-button }
 [Explore research evidence matrix](results/evidence-matrix.md){ .md-button }
 [Get started with real data](start/quickstart.md){ .md-button }
 [Understand the idea](learn/overview.md){ .md-button }
@@ -31,6 +32,7 @@ A reproducible framework for characterizing **scan-level reliability** and diagn
 ## Explore the methodology and implementation
 
 <div class="wf-card-grid">
+  <a class="wf-card" href="learn/sqs-ablation/"><span class="wf-card-mark">NEW · FIVE-COMPONENT SQS</span><strong>Explore SQS anatomy and component ablations</strong><span>Reconstruct measured SQS values and compare the original A1 full-score, leave-one-out and single-component results.</span><em>Open SQS ablation lab →</em></a>
   <a class="wf-card" href="learn/compare-scans/"><span class="wf-card-mark">NEW · TWO-SCAN COMPARISON</span><strong>Compare the reliability evidence of two measured scans</strong><span>Linked SQS components, observed RSS, retrieved-template distances and diagnostic values from validated public examples.</span><em>Open scan comparison →</em></a>
   <a class="wf-card" href="results/evidence-matrix/"><span class="wf-card-mark">NEW · RESEARCH EVIDENCE</span><strong>Examine estimator and indicator performance</strong><span>Compare eight archived estimator summaries and 18 indicator association/discrimination results with uncertainty intervals and provenance.</span><em>Open evidence matrix →</em></a>
   <a class="wf-card" href="learn/indicator-atlas/"><span class="wf-card-mark">EQUATIONS · ANIMATED FIGURES</span><strong>Indicator definitions and computation</strong><span>Explore all 15 diagnostic measurements and three composites, including equations, units, measured examples, and animated signal/geometry explanations.</span><em>Open indicator atlas →</em></a>

@@ -10,3 +10,5 @@ This interactive comparison displays native observations from two independently 
     All 22 selections per unit retain the original SQS and indicator values normalized using the **full evaluation unit**. The stored examples contain scan observations, candidate RSS distances and diagnostic values, but not verified estimator-specific position errors. A higher SQS must not be interpreted as a calibrated probability or a guarantee of lower error.
 
 **Source:** [Measured-scan export and validation](../PUBLIC_EMPIRICAL_INTEGRITY.md) · [Single-scan explorer](interactive-explorer.md) · [Full indicator definitions](../INDICATORS.md) · [Research limitations](../REPRODUCIBILITY.md).
+
+**Related:** [Inspect original SQS components and ablations](sqs-ablation.md).

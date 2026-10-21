@@ -12,3 +12,5 @@ Compare **verified archived cross-unit estimator summaries** and the **18 reliab
 **Data provenance:** the visualization is generated from `results/approved/legacy_canonical/estimator_error_summary.csv` and the three revised A3 association/discrimination summaries. See [approved research assets](../EXISTING_RESEARCH_ASSETS.md) and [what results establish](evidence.md).
 
 The displayed statistics are for retrospective evaluation. SQS is not a calibrated probability of position correctness.
+
+**Related:** [SQS component and ablation explorer](../learn/sqs-ablation.md).

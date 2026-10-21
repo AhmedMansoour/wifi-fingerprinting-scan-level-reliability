@@ -31,8 +31,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 28572,
-      "sha256": "1535db62141a8dac877616d475914c612eda14e725e2b89c9774309da74d8ce8"
+      "size_bytes": 28708,
+      "sha256": "cc20def963e3ede57ab6cf6d8bcc287c50b184631883191184399434cd11e033"
     },
     {
       "path": "RELEASE_VALIDATION.md",
@@ -685,9 +685,29 @@
       "sha256": "1d99b4ec9db95c93f7d6995f834031ea4e3d9f4e9da2af4c11a4c1892b56777f"
     },
     {
+      "path": "docs/assets/interactive/sqs-lab.css",
+      "sha256": "88a6862e60481abb3690cd6073416d143fe2e89f3b57f5f629c091d2da7988d0",
+      "size_bytes": 6115
+    },
+    {
+      "path": "docs/assets/interactive/sqs-lab.html",
+      "sha256": "81a045e6a3c42a1cf14898a02b67167f6b8363f6de817bf1ea70437fb2bf03b5",
+      "size_bytes": 4190
+    },
+    {
+      "path": "docs/assets/interactive/sqs-lab.js",
+      "sha256": "1cdb379473a20d990c711e99d34993b3f531bccd429d80a447e9623e41c2443a",
+      "size_bytes": 7194
+    },
+    {
+      "path": "docs/assets/interactive/sqs_ablation_summary.json",
+      "sha256": "0613bcfe051cbdb60f57fafaa66311ede79715bf203bcde231a5417e09763a30",
+      "size_bytes": 14231
+    },
+    {
       "path": "docs/assets/javascripts/interactive-embed.js",
-      "size_bytes": 937,
-      "sha256": "7a2364aa8aa0a63b61053f9dc9be7f6573b779dbe0b505e02f7fcb88db629664"
+      "size_bytes": 1005,
+      "sha256": "d24b96c377deede007378417af792196c10447b487576f7ced185446dea467ab"
     },
     {
       "path": "docs/assets/javascripts/mathjax-config.js",
@@ -711,13 +731,13 @@
     },
     {
       "path": "docs/index.md",
-      "size_bytes": 6933,
-      "sha256": "5ec774d0f4bcb085dcf26d823877007319c9b895589257fa40481d8ff37dc9e9"
+      "size_bytes": 7335,
+      "sha256": "cc5d14f2f174793967e6ed9c8339c3b2debe098f4d06c24eb5a88e1678b2f8da"
     },
     {
       "path": "docs/learn/compare-scans.md",
-      "size_bytes": 1335,
-      "sha256": "7314149c550dc35f7fddf959e9ab360f438f82f86f6472bb5e013fe791aaac3b"
+      "size_bytes": 1415,
+      "sha256": "0299bdddb7f0cc69c6132bb5f0b1e8a63841401b63c31a5e20363ac2baef337d"
     },
     {
       "path": "docs/learn/indicator-atlas.md",
@@ -735,14 +755,19 @@
       "sha256": "277f88d1bfe1a88d7ec1e293efeb3b9dd8f6ddeba7e949fae98c0d0469c972d8"
     },
     {
+      "path": "docs/learn/sqs-ablation.md",
+      "sha256": "b95017e20d05c9dd311375a1effb8cc770ebe4c909b777fd1d3fdeaac45f0c0d",
+      "size_bytes": 1916
+    },
+    {
       "path": "docs/learn/walkthrough.md",
       "size_bytes": 3587,
       "sha256": "5de0c0ed4b29a3b82bc3c7476afad1cc5fc7752baf371c50ad51a6605cf24418"
     },
     {
       "path": "docs/results/evidence-matrix.md",
-      "size_bytes": 1463,
-      "sha256": "07bf0a97a6aab6f8b9dbdbd9e87c09186b0b85e3d7cb489840bfd57a9eb0a537"
+      "size_bytes": 1542,
+      "sha256": "25abc5b83ef31052e5ab5ad9f34e5f43de53424302ae397228f03e93002a629c"
     },
     {
       "path": "docs/results/evidence.md",
@@ -901,8 +926,8 @@
     },
     {
       "path": "mkdocs.yml",
-      "size_bytes": 4051,
-      "sha256": "00918e47ad51a2d407cef84151b9366f4125a634361c150e1023386b999a93c0"
+      "size_bytes": 4118,
+      "sha256": "ce5d0f661eb97103e14beff8cd4cb1a307d7db33d1f6352184087237c9d730a5"
     },
     {
       "path": "pyproject.toml",
@@ -1598,6 +1623,11 @@
       "path": "tests/unit/test_schemas.py",
       "size_bytes": 435,
       "sha256": "471a40e568943290367a3615b4542c2ec3f70d561cce2282ee0372ccc5ea6f1c"
+    },
+    {
+      "path": "tests/unit/test_sqs_ablation_visual.py",
+      "sha256": "593347717770a3ee5fb90f1062f89753992dab93d24ec9b7074615b75022e177",
+      "size_bytes": 3019
     },
     {
       "path": "tests/unit/test_vertical_architecture_figure.py",

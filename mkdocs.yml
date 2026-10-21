@@ -89,6 +89,7 @@ nav:
   - Explore:
       - Measured scan explorer: learn/interactive-explorer.md
       - Compare two measured scans: learn/compare-scans.md
+      - SQS component and ablation explorer: learn/sqs-ablation.md
       - Interactive indicator atlas: learn/indicator-atlas.md
   - Understand:
       - Why scan-level integrity matters: learn/overview.md
