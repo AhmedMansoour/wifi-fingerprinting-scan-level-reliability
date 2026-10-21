@@ -31,8 +31,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 27444,
-      "sha256": "94da343459b126ea7f0aaaee2d08f0795d13d9a9e11822ddeb654a526386ef4b"
+      "size_bytes": 28756,
+      "sha256": "f599efab0b7665d0849a9eab2655832fdf7ea09afa548630fcc35da392b6aaad"
     },
     {
       "path": "RELEASE_VALIDATION.md",
@@ -595,6 +595,11 @@
       "sha256": "8d1d7f597ac3b6c5c7bdd6125aed3237e6f20976f42fca1522822651a2461b81"
     },
     {
+      "path": "docs/assets/android/android_inspector_ui_public.webp",
+      "size_bytes": 54730,
+      "sha256": "f275dcc1cbf66a1489b0989e63c57e0485c9c084f19442adc300b1ba5ff93e8f"
+    },
+    {
       "path": "docs/assets/indicator-atlas/atlas.css",
       "size_bytes": 6646,
       "sha256": "914bc1dfd6c2617e8720170d0d50b7cd5c314a5e4e612c972681b513f462f42f"
@@ -1061,8 +1066,8 @@
     },
     {
       "path": "scripts/check_public_release.py",
-      "size_bytes": 6744,
-      "sha256": "7b48dfa3f0582c48ecaa731e85eb1dacd6880ea7cfd88d97ed9c892dbcf899f1"
+      "size_bytes": 7467,
+      "sha256": "de4129f2266dfc761e48150bc30fde6e5b56572096ffe0bcd04dc28a6b7c84cf"
     },
     {
       "path": "scripts/create_public_synthetic_combined.py",
@@ -1498,6 +1503,11 @@
       "path": "tests/test_public_integrity.py",
       "size_bytes": 1132,
       "sha256": "826857d75e56b11133da56c6c2727b0f96f4e256db819c0f079a987690ce0b17"
+    },
+    {
+      "path": "tests/unit/test_android_readme_gallery.py",
+      "size_bytes": 1118,
+      "sha256": "bc40f27ec229eb1bd754273e0c048337f1eead5034965ab5cbe50999a81c8338"
     },
     {
       "path": "tests/unit/test_calibration.py",

@@ -19,6 +19,8 @@ APP_ICON = 'android/app/src/main/res/drawable/ic_launcher_foreground.xml'
 APP_ICON_SHA256 = '62759400e1f289a522f3b7c1f441828a3f39908f0837ebb2ceb12e8cee78e73a'
 WRAPPER = 'android/gradle/wrapper/gradle-wrapper.jar'
 WRAPPER_SHA256 = '81a82aaea5abcc8ff68b3dfcb58b3c3c429378efd98e7433460610fecd7ae45f'
+UI_SCREENSHOT = 'docs/assets/android/android_inspector_ui_public.webp'
+UI_SCREENSHOT_SHA256 = 'f275dcc1cbf66a1489b0989e63c57e0485c9c084f19442adc300b1ba5ff93e8f'
 GZ_PREFIX = 'examples/synthetic_combined/'
 GZ_PATHS = {'examples/empirical_integrity/U01_retrieved_candidates.csv.gz','examples/empirical_integrity/U01_scan_reliability.csv.gz','examples/empirical_integrity/U02_retrieved_candidates.csv.gz','examples/empirical_integrity/U02_scan_reliability.csv.gz','examples/empirical_integrity/U03_retrieved_candidates.csv.gz','examples/empirical_integrity/U03_scan_reliability.csv.gz','examples/empirical_integrity/U09_retrieved_candidates.csv.gz','examples/empirical_integrity/U09_scan_reliability.csv.gz'} | {'data/empirical/U01.csv.gz','data/empirical/U02.csv.gz','data/empirical/U03.csv.gz'} | {'data/empirical/hk_u09_test_ordered.csv.gz','data/radio_maps/hk_u09_train.csv.gz'} | {'data/empirical/hk_u09_ap_relative.csv.gz'} | {GZ_PREFIX+'combined_all_datasets.csv.gz'} | {GZ_PREFIX+f'units/U{i:02d}.csv.gz' for i in range(1,11)}
 ALLOWED_DATA = {'data/.gitkeep','data/public/README.md','reference/.gitkeep','reference/README.md','data/empirical/hk_u09_ap_relative.csv.gz','data/empirical/hk_u09_test_ordered.csv.gz','data/radio_maps/hk_u09_train.csv.gz','data/empirical/U01.csv.gz','data/empirical/U02.csv.gz','data/empirical/U03.csv.gz'}
@@ -32,6 +34,14 @@ def check(root=ROOT):
         if not path.is_file() or any(x in IGNORE_PARTS for x in path.relative_to(root).parts):continue
         rel=path.relative_to(root).as_posix();data=path.read_bytes();scanned+=1
         if path.is_symlink():fail.append(rel+': symlink not permitted');continue
+        # One manually reviewed and hash-pinned, location-redacted Android UI gallery.
+        # All other raster/vector screenshot extensions remain prohibited.
+        if rel == UI_SCREENSHOT:
+            if path.suffix.lower() != '.webp' or not data.startswith(b'RIFF') or data[8:12] != b'WEBP':
+                fail.append(rel+': invalid approved Android screenshot format')
+            if hashlib.sha256(data).hexdigest() != UI_SCREENSHOT_SHA256:
+                fail.append(rel+': Android screenshot hash differs from reviewed asset')
+            continue
         if path.suffix.lower() in PROHIBITED or path.name.endswith(('.tar.gz','.tgz')):fail.append(rel+': restricted extension');continue
         if rel.startswith(('reference/approved/','reference/public/')) or (rel.startswith('data/') and rel not in ALLOWED_DATA):
             fail.append(rel+': empirical records not permitted')
