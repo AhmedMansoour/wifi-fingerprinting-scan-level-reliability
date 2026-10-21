@@ -15,6 +15,11 @@
       "sha256": "e42a44815de45d2627c4cc4ccf2a2c827fc3e4842768f627981f4c4480fa8860"
     },
     {
+      "path": ".github/workflows/readme-animations.yml",
+      "size_bytes": 1149,
+      "sha256": "0d3d084841e21f0c5170d4b1fe728414f7781bda316c215e74f9a9edc985e3df"
+    },
+    {
       "path": ".gitignore",
       "size_bytes": 1090,
       "sha256": "d0b75bc8b39a4d6f86a88eb3241bfad657fc210520bae35b6594a33bfac24870"
@@ -1183,6 +1188,11 @@
       "path": "scripts/export_relative_errors.py",
       "size_bytes": 3262,
       "sha256": "a897ab35c379d9dc60eeedde8f3c132858f9e4215a8adc521a551bd4f7901360"
+    },
+    {
+      "path": "scripts/generate_readme_animated_previews.py",
+      "size_bytes": 7544,
+      "sha256": "c7dd65ea6fcffb1a301e4816babcf97e67894eb931a2ed0048003d455e7ac8d1"
     },
     {
       "path": "scripts/generate_synthetic_demo.py",
