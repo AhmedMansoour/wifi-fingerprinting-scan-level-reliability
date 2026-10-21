@@ -12,6 +12,16 @@ This research software evaluates RSS observations, radio-map compatibility, spat
 
 > **Research scope:** Scan-level diagnostic quantities characterize RSS observation structure, fingerprint compatibility, retrieved-candidate geometry and radio-map support alongside independently generated positioning estimates.
 
+### Android scan-level inspection interface
+
+The Android implementation displays the latest scan-level inspection result, including the inferred floor, the scan-level diagnostic state, AP coverage, and SQS. The diagnostic views report the raw indicator values alongside their adverse-percentile positions and threshold exceedances, organized by composite indicators, RSS statistics, scan–radio-map compatibility, spatial support, candidate geometry, and radio-map ambiguity.
+
+<p align="center">
+  <img src="docs/assets/android/android_inspector_four_panel_privacy_safe.webp" alt="Four Android Wi-Fi integrity inspector screens: redacted local map view, scan-level inspection summary, composite and compatibility indicators, and spatial support and ambiguity diagnostics." width="100%">
+</p>
+
+*Android interface excerpts from the manuscript implementation.* From left: full-height local-map screen with the confidential floor-plan content masked; scan inspection and SQS; composite and RSS/fingerprint compatibility indicators; and AP-overlap, spatial-support, candidate-geometry and radio-map-ambiguity diagnostics. Identifying site references and coordinates are masked; the screen itself is not cropped. The displayed warning is an example of the application's **provisional diagnostic interpretation**, not an independently validated prospective error guarantee.
+
 ## Motivation: from aggregate error to scan-level diagnostics
 
 Average positioning accuracy and error percentiles summarize a model across many scans, but they do not describe the evidence supporting a particular prediction. Two queries can yield apparently plausible coordinates while differing substantially in **observed AP coverage, signal-space matching, candidate spatial consistency, and local radio-map support**.
@@ -365,15 +375,6 @@ The Java application supports locally imported Wi-Fi radio maps and on-device sc
 
 On Windows use `gradlew.bat`. First-launch radio-map import, profile provenance, and appropriate calibration are described in the [Android guide](docs/ANDROID.md) and [import specification](android/IMPORT_FORMAT.md). The historical post-retrieval timing measurement does **not** represent total Wi-Fi acquisition-to-position latency.
 
-### Android scan-level inspection interface
-
-The Android implementation displays the latest scan-level inspection result, including the inferred floor, the scan-level diagnostic state, AP coverage, and SQS. The diagnostic views report the raw indicator values alongside their adverse-percentile positions and threshold exceedances, organized by composite indicators, RSS statistics, scan–radio-map compatibility, spatial support, candidate geometry, and radio-map ambiguity.
-
-<p align="center">
-  <img src="docs/assets/android/android_inspector_four_panel_privacy_safe.webp" alt="Four Android Wi-Fi integrity inspector screens: redacted local map view, scan-level inspection summary, composite and compatibility indicators, and spatial support and ambiguity diagnostics." width="100%">
-</p>
-
-*Android interface excerpts from the manuscript implementation.* From left: full-height local-map screen with the confidential floor-plan content masked; scan inspection and SQS; composite and RSS/fingerprint compatibility indicators; and AP-overlap, spatial-support, candidate-geometry and radio-map-ambiguity diagnostics. Identifying site references and coordinates are masked; the screen itself is not cropped. The displayed warning is an example of the application's **provisional diagnostic interpretation**, not an independently validated prospective error guarantee.
 
 ## Documentation
 
