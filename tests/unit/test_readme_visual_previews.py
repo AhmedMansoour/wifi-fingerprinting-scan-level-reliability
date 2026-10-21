@@ -19,7 +19,10 @@ def test_readme_gallery_has_three_clickable_scientific_previews():
         (ABL.name, "learn/sqs-ablation/"),
         (EVIDENCE.name, "results/evidence-matrix/"),
     ):
-        assert readme.count("docs/assets/figures/" + filename) == 1
+        assert readme.count("docs/assets/figures/" + filename.replace(".svg", ".gif")) == 1
+        gif = FIGURES / filename.replace(".svg", ".gif")
+        assert gif.read_bytes()[:6] == b"GIF89a"
+        assert 0 < gif.stat().st_size < 2_000_000
         assert urlpart in readme
 
 

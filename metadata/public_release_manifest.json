@@ -36,8 +36,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 30818,
-      "sha256": "dee2ad7ea92b92310c266c12c5777298b2ad5d17d96e127442812ccaa2b03dac"
+      "size_bytes": 30891,
+      "sha256": "48be593dd4a25dc5b48cfba25ba0afc35e09dbb3bc94aeebd3037ef006660948"
     },
     {
       "path": "RELEASE_VALIDATION.md",
@@ -610,19 +610,34 @@
       "sha256": "63c8b0b5776bdbb7ffd756cb030c3822affed0e14967c814e5edcbba7d78a9be"
     },
     {
+      "path": "docs/assets/figures/preview_evidence_matrix.gif",
+      "size_bytes": 767935,
+      "sha256": "80f31551757d8c162ef50e2a58f4684b9adfd982860612beb5b31ce4bdcec8a8"
+    },
+    {
       "path": "docs/assets/figures/preview_evidence_matrix.svg",
-      "sha256": "03a3d4a57b6aabf5f18734f890bfe9e13aad229992cd40e0009d7164c2b679c4",
-      "size_bytes": 11072
+      "size_bytes": 11072,
+      "sha256": "03a3d4a57b6aabf5f18734f890bfe9e13aad229992cd40e0009d7164c2b679c4"
+    },
+    {
+      "path": "docs/assets/figures/preview_scan_comparison.gif",
+      "size_bytes": 752615,
+      "sha256": "0f312626b76cf4c43414461050ee44da0721ce76b031f257b34c22ee282bbdd4"
     },
     {
       "path": "docs/assets/figures/preview_scan_comparison.svg",
-      "sha256": "0547b93f77bb0a345ac7da601271b11e37f27a7bc4970501d81155eddd793a20",
-      "size_bytes": 7980
+      "size_bytes": 7980,
+      "sha256": "0547b93f77bb0a345ac7da601271b11e37f27a7bc4970501d81155eddd793a20"
+    },
+    {
+      "path": "docs/assets/figures/preview_sqs_ablation.gif",
+      "size_bytes": 779726,
+      "sha256": "a54b8ff12f6674f84ed15da1a9b1ccc5d049311c4f995330a520de8d2e4d53e1"
     },
     {
       "path": "docs/assets/figures/preview_sqs_ablation.svg",
-      "sha256": "8cb98a232ef50d3d3bb61055b8143d9e0719aacc5575c096099a13caf99085da",
-      "size_bytes": 5979
+      "size_bytes": 5979,
+      "sha256": "8cb98a232ef50d3d3bb61055b8143d9e0719aacc5575c096099a13caf99085da"
     },
     {
       "path": "docs/assets/indicator-atlas/atlas.css",
@@ -706,23 +721,23 @@
     },
     {
       "path": "docs/assets/interactive/sqs-lab.css",
-      "sha256": "88a6862e60481abb3690cd6073416d143fe2e89f3b57f5f629c091d2da7988d0",
-      "size_bytes": 6115
+      "size_bytes": 6115,
+      "sha256": "88a6862e60481abb3690cd6073416d143fe2e89f3b57f5f629c091d2da7988d0"
     },
     {
       "path": "docs/assets/interactive/sqs-lab.html",
-      "sha256": "81a045e6a3c42a1cf14898a02b67167f6b8363f6de817bf1ea70437fb2bf03b5",
-      "size_bytes": 4190
+      "size_bytes": 4190,
+      "sha256": "81a045e6a3c42a1cf14898a02b67167f6b8363f6de817bf1ea70437fb2bf03b5"
     },
     {
       "path": "docs/assets/interactive/sqs-lab.js",
-      "sha256": "1cdb379473a20d990c711e99d34993b3f531bccd429d80a447e9623e41c2443a",
-      "size_bytes": 7194
+      "size_bytes": 7194,
+      "sha256": "1cdb379473a20d990c711e99d34993b3f531bccd429d80a447e9623e41c2443a"
     },
     {
       "path": "docs/assets/interactive/sqs_ablation_summary.json",
-      "sha256": "0613bcfe051cbdb60f57fafaa66311ede79715bf203bcde231a5417e09763a30",
-      "size_bytes": 14231
+      "size_bytes": 14231,
+      "sha256": "0613bcfe051cbdb60f57fafaa66311ede79715bf203bcde231a5417e09763a30"
     },
     {
       "path": "docs/assets/javascripts/interactive-embed.js",
@@ -776,8 +791,8 @@
     },
     {
       "path": "docs/learn/sqs-ablation.md",
-      "sha256": "b95017e20d05c9dd311375a1effb8cc770ebe4c909b777fd1d3fdeaac45f0c0d",
-      "size_bytes": 1916
+      "size_bytes": 1916,
+      "sha256": "b95017e20d05c9dd311375a1effb8cc770ebe4c909b777fd1d3fdeaac45f0c0d"
     },
     {
       "path": "docs/learn/walkthrough.md",
@@ -1161,8 +1176,8 @@
     },
     {
       "path": "scripts/check_public_release.py",
-      "size_bytes": 8982,
-      "sha256": "292c72df36d46f4c23723abaf66071212d1122c2b3248c9a188c447b93f46bdc"
+      "size_bytes": 9859,
+      "sha256": "fd211300a3af392c8a9305d59d23625d35771d61ec1b92d4ea76f61e68d73b59"
     },
     {
       "path": "scripts/create_public_synthetic_combined.py",
@@ -1646,8 +1661,8 @@
     },
     {
       "path": "tests/unit/test_readme_visual_previews.py",
-      "sha256": "ed0298fbc0d04db13eee6ca96bdd09b8a26ea582c147b8cb78a98545bff62e21",
-      "size_bytes": 2690
+      "size_bytes": 2870,
+      "sha256": "910c19c4677560c947442a18cbb7cf73b18bdcf4901f246aa2bca906e7d7ed58"
     },
     {
       "path": "tests/unit/test_schemas.py",
@@ -1656,8 +1671,8 @@
     },
     {
       "path": "tests/unit/test_sqs_ablation_visual.py",
-      "sha256": "593347717770a3ee5fb90f1062f89753992dab93d24ec9b7074615b75022e177",
-      "size_bytes": 3019
+      "size_bytes": 3019,
+      "sha256": "593347717770a3ee5fb90f1062f89753992dab93d24ec9b7074615b75022e177"
     },
     {
       "path": "tests/unit/test_vertical_architecture_figure.py",
