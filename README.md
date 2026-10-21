@@ -413,4 +413,10 @@ On Windows use `gradlew.bat`. First-launch radio-map import, profile provenance,
 - **UJIIndoorLoc U01–U03:** original [CC BY 4.0 terms and attribution](docs/UJI_DATA_ATTRIBUTION.md). Empirical measurements are **not automatically relicensed by the code's MIT license**.
 - **Other external datasets:** obtain them from their source publishers and follow their separate terms. See [data handling](docs/DATA_AND_PRIVACY.md) and [third-party notices](THIRD_PARTY_NOTICES.md).
 
-This software accompanies ongoing research in **Expert Systems with Applications** on scan-level reliability, gross-error diagnosis, and integrity-aware Wi-Fi fingerprinting. The manuscript is **not** distributed in this repository. For academic use, cite the underlying datasets and the associated article when its publication details are available; do not invent a DOI or published status.
+### Cite the companion ESWA manuscript
+
+**Mansour, A., Chen, W., Luo, H., Adham, M., Wang, J., Abdallah, M., and Weng, D. (2026).** “An Intelligent Framework for Scan-Level Reliability, Accuracy Diagnostics, and Gross-Error Detection in Wi-Fi Fingerprinting-Based Indoor Positioning Systems.” *Expert Systems with Applications* (manuscript under revision, **ESWA-D-26-23796R2**).
+
+The citation uses the manuscript's full author order and exact current title. **This work is not yet published**: no DOI, volume, article number, or acceptance date is claimed. The manuscript PDF is not distributed through this repository.
+
+**BibTeX:** [Download the companion manuscript citation](CITATION.bib). **Repository citation:** GitHub's `Cite this repository` control uses [`CITATION.cff`](CITATION.cff). Please also cite the original datasets under their respective licenses.

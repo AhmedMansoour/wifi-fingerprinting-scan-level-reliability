@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: >-
+  When using the methodology or scientific results, cite the companion
+  ESWA manuscript identified in CITATION.bib. The paper is under revision
+  and has no verified published DOI. For reuse of this repository, cite
+  this software; empirical datasets retain their own attribution requirements.
+type: software
+title: "Scan-Level Reliability and Gross-Error Diagnosis in Wi-Fi Fingerprinting"
+authors:
+  - given-names: Ahmed
+    family-names: Mansour
+repository-code: "https://github.com/AhmedMansoour/wifi-fingerprinting-scan-level-reliability"
+url: "https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/"
+abstract: >-
+  Reproducible Python, Android, and interactive research-software assets
+  for scan-level diagnostics of Wi-Fi fingerprinting reliability and
+  gross-error discrimination.
+keywords:
+  - Wi-Fi fingerprinting
+  - indoor positioning
+  - reliability diagnostics
+  - gross-error diagnosis
+  - reproducible research

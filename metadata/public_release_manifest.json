@@ -25,6 +25,16 @@
       "sha256": "d0b75bc8b39a4d6f86a88eb3241bfad657fc210520bae35b6594a33bfac24870"
     },
     {
+      "path": "CITATION.bib",
+      "size_bytes": 620,
+      "sha256": "fc74f3221c26276fdb7e13d31a87297a2042461e6f6a2b804d8f4ecf993a7c9b"
+    },
+    {
+      "path": "CITATION.cff",
+      "size_bytes": 983,
+      "sha256": "c06eb6e9d6942e9b594f2bc0ec483b4011276dedf87f1e35b3675c1a8c3afe4c"
+    },
+    {
       "path": "LICENSE",
       "size_bytes": 1094,
       "sha256": "5b0fc0b213c6c71e58b3b94002fc079daab7e5da60f6b151982420be389905f0"
@@ -36,8 +46,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 30891,
-      "sha256": "48be593dd4a25dc5b48cfba25ba0afc35e09dbb3bc94aeebd3037ef006660948"
+      "size_bytes": 31371,
+      "sha256": "19d695bb878646e343056cb9b5f2d0f46553863de4e8280fc04d741b68d0020c"
     },
     {
       "path": "RELEASE_VALIDATION.md",
@@ -1633,6 +1643,11 @@
       "path": "tests/unit/test_candidate_entrypoints.py",
       "size_bytes": 3348,
       "sha256": "eed438d2eddaf8813126e3c0b95e90f215172d136db45f85f3c268a472c82330"
+    },
+    {
+      "path": "tests/unit/test_citation_metadata.py",
+      "size_bytes": 1914,
+      "sha256": "b613f473ad48a399437e9e6c0cae5ac77a23dda3c109bff037373c9d2bcaa4bd"
     },
     {
       "path": "tests/unit/test_config.py",
