@@ -8,6 +8,8 @@ This research software evaluates RSS observations, radio-map compatibility, spat
 [![License: MIT (code)](https://img.shields.io/badge/code_license-MIT-475569)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-2563eb)](pyproject.toml)
 
+**Explore new scientific visualizations:** [Side-by-side measured scan comparison](https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/learn/compare-scans/) · [Estimator and diagnostic evidence matrix](https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/results/evidence-matrix/)
+
 **Start here:** [Mathematical inventory and README illustrations](#diagnostic-framework-15-quantities-and-three-composites) · [Animated indicator atlas](https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/learn/indicator-atlas/) · [Measured-scan explorer](https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/learn/interactive-explorer/) · [Documentation homepage](https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/) · [Methodological architecture](#methodological-architecture) · [Explore without installing](#1-explore-without-installing) · [Run real measurements](#2-run-the-public-empirical-example) · [Use your own data](#3-use-your-own-fingerprints) · [Understand the results](#what-the-results-mean) · [Documentation](#documentation)
 
 > **Research scope:** Scan-level diagnostic quantities characterize RSS observation structure, fingerprint compatibility, retrieved-candidate geometry and radio-map support alongside independently generated positioning estimates.

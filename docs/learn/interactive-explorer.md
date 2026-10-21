@@ -23,3 +23,5 @@ python scripts/export_interactive_examples.py --check
 The exporter verifies that each displayed SQS equals the equal-weight average of the five values obtained from the existing `robust_unit_scale` implementation, using all held-out scans for each unit. No estimator training or original manuscript results are modified.
 
 **Next:** [Understand every indicator](../INDICATORS.md) · [Run all four units](../start/quickstart.md) · [What the archived evidence proves](../results/evidence.md).
+
+**Next:** [Compare two measured scans](compare-scans.md) · [Examine research evidence](../results/evidence-matrix.md).

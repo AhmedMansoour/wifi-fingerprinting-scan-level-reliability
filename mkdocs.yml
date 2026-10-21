@@ -88,6 +88,7 @@ nav:
   - Home: index.md
   - Explore:
       - Measured scan explorer: learn/interactive-explorer.md
+      - Compare two measured scans: learn/compare-scans.md
       - Interactive indicator atlas: learn/indicator-atlas.md
   - Understand:
       - Why scan-level integrity matters: learn/overview.md
@@ -107,6 +108,7 @@ nav:
   - Results:
       - How to read outputs: results/how-to-read.md
       - Which results prove what?: results/evidence.md
+      - Estimator and indicator evidence matrix: results/evidence-matrix.md
       - Native empirical integrity run: PUBLIC_EMPIRICAL_INTEGRITY.md
       - HK U09 empirical baseline: HK_U09_EMPIRICAL_REPRODUCIBILITY.md
       - Saved original research assets: EXISTING_RESEARCH_ASSETS.md

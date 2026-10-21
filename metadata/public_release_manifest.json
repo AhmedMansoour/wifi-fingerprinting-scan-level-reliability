@@ -31,8 +31,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 28244,
-      "sha256": "b01c8f1dcb8f8d22acf7bbfc48cffcaa94022354e2628f5a9d367465ed363467"
+      "size_bytes": 28572,
+      "sha256": "1535db62141a8dac877616d475914c612eda14e725e2b89c9774309da74d8ce8"
     },
     {
       "path": "RELEASE_VALIDATION.md",
@@ -630,6 +630,41 @@
       "sha256": "4bde8bd7f9e832ce98010731df8ac0e990df5369d2d57c48f36f228b35e11d51"
     },
     {
+      "path": "docs/assets/interactive/comparison.css",
+      "size_bytes": 3640,
+      "sha256": "ced7e29981d2f93933d14972d53331ca9ef9fd2ee2548ccfbbf1e31bf1996ae4"
+    },
+    {
+      "path": "docs/assets/interactive/comparison.html",
+      "size_bytes": 2070,
+      "sha256": "fae4d84add8f150bc180f095487841aac26ef93487853f7f67d166a55a4636a4"
+    },
+    {
+      "path": "docs/assets/interactive/comparison.js",
+      "size_bytes": 4800,
+      "sha256": "225b79f0451eeb1a333089b58e3f8f9f29439cf90d918fdfd4b74ad5b22dfbef"
+    },
+    {
+      "path": "docs/assets/interactive/evidence.css",
+      "size_bytes": 2693,
+      "sha256": "b29939bae879aa0c760e1c65ecafa6ff5e92dde83e93e0301456b97dfd91e616"
+    },
+    {
+      "path": "docs/assets/interactive/evidence.html",
+      "size_bytes": 3472,
+      "sha256": "473d96f8b798200f039bc5e6f66faccb4cb69c02b49d5c48bbf52600d1c24196"
+    },
+    {
+      "path": "docs/assets/interactive/evidence.js",
+      "size_bytes": 2928,
+      "sha256": "be5b2f4f3fe76ab2f337e0ccdb6c2953903aabfdd0b5d269f86c3fbcd34f45b6"
+    },
+    {
+      "path": "docs/assets/interactive/evidence_summary.json",
+      "size_bytes": 12528,
+      "sha256": "cba94fb5dac037c4e96321b2564f81f876e1426a67fa94d3572acf8ddc762c76"
+    },
+    {
       "path": "docs/assets/interactive/explorer.css",
       "size_bytes": 10944,
       "sha256": "8f7fb37c6b859f59a4853fd91b67349bb141c531e2369de978fe2ba52316af4a"
@@ -651,8 +686,8 @@
     },
     {
       "path": "docs/assets/javascripts/interactive-embed.js",
-      "size_bytes": 794,
-      "sha256": "12bc4d42312eb46adadf4c7e6f3c4d8a8eaa64f874a71bc80739c987405bbcc8"
+      "size_bytes": 937,
+      "sha256": "7a2364aa8aa0a63b61053f9dc9be7f6573b779dbe0b505e02f7fcb88db629664"
     },
     {
       "path": "docs/assets/javascripts/mathjax-config.js",
@@ -676,8 +711,13 @@
     },
     {
       "path": "docs/index.md",
-      "size_bytes": 6080,
-      "sha256": "a173acd544940bce98c81d6cd47b52f1e36045f62af4bd41832c96aedd5222b2"
+      "size_bytes": 6933,
+      "sha256": "5ec774d0f4bcb085dcf26d823877007319c9b895589257fa40481d8ff37dc9e9"
+    },
+    {
+      "path": "docs/learn/compare-scans.md",
+      "size_bytes": 1335,
+      "sha256": "7314149c550dc35f7fddf959e9ab360f438f82f86f6472bb5e013fe791aaac3b"
     },
     {
       "path": "docs/learn/indicator-atlas.md",
@@ -686,8 +726,8 @@
     },
     {
       "path": "docs/learn/interactive-explorer.md",
-      "size_bytes": 2215,
-      "sha256": "277e8d35b2597d865074213cd6e7ca43447732d6eca5f8b6cbd5b2cc36d1d1ce"
+      "size_bytes": 2336,
+      "sha256": "f4333332bf481b0439e1ebe1a1029e2dafd1d932faaba1b1732383931f0f8888"
     },
     {
       "path": "docs/learn/overview.md",
@@ -698,6 +738,11 @@
       "path": "docs/learn/walkthrough.md",
       "size_bytes": 3587,
       "sha256": "5de0c0ed4b29a3b82bc3c7476afad1cc5fc7752baf371c50ad51a6605cf24418"
+    },
+    {
+      "path": "docs/results/evidence-matrix.md",
+      "size_bytes": 1463,
+      "sha256": "07bf0a97a6aab6f8b9dbdbd9e87c09186b0b85e3d7cb489840bfd57a9eb0a537"
     },
     {
       "path": "docs/results/evidence.md",
@@ -856,8 +901,8 @@
     },
     {
       "path": "mkdocs.yml",
-      "size_bytes": 3916,
-      "sha256": "f174d71facd2a3190eb232fe832bad1ea14e424a31634b1f909377a1d9f0f555"
+      "size_bytes": 4051,
+      "sha256": "00918e47ad51a2d407cef84151b9366f4125a634361c150e1023386b999a93c0"
     },
     {
       "path": "pyproject.toml",
@@ -1558,6 +1603,11 @@
       "path": "tests/unit/test_vertical_architecture_figure.py",
       "size_bytes": 1268,
       "sha256": "1efd7b8a66ba6bacd3323d522fe79ae956f1d5834b3b72e815ce743a4efb4c5c"
+    },
+    {
+      "path": "tests/unit/test_visual_evidence.py",
+      "size_bytes": 2990,
+      "sha256": "457a7d0c0bfa26b1c1d659ef19e793eed15e4673015dbf3227f67eb5ebdb9c3f"
     },
     {
       "path": "web/assets/app.js",
