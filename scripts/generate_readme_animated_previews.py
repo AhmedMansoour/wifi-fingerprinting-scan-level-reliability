@@ -37,19 +37,25 @@ def bar_for(key, x, y, w, h, color):
 def source(key):
     p = ASSETS / ("preview_" + key + ".svg")
     original = ET.parse(p)
-    cleared = deepcopy(original)
+    raw_svg = p.read_text(encoding="utf8")
+    cleared_svg = raw_svg
     bars = []
-    for el in cleared.getroot():
+    for el in original.getroot():
         if not el.tag.endswith("rect"):
             continue
         x, y, w, h = (float(el.get(k, "0")) for k in ("x", "y", "width", "height"))
         color = el.get("fill")
         if bar_for(key, x, y, w, h, color):
             bars.append((x, y, w, h, color, float(el.get("rx", "0"))))
-            el.set("width", "0")
+            old = ('<rect x="' + el.get("x") + '" y="' + el.get("y") +
+                   '" width="' + el.get("width") + '" height="' + el.get("height") +
+                   '" rx="' + el.get("rx") + '" fill="' + color + '"/>')
+            assert cleared_svg.count(old) == 1, (key, old)
+            cleared_svg = cleared_svg.replace(old, old.replace(
+                ' width="' + el.get("width") + '"', ' width="0"', 1), 1)
     expected = {"scan_comparison": 7, "sqs_ablation": 6, "evidence_matrix": 24}
     assert len(bars) == expected[key], (key, len(bars))
-    empty = cairosvg.svg2png(bytestring=ET.tostring(cleared.getroot(), encoding="utf8"),
+    empty = cairosvg.svg2png(bytestring=cleared_svg.encode("utf8"),
                              output_width=1100, output_height=540)
     rendered = cairosvg.svg2png(url=str(p), output_width=1100, output_height=540)
     poster = Image.open(BytesIO(rendered)).convert("RGB")
