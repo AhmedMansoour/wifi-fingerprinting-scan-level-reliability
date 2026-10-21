@@ -1,0 +1,48 @@
+{
+  "input_sha256": "b99bac3454e8f0f306c7fb8c012a7def5e277251c8013304e50e02ae51717078",
+  "settings": {
+    "k": 5,
+    "wknn_inverse_distance_power": 2.0,
+    "seed": 42,
+    "metric": "euclidean",
+    "estimators": [
+      "knn",
+      "wknn",
+      "random_forest"
+    ]
+  },
+  "estimator_results": {
+    "knn": {
+      "mean_error_m": 4.376629,
+      "median_error_m": 3.450368,
+      "rmse_error_m": 5.752396,
+      "p75_error_m": 6.026191,
+      "p90_error_m": 9.116105,
+      "p95_error_m": 10.620794,
+      "max_error_m": 37.4358
+    },
+    "wknn": {
+      "mean_error_m": 4.153695,
+      "median_error_m": 3.239461,
+      "rmse_error_m": 5.48541,
+      "p75_error_m": 5.730773,
+      "p90_error_m": 8.632744,
+      "p95_error_m": 10.241504,
+      "max_error_m": 36.556433
+    },
+    "random_forest": {
+      "mean_error_m": 6.351815,
+      "median_error_m": 5.055917,
+      "rmse_error_m": 8.354984,
+      "p75_error_m": 7.810062,
+      "p90_error_m": 11.910807,
+      "p95_error_m": 16.153386,
+      "max_error_m": 43.1383
+    }
+  },
+  "dependency_versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.8.0"
+  }
+}
