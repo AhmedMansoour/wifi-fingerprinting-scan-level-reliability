@@ -1206,8 +1206,8 @@
     },
     {
       "path": "scripts/generate_readme_animated_previews.py",
-      "size_bytes": 7952,
-      "sha256": "c97cada05c2788957ff96e1247ac47ee22c099e88f2e347efc1804d6f797b142"
+      "size_bytes": 8199,
+      "sha256": "42262aedf2cc633f46b8780fa7c8308ef480c10c6cfb129a51767d236c589e9a"
     },
     {
       "path": "scripts/generate_synthetic_demo.py",

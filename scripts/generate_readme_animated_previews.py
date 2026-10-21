@@ -118,8 +118,10 @@ def publish(paths):
     text = readme.read_text(encoding="utf8")
     for path in pins:
         old = path.replace(".gif", ".svg")
-        assert text.count(old) == 1, old
-        text = text.replace(old, path, 1)
+        if text.count(old) == 1:
+            text = text.replace(old, path, 1)
+        elif text.count(path) != 1:
+            raise ValueError("Expected exactly one approved preview: " + path)
     text = text.replace(
         "Three compact previews of the public research tools.",
         "Three animated previews of the public research tools. "
@@ -156,12 +158,15 @@ def publish(paths):
     test_path = ROOT / "tests/unit/test_readme_visual_previews.py"
     tests = test_path.read_text(encoding="utf8")
     original = 'assert readme.count("docs/assets/figures/" + filename) == 1'
-    assert tests.count(original) == 1
     revised = ('assert readme.count("docs/assets/figures/" + filename.replace(".svg", ".gif")) == 1\n'
                '        gif = FIGURES / filename.replace(".svg", ".gif")\n'
                '        assert gif.read_bytes()[:6] == b"GIF89a"\n'
                '        assert 0 < gif.stat().st_size < 2_000_000')
-    test_path.write_text(tests.replace(original, revised), encoding="utf8")
+    if tests.count(original) == 1:
+        tests = tests.replace(original, revised)
+    elif revised not in tests:
+        raise ValueError("Preview regression test does not match expected structure")
+    test_path.write_text(tests, encoding="utf8")
 
     files = [readme, checker_path, test_path] + paths
     subprocess.run(["git", "add", *[p.relative_to(ROOT).as_posix() for p in files]],
