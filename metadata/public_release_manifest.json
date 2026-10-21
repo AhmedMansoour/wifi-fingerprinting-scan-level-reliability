@@ -1506,8 +1506,8 @@
     },
     {
       "path": "tests/unit/test_android_readme_gallery.py",
-      "size_bytes": 1152,
-      "sha256": "587a2137ff3e967665d4dbd1db1c7d7c51f45e3a2065ff9ae948248053c334d5"
+      "size_bytes": 1202,
+      "sha256": "c5d1d436bda53c016022f34ebb179d6a0ba1c0cd9984e46cd080c12cd2322371"
     },
     {
       "path": "tests/unit/test_calibration.py",

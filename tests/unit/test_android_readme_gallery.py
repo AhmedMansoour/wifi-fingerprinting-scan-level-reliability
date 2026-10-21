@@ -10,7 +10,7 @@ EXPECTED_SHA256 = "6f3df4622813c2a13e88f5ab608134835c8f2d3ab5e378d8df9be04a4e573
 def test_android_gallery_links_to_hash_pinned_image():
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     assert readme.count("docs/assets/android/android_inspector_four_panel_privacy_safe.webp") == 1
-    assert "original site name is redacted" in readme
+    assert readme.index("### Android scan-level inspection interface") < readme.index("## Motivation:")
     assert "confidential floor-plan content masked" in readme
     binary = ASSET.read_bytes()
     assert len(binary) == 132692
