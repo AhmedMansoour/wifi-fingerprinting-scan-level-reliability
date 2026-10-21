@@ -61,4 +61,6 @@ For the four public empirical units, the code generates **5,041 scan-feature row
 !!! note "What this walkthrough does not claim"
     Running the indicator layer on public input does not retrain the eight original ESWA estimators, independently calibrate an online warning system, or regenerate every historical manuscript value.
 
+**Explore an actual measured scan:** [Interactive scan-to-SQS explorer](interactive-explorer.md).
+
 **Next:** [Run the actual code](../start/quickstart.md) · [Read the generated outputs](../results/how-to-read.md).

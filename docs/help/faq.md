@@ -28,6 +28,6 @@
     No. MIT applies to original code and synthetic fixtures. The UJIIndoorLoc data are under their source CC BY 4.0 terms, and other data require checking the source publisher's terms.
 
 ??? question "Is there a hosted interactive results dashboard?"
-    This documentation site is searchable and navigable. The repository includes a separate synthetic dashboard, but the original `web/` research UI is not advertised as a fully functional public empirical dashboard. An interactive measured-data explorer is a separate planned implementation stage.
+    Yes, the [interactive measured-scan explorer](../learn/interactive-explorer.md) visualizes 88 selected query scans from the four available measured units. It uses the original computed indicator/SQS values. The separate `dashboard/` is synthetic, and the original `web/` research interface is not a complete public live-positioning service.
 
 **Still need help?** [Open a GitHub issue](https://github.com/AhmedMansoour/wifi-fingerprinting-scan-level-reliability/issues) with the unit ID, command, error message and non-sensitive input schema.

@@ -77,9 +77,13 @@ markdown_extensions:
 
 extra_css:
   - assets/stylesheets/site.css
+extra_javascript:
+  - assets/javascripts/interactive-embed.js
 
 nav:
   - Home: index.md
+  - Explore:
+      - Interactive scan explorer: learn/interactive-explorer.md
   - Understand:
       - The problem in plain language: learn/overview.md
       - Follow one Wi-Fi scan: learn/walkthrough.md

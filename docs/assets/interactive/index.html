@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>From a Wi-Fi scan to reliability evidence · Interactive explorer</title>
+  <link rel="stylesheet" href="explorer.css">
+  <script src="explorer.js" defer></script>
+</head>
+<body>
+  <main class="explorer" id="explorer-root">
+    <header class="intro">
+      <div class="intro-copy">
+        <span class="eyebrow"><span class="live-dot" aria-hidden="true"></span> EXPLAIN THE PIPELINE · MEASURED EXAMPLES</span>
+        <h1>What does this Wi-Fi scan actually tell us?</h1>
+        <p>Explore real, pseudonymized observations. Follow a scan from observed access points to radio-map matches, spatial candidates, and its five-part <strong>Scan Quality and Support Score (SQS)</strong>.</p>
+      </div>
+      <div class="intro-note"><span>DATA PROVENANCE</span><strong>4 measured units</strong><small>88 deterministically selected examples from 5,041 evaluated queries. No fabricated scores.</small></div>
+    </header>
+
+    <section class="toolbar" aria-label="Scan selection">
+      <div class="control"><label for="unit">1 · Choose a dataset</label><select id="unit"><option>Loading measured examples…</option></select></div>
+      <div class="control"><label for="scan">2 · Choose a query scan</label><select id="scan" disabled></select></div>
+      <div class="control control-preset"><span class="control-title">Or jump to</span><div class="preset-actions"><button id="choose-low" type="button">Low SQS</button><button id="choose-middle" type="button">Middle SQS</button><button id="choose-high" type="button">High SQS</button></div></div>
+      <div class="control sample-counter" aria-live="polite"><span class="control-title">Original test scans</span><strong id="unit-count">—</strong><span id="unit-subtitle">From this unit</span></div>
+    </section>
+
+    <div id="error" class="error" role="alert" hidden>Unable to read the measured examples. Serve the documentation site with a local web server, or open the GitHub Pages site.</div>
+
+    <nav class="steps" aria-label="Stages of the Wi-Fi integrity workflow">
+      <button type="button" data-step="0" class="active"><b>01</b><span>Wi-Fi observations</span></button>
+      <button type="button" data-step="1"><b>02</b><span>Radio-map retrieval</span></button>
+      <button type="button" data-step="2"><b>03</b><span>Candidate geometry</span></button>
+      <button type="button" data-step="3"><b>04</b><span>Indicators &amp; SQS</span></button>
+      <button type="button" data-step="4"><b>05</b><span>Interpret carefully</span></button>
+    </nav>
+
+    <section class="step-explanation" aria-live="polite">
+      <div><span id="step-kicker">STAGE 01 / 05</span><h2 id="step-title">The phone observes nearby access points</h2><p id="step-description">An observed Wi-Fi scan contains AP labels and RSS values. The same labels must be used within the radio map.</p></div>
+      <div class="step-navigation"><button id="previous-step" type="button" aria-label="Previous pipeline stage">←</button><button id="next-step" type="button" aria-label="Next pipeline stage">→</button></div>
+    </section>
+
+    <section class="metrics" aria-label="Selected scan measurements">
+      <div><span>Observed access points</span><strong id="m-ap">—</strong><small>Signals in this query</small></div>
+      <div><span>RSS-match distance</span><strong id="m-rss">—</strong><small>Lower generally means closer</small></div>
+      <div><span>Candidate spread</span><strong id="m-spread">—</strong><small>Metres · top 10 candidates</small></div>
+      <div class="metric-emphasis"><span>Scan support · SQS</span><strong id="m-sqs">—</strong><small>Unit-relative score, not probability</small></div>
+    </section>
+
+    <div class="panel-grid">
+      <section class="panel" id="signal-panel">
+        <div class="panel-head"><div><span class="tag">INPUT</span><h3>Observed Wi-Fi signals</h3></div><span id="ap-summary" class="panel-meta">Top observed APs</span></div>
+        <p class="panel-explain">Stronger readings appear toward the right. Labels are anonymous and stable only within a unit.</p>
+        <div id="ap-bars" class="ap-bars" role="list" aria-label="Strongest observed access points"></div>
+      </section>
+
+      <section class="panel" id="geometry-panel">
+        <div class="panel-head"><div><span class="tag">MATCHED REFERENCES</span><h3>Where do the best fingerprints point?</h3></div><span class="panel-meta">Local X/Y · metres</span></div>
+        <p class="panel-explain">Dots are the 10 retrieved reference fingerprints, <strong>not a floor plan</strong>. Candidate points may belong to different floor categories.</p>
+        <div class="plot-holder"><canvas id="candidate-plot" width="680" height="410" role="img" aria-label="Scatter plot of ten retrieved reference positions in local coordinates"></canvas><div id="candidate-hover" class="plot-tooltip" hidden></div></div>
+        <div class="plot-legend"><span><i class="legend-dot"></i> Retrieved candidate</span><span><i class="legend-diagnostic"></i> Diagnostic centroid</span><span id="truth-legend" hidden><i class="legend-truth"></i> Known reference (evaluation only)</span></div>
+        <label class="toggle"><input type="checkbox" id="show-truth"> Reveal held-out reference position, for retrospective inspection only</label>
+        <p id="floor-overview" class="footnote"></p>
+      </section>
+    </div>
+
+    <section class="panel sqs-panel" id="sqs-panel">
+      <div class="panel-head"><div><span class="tag">CORE CONTRIBUTION</span><h3>Five components, one scan-support score</h3></div><span class="panel-meta" id="sqs-identity">Source-derived components</span></div>
+      <div class="sqs-layout">
+        <div><div id="components" class="components" role="list"></div><p class="footnote">Every component is scaled with the original implementation using the <strong>full evaluation unit</strong> (5th–95th percentile), not these 22 displayed samples.</p></div>
+        <div class="sqs-formula"><span>Equal-weight average</span><div class="formula-expression" id="formula-text">( component 1 + … + component 5 ) / 5</div><div class="sqs-large"><strong id="sqs-total">—</strong><small>Scan Quality and Support Score</small></div><p id="sqs-explanation">Five measurements summarize evidence; SQS is not an accuracy percentage.</p></div>
+      </div>
+    </section>
+
+    <section class="panel distribution-panel">
+      <div class="panel-head"><div><span class="tag">CONTEXT</span><h3>How this scan compares within its evaluation unit</h3></div><span class="panel-meta" id="distribution-summary">Complete unit distribution</span></div>
+      <div class="histogram-wrap"><div id="histogram" class="histogram" role="img" aria-label="Histogram of all test scan SQS values in this dataset"></div><div class="hist-axis"><span>0 · lower support</span><span>1 · higher support</span></div></div>
+      <p class="footnote">All test scans appear in the histogram, but only 22 selected scans are selectable here. These are <strong>teaching examples</strong>, not validation of a warning threshold.</p>
+    </section>
+
+    <section class="panel compare-panel">
+      <div class="panel-head"><div><span class="tag">COMPARE</span><h3>Two scans, different evidence</h3></div><span class="panel-meta">Same dataset · descriptive comparison</span></div>
+      <div class="comparison" id="comparison"></div>
+      <p class="footnote">Comparing a low- and high-SQS scan shows how the measured indicators differ. It does not establish which estimated position is correct.</p>
+    </section>
+
+    <section class="guide-strip" id="interpretation">
+      <div><span class="tag">IMPORTANT DISTINCTIONS</span><h3>What can you conclude?</h3><p>A radio-map candidate plot describes evidence geometry. The displayed centroid is a <strong>diagnostic candidate-set location</strong>, not one of the paper’s trained estimator outputs. A true reference position is shown only when explicitly requested.</p></div>
+      <div><h4>Three different quantities</h4><p><strong>SQS:</strong> normalized support. <strong>Positioning error:</strong> requires a prediction and known ground truth. <strong>Gross-error warning:</strong> requires a calibrated decision rule and evaluation protocol.</p></div>
+    </section>
+    <footer class="footer">Source: original native scan-level outputs for U01–U03 / U09. <a href="../../PUBLIC_EMPIRICAL_INTEGRITY/" target="_top">Method and reproducibility details ↗</a> · <a href="https://github.com/AhmedMansoour/wifi-fingerprinting-scan-level-reliability/tree/main/examples/empirical_integrity" target="_blank" rel="noopener">Inspect source records ↗</a></footer>
+  </main>
+</body>
+</html>

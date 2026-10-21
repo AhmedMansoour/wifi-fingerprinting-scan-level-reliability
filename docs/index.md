@@ -11,7 +11,8 @@ hide:
 
 A Wi-Fi fingerprinting system gives you a position. **This research adds scan-level evidence for judging how well the Wi-Fi observations and radio-map matches support that position.**
 
-[Get started with real data](start/quickstart.md){ .md-button .md-button--primary }
+[Explore real scan evidence](learn/interactive-explorer.md){ .md-button .md-button--primary }
+[Get started with real data](start/quickstart.md){ .md-button }
 [Understand the idea](learn/overview.md){ .md-button }
 
 <span class="wf-hero-footnote">Research implementation · Python and Android Java · Reproducible data and source</span>
@@ -27,6 +28,7 @@ A Wi-Fi fingerprinting system gives you a position. **This research adds scan-le
 ## Start with the question you have
 
 <div class="wf-card-grid">
+  <a class="wf-card" href="learn/interactive-explorer/"><span class="wf-card-mark">INTERACTIVE · MEASURED DATA</span><strong>Follow one real scan to its SQS</strong><span>Switch between scans, inspect candidate coordinates and the five original components, and compare examples.</span><em>Open interactive explorer →</em></a>
   <a class="wf-card" href="learn/overview/"><span class="wf-card-mark">01 · LEARN</span><strong>Why does reliability matter?</strong><span>Two similar-looking location estimates can have very different levels of supporting evidence.</span><em>Understand the problem →</em></a>
   <a class="wf-card" href="learn/walkthrough/"><span class="wf-card-mark">02 · FOLLOW</span><strong>What happens to one scan?</strong><span>Trace the input, reference radio map, retrieved candidates, indicators, SQS, and interpretation.</span><em>Follow the pipeline →</em></a>
   <a class="wf-card" href="start/quickstart/"><span class="wf-card-mark">03 · RUN</span><strong>Can I execute the research code?</strong><span>Run the released measured UJI and HK scans and inspect generated indicators.</span><em>Run the public example →</em></a>

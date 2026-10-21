@@ -45,3 +45,10 @@ a.wf-card:hover { transform:translateY(-2px);border-color:var(--wf-teal);box-sha
   a.wf-card { transition:none; }
   a.wf-card:hover { transform:none; }
 }
+
+/* Measured-data interactive explorer page */
+.wf-interactive-frame {width:100%;max-width:100%;margin:1.25rem 0; overflow:hidden; border-radius:.65rem; border:1px solid var(--wf-border);}
+.wf-interactive-frame iframe {display:block;}
+.md-content:has(.wf-interactive-frame) {max-width:100%;}
+@media(min-width:1220px) { .md-content:has(.wf-interactive-frame) .md-content__inner {max-width:unset;} }
+@media(max-width:700px) { .wf-interactive-frame iframe {min-height:3400px;} }

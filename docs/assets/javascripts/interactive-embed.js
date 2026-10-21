@@ -1,0 +1,13 @@
+/* Same-origin frame sizing for the read-only measured-scan explorer. */
+window.addEventListener('message', function(event) {
+  if (event.origin !== window.location.origin) return;
+  if (!event.data || event.data.source !== 'wifi-integrity-explorer') return;
+  const requested = Number(event.data.height);
+  if (!Number.isFinite(requested) || requested < 500 || requested > 10000) return;
+  document.querySelectorAll('iframe[src*="assets/interactive/index.html"]').forEach(function(frame) {
+    if (frame.contentWindow === event.source) {
+      const height = Math.round(requested + 16);
+      if (Math.abs(frame.getBoundingClientRect().height - height) > 12) frame.style.height = height + 'px';
+    }
+  });
+});

@@ -595,14 +595,39 @@
       "sha256": "8d1d7f597ac3b6c5c7bdd6125aed3237e6f20976f42fca1522822651a2461b81"
     },
     {
+      "path": "docs/assets/interactive/explorer.css",
+      "size_bytes": 10944,
+      "sha256": "8f7fb37c6b859f59a4853fd91b67349bb141c531e2369de978fe2ba52316af4a"
+    },
+    {
+      "path": "docs/assets/interactive/explorer.js",
+      "size_bytes": 14645,
+      "sha256": "e4e207ab48c4e72147fbfb4e662987411fb2cf1efd885f71ea64eb0e0c94e20d"
+    },
+    {
+      "path": "docs/assets/interactive/index.html",
+      "size_bytes": 8852,
+      "sha256": "33840a4c2c55298bf30c74029b3008984fcdd3ad8397cdbbc4d73d068ea2df7a"
+    },
+    {
+      "path": "docs/assets/interactive/sample_scans.json",
+      "size_bytes": 158342,
+      "sha256": "1d99b4ec9db95c93f7d6995f834031ea4e3d9f4e9da2af4c11a4c1892b56777f"
+    },
+    {
+      "path": "docs/assets/javascripts/interactive-embed.js",
+      "size_bytes": 712,
+      "sha256": "1728ce67bd3ece8280bf1c1c67f9bc0826998c38a0301780d52f74ebe2faf66f"
+    },
+    {
       "path": "docs/assets/stylesheets/site.css",
-      "size_bytes": 3019,
-      "sha256": "96460e1421c13d604f856523f59eec06e746db24afdd681e48d1b5f5b266d9a9"
+      "size_bytes": 3495,
+      "sha256": "340709c243563ebfc46c8cef7de280abe466510216b6b47d8b04d1d4a9d4d22b"
     },
     {
       "path": "docs/help/faq.md",
-      "size_bytes": 2889,
-      "sha256": "f62dc080eb6ac0b9894b7fdf8224de364693954d223f75170e53bedb4990db62"
+      "size_bytes": 2935,
+      "sha256": "1c1c299eec3ba718346683e596beeb81fa928403a8cd969c085abcb0a3d3d88e"
     },
     {
       "path": "docs/hk_u09_expected_summary.json",
@@ -611,8 +636,13 @@
     },
     {
       "path": "docs/index.md",
-      "size_bytes": 4977,
-      "sha256": "ce3030d6d4955833b758bae141c18a764b8bc487d38c57333cfe9feb1b034d97"
+      "size_bytes": 5380,
+      "sha256": "d2eabd0e954afd39e1e7181568847248893cc7c415407d5536d2223e89818db2"
+    },
+    {
+      "path": "docs/learn/interactive-explorer.md",
+      "size_bytes": 2215,
+      "sha256": "277e8d35b2597d865074213cd6e7ca43447732d6eca5f8b6cbd5b2cc36d1d1ce"
     },
     {
       "path": "docs/learn/overview.md",
@@ -621,8 +651,8 @@
     },
     {
       "path": "docs/learn/walkthrough.md",
-      "size_bytes": 3378,
-      "sha256": "a8e938ead407f678081534b16bbe5be024b8b81216d2ab3cec65f34fe6249958"
+      "size_bytes": 3477,
+      "sha256": "1ffb983685f46194a4bb642829fa66e1a312ff1223a722b0fae7d3841a887c26"
     },
     {
       "path": "docs/results/evidence.md",
@@ -781,8 +811,8 @@
     },
     {
       "path": "mkdocs.yml",
-      "size_bytes": 3549,
-      "sha256": "b7c4d27502ee3e7e78887fe275b68c65b6220b4f28069dcc00aa99f2cf6da986"
+      "size_bytes": 3689,
+      "sha256": "956ca3c4c9496cc18cc9998950239871c608aa8735ce8a7f22a220a1063dd763"
     },
     {
       "path": "pyproject.toml",
@@ -1008,6 +1038,11 @@
       "path": "scripts/evaluate_hk_u09.py",
       "size_bytes": 9482,
       "sha256": "fc33fb1c6929ec8df0c1db31ccf4ac27f769fb653ddd5cc7b620c57f78b6cbcb"
+    },
+    {
+      "path": "scripts/export_interactive_examples.py",
+      "size_bytes": 8519,
+      "sha256": "7dc0f9158ac40d93e9f60a9c2af963b19ab7cc8d0785567ada63e575b7794e96"
     },
     {
       "path": "scripts/export_relative_errors.py",
@@ -1408,6 +1443,11 @@
       "path": "tests/test_external_unit_input.py",
       "size_bytes": 2347,
       "sha256": "60b3f9291e9fdfa3d70b959462f53f0ca0600a0d4ad5fcefe0c1f61ae317c82c"
+    },
+    {
+      "path": "tests/test_interactive_examples.py",
+      "size_bytes": 2727,
+      "sha256": "bb0d11483b1729c9a0839ef95e92c4f5a31fbbd090c8b3415950fa6820a32af9"
     },
     {
       "path": "tests/test_public_integrity.py",
