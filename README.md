@@ -71,7 +71,7 @@ The first ten retrieved templates define the candidate neighborhood used for spa
 
 ## Diagnostic framework: 15 quantities and three composites
 
-Let $A_q$ and $A_j$ be the observed query and template AP sets; $r_a$ denotes a recorded RSS value (dBm). The aligned query and template RSS vectors are $\mathbf q,\mathbf t_j\in\mathbb R^D$, with absent AP features filled at $-110$ dBm for RSS-template comparison. Reference templates are ranked by $d_j=\|\mathbf q-\mathbf t_j\|_2/\sqrt D$. Let $\mathbf p_j$ be the 2D reference coordinate of candidate $j$, $\bar{\mathbf p}=\frac{1}{10}\sum_{j=1}^{10}\mathbf p_j$, and $\mathcal P$ the distinct training reference coordinates. The AP-set Jaccard overlap is $J(A,B)=|A\cap B|/|A\cup B|$.
+Each query scan is represented by its observed APs and their RSS measurements in dBm. For comparison with the radio map, the query and reference-template RSS vectors are aligned to a common AP feature space, with missing AP measurements assigned −110 dBm. Reference templates are ranked by normalized Euclidean RSS distance to the query, and the ten nearest templates define the candidate neighborhood used for AP-overlap and spatial diagnostics. Each candidate has a two-dimensional reference coordinate; the average of the ten candidate coordinates defines the neighborhood centroid. Spatial-support diagnostics additionally consider all distinct training reference coordinates. AP-set agreement is quantified by Jaccard overlap, the proportion of APs shared by the query and a reference template relative to the total number observed in either.
 
 ### 1. Query RSS statistics
 
