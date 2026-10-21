@@ -29,7 +29,7 @@
     
     
       
-        <title>The 18 diagnostics - Wi-Fi Fingerprinting Integrity</title>
+        <title>Indicator definitions and equations - Wi-Fi Fingerprinting Integrity</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#indicator-guide" class="md-skip">
+        <a href="#scan-level-diagnostic-indicators-definitions-and-equations" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              The 18 diagnostics
+              Indicator definitions and equations
             
           </span>
         </div>
@@ -516,7 +516,35 @@
   <span class="md-ellipsis">
     
   
-    Interactive scan explorer
+    Measured scan explorer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../learn/indicator-atlas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interactive indicator atlas
   
 
     
@@ -608,7 +636,7 @@
   <span class="md-ellipsis">
     
   
-    The problem in plain language
+    Why scan-level integrity matters
   
 
     
@@ -636,7 +664,7 @@
   <span class="md-ellipsis">
     
   
-    Follow one Wi-Fi scan
+    Processing pipeline
   
 
     
@@ -673,7 +701,7 @@
   <span class="md-ellipsis">
     
   
-    The 18 diagnostics
+    Indicator definitions and equations
   
 
     
@@ -691,7 +719,7 @@
   <span class="md-ellipsis">
     
   
-    The 18 diagnostics
+    Indicator definitions and equations
   
 
     
@@ -717,10 +745,321 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sqs-and-warning-interpretation" class="md-nav__link">
+  <a href="#notation-and-computation-scope" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SQS and warning interpretation
+        Notation and computation scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scan-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scan statistics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scan statistics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#observed-ap-count-ap_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Observed AP count (ap_count)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rss-standard-deviation-rss_std" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RSS standard deviation (rss_std)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rss-range-rss_range" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RSS range (rss_range)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scanmap-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scan–map compatibility
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scan–map compatibility">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nearest-rss-template-distance-min_rss_distance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nearest RSS-template distance (min_rss_distance)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nearest-match-isolation-nearest_match_isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nearest-match isolation (nearest_match_isolation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nearest-template-cosine-similarity-max_cosine_similarity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nearest-template cosine similarity (max_cosine_similarity)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maximum-ap-set-overlap-ap_overlap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maximum AP-set overlap (ap_overlap)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mean-ap-set-overlap-mean_ap_overlap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mean AP-set overlap (mean_ap_overlap)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ap-set-novelty-ap_set_novelty" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AP-set novelty (ap_set_novelty)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spatial-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spatial support
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Spatial support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nearest-reference-point-distance-nearest_rp_distance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nearest reference-point distance (nearest_rp_distance)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-reference-point-density-local_rp_density" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Local reference-point density (local_rp_density)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#candidate-geometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Candidate geometry
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Candidate geometry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#candidate-spatial-spread-sigma_fps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Candidate spatial spread (sigma_fps)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#candidate-set-diameter-d_cand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Candidate-set diameter (d_cand)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cumulative-neighborhood-instability-i_k" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cumulative-neighborhood instability (i_k)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#radio-map-ambiguity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Radio-map ambiguity
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Radio-map ambiguity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rss-gradient-uncertainty-proxy-rss_gradient_proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RSS-gradient uncertainty proxy (rss_gradient_proxy)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#composite-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Composite support
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Composite support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scan-quality-and-support-score-sqs-sqs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scan Quality and Support Score (SQS) (sqs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signal-to-spread-support-c-c_sigma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Signal-to-spread support (Cσ) (c_sigma)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fingerprint-integrity-index-fii-fii" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fingerprint Integrity Index (FII) (fii)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interpreting-the-directions-and-scores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpreting the directions and scores
       
     </span>
   </a>
@@ -1765,10 +2104,321 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sqs-and-warning-interpretation" class="md-nav__link">
+  <a href="#notation-and-computation-scope" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SQS and warning interpretation
+        Notation and computation scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scan-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scan statistics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scan statistics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#observed-ap-count-ap_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Observed AP count (ap_count)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rss-standard-deviation-rss_std" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RSS standard deviation (rss_std)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rss-range-rss_range" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RSS range (rss_range)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scanmap-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scan–map compatibility
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scan–map compatibility">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nearest-rss-template-distance-min_rss_distance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nearest RSS-template distance (min_rss_distance)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nearest-match-isolation-nearest_match_isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nearest-match isolation (nearest_match_isolation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nearest-template-cosine-similarity-max_cosine_similarity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nearest-template cosine similarity (max_cosine_similarity)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maximum-ap-set-overlap-ap_overlap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maximum AP-set overlap (ap_overlap)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mean-ap-set-overlap-mean_ap_overlap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mean AP-set overlap (mean_ap_overlap)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ap-set-novelty-ap_set_novelty" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AP-set novelty (ap_set_novelty)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spatial-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spatial support
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Spatial support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nearest-reference-point-distance-nearest_rp_distance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nearest reference-point distance (nearest_rp_distance)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-reference-point-density-local_rp_density" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Local reference-point density (local_rp_density)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#candidate-geometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Candidate geometry
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Candidate geometry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#candidate-spatial-spread-sigma_fps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Candidate spatial spread (sigma_fps)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#candidate-set-diameter-d_cand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Candidate-set diameter (d_cand)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cumulative-neighborhood-instability-i_k" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cumulative-neighborhood instability (i_k)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#radio-map-ambiguity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Radio-map ambiguity
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Radio-map ambiguity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rss-gradient-uncertainty-proxy-rss_gradient_proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RSS-gradient uncertainty proxy (rss_gradient_proxy)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#composite-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Composite support
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Composite support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scan-quality-and-support-score-sqs-sqs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scan Quality and Support Score (SQS) (sqs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signal-to-spread-support-c-c_sigma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Signal-to-spread support (Cσ) (c_sigma)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fingerprint-integrity-index-fii-fii" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fingerprint Integrity Index (FII) (fii)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interpreting-the-directions-and-scores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpreting the directions and scores
       
     </span>
   </a>
@@ -1800,152 +2450,136 @@
   
 
 
-<h1 id="indicator-guide">Indicator guide<a class="headerlink" href="#indicator-guide" title="Permanent link">&para;</a></h1>
-<p><a href="../">Documentation home</a> · <a href="../RESEARCH_OVERVIEW/">Research overview</a></p>
-<p>The 18 retained indicators include three composites. The table preserves the supplied configuration identifiers and maps them to the historical output-column names where these differ. “Adverse direction” is the prespecified analysis convention, not a guarantee that the direction holds in every condition.</p>
-<table>
-<thead>
-<tr>
-<th>Configuration ID</th>
-<th>Output column</th>
-<th>Indicator</th>
-<th>Group</th>
-<th>Prespecified adverse direction</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ap_count</code></td>
-<td><code>ap_count</code></td>
-<td>AP count</td>
-<td>Scan statistics</td>
-<td>Low</td>
-</tr>
-<tr>
-<td><code>rss_std</code></td>
-<td><code>rss_std</code></td>
-<td>RSS standard deviation</td>
-<td>Scan statistics</td>
-<td>High</td>
-</tr>
-<tr>
-<td><code>rss_range</code></td>
-<td><code>rss_range</code></td>
-<td>RSS range</td>
-<td>Scan statistics</td>
-<td>High</td>
-</tr>
-<tr>
-<td><code>min_rss_distance</code></td>
-<td><code>min_rss_distance</code></td>
-<td>Minimum RSS distance</td>
-<td>Scan–map compatibility</td>
-<td>High</td>
-</tr>
-<tr>
-<td><code>nearest_match_isolation</code></td>
-<td><code>nearest_match_isolation</code></td>
-<td>Nearest-match isolation</td>
-<td>Scan–map compatibility</td>
-<td>Low</td>
-</tr>
-<tr>
-<td><code>max_cosine_similarity</code></td>
-<td><code>max_cosine_similarity</code></td>
-<td>Nearest-match cosine similarity</td>
-<td>Scan–map compatibility</td>
-<td>Low</td>
-</tr>
-<tr>
-<td><code>ap_overlap</code></td>
-<td><code>ap_overlap</code></td>
-<td>Maximum AP overlap</td>
-<td>Scan–map compatibility</td>
-<td>Low</td>
-</tr>
-<tr>
-<td><code>mean_ap_overlap</code></td>
-<td><code>mean_ap_overlap</code></td>
-<td>Mean AP overlap</td>
-<td>Scan–map compatibility</td>
-<td>Low</td>
-</tr>
-<tr>
-<td><code>ap_set_novelty</code></td>
-<td><code>ap_set_novelty</code></td>
-<td>AP-set novelty</td>
-<td>Scan–map compatibility</td>
-<td>High</td>
-</tr>
-<tr>
-<td><code>nearest_rp_distance</code></td>
-<td><code>nearest_rp_distance</code></td>
-<td>Nearest-RP distance</td>
-<td>Spatial support</td>
-<td>High</td>
-</tr>
-<tr>
-<td><code>local_rp_density</code></td>
-<td><code>local_rp_density</code></td>
-<td>Local RP density</td>
-<td>Spatial support</td>
-<td>Low</td>
-</tr>
-<tr>
-<td><code>sigma_fps</code></td>
-<td><code>sigma_fps</code></td>
-<td>Candidate spatial spread</td>
-<td>Candidate geometry</td>
-<td>High</td>
-</tr>
-<tr>
-<td><code>d_cand</code></td>
-<td><code>D_cand</code></td>
-<td>Candidate-set diameter</td>
-<td>Candidate geometry</td>
-<td>High</td>
-</tr>
-<tr>
-<td><code>i_k</code></td>
-<td><code>I_k</code></td>
-<td>Cumulative-neighborhood instability</td>
-<td>Candidate geometry</td>
-<td>High</td>
-</tr>
-<tr>
-<td><code>rss_gradient_proxy</code></td>
-<td><code>rss_gradient_proxy</code></td>
-<td>RSS-gradient uncertainty proxy</td>
-<td>Radio-map ambiguity</td>
-<td>High</td>
-</tr>
-<tr>
-<td><code>sqs</code></td>
-<td><code>SQS</code></td>
-<td>Scan Quality and Support Score</td>
-<td>Composite support</td>
-<td>Low</td>
-</tr>
-<tr>
-<td><code>c_sigma</code></td>
-<td><code>C_sigma</code></td>
-<td>Signal-to-spread support score</td>
-<td>Composite support</td>
-<td>Low</td>
-</tr>
-<tr>
-<td><code>fii</code></td>
-<td><code>FII</code></td>
-<td>Fingerprint Integrity Index</td>
-<td>Composite support</td>
-<td>Low</td>
-</tr>
-</tbody>
-</table>
-<h2 id="sqs-and-warning-interpretation">SQS and warning interpretation<a class="headerlink" href="#sqs-and-warning-interpretation" title="Permanent link">&para;</a></h2>
-<p>SQS combines signal support, candidate-geometry support, AP-count support, AP-overlap support, and local-density support. Its nominal component weights are equal. It summarizes diagnostic support; it is not a learned error predictor or a calibrated probability.</p>
-<p>A condition-relative adverse percentile describes the position of an indicator within a reference distribution. The reference population, fitted scaling, unavailable-value policy, and warning threshold must be stated when interpreting a score or moving from offline analysis to new live scans.</p>
-<p>RSS standard deviation and RSS range do not consistently follow their prespecified adverse directions in the current study. Their configuration signs must not be presented as universal reliability rules. Similarly, favorable RSS matching alone does not establish that candidate locations are spatially coherent.</p>
+<h1 id="scan-level-diagnostic-indicators-definitions-and-equations">Scan-level diagnostic indicators: definitions and equations<a class="headerlink" href="#scan-level-diagnostic-indicators-definitions-and-equations" title="Permanent link">&para;</a></h1>
+<p><strong>15 diagnostic measurements and three composite scores</strong>, grouped by the source implementation. This page specifies the formulas implemented in <code>src/wifi_integrity/reliability/indicators.py</code> and <code>src/wifi_integrity/reliability/sqs.py</code>. The direction column is the study’s <strong>prespecified adverse direction</strong>, not a fitted classification threshold or a universal direction of association.</p>
+<p><a class="md-button md-button--primary" href="../learn/indicator-atlas/">Open the animated indicator atlas</a> <a class="md-button" href="../learn/interactive-explorer/">Inspect measured scans</a></p>
+<h2 id="notation-and-computation-scope">Notation and computation scope<a class="headerlink" href="#notation-and-computation-scope" title="Permanent link">&para;</a></h2>
+<ul>
+<li><span class="arithmatex">\(\mathbf q\in\mathbb R^D\)</span>: RSS vector for one query, with absent AP features filled at <span class="arithmatex">\(-110\)</span> dBm; <span class="arithmatex">\(\mathbf t_j\)</span>: training templates, ordered by normalized RSS distance <span class="arithmatex">\(d_1\leq d_2\leq\cdots\)</span>.</li>
+<li><span class="arithmatex">\(A_q\)</span> and <span class="arithmatex">\(A_j\)</span>: sets of observed APs in the query and retrieved reference template <span class="arithmatex">\(j\)</span>.</li>
+<li><span class="arithmatex">\(\mathbf p_j\in\mathbb R^2\)</span>: local reference coordinate of the <span class="arithmatex">\(j\)</span>-th retrieved template; <span class="arithmatex">\(\bar{\mathbf p}=\frac1{10}\sum_{j=1}^{10}\mathbf p_j\)</span>.</li>
+<li><span class="arithmatex">\(\mathcal P\)</span>: set of distinct training reference coordinates, <span class="arithmatex">\(\hat{\mathbf x}\)</span>: independently produced position estimate.</li>
+<li>The native retrieval first considers up to <strong>20 nearest RSS templates</strong>; the spatial and overlap diagnostics use the first <strong>10</strong>. Repeated training observations at the same location/floor are aggregated into reference templates.</li>
+<li>Define <span class="arithmatex">\(R(z)=\operatorname{clip}\!\left(\frac{z-Q_{0.05}}{Q_{0.95}-Q_{0.05}},0,1\right)\)</span>, where the quantiles are fitted within the complete evaluation unit. For a degenerate finite range, <span class="arithmatex">\(R(z)=0.5\)</span>. Unavailable observations remain missing.</li>
+</ul>
+<h2 id="scan-statistics">Scan statistics<a class="headerlink" href="#scan-statistics" title="Permanent link">&para;</a></h2>
+<h3 id="observed-ap-count-ap_count">Observed AP count (<code>ap_count</code>)<a class="headerlink" href="#observed-ap-count-ap_count" title="Permanent link">&para;</a></h3>
+<p>Number of access points retained in the query RSS feature vector.</p>
+<div class="arithmatex">\[
+N_{AP}=|A_q|
+\]</div>
+<p><strong>Units:</strong> APs. <strong>Adverse direction:</strong> Low. <strong>Implementation note:</strong> The count measures scan visibility, not the number of installed or discovered access points. AP labels remain unit-local.</p>
+<h3 id="rss-standard-deviation-rss_std">RSS standard deviation (<code>rss_std</code>)<a class="headerlink" href="#rss-standard-deviation-rss_std" title="Permanent link">&para;</a></h3>
+<p>Population standard deviation across all RSS observations in the current query.</p>
+<div class="arithmatex">\[
+\sigma_{RSS}=\sqrt{\frac{1}{N}\sum_{a\in A_q}(r_a-\bar r)^2}
+\]</div>
+<p><strong>Units:</strong> dBm. <strong>Adverse direction:</strong> High*. <strong>Implementation note:</strong> A wide RSS distribution is not necessarily harmful; the prespecified direction did not remain consistent across evaluation conditions.</p>
+<h3 id="rss-range-rss_range">RSS range (<code>rss_range</code>)<a class="headerlink" href="#rss-range-rss_range" title="Permanent link">&para;</a></h3>
+<p>Difference between strongest and weakest recorded RSS in a query.</p>
+<div class="arithmatex">\[
+R_{RSS}=\max_{a\in A_q}r_a-\min_{a\in A_q}r_a
+\]</div>
+<p><strong>Units:</strong> dB. <strong>Adverse direction:</strong> High*. <strong>Implementation note:</strong> The range summarizes signal-strength dispersion; it is not directly a measure of positioning error.</p>
+<h2 id="scanmap-compatibility">Scan–map compatibility<a class="headerlink" href="#scanmap-compatibility" title="Permanent link">&para;</a></h2>
+<h3 id="nearest-rss-template-distance-min_rss_distance">Nearest RSS-template distance (<code>min_rss_distance</code>)<a class="headerlink" href="#nearest-rss-template-distance-min_rss_distance" title="Permanent link">&para;</a></h3>
+<p>Smallest normalized Euclidean distance from the query RSS vector to a reference template.</p>
+<div class="arithmatex">\[
+d_1=\min_j\frac{\|\mathbf q-\mathbf t_j\|_2}{\sqrt D}
+\]</div>
+<p><strong>Units:</strong> normalized RSS distance. <strong>Adverse direction:</strong> High. <strong>Implementation note:</strong> Missing AP features are filled at −110 dBm in the native computation. Training scans at the same reference coordinate/floor are averaged into a template.</p>
+<h3 id="nearest-match-isolation-nearest_match_isolation">Nearest-match isolation (<code>nearest_match_isolation</code>)<a class="headerlink" href="#nearest-match-isolation-nearest_match_isolation" title="Permanent link">&para;</a></h3>
+<p>Relative separation of the first two nearest RSS-template distances.</p>
+<div class="arithmatex">\[
+I_{\mathrm{near}}=\frac{\max(d_2-d_1,0)}{d_2+10^{-6}}
+\]</div>
+<p><strong>Units:</strong> ratio. <strong>Adverse direction:</strong> Low. <strong>Implementation note:</strong> A larger gap makes the nearest RSS template more distinguishable from the runner-up, but does not independently establish positioning accuracy.</p>
+<h3 id="nearest-template-cosine-similarity-max_cosine_similarity">Nearest-template cosine similarity (<code>max_cosine_similarity</code>)<a class="headerlink" href="#nearest-template-cosine-similarity-max_cosine_similarity" title="Permanent link">&para;</a></h3>
+<p>Cosine similarity between the query and its nearest RSS template after offsetting each vector by the RSS floor.</p>
+<div class="arithmatex">\[
+C_{\mathrm{cos}}=\frac{(\mathbf q+110)\cdot(\mathbf t_1+110)}{\|\mathbf q+110\|_2\,\|\mathbf t_1+110\|_2}
+\]</div>
+<p><strong>Units:</strong> similarity. <strong>Adverse direction:</strong> Low. <strong>Implementation note:</strong> A result is unavailable when the shifted vector norm is zero. The display illustrates a vector-angle comparison; per-AP template RSS values are not included in the browser sample.</p>
+<h3 id="maximum-ap-set-overlap-ap_overlap">Maximum AP-set overlap (<code>ap_overlap</code>)<a class="headerlink" href="#maximum-ap-set-overlap-ap_overlap" title="Permanent link">&para;</a></h3>
+<p>Largest Jaccard agreement between the observed query AP set and one of the ten retrieved reference-template AP sets.</p>
+<div class="arithmatex">\[
+J_{\max}=\max_{j\leq10}\frac{|A_q\cap A_j|}{|A_q\cup A_j|}
+\]</div>
+<p><strong>Units:</strong> Jaccard index. <strong>Adverse direction:</strong> Low. <strong>Implementation note:</strong> The reference AP set is the union of observed APs from scans aggregated into the template.</p>
+<h3 id="mean-ap-set-overlap-mean_ap_overlap">Mean AP-set overlap (<code>mean_ap_overlap</code>)<a class="headerlink" href="#mean-ap-set-overlap-mean_ap_overlap" title="Permanent link">&para;</a></h3>
+<p>Mean Jaccard agreement between query APs and the ten retrieved templates.</p>
+<div class="arithmatex">\[
+\bar J=\frac1{10}\sum_{j=1}^{10}\frac{|A_q\cap A_j|}{|A_q\cup A_j|}
+\]</div>
+<p><strong>Units:</strong> Jaccard index. <strong>Adverse direction:</strong> Low. <strong>Implementation note:</strong> Unlike maximum overlap, this describes the whole retrieved candidate group.</p>
+<h3 id="ap-set-novelty-ap_set_novelty">AP-set novelty (<code>ap_set_novelty</code>)<a class="headerlink" href="#ap-set-novelty-ap_set_novelty" title="Permanent link">&para;</a></h3>
+<p>Complement of the maximum query-to-template AP-set overlap.</p>
+<div class="arithmatex">\[
+N_{APset}=1-J_{\max}
+\]</div>
+<p><strong>Units:</strong> fraction. <strong>Adverse direction:</strong> High. <strong>Implementation note:</strong> Novelty increases as the query AP set becomes less compatible with the best reference template.</p>
+<h2 id="spatial-support">Spatial support<a class="headerlink" href="#spatial-support" title="Permanent link">&para;</a></h2>
+<h3 id="nearest-reference-point-distance-nearest_rp_distance">Nearest reference-point distance (<code>nearest_rp_distance</code>)<a class="headerlink" href="#nearest-reference-point-distance-nearest_rp_distance" title="Permanent link">&para;</a></h3>
+<p>Distance between an estimator-produced position and the closest radio-map reference point.</p>
+<div class="arithmatex">\[
+d_{RP}=\min_{\mathbf p\in\mathcal P}\|\hat{\mathbf x}-\mathbf p\|_2
+\]</div>
+<p><strong>Units:</strong> metres. <strong>Adverse direction:</strong> High. <strong>Implementation note:</strong> Estimator-specific. Unlike the other examples, it requires a separately generated predicted position; no estimator prediction is supplied by this browser-only atlas.</p>
+<h3 id="local-reference-point-density-local_rp_density">Local reference-point density (<code>local_rp_density</code>)<a class="headerlink" href="#local-reference-point-density-local_rp_density" title="Permanent link">&para;</a></h3>
+<p>Number of distinct training reference coordinates within an adaptive radius around the candidate centroid.</p>
+<div class="arithmatex">\[
+\rho_{RP}=\sum_{\mathbf p\in\mathcal P}\mathbf1\{\|\mathbf p-\bar{\mathbf c}\|_2\leq r\}
+\]</div>
+<p><strong>Units:</strong> reference points. <strong>Adverse direction:</strong> Low. <strong>Implementation note:</strong> The radius is r = clip(3 × median positive nearest-neighbor spacing, 2 m, 25 m); default 5 m if the spacing cannot be resolved. The live candidate plot shows only the top ten, not every RP counted.</p>
+<h2 id="candidate-geometry">Candidate geometry<a class="headerlink" href="#candidate-geometry" title="Permanent link">&para;</a></h2>
+<h3 id="candidate-spatial-spread-sigma_fps">Candidate spatial spread (<code>sigma_fps</code>)<a class="headerlink" href="#candidate-spatial-spread-sigma_fps" title="Permanent link">&para;</a></h3>
+<p>Root mean squared spatial distance of the ten retrieved reference coordinates from their centroid.</p>
+<div class="arithmatex">\[
+\sigma_{FP}=\sqrt{\frac1{10}\sum_{j=1}^{10}\|\mathbf p_j-\bar{\mathbf p}\|_2^2}
+\]</div>
+<p><strong>Units:</strong> metres. <strong>Adverse direction:</strong> High. <strong>Implementation note:</strong> A high value indicates retrieved fingerprints spread across local coordinates. Floor categories are not added as a vertical metric in this 2D calculation.</p>
+<h3 id="candidate-set-diameter-d_cand">Candidate-set diameter (<code>d_cand</code>)<a class="headerlink" href="#candidate-set-diameter-d_cand" title="Permanent link">&para;</a></h3>
+<p>Largest pairwise 2D separation among the ten retrieved reference coordinates.</p>
+<div class="arithmatex">\[
+D_{cand}=\max_{1\leq i,j\leq10}\|\mathbf p_i-\mathbf p_j\|_2
+\]</div>
+<p><strong>Units:</strong> metres. <strong>Adverse direction:</strong> High. <strong>Implementation note:</strong> Highlights distant outlying candidate references even if most candidates are clustered.</p>
+<h3 id="cumulative-neighborhood-instability-i_k">Cumulative-neighborhood instability (<code>i_k</code>)<a class="headerlink" href="#cumulative-neighborhood-instability-i_k" title="Permanent link">&para;</a></h3>
+<p>Maximum displacement between a cumulative rank-k candidate centroid and the final ten-candidate centroid.</p>
+<div class="arithmatex">\[
+I_k=\max_{1\leq k\leq10}\left\|\frac1k\sum_{j=1}^k\mathbf p_j-\bar{\mathbf p}\right\|_2
+\]</div>
+<p><strong>Units:</strong> metres. <strong>Adverse direction:</strong> High. <strong>Implementation note:</strong> Ordered by RSS-template similarity. This is a diagnostic of rank-dependent spatial stability, not a time-series displacement.</p>
+<h2 id="radio-map-ambiguity">Radio-map ambiguity<a class="headerlink" href="#radio-map-ambiguity" title="Permanent link">&para;</a></h2>
+<h3 id="rss-gradient-uncertainty-proxy-rss_gradient_proxy">RSS-gradient uncertainty proxy (<code>rss_gradient_proxy</code>)<a class="headerlink" href="#rss-gradient-uncertainty-proxy-rss_gradient_proxy" title="Permanent link">&para;</a></h3>
+<p>Candidate spatial spread divided by the RSS-distance contrast across ranks 1–10.</p>
+<div class="arithmatex">\[
+G_{RSS}=\frac{\sigma_{FP}}{\max(d_{10}-d_1,10^{-6})}
+\]</div>
+<p><strong>Units:</strong> metres per normalized RSS distance. <strong>Adverse direction:</strong> High. <strong>Implementation note:</strong> Large spatial spread with a narrow RSS-distance range indicates spatial ambiguity relative to signal-space separation.</p>
+<h2 id="composite-support">Composite support<a class="headerlink" href="#composite-support" title="Permanent link">&para;</a></h2>
+<h3 id="scan-quality-and-support-score-sqs-sqs">Scan Quality and Support Score (SQS) (<code>sqs</code>)<a class="headerlink" href="#scan-quality-and-support-score-sqs-sqs" title="Permanent link">&para;</a></h3>
+<p>Equal-weight average of signal-match, candidate-geometry, AP-count, overlap and local-density support.</p>
+<div class="arithmatex">\[
+SQS=\operatorname{mean}(1-R(d_1),\ 1-\tfrac{R(\sigma_{FP})+R(D_{cand})}{2},\ R(N_{AP}),\ R(J_{\max}),\ R(\rho_{RP}))
+\]</div>
+<p><strong>Units:</strong> [0,1]. <strong>Adverse direction:</strong> Low. <strong>Implementation note:</strong> R(z) is 5th–95th percentile clipped scaling within the full evaluation unit. Missing component values are omitted from the mean. SQS is not a calibrated probability.</p>
+<h3 id="signal-to-spread-support-c-c_sigma">Signal-to-spread support (Cσ) (<code>c_sigma</code>)<a class="headerlink" href="#signal-to-spread-support-c-c_sigma" title="Permanent link">&para;</a></h3>
+<p>Signal-match support reduced by normalized candidate spread.</p>
+<div class="arithmatex">\[
+C_{\sigma}=\frac{1-R(d_1)}{1+R(\sigma_{FP})}
+\]</div>
+<p><strong>Units:</strong> [0,1]. <strong>Adverse direction:</strong> Low. <strong>Implementation note:</strong> The denominator penalizes diffuse spatial candidate sets while preserving the normalized RSS-match numerator.</p>
+<h3 id="fingerprint-integrity-index-fii-fii">Fingerprint Integrity Index (FII) (<code>fii</code>)<a class="headerlink" href="#fingerprint-integrity-index-fii-fii" title="Permanent link">&para;</a></h3>
+<p>Average of signal support, AP count, maximum overlap, match isolation and inverse AP novelty.</p>
+<div class="arithmatex">\[
+FII=\operatorname{mean}(1-R(d_1),\ R(N_{AP}),\ R(J_{\max}),\ R(I_{near}),\ 1-R(N_{APset}))
+\]</div>
+<p><strong>Units:</strong> [0,1]. <strong>Adverse direction:</strong> Low. <strong>Implementation note:</strong> Five component terms are unit-relative. FII and SQS use different component definitions and cannot be interpreted as interchangeable probabilities.</p>
+<h2 id="interpreting-the-directions-and-scores">Interpreting the directions and scores<a class="headerlink" href="#interpreting-the-directions-and-scores" title="Permanent link">&para;</a></h2>
+<p>The adverse-direction labels are <strong>a priori analysis conventions</strong>. In particular, higher <code>rss_std</code> and <code>rss_range</code> did not show a stable adverse relationship throughout the evaluated conditions; their signs should not be generalized. Nearest-RP distance is defined <strong>per estimator prediction</strong> and is not available in the native scan-only example CSV.</p>
+<p>SQS, Cσ and FII are <strong>dimensionless relative support summaries</strong>, not calibrated probabilities, error bounds or standalone gross-error decisions. To use a score for accepting or rejecting a position, first fit a threshold on independent calibration data and evaluate it on held-out scans. The browser atlas is descriptive and read-only: it never fabricates estimator predictions or operational warnings.</p>
+<p><strong>Source mapping:</strong> <code>nearest_rp_distance</code> is added to prediction outputs by <code>add_estimator_specific_nearest_rp</code>; <code>D_cand</code>, <code>I_k</code>, <code>C_sigma</code> and <code>FII</code> are the exact emitted CSV column spellings, while the configuration names use <code>d_cand</code>, <code>i_k</code>, <code>c_sigma</code> and <code>fii</code>.</p>
 
 
 
@@ -1981,7 +2615,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../learn/walkthrough/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Follow one Wi-Fi scan">
+          <a href="../learn/walkthrough/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Processing pipeline">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1991,7 +2625,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Follow one Wi-Fi scan
+                Processing pipeline
               </div>
             </div>
           </a>
@@ -2051,6 +2685,10 @@
       <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../assets/javascripts/interactive-embed.js"></script>
+      
+        <script src="../assets/javascripts/mathjax-config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

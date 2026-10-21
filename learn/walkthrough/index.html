@@ -29,7 +29,7 @@
     
     
       
-        <title>Follow one Wi-Fi scan - Wi-Fi Fingerprinting Integrity</title>
+        <title>Processing pipeline - Wi-Fi Fingerprinting Integrity</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#follow-one-wi-fi-scan-through-the-pipeline" class="md-skip">
+        <a href="#processing-pipeline-scan-to-reliability-diagnostics" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Follow one Wi-Fi scan
+              Processing pipeline
             
           </span>
         </div>
@@ -516,7 +516,35 @@
   <span class="md-ellipsis">
     
   
-    Interactive scan explorer
+    Measured scan explorer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../indicator-atlas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interactive indicator atlas
   
 
     
@@ -608,7 +636,7 @@
   <span class="md-ellipsis">
     
   
-    The problem in plain language
+    Why scan-level integrity matters
   
 
     
@@ -645,7 +673,7 @@
   <span class="md-ellipsis">
     
   
-    Follow one Wi-Fi scan
+    Processing pipeline
   
 
     
@@ -663,7 +691,7 @@
   <span class="md-ellipsis">
     
   
-    Follow one Wi-Fi scan
+    Processing pipeline
   
 
     
@@ -777,7 +805,7 @@
   <span class="md-ellipsis">
     
   
-    The 18 diagnostics
+    Indicator definitions and equations
   
 
     
@@ -1910,8 +1938,8 @@
   
 
 
-<h1 id="follow-one-wi-fi-scan-through-the-pipeline">Follow one Wi-Fi scan through the pipeline<a class="headerlink" href="#follow-one-wi-fi-scan-through-the-pipeline" title="Permanent link">&para;</a></h1>
-<p>This guided walkthrough explains what the repository <strong>does to one scan</strong>. The descriptions are conceptual; numeric examples are illustrative and should not be read as archived study findings.</p>
+<h1 id="processing-pipeline-scan-to-reliability-diagnostics">Processing pipeline: scan to reliability diagnostics<a class="headerlink" href="#processing-pipeline-scan-to-reliability-diagnostics" title="Permanent link">&para;</a></h1>
+<p>The pipeline combines RSS-template retrieval, position estimation, and estimator-independent diagnostic computation. The example RSS values below illustrate the input schema; they are not an archived measurement.</p>
 <h2 id="step-1-receive-a-query-scan">Step 1. Receive a query scan<a class="headerlink" href="#step-1-receive-a-query-scan" title="Permanent link">&para;</a></h2>
 <p>A scan lists observed AP labels and signal strengths, for example:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span><span class="nt">"AP1"</span><span class="p">:</span><span class="w"> </span><span class="mi">-61</span><span class="p">,</span><span class="w"> </span><span class="nt">"AP4"</span><span class="p">:</span><span class="w"> </span><span class="mi">-76</span><span class="p">,</span><span class="w"> </span><span class="nt">"AP7"</span><span class="p">:</span><span class="w"> </span><span class="mi">-83</span><span class="p">}</span>
@@ -1974,7 +2002,7 @@
 <p class="admonition-title">What this walkthrough does not claim</p>
 <p>Running the indicator layer on public input does not retrain the eight original ESWA estimators, independently calibrate an online warning system, or regenerate every historical manuscript value.</p>
 </div>
-<p><strong>Explore an actual measured scan:</strong> <a href="../interactive-explorer/">Interactive scan-to-SQS explorer</a>.</p>
+<p><strong>Inspect the definitions and equations:</strong> <a href="../indicator-atlas/">Interactive indicator atlas</a>. <strong>Examine actual measured scans:</strong> <a href="../interactive-explorer/">Scan-to-SQS explorer</a>.</p>
 <p><strong>Next:</strong> <a href="../../start/quickstart/">Run the actual code</a> · <a href="../../results/how-to-read/">Read the generated outputs</a>.</p>
 
 
@@ -2011,7 +2039,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../overview/" class="md-footer__link md-footer__link--prev" aria-label="Previous: The problem in plain language">
+          <a href="../overview/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Why scan-level integrity matters">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2021,20 +2049,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                The problem in plain language
+                Why scan-level integrity matters
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../INDICATORS/" class="md-footer__link md-footer__link--next" aria-label="Next: The 18 diagnostics">
+          <a href="../../INDICATORS/" class="md-footer__link md-footer__link--next" aria-label="Next: Indicator definitions and equations">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                The 18 diagnostics
+                Indicator definitions and equations
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2081,6 +2109,10 @@
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../assets/javascripts/interactive-embed.js"></script>
+      
+        <script src="../../assets/javascripts/mathjax-config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

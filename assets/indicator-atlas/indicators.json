@@ -1,0 +1,200 @@
+[
+  {
+    "id": "ap_count",
+    "label": "Observed AP count",
+    "group": "Scan statistics",
+    "unit": "APs",
+    "adverse": "Low",
+    "definition": "Number of access points retained in the query RSS feature vector.",
+    "eq": "N_{AP}=|A_q|",
+    "details": "The count measures scan visibility, not the number of installed or discovered access points. AP labels remain unit-local.",
+    "kind": "rss"
+  },
+  {
+    "id": "rss_std",
+    "label": "RSS standard deviation",
+    "group": "Scan statistics",
+    "unit": "dBm",
+    "adverse": "High*",
+    "definition": "Population standard deviation across all RSS observations in the current query.",
+    "eq": "\\sigma_{RSS}=\\sqrt{\\frac{1}{N}\\sum_{a\\in A_q}(r_a-\\bar r)^2}",
+    "details": "A wide RSS distribution is not necessarily harmful; the prespecified direction did not remain consistent across evaluation conditions.",
+    "kind": "rss"
+  },
+  {
+    "id": "rss_range",
+    "label": "RSS range",
+    "group": "Scan statistics",
+    "unit": "dB",
+    "adverse": "High*",
+    "definition": "Difference between strongest and weakest recorded RSS in a query.",
+    "eq": "R_{RSS}=\\max_{a\\in A_q}r_a-\\min_{a\\in A_q}r_a",
+    "details": "The range summarizes signal-strength dispersion; it is not directly a measure of positioning error.",
+    "kind": "rss"
+  },
+  {
+    "id": "min_rss_distance",
+    "label": "Nearest RSS-template distance",
+    "group": "Scan–map compatibility",
+    "unit": "normalized RSS distance",
+    "adverse": "High",
+    "definition": "Smallest normalized Euclidean distance from the query RSS vector to a reference template.",
+    "eq": "d_1=\\min_j\\frac{\\|\\mathbf q-\\mathbf t_j\\|_2}{\\sqrt D}",
+    "details": "Missing AP features are filled at −110 dBm in the native computation. Training scans at the same reference coordinate/floor are averaged into a template.",
+    "kind": "match"
+  },
+  {
+    "id": "nearest_match_isolation",
+    "label": "Nearest-match isolation",
+    "group": "Scan–map compatibility",
+    "unit": "ratio",
+    "adverse": "Low",
+    "definition": "Relative separation of the first two nearest RSS-template distances.",
+    "eq": "I_{\\mathrm{near}}=\\frac{\\max(d_2-d_1,0)}{d_2+10^{-6}}",
+    "details": "A larger gap makes the nearest RSS template more distinguishable from the runner-up, but does not independently establish positioning accuracy.",
+    "kind": "match"
+  },
+  {
+    "id": "max_cosine_similarity",
+    "label": "Nearest-template cosine similarity",
+    "group": "Scan–map compatibility",
+    "unit": "similarity",
+    "adverse": "Low",
+    "definition": "Cosine similarity between the query and its nearest RSS template after offsetting each vector by the RSS floor.",
+    "eq": "C_{\\mathrm{cos}}=\\frac{(\\mathbf q+110)\\cdot(\\mathbf t_1+110)}{\\|\\mathbf q+110\\|_2\\,\\|\\mathbf t_1+110\\|_2}",
+    "details": "A result is unavailable when the shifted vector norm is zero. The display illustrates a vector-angle comparison; per-AP template RSS values are not included in the browser sample.",
+    "kind": "match"
+  },
+  {
+    "id": "ap_overlap",
+    "label": "Maximum AP-set overlap",
+    "group": "Scan–map compatibility",
+    "unit": "Jaccard index",
+    "adverse": "Low",
+    "definition": "Largest Jaccard agreement between the observed query AP set and one of the ten retrieved reference-template AP sets.",
+    "eq": "J_{\\max}=\\max_{j\\leq10}\\frac{|A_q\\cap A_j|}{|A_q\\cup A_j|}",
+    "details": "The reference AP set is the union of observed APs from scans aggregated into the template.",
+    "kind": "overlap"
+  },
+  {
+    "id": "mean_ap_overlap",
+    "label": "Mean AP-set overlap",
+    "group": "Scan–map compatibility",
+    "unit": "Jaccard index",
+    "adverse": "Low",
+    "definition": "Mean Jaccard agreement between query APs and the ten retrieved templates.",
+    "eq": "\\bar J=\\frac1{10}\\sum_{j=1}^{10}\\frac{|A_q\\cap A_j|}{|A_q\\cup A_j|}",
+    "details": "Unlike maximum overlap, this describes the whole retrieved candidate group.",
+    "kind": "overlap"
+  },
+  {
+    "id": "ap_set_novelty",
+    "label": "AP-set novelty",
+    "group": "Scan–map compatibility",
+    "unit": "fraction",
+    "adverse": "High",
+    "definition": "Complement of the maximum query-to-template AP-set overlap.",
+    "eq": "N_{APset}=1-J_{\\max}",
+    "details": "Novelty increases as the query AP set becomes less compatible with the best reference template.",
+    "kind": "overlap"
+  },
+  {
+    "id": "nearest_rp_distance",
+    "label": "Nearest reference-point distance",
+    "group": "Spatial support",
+    "unit": "metres",
+    "adverse": "High",
+    "definition": "Distance between an estimator-produced position and the closest radio-map reference point.",
+    "eq": "d_{RP}=\\min_{\\mathbf p\\in\\mathcal P}\\|\\hat{\\mathbf x}-\\mathbf p\\|_2",
+    "details": "Estimator-specific. Unlike the other examples, it requires a separately generated predicted position; no estimator prediction is supplied by this browser-only atlas.",
+    "kind": "estimator"
+  },
+  {
+    "id": "local_rp_density",
+    "label": "Local reference-point density",
+    "group": "Spatial support",
+    "unit": "reference points",
+    "adverse": "Low",
+    "definition": "Number of distinct training reference coordinates within an adaptive radius around the candidate centroid.",
+    "eq": "\\rho_{RP}=\\sum_{\\mathbf p\\in\\mathcal P}\\mathbf1\\{\\|\\mathbf p-\\bar{\\mathbf c}\\|_2\\leq r\\}",
+    "details": "The radius is r = clip(3 × median positive nearest-neighbor spacing, 2 m, 25 m); default 5 m if the spacing cannot be resolved. The live candidate plot shows only the top ten, not every RP counted.",
+    "kind": "density"
+  },
+  {
+    "id": "sigma_fps",
+    "label": "Candidate spatial spread",
+    "group": "Candidate geometry",
+    "unit": "metres",
+    "adverse": "High",
+    "definition": "Root mean squared spatial distance of the ten retrieved reference coordinates from their centroid.",
+    "eq": "\\sigma_{FP}=\\sqrt{\\frac1{10}\\sum_{j=1}^{10}\\|\\mathbf p_j-\\bar{\\mathbf p}\\|_2^2}",
+    "details": "A high value indicates retrieved fingerprints spread across local coordinates. Floor categories are not added as a vertical metric in this 2D calculation.",
+    "kind": "geometry"
+  },
+  {
+    "id": "d_cand",
+    "label": "Candidate-set diameter",
+    "group": "Candidate geometry",
+    "unit": "metres",
+    "adverse": "High",
+    "definition": "Largest pairwise 2D separation among the ten retrieved reference coordinates.",
+    "eq": "D_{cand}=\\max_{1\\leq i,j\\leq10}\\|\\mathbf p_i-\\mathbf p_j\\|_2",
+    "details": "Highlights distant outlying candidate references even if most candidates are clustered.",
+    "kind": "geometry"
+  },
+  {
+    "id": "i_k",
+    "label": "Cumulative-neighborhood instability",
+    "group": "Candidate geometry",
+    "unit": "metres",
+    "adverse": "High",
+    "definition": "Maximum displacement between a cumulative rank-k candidate centroid and the final ten-candidate centroid.",
+    "eq": "I_k=\\max_{1\\leq k\\leq10}\\left\\|\\frac1k\\sum_{j=1}^k\\mathbf p_j-\\bar{\\mathbf p}\\right\\|_2",
+    "details": "Ordered by RSS-template similarity. This is a diagnostic of rank-dependent spatial stability, not a time-series displacement.",
+    "kind": "geometry"
+  },
+  {
+    "id": "rss_gradient_proxy",
+    "label": "RSS-gradient uncertainty proxy",
+    "group": "Radio-map ambiguity",
+    "unit": "metres per normalized RSS distance",
+    "adverse": "High",
+    "definition": "Candidate spatial spread divided by the RSS-distance contrast across ranks 1–10.",
+    "eq": "G_{RSS}=\\frac{\\sigma_{FP}}{\\max(d_{10}-d_1,10^{-6})}",
+    "details": "Large spatial spread with a narrow RSS-distance range indicates spatial ambiguity relative to signal-space separation.",
+    "kind": "gradient"
+  },
+  {
+    "id": "sqs",
+    "label": "Scan Quality and Support Score (SQS)",
+    "group": "Composite support",
+    "unit": "[0,1]",
+    "adverse": "Low",
+    "definition": "Equal-weight average of signal-match, candidate-geometry, AP-count, overlap and local-density support.",
+    "eq": "SQS=\\operatorname{mean}(1-R(d_1),\\ 1-\\tfrac{R(\\sigma_{FP})+R(D_{cand})}{2},\\ R(N_{AP}),\\ R(J_{\\max}),\\ R(\\rho_{RP}))",
+    "details": "R(z) is 5th–95th percentile clipped scaling within the full evaluation unit. Missing component values are omitted from the mean. SQS is not a calibrated probability.",
+    "kind": "composite"
+  },
+  {
+    "id": "c_sigma",
+    "label": "Signal-to-spread support (Cσ)",
+    "group": "Composite support",
+    "unit": "[0,1]",
+    "adverse": "Low",
+    "definition": "Signal-match support reduced by normalized candidate spread.",
+    "eq": "C_{\\sigma}=\\frac{1-R(d_1)}{1+R(\\sigma_{FP})}",
+    "details": "The denominator penalizes diffuse spatial candidate sets while preserving the normalized RSS-match numerator.",
+    "kind": "composite"
+  },
+  {
+    "id": "fii",
+    "label": "Fingerprint Integrity Index (FII)",
+    "group": "Composite support",
+    "unit": "[0,1]",
+    "adverse": "Low",
+    "definition": "Average of signal support, AP count, maximum overlap, match isolation and inverse AP novelty.",
+    "eq": "FII=\\operatorname{mean}(1-R(d_1),\\ R(N_{AP}),\\ R(J_{\\max}),\\ R(I_{near}),\\ 1-R(N_{APset}))",
+    "details": "Five component terms are unit-relative. FII and SQS use different component definitions and cannot be interpreted as interchangeable probabilities.",
+    "kind": "composite"
+  }
+]

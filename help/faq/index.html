@@ -516,7 +516,35 @@
   <span class="md-ellipsis">
     
   
-    Interactive scan explorer
+    Measured scan explorer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learn/indicator-atlas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interactive indicator atlas
   
 
     
@@ -603,7 +631,7 @@
   <span class="md-ellipsis">
     
   
-    The problem in plain language
+    Why scan-level integrity matters
   
 
     
@@ -631,7 +659,7 @@
   <span class="md-ellipsis">
     
   
-    Follow one Wi-Fi scan
+    Processing pipeline
   
 
     
@@ -659,7 +687,7 @@
   <span class="md-ellipsis">
     
   
-    The 18 diagnostics
+    Indicator definitions and equations
   
 
     
@@ -1735,7 +1763,7 @@
 
 <h1 id="frequently-asked-questions">Frequently asked questions<a class="headerlink" href="#frequently-asked-questions" title="Permanent link">&para;</a></h1>
 <details class="question">
-<summary>What is Wi-Fi fingerprinting?</summary>
+<summary>How does Wi-Fi fingerprinting estimate position?</summary>
 <p>It estimates a location by comparing observed Wi-Fi signal strengths with a radio map collected at reference positions.</p>
 </details>
 <details class="question">
@@ -1743,11 +1771,11 @@
 <p>A radio map is an RSS/position table, not an architectural map. No original HK floor-plan image or vector file is needed to run the released examples.</p>
 </details>
 <details class="question">
-<summary>What does SQS mean?</summary>
+<summary>How is SQS constructed?</summary>
 <p>The <strong>Scan Quality and Support Score</strong> combines five kinds of diagnostic support (signal match, candidate geometry, AP count, AP overlap and local density). It is not a calibrated probability of correctness.</p>
 </details>
 <details class="question">
-<summary>Does a high SQS prove that a position is accurate?</summary>
+<summary>Does SQS provide a calibrated accuracy probability?</summary>
 <p>No. Some strong-looking fingerprint matches can produce large errors. Use SQS as diagnostic evidence, and calibrate and evaluate any operational warning rule separately.</p>
 </details>
 <details class="question">
@@ -1775,6 +1803,10 @@
 <p>Yes, the <a href="../../learn/interactive-explorer/">interactive measured-scan explorer</a> visualizes 88 selected query scans from the four available measured units. It uses the original computed indicator/SQS values. The separate <code>dashboard/</code> is synthetic, and the original <code>web/</code> research interface is not a complete public live-positioning service.</p>
 </details>
 <p><strong>Still need help?</strong> <a href="https://github.com/AhmedMansoour/wifi-fingerprinting-scan-level-reliability/issues">Open a GitHub issue</a> with the unit ID, command, error message and non-sensitive input schema.</p>
+<details class="question">
+<summary>Where are the equations for all 18 indicators?</summary>
+<p>The <a href="../../learn/indicator-atlas/">indicator atlas</a> provides definitions, units, original source formulas, and animated signal/geometry diagrams. The <a href="../../INDICATORS/">complete mathematical reference</a> preserves all 18 indicator names and adverse-direction conventions.</p>
+</details>
 
 
 
@@ -1880,6 +1912,10 @@
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../assets/javascripts/interactive-embed.js"></script>
+      
+        <script src="../../assets/javascripts/mathjax-config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

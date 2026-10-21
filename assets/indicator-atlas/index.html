@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light"><title>Scan-level indicator atlas · Wi-Fi Integrity</title>
+<link rel="stylesheet" href="atlas.css"><script src="atlas.js" defer></script>
+<script>window.MathJax={tex:{inlineMath:[['\\(','\\)']]},options:{enableMenu:false}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" defer></script>
+</head><body>
+<main class="atlas">
+<header class="header"><div><p class="eyebrow">METHOD EXPLORER / 18 VERIFIED QUANTITIES</p><h1>Scan-level reliability indicators</h1><p class="subtitle">Definitions, equations, implementation details, and interactive representations derived from the research code. Select any indicator to see the metric and its geometric or signal-space interpretation.</p></div><div class="header-index"><strong>15 + 3</strong><span>Diagnostics + composites</span><small>Source-derived formulas · measured examples</small></div></header>
+<div class="atlas-tools"><div><label for="unit">Measured evaluation unit</label><select id="unit"></select></div><div><label for="scan">Held-out example scan</label><select id="scan"></select></div><div><label for="search">Find an indicator</label><input id="search" type="search" placeholder="AP overlap, spatial spread, SQS…"></div></div>
+<div class="atlas-layout"><aside class="index-panel"><div class="index-head"><strong>Indicators</strong><span id="found-count">18</span></div><div id="indicator-list" class="indicator-list" aria-label="Select a reliability indicator"></div></aside>
+<article class="detail-panel" aria-live="polite"><div class="detail-top"><div><span class="group-name" id="group-name"></span><h2 id="indicator-name"></h2><div id="symbol" class="symbol"></div></div><div class="metric-box"><span>Example value</span><strong id="observed-value">—</strong><small id="observed-description"></small></div></div>
+<p class="definition" id="definition"></p><div class="equation-wrap"><div class="equation-label">IMPLEMENTED DEFINITION</div><div class="equation" id="equation"></div></div>
+<div class="diagram-head"><h3 id="figure-title">Interactive representation</h3><button id="motion" type="button" aria-pressed="true">Pause animation</button></div>
+<div class="diagram-wrap"><div id="diagram-container" aria-label="Dynamic explanation of the selected indicator"></div></div><p id="figure-caption" class="figure-caption"></p>
+<div class="explanation-grid"><section><h3>Interpretation</h3><p id="interpretation"></p></section><section><h3>Source and availability</h3><p id="source-note"></p></section></div>
+<div class="status"><span id="direction"></span><span id="identity"></span></div></article></div>
+<div class="key"><strong>Notation:</strong> q is the query RSS vector; t<sub>j</sub> a ranked reference RSS template; d<sub>j</sub> the normalized signal-space distance; p<sub>j</sub> a retrieved local 2D reference coordinate; R is 5th–95th percentile scaling within the full evaluation unit. The default candidate geometry uses ten templates, not the radio map floor plan.</div>
+<footer>Values originate from public measured U01–U03 and U09 scans. Indicators are descriptive and estimator-independent except for nearest-RP distance. <a href="../../INDICATORS/" target="_top">Complete source specification</a> · <a href="../../learn/interactive-explorer/" target="_top">Measured scan explorer</a>. SQS/FII/Cσ are not calibrated confidence probabilities.</footer>
+<div id="error" role="alert" class="error" hidden></div></main>
+</body></html>

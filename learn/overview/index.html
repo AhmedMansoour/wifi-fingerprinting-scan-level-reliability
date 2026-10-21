@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/learn/overview/">
       
       
-        <link rel="prev" href="../interactive-explorer/">
+        <link rel="prev" href="../indicator-atlas/">
       
       
         <link rel="next" href="../walkthrough/">
@@ -29,7 +29,7 @@
     
     
       
-        <title>The problem in plain language - Wi-Fi Fingerprinting Integrity</title>
+        <title>Why scan-level integrity matters - Wi-Fi Fingerprinting Integrity</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#why-inspect-the-reliability-of-a-wi-fi-position" class="md-skip">
+        <a href="#why-scan-level-integrity-matters-in-wi-fi-fingerprinting" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              The problem in plain language
+              Why scan-level integrity matters
             
           </span>
         </div>
@@ -516,7 +516,35 @@
   <span class="md-ellipsis">
     
   
-    Interactive scan explorer
+    Measured scan explorer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../indicator-atlas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interactive indicator atlas
   
 
     
@@ -617,7 +645,7 @@
   <span class="md-ellipsis">
     
   
-    The problem in plain language
+    Why scan-level integrity matters
   
 
     
@@ -635,7 +663,7 @@
   <span class="md-ellipsis">
     
   
-    The problem in plain language
+    Why scan-level integrity matters
   
 
     
@@ -661,21 +689,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#two-scans-one-positioning-system" class="md-nav__link">
+  <a href="#processing-architecture" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Two scans, one positioning system
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-extra-layer-this-project-provides" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The extra layer this project provides
+        Processing architecture
       
     </span>
   </a>
@@ -687,6 +704,17 @@
     <span class="md-ellipsis">
       
         Five SQS support components
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inspect-the-actual-formulas-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inspect the actual formulas and examples
       
     </span>
   </a>
@@ -716,7 +744,7 @@
   <span class="md-ellipsis">
     
   
-    Follow one Wi-Fi scan
+    Processing pipeline
   
 
     
@@ -744,7 +772,7 @@
   <span class="md-ellipsis">
     
   
-    The 18 diagnostics
+    Indicator definitions and equations
   
 
     
@@ -1787,21 +1815,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#two-scans-one-positioning-system" class="md-nav__link">
+  <a href="#processing-architecture" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Two scans, one positioning system
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-extra-layer-this-project-provides" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The extra layer this project provides
+        Processing architecture
       
     </span>
   </a>
@@ -1813,6 +1830,17 @@
     <span class="md-ellipsis">
       
         Five SQS support components
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inspect-the-actual-formulas-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inspect the actual formulas and examples
       
     </span>
   </a>
@@ -1844,68 +1872,29 @@
   
 
 
-<h1 id="why-inspect-the-reliability-of-a-wi-fi-position">Why inspect the reliability of a Wi-Fi position?<a class="headerlink" href="#why-inspect-the-reliability-of-a-wi-fi-position" title="Permanent link">&para;</a></h1>
-<p>A smartphone can estimate an indoor position without GPS by comparing the strengths of nearby Wi-Fi signals with a previously collected <strong>radio map</strong>. The radio map contains Wi-Fi observations and known reference positions. A typical estimator returns a location, often summarized by its average error over many test scans.</p>
-<p>But a single estimate can be unexpectedly wrong even when the average performance is acceptable. <strong>For a navigation or sensor-fusion system, the question is not only <em>Where am I?</em> but also <em>What evidence supports this particular estimate?</em></strong></p>
-<h2 id="two-scans-one-positioning-system">Two scans, one positioning system<a class="headerlink" href="#two-scans-one-positioning-system" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Scan with stronger support</th>
-<th>Scan worth inspecting</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Observable access points</td>
-<td>Several known APs</td>
-<td>Few known APs</td>
-</tr>
-<tr>
-<td>Fingerprint similarity</td>
-<td>Closely matches stored fingerprints</td>
-<td>Poor or ambiguous matches</td>
-</tr>
-<tr>
-<td>Retrieved candidate positions</td>
-<td>Cluster reasonably together</td>
-<td>Scattered between different areas</td>
-</tr>
-<tr>
-<td>Interpretation</td>
-<td>More supporting evidence</td>
-<td>Less consistent supporting evidence</td>
-</tr>
-</tbody>
-</table>
-<p>The examples are <strong>illustrative</strong>, not measured cases or a fixed warning rule. A signal match that looks convincing can still produce a large error.</p>
-<h2 id="the-extra-layer-this-project-provides">The extra layer this project provides<a class="headerlink" href="#the-extra-layer-this-project-provides" title="Permanent link">&para;</a></h2>
-<p>Wi-Fi scan and radio-map data are used to calculate <strong>18 selected diagnostic quantities</strong>, including three composite indicators. The individual quantities describe signal observations, match quality, geometric support and ambiguity. Five support components are combined into a <strong>Scan Quality and Support Score (SQS)</strong>.</p>
-<pre class="mermaid"><code>flowchart TB
-    S[Single Wi-Fi scan] --&gt; P[Positioning system]
-    S --&gt; R[Scan-level reliability layer]
-    M[Reference radio map] --&gt; P
-    M --&gt; R
-    P --&gt; O[Estimated position]
-    R --&gt; Q[18 diagnostic quantities, including SQS]
-    O --&gt; I[Estimate with evidence]
-    Q --&gt; I</code></pre>
-<p>The scores can help <strong>inspect, rank, compare, or flag</strong> scans. They do not automatically justify deployment decisions, and an SQS value is not an error probability.</p>
+<h1 id="why-scan-level-integrity-matters-in-wi-fi-fingerprinting">Why scan-level integrity matters in Wi-Fi fingerprinting<a class="headerlink" href="#why-scan-level-integrity-matters-in-wi-fi-fingerprinting" title="Permanent link">&para;</a></h1>
+<p>Fingerprinting-based indoor positioning estimates a coordinate by comparing a query Wi-Fi RSS vector with previously surveyed reference fingerprints. Accuracy statistics, such as the median and 90th-percentile positioning errors, describe aggregate estimator performance but do not establish whether <strong>one individual estimate has sufficient observable support</strong>.</p>
+<p>The proposed reliability layer examines the query and the supporting radio-map neighborhood to extract <strong>15 individual diagnostic quantities</strong>. These describe AP availability, signal-space compatibility, retrieved-candidate geometry, spatial reference-point support, and ambiguity. Three composite scores, SQS, Cσ, and FII, summarize complementary aspects of that evidence.</p>
+<h2 id="processing-architecture">Processing architecture<a class="headerlink" href="#processing-architecture" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>flowchart LR
+  Q[Query RSS vector] --&gt; R[RSS-template retrieval]
+  M[Reference radio map] --&gt; R
+  R --&gt; E[Position estimator]
+  R --&gt; I[Scan-level diagnostics]
+  Q --&gt; I
+  I --&gt; C[SQS, Cσ, FII]
+  E --&gt; P[Predicted coordinates]
+  P --&gt; O[Estimator result + diagnostics]
+  C --&gt; O
+  O --&gt; V[Retrospective error analysis or independently calibrated decision rule]</code></pre>
+<p>The diagnostic stream and the location estimator are related but <strong>not equivalent</strong>. A close RSS match can correspond to several spatially separated training positions, or to a different floor. Conversely, a spatially coherent neighborhood may have poor AP visibility. The individual measurements expose these cases rather than relying solely on an averaged error statistic.</p>
 <h2 id="five-sqs-support-components">Five SQS support components<a class="headerlink" href="#five-sqs-support-components" title="Permanent link">&para;</a></h2>
-<ol>
-<li><strong>Signal-match support:</strong> how compatible the scan appears with its best reference fingerprints.</li>
-<li><strong>Candidate-geometry support:</strong> whether candidate reference positions form a coherent neighborhood.</li>
-<li><strong>AP-count support:</strong> how much access-point evidence was observed.</li>
-<li><strong>AP-overlap support:</strong> how well the observed access-point set overlaps the radio map.</li>
-<li><strong>Local-density support:</strong> how well the retrieved neighborhood is supported by nearby reference points.</li>
-</ol>
-<p>The documented SQS combines these five components with equal nominal weights and cohort-relative scaling. See <a href="../../INDICATORS/">the full indicator table</a> for their scientific definitions and directional conventions.</p>
-<div class="admonition warning">
-<p class="admonition-title">Do not mistake high support for ground-truth correctness</p>
-<p>The SQS is not a calibrated accuracy percentage, confidence interval, or guaranteed bound on positioning error. Gross-error classification requires the specified reference distribution and evaluation protocol.</p>
-</div>
-<p><strong>Next:</strong> <a href="../walkthrough/">Follow the pipeline on one scan</a> · <a href="../../start/quickstart/">Run the public measured example</a>.</p>
+<p>The <strong>Scan Quality and Support Score (SQS)</strong> combines normalized signal-match distance, candidate spatial coherence, AP count, AP-set overlap, and local reference-point density. Scaling uses the 5th and 95th percentiles of the <strong>complete evaluation unit</strong>, and the five component weights are equal. The value ranks relative support under the stated normalization; it is not a confidence probability or certified error bound.</p>
+<p>For a particular deployed system, an acceptance threshold must be calibrated against appropriate labelled data and evaluated with the intended floor model, positioning estimator, and gross-error criterion.</p>
+<h2 id="inspect-the-actual-formulas-and-examples">Inspect the actual formulas and examples<a class="headerlink" href="#inspect-the-actual-formulas-and-examples" title="Permanent link">&para;</a></h2>
+<p><a class="md-button md-button--primary" href="../indicator-atlas/">Indicator atlas: 18 equations and animated diagrams</a>
+<a class="md-button" href="../interactive-explorer/">Measured scan explorer</a></p>
+<p><strong>Evidence base:</strong> the original study uses 10 evaluation units, eight estimators, 54,520 training scans, and 13,629 queries. The public executable examples currently contain four measured units. The <a href="../../REPRODUCIBILITY/">reproducibility notes</a> separate original stored results from fresh native computations.</p>
 
 
 
@@ -1941,7 +1930,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../interactive-explorer/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Interactive scan explorer">
+          <a href="../indicator-atlas/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Interactive indicator atlas">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1951,20 +1940,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Interactive scan explorer
+                Interactive indicator atlas
               </div>
             </div>
           </a>
         
         
           
-          <a href="../walkthrough/" class="md-footer__link md-footer__link--next" aria-label="Next: Follow one Wi-Fi scan">
+          <a href="../walkthrough/" class="md-footer__link md-footer__link--next" aria-label="Next: Processing pipeline">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Follow one Wi-Fi scan
+                Processing pipeline
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2011,6 +2000,10 @@
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../assets/javascripts/interactive-embed.js"></script>
+      
+        <script src="../../assets/javascripts/mathjax-config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

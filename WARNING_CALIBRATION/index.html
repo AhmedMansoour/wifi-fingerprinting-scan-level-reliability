@@ -516,7 +516,35 @@
   <span class="md-ellipsis">
     
   
-    Interactive scan explorer
+    Measured scan explorer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../learn/indicator-atlas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interactive indicator atlas
   
 
     
@@ -603,7 +631,7 @@
   <span class="md-ellipsis">
     
   
-    The problem in plain language
+    Why scan-level integrity matters
   
 
     
@@ -631,7 +659,7 @@
   <span class="md-ellipsis">
     
   
-    Follow one Wi-Fi scan
+    Processing pipeline
   
 
     
@@ -659,7 +687,7 @@
   <span class="md-ellipsis">
     
   
-    The 18 diagnostics
+    Indicator definitions and equations
   
 
     
@@ -1734,7 +1762,7 @@
 
 
 <h1 id="adverse-percentile-warnings-calibration-boundary">Adverse-percentile warnings: calibration boundary<a class="headerlink" href="#adverse-percentile-warnings-calibration-boundary" title="Permanent link">&para;</a></h1>
-<p>The Inspector v1.0.9 <code>DiagnosticEngine</code> computes each raw indicator first, then (when an exact floor/estimator calibration exists) maps its value to an adverse percentile using a sorted reference distribution. For sorted values (r_1,...,r_n):</p>
+<p>The Inspector v1.0.9 <code>DiagnosticEngine</code> computes each raw indicator first, then (when an exact floor/estimator calibration exists) maps its value to an adverse percentile using a sorted reference distribution. For sorted values <span class="arithmatex">\(r_1,...,r_n\)</span>:</p>
 <ul>
 <li>adverse <strong>high</strong>: <code>count(r &lt;= observed) / n</code> (inclusive upper-tail rank in code terminology);</li>
 <li>adverse <strong>low</strong>: <code>count(r &gt;= observed) / n</code> (inclusive lower-tail rank);</li>
@@ -1849,6 +1877,10 @@
       <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../assets/javascripts/interactive-embed.js"></script>
+      
+        <script src="../assets/javascripts/mathjax-config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

@@ -12,9 +12,9 @@
   <main class="explorer" id="explorer-root">
     <header class="intro">
       <div class="intro-copy">
-        <span class="eyebrow"><span class="live-dot" aria-hidden="true"></span> EXPLAIN THE PIPELINE · MEASURED EXAMPLES</span>
-        <h1>What does this Wi-Fi scan actually tell us?</h1>
-        <p>Explore real, pseudonymized observations. Follow a scan from observed access points to radio-map matches, spatial candidates, and its five-part <strong>Scan Quality and Support Score (SQS)</strong>.</p>
+        <span class="eyebrow"><span class="live-dot" aria-hidden="true"></span> MEASURED SCANS · NATIVE RELIABILITY OUTPUTS</span>
+        <h1>Inspect the reliability evidence for one measured scan</h1>
+        <p>Inspect observed, pseudonymized RSS measurements and the matched radio-map templates. Review candidate geometry, native diagnostic indicators, and the five-component <strong>Scan Quality and Support Score (SQS)</strong>.</p>
       </div>
       <div class="intro-note"><span>DATA PROVENANCE</span><strong>4 measured units</strong><small>88 deterministically selected examples from 5,041 evaluated queries. No fabricated scores.</small></div>
     </header>
@@ -66,7 +66,7 @@
     </div>
 
     <section class="panel sqs-panel" id="sqs-panel">
-      <div class="panel-head"><div><span class="tag">CORE CONTRIBUTION</span><h3>Five components, one scan-support score</h3></div><span class="panel-meta" id="sqs-identity">Source-derived components</span></div>
+      <div class="panel-head"><div><span class="tag">CORE CONTRIBUTION</span><h3>Five normalized support components and SQS</h3></div><span class="panel-meta" id="sqs-identity">Source-derived components</span></div>
       <div class="sqs-layout">
         <div><div id="components" class="components" role="list"></div><p class="footnote">Every component is scaled with the original implementation using the <strong>full evaluation unit</strong> (5th–95th percentile), not these 22 displayed samples.</p></div>
         <div class="sqs-formula"><span>Equal-weight average</span><div class="formula-expression" id="formula-text">( component 1 + … + component 5 ) / 5</div><div class="sqs-large"><strong id="sqs-total">—</strong><small>Scan Quality and Support Score</small></div><p id="sqs-explanation">Five measurements summarize evidence; SQS is not an accuracy percentage.</p></div>

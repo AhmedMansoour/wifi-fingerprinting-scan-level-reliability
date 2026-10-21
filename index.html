@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#from-a-wi-fi-location-to-the-evidence-behind-it" class="md-skip">
+        <a href="#scan-level-reliability-for-wi-fi-fingerprinting" class="md-skip">
           Skip to content
         </a>
       
@@ -490,10 +490,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#start-with-the-question-you-have" class="md-nav__link">
+  <a href="#explore-the-methodology-and-implementation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Start with the question you have
+        Explore the methodology and implementation
       
     </span>
   </a>
@@ -501,10 +501,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-idea-in-one-diagram" class="md-nav__link">
+  <a href="#processing-architecture" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The idea in one diagram
+        Processing architecture
       
     </span>
   </a>
@@ -607,7 +607,35 @@
   <span class="md-ellipsis">
     
   
-    Interactive scan explorer
+    Measured scan explorer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="learn/indicator-atlas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interactive indicator atlas
   
 
     
@@ -694,7 +722,7 @@
   <span class="md-ellipsis">
     
   
-    The problem in plain language
+    Why scan-level integrity matters
   
 
     
@@ -722,7 +750,7 @@
   <span class="md-ellipsis">
     
   
-    Follow one Wi-Fi scan
+    Processing pipeline
   
 
     
@@ -750,7 +778,7 @@
   <span class="md-ellipsis">
     
   
-    The 18 diagnostics
+    Indicator definitions and equations
   
 
     
@@ -1795,10 +1823,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#start-with-the-question-you-have" class="md-nav__link">
+  <a href="#explore-the-methodology-and-implementation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Start with the question you have
+        Explore the methodology and implementation
       
     </span>
   </a>
@@ -1806,10 +1834,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-idea-in-one-diagram" class="md-nav__link">
+  <a href="#processing-architecture" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The idea in one diagram
+        Processing architecture
       
     </span>
   </a>
@@ -1866,10 +1894,11 @@
 
 
 <div class="wf-hero">
-<div class="wf-kicker">EXPLAIN · IMPLEMENT · VERIFY</div>
-<h1 id="from-a-wi-fi-location-to-the-evidence-behind-it">From a Wi-Fi location to the evidence behind it<a class="headerlink" href="#from-a-wi-fi-location-to-the-evidence-behind-it" title="Permanent link">&para;</a></h1>
-<p>A Wi-Fi fingerprinting system gives you a position. <strong>This research adds scan-level evidence for judging how well the Wi-Fi observations and radio-map matches support that position.</strong></p>
-<p><a class="md-button md-button--primary" href="learn/interactive-explorer/">Explore real scan evidence</a>
+<div class="wf-kicker">RESEARCH SOFTWARE · METHODS · REPRODUCIBILITY</div>
+<h1 id="scan-level-reliability-for-wi-fi-fingerprinting">Scan-level reliability for Wi-Fi fingerprinting<a class="headerlink" href="#scan-level-reliability-for-wi-fi-fingerprinting" title="Permanent link">&para;</a></h1>
+<p>A reproducible framework for characterizing <strong>scan-level reliability</strong> and diagnosing conditions associated with large positioning errors. It evaluates measured RSS observations, radio-map matches and the spatial consistency of retrieved reference points alongside conventional Wi-Fi positioning estimates.</p>
+<p><a class="md-button md-button--primary" href="learn/indicator-atlas/">Explore indicator definitions</a>
+<a class="md-button" href="learn/interactive-explorer/">Inspect measured scan diagnostics</a>
 <a class="md-button" href="start/quickstart/">Get started with real data</a>
 <a class="md-button" href="learn/overview/">Understand the idea</a></p>
 <p><span class="wf-hero-footnote">Research implementation · Python and Android Java · Reproducible data and source</span></p>
@@ -1881,18 +1910,19 @@
   <div><strong>10</strong><span>Units in the original research evaluation</span></div>
 </div>
 
-<h2 id="start-with-the-question-you-have">Start with the question you have<a class="headerlink" href="#start-with-the-question-you-have" title="Permanent link">&para;</a></h2>
+<h2 id="explore-the-methodology-and-implementation">Explore the methodology and implementation<a class="headerlink" href="#explore-the-methodology-and-implementation" title="Permanent link">&para;</a></h2>
 <div class="wf-card-grid">
-  <a class="wf-card" href="learn/interactive-explorer/"><span class="wf-card-mark">INTERACTIVE · MEASURED DATA</span><strong>Follow one real scan to its SQS</strong><span>Switch between scans, inspect candidate coordinates and the five original components, and compare examples.</span><em>Open interactive explorer →</em></a>
-  <a class="wf-card" href="learn/overview/"><span class="wf-card-mark">01 · LEARN</span><strong>Why does reliability matter?</strong><span>Two similar-looking location estimates can have very different levels of supporting evidence.</span><em>Understand the problem →</em></a>
-  <a class="wf-card" href="learn/walkthrough/"><span class="wf-card-mark">02 · FOLLOW</span><strong>What happens to one scan?</strong><span>Trace the input, reference radio map, retrieved candidates, indicators, SQS, and interpretation.</span><em>Follow the pipeline →</em></a>
-  <a class="wf-card" href="start/quickstart/"><span class="wf-card-mark">03 · RUN</span><strong>Can I execute the research code?</strong><span>Run the released measured UJI and HK scans and inspect generated indicators.</span><em>Run the public example →</em></a>
-  <a class="wf-card" href="results/how-to-read/"><span class="wf-card-mark">04 · INTERPRET</span><strong>What does the output tell me?</strong><span>Find out what SQS, candidate spread, AP overlap and the results files actually mean.</span><em>Read the outputs →</em></a>
-  <a class="wf-card" href="start/your-data/"><span class="wf-card-mark">05 · ADAPT</span><strong>What if I have my own scans?</strong><span>Use the canonical eight-column format and prepare a local radio map.</span><em>Prepare a dataset →</em></a>
-  <a class="wf-card" href="results/evidence/"><span class="wf-card-mark">06 · VERIFY</span><strong>Which results can I reproduce?</strong><span>Distinguish fresh runs, the historical HK predictions, ten-unit summaries, and synthetic examples.</span><em>Check evidence scope →</em></a>
+  <a class="wf-card" href="learn/indicator-atlas/"><span class="wf-card-mark">EQUATIONS · ANIMATED FIGURES</span><strong>Indicator definitions and computation</strong><span>Explore all 15 diagnostic measurements and three composites, including equations, units, measured examples, and animated signal/geometry explanations.</span><em>Open indicator atlas →</em></a>
+  <a class="wf-card" href="learn/interactive-explorer/"><span class="wf-card-mark">INTERACTIVE · MEASURED DATA</span><strong>Inspect a measured scan and its SQS</strong><span>Switch between scans, inspect candidate coordinates and the five original components, and compare examples.</span><em>Open interactive explorer →</em></a>
+  <a class="wf-card" href="learn/overview/"><span class="wf-card-mark">01 · LEARN</span><strong>Why evaluate scan-level reliability?</strong><span>Aggregate accuracy conceals scan-to-scan variation in reference support and spatial ambiguity.</span><em>Understand the problem →</em></a>
+  <a class="wf-card" href="learn/walkthrough/"><span class="wf-card-mark">02 · FOLLOW</span><strong>How is each diagnostic computed?</strong><span>Trace RSS normalization, template matching, retrieved candidate geometry, composite scores and output verification.</span><em>Follow the pipeline →</em></a>
+  <a class="wf-card" href="start/quickstart/"><span class="wf-card-mark">03 · RUN</span><strong>Run the native Python pipeline</strong><span>Run the released measured UJI and HK scans and inspect generated indicators.</span><em>Run the public example →</em></a>
+  <a class="wf-card" href="results/how-to-read/"><span class="wf-card-mark">04 · INTERPRET</span><strong>Interpret outputs and indicators</strong><span>Find out what SQS, candidate spread, AP overlap and the results files actually mean.</span><em>Read the outputs →</em></a>
+  <a class="wf-card" href="start/your-data/"><span class="wf-card-mark">05 · ADAPT</span><strong>Prepare your own radio map</strong><span>Use the canonical eight-column format and prepare a local radio map.</span><em>Prepare a dataset →</em></a>
+  <a class="wf-card" href="results/evidence/"><span class="wf-card-mark">06 · VERIFY</span><strong>Verify the evidence and reproducibility scope</strong><span>Distinguish fresh runs, the historical HK predictions, ten-unit summaries, and synthetic examples.</span><em>Check evidence scope →</em></a>
 </div>
 
-<h2 id="the-idea-in-one-diagram">The idea in one diagram<a class="headerlink" href="#the-idea-in-one-diagram" title="Permanent link">&para;</a></h2>
+<h2 id="processing-architecture">Processing architecture<a class="headerlink" href="#processing-architecture" title="Permanent link">&para;</a></h2>
 <pre class="mermaid"><code>flowchart LR
     A[Wi-Fi query scan] --&gt; C[Compare fingerprints]
     B[Radio map: RSS and known positions] --&gt; C
@@ -1906,8 +1936,8 @@
     H --&gt; I
     I --&gt; J[Inspect or apply a calibrated decision rule]</code></pre>
 <div class="admonition info">
-<p class="admonition-title">A score is not a certainty</p>
-<p>The Scan Quality and Support Score (SQS) summarizes support from the recorded scan and radio map. It is <strong>not</strong> a calibrated probability that an estimated position is correct. A decision threshold must be fitted and evaluated separately.</p>
+<p class="admonition-title">Interpretation of composite scores</p>
+<p>The Scan Quality and Support Score (SQS) combines five cohort-normalized support components. It is <strong>not a calibrated probability of correct localization</strong>. Operational acceptance or warning thresholds require separately specified training, calibration, and held-out evaluation.</p>
 </div>
 <h2 id="what-can-you-run-today">What can you run today?<a class="headerlink" href="#what-can-you-run-today" title="Permanent link">&para;</a></h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Measured Wi-Fi data</label><label for="__tabbed_1_2">Positioning baseline</label><label for="__tabbed_1_3">Original stored results</label></div>
@@ -1983,13 +2013,13 @@
         
         
           
-          <a href="learn/interactive-explorer/" class="md-footer__link md-footer__link--next" aria-label="Next: Interactive scan explorer">
+          <a href="learn/interactive-explorer/" class="md-footer__link md-footer__link--next" aria-label="Next: Measured scan explorer">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Interactive scan explorer
+                Measured scan explorer
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2036,6 +2066,10 @@
       <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="assets/javascripts/interactive-embed.js"></script>
+      
+        <script src="assets/javascripts/mathjax-config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
