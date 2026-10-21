@@ -189,7 +189,7 @@ flowchart TB
   class SQS,CS,FII composite
 ```
 
-$R(z)=\operatorname{clip}[(z-Q_{0.05})/(Q_{0.95}-Q_{0.05}),0,1]$ uses the **complete evaluation unit**, not only the selected visual examples. For a degenerate finite range, the implementation returns $0.5$; unavailable values remain missing and are omitted from composite means. Higher composite values denote stronger relative support under their construction; they are **not calibrated probabilities of a correct position**.
+$R(z)=\mathrm{clip}[(z-Q_{0.05})/(Q_{0.95}-Q_{0.05}),0,1]$ uses the **complete evaluation unit**, not only the selected visual examples. For a degenerate finite range, the implementation returns $0.5$; unavailable values remain missing and are omitted from composite means. Higher composite values denote stronger relative support under their construction; they are **not calibrated probabilities of a correct position**.
 
 ### Mathematical inventory
 
@@ -201,20 +201,20 @@ All **18** implemented quantities are presented here; exact handling of missing 
 | RSS statistics | **RSS standard deviation** | $\sigma_{RSS}=\sqrt{\frac1N\sum_{a\in A_q}(r_a-\bar r)^2}$ | High* |
 | RSS statistics | **RSS range** | $\max_a r_a-\min_a r_a$ | High* |
 | Scan–map compatibility | **Minimum RSS distance** | $d_1=\min_j\|\mathbf q-\mathbf t_j\|_2/\sqrt D$ | High |
-| Scan–map compatibility | **Nearest-match isolation** | $I_{\rm near}=\max(d_2-d_1,0)/(d_2+10^{-6})$ | Low |
+| Scan–map compatibility | **Nearest-match isolation** | $I_{\mathrm{near}}=\max(d_2-d_1,0)/(d_2+10^{-6})$ | Low |
 | Scan–map compatibility | **Cosine similarity** | $\cos(\mathbf q+110,\mathbf t_1+110)$ | Low |
 | Scan–map compatibility | **Maximum AP overlap** | $J_{\max}=\max_{j\leq10}J(A_q,A_j)$ | Low |
 | Scan–map compatibility | **Mean AP overlap** | $\bar J=\frac1{10}\sum_{j=1}^{10}J(A_q,A_j)$ | Low |
-| Scan–map compatibility | **AP-set novelty** | $N_{\rm novel}=1-J_{\max}$ | High |
+| Scan–map compatibility | **AP-set novelty** | $N_{\mathrm{novel}}=1-J_{\max}$ | High |
 | Spatial support | **Nearest-RP distance** | $d_{RP}=\min_{\mathbf p\in\mathcal P}\|\hat{\mathbf x}-\mathbf p\|_2$ | High |
 | Spatial support | **Local RP density** | $\rho_{RP}=\sum_{\mathbf p\in\mathcal P}\mathbf1\{\|\mathbf p-\bar{\mathbf p}\|_2\leq r\}$ | Low |
 | Candidate geometry | **Candidate spatial spread** | $\sigma_{FP}=\sqrt{\frac1{10}\sum_j\|\mathbf p_j-\bar{\mathbf p}\|_2^2}$ | High |
 | Candidate geometry | **Candidate-set diameter** | $D_{cand}=\max_{i,j}\|\mathbf p_i-\mathbf p_j\|_2$ | High |
 | Candidate geometry | **Cumulative-neighborhood instability** | $I_k=\max_{1\leq k\leq10}\|\bar{\mathbf p}_{1:k}-\bar{\mathbf p}\|_2$ | High |
 | Radio-map ambiguity | **RSS-gradient proxy** | $G_{RSS}=\sigma_{FP}/\max(d_{10}-d_1,10^{-6})$ | High |
-| Composite support | **SQS** | $\operatorname{mean}\!\left(1-R(d_1),1-\frac{R(\sigma_{FP})+R(D_{cand})}{2},R(N_{AP}),R(J_{\max}),R(\rho_{RP})\right)$ | Low |
+| Composite support | **SQS** | $\mathrm{mean}\!\left(1-R(d_1),1-\frac{R(\sigma_{FP})+R(D_{cand})}{2},R(N_{AP}),R(J_{\max}),R(\rho_{RP})\right)$ | Low |
 | Composite support | **Cσ** | $(1-R(d_1))/(1+R(\sigma_{FP}))$ | Low |
-| Composite support | **FII** | $\operatorname{mean}\!\left(1-R(d_1),R(N_{AP}),R(J_{\max}),R(I_{\rm near}),1-R(N_{\rm novel})\right)$ | Low |
+| Composite support | **FII** | $\mathrm{mean}\!\left(1-R(d_1),R(N_{AP}),R(J_{\max}),R(I_{\mathrm{near}}),1-R(N_{\mathrm{novel}})\right)$ | Low |
 
 *The adverse directions are prespecified analytical hypotheses, not universal empirical findings. In particular, higher RSS standard deviation or range did not consistently imply worse positioning accuracy.*
 
