@@ -58,7 +58,7 @@ function renderComponents(s){
     const score=create('span','component-value',fmt(value,3));row.append(name,track,score);root.append(row);
   }
   const mean=sum/5;if(Math.abs(mean-s.sqs)>1e-8)throw Error('Displayed components do not reconstruct stored SQS');
-  text('formula-text',`${components.map(([key])=>fmt(s.components[key],3)).join(' + ')}  ÷  5`);
+  text('formula-text',`(${components.map(([key])=>fmt(s.components[key],3)).join(' + ')}) ÷ 5`);
   text('sqs-total',fmt(s.sqs,3));text('sqs-explanation',`Original source-derived average: ${fmt(mean,4)}. This is a relative measure of support, not a confidence percentage.`);
 }
 function renderHistogram(u,s){
