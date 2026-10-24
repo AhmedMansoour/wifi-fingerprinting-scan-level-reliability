@@ -440,10 +440,10 @@ On Windows use `gradlew.bat`. First-launch radio-map import, profile provenance,
 - **UJIIndoorLoc U01–U03:** original [CC BY 4.0 terms and attribution](docs/UJI_DATA_ATTRIBUTION.md). Empirical measurements are **not automatically relicensed by the code's MIT license**.
 - **Other external datasets:** obtain them from their source publishers and follow their separate terms. See [data handling](docs/DATA_AND_PRIVACY.md) and [third-party notices](THIRD_PARTY_NOTICES.md).
 
-### Cite the companion ESWA manuscript
+### Cite the published ESWA article
 
-**Mansour, A., Chen, W., Luo, H., Adham, M., Wang, J., Abdallah, M., and Weng, D. (2026).** “An Intelligent Framework for Scan-Level Reliability, Accuracy Diagnostics, and Gross-Error Detection in Wi-Fi Fingerprinting-Based Indoor Positioning Systems.” *Expert Systems with Applications* (manuscript under revision, **ESWA-D-26-23796R2**).
+**Mansour, A., Chen, W., Luo, H., Adham, M., Wang, J., Abdallah, M., and Weng, D. (2026).** “An Intelligent Framework for Scan-Level Reliability, Accuracy Diagnostics, and Gross-Error Detection in Wi-Fi Fingerprinting-Based Indoor Positioning Systems.” *Expert Systems with Applications*, article **134855**. https://doi.org/10.1016/j.eswa.2026.134855
 
-The citation uses the manuscript's full author order and exact current title. **This work is not yet published**: no DOI, volume, article number, or acceptance date is claimed. The manuscript PDF is not distributed through this repository.
+**Publication links:** [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S0957417426037589) · [DOI](https://doi.org/10.1016/j.eswa.2026.134855) · [ResearchGate](https://www.researchgate.net/publication/416717447_An_Intelligent_Framework_for_Scan-Level_Reliability_Accuracy_Diagnostics_and_Gross-Error_Detection_in_Wi-Fi_Fingerprinting-Based_Indoor_Positioning_Systems).
 
-**BibTeX:** [Download the companion manuscript citation](CITATION.bib) (formatted as `@article` for the target journal; manuscript remains under revision). **Repository citation:** GitHub's `Cite this repository` control uses [`CITATION.cff`](CITATION.cff). Please also cite the original datasets under their respective licenses.
+**BibTeX:** [Download the published article citation](CITATION.bib) (`@article`, with the publisher-assigned DOI and article number). **GitHub citation:** The `Cite this repository` control uses [`CITATION.cff`](CITATION.cff), which identifies the published ESWA article as its preferred citation. The research software remains a distinct resource, and original datasets should be cited under their respective licenses. The article PDF is not distributed through this repository.
