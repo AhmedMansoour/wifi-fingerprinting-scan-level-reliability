@@ -1,9 +1,9 @@
 cff-version: 1.2.0
 message: >-
-  When using the methodology or scientific results, cite the companion
-  ESWA manuscript identified in CITATION.bib. The paper is under revision
-  and has no verified published DOI. For reuse of this repository, cite
-  this software; empirical datasets retain their own attribution requirements.
+  When using the methods or results, cite the published ESWA article
+  identified in preferred-citation and CITATION.bib. The repository can
+  also be cited separately as software; empirical datasets retain their
+  original attribution requirements.
 type: software
 title: "Scan-Level Reliability and Gross-Error Diagnosis in Wi-Fi Fingerprinting"
 authors:
@@ -21,3 +21,25 @@ keywords:
   - reliability diagnostics
   - gross-error diagnosis
   - reproducible research
+preferred-citation:
+  type: article
+  title: "An Intelligent Framework for Scan-Level Reliability, Accuracy Diagnostics, and Gross-Error Detection in Wi-Fi Fingerprinting-Based Indoor Positioning Systems"
+  authors:
+    - given-names: Ahmed
+      family-names: Mansour
+    - given-names: Wu
+      family-names: Chen
+    - given-names: Huan
+      family-names: Luo
+    - given-names: Mahmoud
+      family-names: Adham
+    - given-names: Jingxian
+      family-names: Wang
+    - given-names: Mahmoud
+      family-names: Abdallah
+    - given-names: Duojie
+      family-names: Weng
+  journal: "Expert Systems with Applications"
+  year: 2026
+  doi: "10.1016/j.eswa.2026.134855"
+  url: "https://www.sciencedirect.com/science/article/pii/S0957417426037589"
