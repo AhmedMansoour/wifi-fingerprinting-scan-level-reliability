@@ -26,13 +26,13 @@
     },
     {
       "path": "CITATION.bib",
-      "size_bytes": 616,
-      "sha256": "be4824496294bf6396a34f3d4b19de3147ecad8cd78db3cefc993ed2a7c4c10f"
+      "size_bytes": 724,
+      "sha256": "8189db68f4ee8151a0457f9bc006530d730a725c9f7d15019d7086a70b4f3719"
     },
     {
       "path": "CITATION.cff",
-      "size_bytes": 983,
-      "sha256": "c06eb6e9d6942e9b594f2bc0ec483b4011276dedf87f1e35b3675c1a8c3afe4c"
+      "size_bytes": 1686,
+      "sha256": "54cfcc32b1d6df87475d74239425eb8c2967c059acd6ac9cbaf73e032929fb82"
     },
     {
       "path": "LICENSE",
@@ -46,8 +46,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 34279,
-      "sha256": "21c8e2f6c92705091b7e5e9d4fc066fd8f781b2558d47f50772c645f34ba3585"
+      "size_bytes": 34586,
+      "sha256": "e1010d4e706d845e2203db70ea059f333f25a724c633fa6eca7deba67702896e"
     },
     {
       "path": "RELEASE_VALIDATION.md",
@@ -1671,8 +1671,8 @@
     },
     {
       "path": "tests/unit/test_citation_metadata.py",
-      "size_bytes": 1994,
-      "sha256": "fe7e75a0104177ee0fcb8c529d3a7d0a81936cf489e868872de8e85d0894ef9e"
+      "size_bytes": 2396,
+      "sha256": "308d28e02d7a9c1893efb3025e2be9e8567be1e4969d355077251c4a161f0d1c"
     },
     {
       "path": "tests/unit/test_config.py",
