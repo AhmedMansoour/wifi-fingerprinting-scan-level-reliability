@@ -4,6 +4,8 @@
 
 > **Published research article:** Ahmed Mansour et al., *An Intelligent Framework for Scan-Level Reliability, Accuracy Diagnostics, and Gross-Error Detection in Wi-Fi Fingerprinting-Based Indoor Positioning Systems*, **Expert Systems with Applications** (2026), article 134855. **[Read the ESWA paper](https://doi.org/10.1016/j.eswa.2026.134855)** · **[Publication overview and citation](https://ahmedmansoour.github.io/indoor-positioning-hub/publications/wifi-scan-level-reliability-gross-error-detection.html)** · **[Interactive reproducible research materials](https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/)**
 
+**Archived software release:** [Zenodo v1.0.0rc1 (version DOI)](https://doi.org/10.5281/zenodo.23893930) · [Zenodo all-versions DOI](https://doi.org/10.5281/zenodo.23893929) · [GitHub release](https://github.com/AhmedMansoour/wifi-fingerprinting-scan-level-reliability/releases/tag/v1.0.0rc1). Cite the [ESWA journal article](https://doi.org/10.1016/j.eswa.2026.134855) for scientific methods and results, or the Zenodo DOI for this archived software release.
+
 ### Animated interface concept: four illustrative cases
 
 <p align="center">
