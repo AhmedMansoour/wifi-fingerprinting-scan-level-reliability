@@ -2,6 +2,8 @@
 
 **Reproducible methods, measured data, and software for evaluating the reliability evidence associated with individual Wi-Fi fingerprints.**
 
+> **Published research article:** Ahmed Mansour et al., *An Intelligent Framework for Scan-Level Reliability, Accuracy Diagnostics, and Gross-Error Detection in Wi-Fi Fingerprinting-Based Indoor Positioning Systems*, **Expert Systems with Applications** (2026), article 134855. **[Read the ESWA paper](https://doi.org/10.1016/j.eswa.2026.134855)** · **[Publication overview and citation](https://ahmedmansoour.github.io/indoor-positioning-hub/publications/wifi-scan-level-reliability-gross-error-detection.html)** · **[Interactive reproducible research materials](https://ahmedmansoour.github.io/wifi-fingerprinting-scan-level-reliability/)**
+
 ### Animated interface concept: four illustrative cases
 
 <p align="center">
